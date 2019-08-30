@@ -1,34 +1,29 @@
 <template>
   <div class="head">
-    <!-- <span>{{$t('m.music')}}</span>
-    <select name="changeLang" v-model="lang" @change="changeLangEvent">
-     <option selected value="">--请选择--</option>
-     <option value="zh-CN" v-text="$t('m.language.cn')"></option>
-     <option value="en-US"  v-text="$t('m.language.en')"></option>
-   </select>
-    <h1 v-if="bool">{{$t('m.language.en')}}</h1>
-    <h1 v-else>{{$t('m.language.cn')}}</h1>
-    <div class="test">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, officiis? Asperiores distinctio neque harum non aperiam consectetur dolorum ab, nostrum excepturi magni molestiae, alias velit blanditiis, optio molestias voluptatibus commodi?</div> -->
     <header>
       <div class="warp">
          <img class="logo" src="../assets/images/logo.png" alt="">
          <div class="rf register countryselect">
-           <el-dropdown placement="bottom-start">
-            <span >
-              <img src="../assets/images/country.png" alt=""><i class="el-dropdown-link el-icon-arrow-down el-icon--right"></i>
+           <el-dropdown placement="bottom-start" >
+            <span>
+              <img :src="imgSrc" class="flag" alt=""><i class="el-dropdown-link el-icon-arrow-down el-icon--right"></i>
             </span>
             <el-dropdown-menu slot="dropdown" size="medium">
-              <el-dropdown-item :command="changeLangEvent"><img class="flag" src="../assets/images/chinese.png" alt=""><span>{{$t('m.language.cn')}}</span></el-dropdown-item>
-              <el-dropdown-item><img class="flag" src="../assets/images/chinese.png" alt=""><span>{{$t('m.language.zh')}}</span></el-dropdown-item>
-              <el-dropdown-item><img class="flag" src="../assets/images/country.png" alt=""><span>{{$t('m.language.en')}}</span></el-dropdown-item>
+              <el-dropdown-item  @click.native="changeChinese()"><img class="flag" src="../assets/images/chinese.png" alt=""><span>{{$t('m.language.cn')}}</span></el-dropdown-item>
+              <el-dropdown-item  @click.native="changeChinese()"><img class="flag" src="../assets/images/chinese.png" alt=""><span>{{$t('m.language.zh')}}</span></el-dropdown-item>
+              <el-dropdown-item  @click.native="changeLangEvent()"><img class="flag" src="../assets/images/country.png" alt=""><span>{{$t('m.language.en')}}</span></el-dropdown-item>
             </el-dropdown-menu>
           </el-dropdown>
          </div>
          <div class="rf">
-           <el-button class="hd-btn">注册</el-button>
-           <el-button class="hd-btn">登录</el-button>
+           <el-button class="hd-btn">{{$t('m.header.login')}}</el-button>
+           <el-button class="hd-btn">{{$t('m.header.register')}}</el-button>
          </div>
-         
+         <div class="nav clearfix">
+           <ul :class="classNum == 0 ? 'tabs':'tabs-en'">
+              <li v-for="(list,index) in lists" :key="index">{{$t(list)}}</li>
+           </ul>
+         </div>
       </div>
       
     </header>
@@ -42,24 +37,29 @@ export default {
     return{
       lang:'',
       bool:'',
+      langString:'',
+      imgSrc: require ('../assets/images/chinese.png'),
+      tabPosition: 'top',
+      classNum: 0,
+      lists:["m.header.home","m.header.about","m.header.product","m.header.platform","m.header.support","m.header.partner","m.header.contact"],
     }
   },
   methods:{
     changeLangEvent() {
-      console.log(123);
-      //  if ( this.lang === 'zh-CN' ) {
-      //         console.log(1)
-      //         this.lang = 'zh-CN';
-      //         this.$i18n.locale = this.lang; // 关键语句
-      //         this.bool = false;
-      //         console.log(this.lang)
-      //     }else if(this.lang === 'en-US'){
-      //       console.log(2)
-      //       this.lang = 'en-US';
-      //       this.$i18n.locale = this.lang; // 关键语句
-      //       this.bool = true;
-      //       console.log(this.lang)
-      //     }
+      console.log(1)
+      this.lang = 'en-US';
+      this.$i18n.locale = this.lang; // 关键语句
+      this.bool = false;
+      this.imgSrc = require('../assets/images/country.png');
+      this.classNum = 1;
+    },
+    changeChinese(){
+      console.log(2)
+      this.lang = 'zh-CN';
+      this.$i18n.locale = this.lang; // 关键语句
+      this.bool = false;
+      this.imgSrc = require('../assets/images/chinese.png');
+      this.classNum = 0;
     }
 
   },
@@ -115,4 +115,49 @@ export default {
       display: inline-block;
       vertical-align: middle;
     }
+    .tabs li{
+      width: auto;
+      text-align: center;
+      line-height: 90px;
+      float: left;
+      padding-left: 52px;
+      padding-right: 52px;
+      font-size: 16px;
+      transition: color .5s;
+      transition-timing-function: cubic-bezier(.2,1,.3,1);
+      position: relative;
+      color: #000;
+    }
+    .tabs-en li{
+      width: auto;
+      text-align: center;
+      line-height: 90px;
+      float: left;
+      padding-left: 32px;
+      padding-right: 32px;
+      font-size: 16px !important;
+      transition: color .5s;
+      transition-timing-function: cubic-bezier(.2,1,.3,1);
+      position: relative;
+      color: #000;
+    }
+    .tabs li::before,.tabs-en li::before{
+        content: '';
+        height: 40px !important;
+        border-radius: 10px;
+        position: absolute;
+        z-index: -1;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 20%;
+        bottom: 30%;
+        opacity: .3;
+        transform: scale3d(0,1,1);
+        transform-origin: 0% 50%;
+        transition: transform .5s;
+        transition-timing-function: cubic-bezier(.2,1,.3,1);
+        background: #6265fe;
+    }
+    .tabs li:hover:before , .tabs-en li:hover:before{transform: scale3d(1, 1, 1);}
 </style>
