@@ -1,4 +1,4 @@
-export const m = { 
+module.exports = { 
   language:{
     cn:'Chinese',
     zh:'Traditional',
