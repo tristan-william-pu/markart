@@ -19,14 +19,10 @@
            <el-button class="hd-btn">{{$t('header.login')}}</el-button>
            <el-button class="hd-btn">{{$t('header.register')}}</el-button>
          </div>
-         <!-- <div class="nav clearfix">
-           <ul :class="classNum == 0 ? 'tabs':'tabs-en'">
-              <li  v-for="(list,index) in lists" :key="index" @mouseover="tabs(index)" @mouseout="function(){curId = -1}">{{$t(list)}}</li>
-           </ul>
-         </div> -->
          <div class="nav clearfix">
             <ul :class="classNum == 0 ? 'tabs':'tabs-en'">
-                <li v-for="(item,index) of $t('tabs')" :key="item.title"
+                <li v-for="(item,index) in $t('tabs')"
+                  :key="index"
                   :class="{active:index == n}"
                   @mouseenter="tap(index)"
                   @mouseleave="tapLeave()"
@@ -49,6 +45,7 @@
 
 <script>
 export default {
+  name: 'Header',
   data(){
     return{
       lang:'',
