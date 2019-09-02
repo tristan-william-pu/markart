@@ -15,4 +15,8 @@ export const m = {
     partner:'合作伙伴',
     contact:'联系我们',
   },
+  tabs:{},
+
+
+    
 }

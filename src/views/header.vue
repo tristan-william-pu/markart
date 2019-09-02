@@ -19,13 +19,31 @@
            <el-button class="hd-btn">{{$t('m.header.login')}}</el-button>
            <el-button class="hd-btn">{{$t('m.header.register')}}</el-button>
          </div>
-         <div class="nav clearfix">
+         <!-- <div class="nav clearfix">
            <ul :class="classNum == 0 ? 'tabs':'tabs-en'">
-              <li v-for="(list,index) in lists" :key="index">{{$t(list)}}</li>
+              <li  v-for="(list,index) in lists" :key="index" @mouseover="tabs(index)" @mouseout="function(){curId = -1}">{{$t(list)}}</li>
            </ul>
-         </div>
+         </div> -->
+         <div class="nav clearfix">
+            <ul :class="classNum == 0 ? 'tabs':'tabs-en'">
+                <!-- <li class="active">北京</li> -->
+                <li v-for="(item,index) of items" :key="index"
+                :class="{active:index == n}"
+                @mouseenter="tap(index)"
+                @mouseleave="tapLeave(index)"
+                >
+                {{$t(item.title)}}
+            </li>
+               
+            </ul>
+            <div class="content clearfix" >
+                <p style="background:red">{{items[n].content | show}}</p>
+            </div>
+        </div>
       </div>
-      
+      <!-- <div v-show="index !==0 && index!==6 &&index == curId"  v-for="(content, index) in contents" :key="index" style="color:red">
+          <span>{{content.content}}</span>
+      </div> -->
     </header>
   
   </div>
@@ -41,10 +59,45 @@ export default {
       imgSrc: require ('../assets/images/chinese.png'),
       tabPosition: 'top',
       classNum: 0,
-      lists:["m.header.home","m.header.about","m.header.product","m.header.platform","m.header.support","m.header.partner","m.header.contact"],
+      classItem:-1,
+      curId:-1,
+      items:[
+                {title:'m.header.home',content:''},
+                {title:'m.header.about',content:'这里是上海'},
+                {title:'m.header.product',content:'这里是广州'},
+                {title:'m.header.platform',content:'这里是深圳'},
+                {title:'m.header.support',content:'这里是武汉'},
+                {title:'m.header.partner',content:'这里是武汉'},
+                {title:'m.header.contact',content:''},
+      ],
+      n:0,
+      // contents: [
+     
+      // ],
+      lists:["m.header.home","m.header.about","m.header.product","m.header.platform","m.header.support","m.header.partner",
+      "m.header.contact"],
     }
   },
+  filters:{
+    // show(value){
+    //   // if(this.value = ){} 
+    // },
+  },
+  computed:{
+
+  },
+  mounted(){
+    // for(let i = 0;i < this.contents.length ; i++){
+    //   this.contents[i] = $t("m.header.tabs"+[i]);
+    // }
+  },
   methods:{
+    tap(i){
+        this.n = i
+    },
+    tapLeave(){
+        
+    },
     changeLangEvent() {
       console.log(1)
       this.lang = 'en-US';
@@ -60,6 +113,9 @@ export default {
       this.bool = false;
       this.imgSrc = require('../assets/images/chinese.png');
       this.classNum = 0;
+    },
+    tabs(index){
+      this.curId = index;
     }
 
   },

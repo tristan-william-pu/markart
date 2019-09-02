@@ -15,4 +15,10 @@ export const m = {
     partner:'Partner',//合作伙伴
     contact:'Contact Us',//联系我们
   },
+  tabs:[
+    [],
+    ['Funds Safety'],
+    ['Foreign Exchange','Precious Metal','Account Types','CFD','index','Digital Currency'],
+    [],
+  ],
 }
