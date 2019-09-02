@@ -1,10 +1,9 @@
 <template>
   <div>
-
+    white
   </div>
 </template>
 <script>
-
 export default {
   
 }
