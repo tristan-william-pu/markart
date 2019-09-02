@@ -11,7 +11,7 @@ export default new Router({
   routes: [
     {
       path: '/',
-      component: importModule('home/home')
+      component: importModule('header')
     },
     {
       path: '/home',

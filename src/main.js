@@ -10,6 +10,7 @@ import './plugins/element.js'
 Vue.use(VueI18n)
 
 Vue.config.productionTip = false
+
 const messages = {
   en: require('./common/lang/en'),
   cn: require('./common/lang/zh')

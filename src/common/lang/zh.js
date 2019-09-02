@@ -15,10 +15,6 @@ module.exports = {
     partner:'合作伙伴',
     contact:'联系我们',
   },
-  // tabs:{
-  //   home:['资金安全'],
-  //   about:['外汇','贵金属','原油'],
-  // },
   tabs:[
     {title:'首页',content:['',]},
     {title:'关于我们',content:['资金安全',]},
