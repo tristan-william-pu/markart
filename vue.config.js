@@ -43,7 +43,7 @@ module.exports = {
      https: false,
      hotOnly: false,
      proxy: null, // 设置代理
-     before: app => {}
+     before: () => {}
     },
     // 第三方插件配置
     pluginOptions: {

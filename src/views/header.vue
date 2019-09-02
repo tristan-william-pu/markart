@@ -2,16 +2,16 @@
   <div class="head">
     <header>
       <div class="warp">
-         <img class="logo" src="../assets/images/logo.png" alt="">
+         <img class="logo" src="@/assets/logo.png" alt="">
          <div class="rf register countryselect">
            <el-dropdown placement="bottom-start" >
             <span>
               <img :src="imgSrc" class="flag" alt=""><i class="el-dropdown-link el-icon-arrow-down el-icon--right"></i>
             </span>
             <el-dropdown-menu slot="dropdown" size="medium">
-              <el-dropdown-item  @click.native="changeChinese()"><img class="flag" src="@/public/static/chinese.png" alt=""><span>{{$t('m.language.cn')}}</span></el-dropdown-item>
-              <el-dropdown-item  @click.native="changeChinese()"><img class="flag" src="@/public/static/chinese.png" alt=""><span>{{$t('m.language.zh')}}</span></el-dropdown-item>
-              <el-dropdown-item  @click.native="changeLangEvent()"><img class="flag" src="@/public/static/country.png" alt=""><span>{{$t('m.language.en')}}</span></el-dropdown-item>
+              <el-dropdown-item  @click.native="changeChinese()"><img class="flag" src="@/assets/chinese.png" alt=""><span>{{$t('m.language.cn')}}</span></el-dropdown-item>
+              <el-dropdown-item  @click.native="changeChinese()"><img class="flag" src="@/assets/chinese.png" alt=""><span>{{$t('m.language.zh')}}</span></el-dropdown-item>
+              <el-dropdown-item  @click.native="changeLangEvent()"><img class="flag" src="@/assets/country.png" alt=""><span>{{$t('m.language.en')}}</span></el-dropdown-item>
             </el-dropdown-menu>
           </el-dropdown>
          </div>
@@ -31,12 +31,12 @@
                   @mouseenter="tap(index)"
                   @mouseleave="tapLeave()"
                 >
-                {{$t(item.title)}}
-            </li>
+                  {{$t(item.title)}}
+                </li>
                
             </ul>
-            <div class="content clearfix" :class="n == 0 ? 'show' : ''">
-                <!-- <p>{{$t(items[n].content)}}</p> -->
+            <div class="content clearfix" :class="(n == 0 || n == 6) ? 'show' : ''">
+                <p>213</p>
             </div>
         </div>
       </div>
@@ -52,7 +52,7 @@ export default {
       lang:'',
       bool:'',
       langString:'',
-      imgSrc: require ('../assets/images/chinese.png'),
+      imgSrc: require ('../assets/chinese.png'),
       tabPosition: 'top',
       classNum: 0,
       classItem:-1,
@@ -69,6 +69,8 @@ export default {
       
   },
   mounted(){
+    // let items = $t('m.tabs');
+    // console.log($t('m.tabs'));
   },
   methods:{
     tap(i){
@@ -82,7 +84,7 @@ export default {
       this.lang = 'en-US';
       this.$i18n.locale = this.lang; // 关键语句
       this.bool = false;
-      this.imgSrc = require('../assets/images/country.png');
+      this.imgSrc = require('../assets/country.png');
       this.classNum = 1;
     },
     changeChinese(){
@@ -90,7 +92,7 @@ export default {
       this.lang = 'zh-CN';
       this.$i18n.locale = this.lang; // 关键语句
       this.bool = false;
-      this.imgSrc = require('../assets/images/chinese.png');
+      this.imgSrc = require('../assets/chinese.png');
       this.classNum = 0;
     },
     tabs(index){
