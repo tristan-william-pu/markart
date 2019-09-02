@@ -9,24 +9,20 @@
               <img :src="imgSrc" class="flag" alt=""><i class="el-dropdown-link el-icon-arrow-down el-icon--right"></i>
             </span>
             <el-dropdown-menu slot="dropdown" size="medium">
-              <el-dropdown-item  @click.native="changeChinese()"><img class="flag" src="@/assets/chinese.png" alt=""><span>{{$t('m.language.cn')}}</span></el-dropdown-item>
-              <el-dropdown-item  @click.native="changeChinese()"><img class="flag" src="@/assets/chinese.png" alt=""><span>{{$t('m.language.zh')}}</span></el-dropdown-item>
-              <el-dropdown-item  @click.native="changeLangEvent()"><img class="flag" src="@/assets/country.png" alt=""><span>{{$t('m.language.en')}}</span></el-dropdown-item>
+              <el-dropdown-item  @click.native="changeChinese()"><img class="flag" src="@/assets/chinese.png" alt=""><span>{{$t('language.cn')}}</span></el-dropdown-item>
+              <el-dropdown-item  @click.native="changeChinese()"><img class="flag" src="@/assets/chinese.png" alt=""><span>{{$t('language.zh')}}</span></el-dropdown-item>
+              <el-dropdown-item  @click.native="changeLangEvent()"><img class="flag" src="@/assets/country.png" alt=""><span>{{$t('language.en')}}</span></el-dropdown-item>
             </el-dropdown-menu>
           </el-dropdown>
          </div>
          <div class="rf">
-           <el-button class="hd-btn">{{$t('m.header.login')}}</el-button>
-           <el-button class="hd-btn">{{$t('m.header.register')}}</el-button>
+           <el-button class="hd-btn">{{$t('header.login')}}</el-button>
+           <el-button class="hd-btn">{{$t('header.register')}}</el-button>
          </div>
-         <!-- <div class="nav clearfix">
-           <ul :class="classNum == 0 ? 'tabs':'tabs-en'">
-              <li  v-for="(list,index) in lists" :key="index" @mouseover="tabs(index)" @mouseout="function(){curId = -1}">{{$t(list)}}</li>
-           </ul>
-         </div> -->
          <div class="nav clearfix">
             <ul :class="classNum == 0 ? 'tabs':'tabs-en'">
-                <li v-for="(item,index) of $t('m.tabs')" :key="item.title"
+                <li v-for="(item,index) in $t('tabs')"
+                  :key="index"
                   :class="{active:index == n}"
                   @mouseenter="tap(index)"
                   @mouseleave="tapLeave()"
@@ -47,6 +43,7 @@
 
 <script>
 export default {
+  name: 'Header',
   data(){
     return{
       lang:'',
