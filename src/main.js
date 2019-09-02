@@ -16,6 +16,7 @@ Vue.use({
 });
 
 Vue.config.productionTip = false
+
 const messages = {
   en: require('./common/lang/en'),
   cn: require('./common/lang/zh')

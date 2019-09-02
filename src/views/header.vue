@@ -31,9 +31,11 @@
                 </li>
                
             </ul>
-            <div class="content clearfix" :class="(n == 0 || n == 6) ? 'show' : ''">
-                <p>213</p>
-            </div>
+            <!-- <div class="content clearfix" :class="(n == 0 || n == 6) ? 'show' : ''"  v-for="(list,index) in contents" :key="index">
+              <div v-for="(abc,index) in list" :key="abc">
+                <p>{{abc[index]}}</p>
+              </div>
+            </div> -->
         </div>
       </div>
     </header>
@@ -50,12 +52,14 @@ export default {
       bool:'',
       langString:'',
       imgSrc: require ('../assets/chinese.png'),
+      tabsImg:require(['../assets/safe.png','../assets/train.png','../assets/pla.png','../assets/cusSup.png','../assets/zr.png']),
       tabPosition: 'top',
       classNum: 0,
       classItem:-1,
       curId:-1,
       title:[],
       contents:[],
+      // rote:'',
       n:0,
     }
   },
@@ -66,10 +70,25 @@ export default {
       
   },
   mounted(){
-    // let items = $t('m.tabs');
-    // console.log($t('m.tabs'));
+    this.rote();
+  },
+  components:{
+    
   },
   methods:{
+    rote(){
+      let items = this.$t('tabs');
+      let arr = [];
+      this.contents = arr;
+      for(let i = 0;i < items.length;i++){
+        let lists = items[i].content;
+        arr[i] = []
+        for(let j = 0;j<lists.length;j++){
+          arr[i].push(lists[j]);
+        }
+      }
+      console.log(this.contents)
+    },
     tap(i){
         this.n = i
     },
