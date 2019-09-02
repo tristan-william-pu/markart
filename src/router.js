@@ -19,7 +19,7 @@ export default new Router({
     }, {
       path: '/about',
       name: 'about',
-      component: importModule('about/safety')
+      component: importModule('about/about')
     }, {
       // 交易平台
       path: '/platform',
