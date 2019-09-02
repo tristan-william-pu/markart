@@ -97,7 +97,7 @@ export default {
     },
     changeLangEvent() {
       console.log(1)
-      this.lang = 'en-US';
+      this.lang = 'en';
       this.$i18n.locale = this.lang; // 关键语句
       this.bool = false;
       this.imgSrc = require('../assets/country.png');
@@ -105,7 +105,7 @@ export default {
     },
     changeChinese(){
       console.log(2)
-      this.lang = 'zh-CN';
+      this.lang = 'cn';
       this.$i18n.locale = this.lang; // 关键语句
       this.bool = false;
       this.imgSrc = require('../assets/chinese.png');

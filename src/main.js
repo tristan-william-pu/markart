@@ -7,11 +7,12 @@ import store from './store'
 import VueI18n from 'vue-i18n'
 import './plugins/element.js'
 import Header from '@/views/header.vue';
+import Footer from '@/views/footer.vue';
 Vue.use(VueI18n);
 
 Vue.use({
   install: () => {
-    Vue.component(Header.name, Header)
+    Vue.component(Header.name, Header ,Footer)
   }
 });
 
