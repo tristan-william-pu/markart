@@ -2,13 +2,14 @@
  * @ Author: Diskfan
  * @ Create Time: 2019-09-02 13:55:38
  * @ Modified by: Your name
- * @ Modified time: 2019-09-02 20:42:19
+ * @ Modified time: 2019-09-02 22:07:31
  * @ Description: 外汇
  -->
 
 
 <template>
   <div class="foreign">
+    <Header />
     <div class="title">外汇</div>
     <div class="exp">
       <div class="leftimg">
@@ -74,6 +75,7 @@
       </div>
     </div>
     <Regist />
+    <Footer />
   </div>
 </template>
 <script>
@@ -82,7 +84,7 @@ export default {
   comments: { Regist }
 };
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 @import "@/styles/mixin.scss";
 .foreign {
   margin: 0 auto;

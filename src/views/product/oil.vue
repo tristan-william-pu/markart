@@ -2,13 +2,14 @@
  * @ Author: Diskfan
  * @ Create Time: 2019-09-02 13:55:38
  * @ Modified by: Your name
- * @ Modified time: 2019-09-02 20:54:47
+ * @ Modified time: 2019-09-02 22:07:10
  * @ Description: 外汇
  -->
 
 
 <template>
   <div class="oil">
+    <Header />
     <div class="title">原油</div>
     <div class="exp">
       <div class="leftimg">
@@ -53,6 +54,7 @@
       </div>
     </div>
     <Regist />
+    <Footer />
   </div>
 </template>
 <script>
@@ -61,7 +63,7 @@ export default {
   components: { Regist }
 };
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 @import "@/styles/mixin.scss";
 .oil {
   margin: 0 auto;

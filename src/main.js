@@ -12,10 +12,14 @@ Vue.use(VueI18n);
 
 Vue.use({
   install: () => {
-    Vue.component(Header.name, Header ,Footer)
+    Vue.component(Header.name, Header)
   }
 });
-
+Vue.use({
+  install: () => {
+    Vue.component(Footer.name, Footer)
+  }
+});
 Vue.config.productionTip = false
 
 const messages = {

@@ -26,7 +26,6 @@ export default {};
   transition: 0.5s;
   box-sizing: border-box;
   padding-top: 20px;
-  margin-bottom: 20px;
   .wrap {
     width: 1200px;
     display: block;
