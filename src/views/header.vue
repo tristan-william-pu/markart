@@ -26,24 +26,20 @@
          </div> -->
          <div class="nav clearfix">
             <ul :class="classNum == 0 ? 'tabs':'tabs-en'">
-                <!-- <li class="active">北京</li> -->
-                <li v-for="(item,index) of items" :key="index"
-                :class="{active:index == n}"
-                @mouseenter="tap(index)"
-                @mouseleave="tapLeave(index)"
+                <li v-for="(item,index) of $t('m.tabs')" :key="item.title"
+                  :class="{active:index == n}"
+                  @mouseenter="tap(index)"
+                  @mouseleave="tapLeave()"
                 >
-                {{$t(item.title)}}
-            </li>
+                  {{$t(item.title)}}
+                </li>
                
             </ul>
-            <div class="content clearfix" >
-                <p style="background:red">{{items[n].content | show}}</p>
+            <div class="content clearfix" :class="(n == 0 || n == 6) ? 'show' : ''">
+                <p>213</p>
             </div>
         </div>
       </div>
-      <!-- <div v-show="index !==0 && index!==6 &&index == curId"  v-for="(content, index) in contents" :key="index" style="color:red">
-          <span>{{content.content}}</span>
-      </div> -->
     </header>
   
   </div>
@@ -61,42 +57,27 @@ export default {
       classNum: 0,
       classItem:-1,
       curId:-1,
-      items:[
-                {title:'m.header.home',content:''},
-                {title:'m.header.about',content:'这里是上海'},
-                {title:'m.header.product',content:'这里是广州'},
-                {title:'m.header.platform',content:'这里是深圳'},
-                {title:'m.header.support',content:'这里是武汉'},
-                {title:'m.header.partner',content:'这里是武汉'},
-                {title:'m.header.contact',content:''},
-      ],
+      title:[],
+      contents:[],
       n:0,
-      // contents: [
-     
-      // ],
-      lists:["m.header.home","m.header.about","m.header.product","m.header.platform","m.header.support","m.header.partner",
-      "m.header.contact"],
     }
   },
-  filters:{
-    // show(value){
-    //   // if(this.value = ){} 
-    // },
-  },
   computed:{
-
+    objec(){
+      return 1234;
+    },
+      
   },
   mounted(){
-    // for(let i = 0;i < this.contents.length ; i++){
-    //   this.contents[i] = $t("m.header.tabs"+[i]);
-    // }
+    // let items = $t('m.tabs');
+    // console.log($t('m.tabs'));
   },
   methods:{
     tap(i){
         this.n = i
     },
     tapLeave(){
-        
+      this.n = 0;
     },
     changeLangEvent() {
       console.log(1)
@@ -216,4 +197,7 @@ export default {
         background: #6265fe;
     }
     .tabs li:hover:before , .tabs-en li:hover:before{transform: scale3d(1, 1, 1);}
+    .show{
+      display:none;
+    }
 </style>
