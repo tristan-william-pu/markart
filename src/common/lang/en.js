@@ -16,9 +16,12 @@ export const m = {
     contact:'Contact Us',//联系我们
   },
   tabs:[
-    [],
-    ['Funds Safety'],
-    ['Foreign Exchange','Precious Metal','Account Types','CFD','index','Digital Currency'],
-    [],
+    {title:'home',content:''},
+    {title:'about us',content:'m.tabs.home'},
+    {title:'Trading Product',content:'m.tabs.about'},
+    {title:'Trading Platform',content:'这里是深圳'},
+    {title:'Customer Support',content:'这里是武汉'},
+    {title:'Partner',content:'这里是武汉'},
+    {title:'Contact Us',content:''},
   ],
 }
