@@ -72,7 +72,9 @@
     <div class="partleft">
       <p class="art">{{$t('home.more')}}<br>{{$t('home.mainstream')}}<span class="pupcolor">{{$t('home.financial')}}</span>{{$t('home.chooese')}}</p>
       <div class="btnbox cn">
-		  <div class="btn"><a href="/simulationRegister/simulationRegister" >{{$t('home.simulation')}}</a></div>
+        <div class="btn">
+          <a href="/simulationRegister/simulationRegister" >{{$t('home.simulation')}}</a>
+        </div>
         <div class="btn active"><a href="/register/register">{{$t('home.tureth')}}</a></div>
       </div>
     </div>
@@ -80,9 +82,9 @@
       <div class="gupiao">
       </div>
     </div>
-    <img class="mobpad" src="@/../public/padimg.jpg" alt="">
+    <img class="mobpad" :src='`${publicPath}/padimg.jpg`' alt="">
   </div>
-  <img class="imgnav" src="@/../public/imgnav.jpg" alt="">
+  <img class="imgnav"  :src='`${publicPath}/imgnav.jpg`' alt="">
 
     <Footer />
   </div>
@@ -91,6 +93,11 @@
 import Header from '../header.vue';
 import Footer from '../footer.vue';
 export default {
+  data(){
+    return {
+      publicPath: process.env.BASE_URL,
+    }
+  },
   components: { Header , Footer}
 }
 </script>
