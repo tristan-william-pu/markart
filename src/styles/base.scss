@@ -21,7 +21,11 @@ input,img{
     outline-style: none;
     vertical-align: bottom; 
 }
- 
+// button
+button{
+    cursor: pointer;
+    outline: none;
+}
 /*行内元素*/
 a,a:active,a:visited{
     /*下划线和颜色*/

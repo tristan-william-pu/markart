@@ -9,8 +9,15 @@
 <template>
   <div>
     <Header />
+    <!-- 视频 -->
+    <div class="videowarp">
+      <div class="videomask"></div>
+      <video class="video" id="video" autoplay loop width="100%" muted poster>
+        <source src="../../../public/images/video/gp.mp4" type="video/mp4" />
+      </video>
+    </div>
     <!-- 轮播图 -->
-    <Banner :banner="banner"></Banner>
+    <Banner :banner="banner"  style="z-index:1000;"></Banner>
     <!-- 主体 -->
     <div class="warp whycpt clearfix cn">
       <div class="top clearfix">
@@ -59,7 +66,7 @@
     </div>
 
     <!-- 交易市场 -->
-  <div class="warp gupao clearfix cn animated jiaoyi">
+  <div class="warp gupao clearfix cn emerging">
     <div class="top clearfix">
       <div class="headertitle">
         {{$t('home.want')}}
@@ -87,7 +94,7 @@
   <img class="imgnav"  :src='`${publicPath}/images/imgnav.jpg`' alt="">
 
       <!-- 交易平台 -->
-      <div class="warp trading clearfix animated jiaoyi">
+      <div class="warp trading clearfix emerging">
         <div class="top clearfix">
           <div class="headertitle">
             {{$t('home.station')}}
@@ -133,7 +140,7 @@
             </div>
 
           </div> -->
-          <div>
+          <div style="text-align:left;">
             <svg :width='width' :height='height' @mousemove='listener($event)'>
                 <a :href="tag.href" v-for='(tag,index) in tags' :key="index">
                     <text :x='tag.x' :y='tag.y' :font-size='20 * (600/(600-tag.z))' :fill-opacity='((400+tag.z)/600)' v-html="tag.text"></text>
@@ -144,7 +151,7 @@
         </div>
       </div>
     <!-- 邀请 -->
-      <div class="navbanner animated jiaoyi">
+      <div class="navbanner emerging">
         <div class="title"><span class="blod">{{$t('home.friend')}}</span> <br>{{$t('home.invit')}}<span class="yel">{{$t('home.makeMoney')}}</span></div>
         <div class="grid btn pupradio2" id="join">
           <div class="grid__item theme-1">
@@ -195,7 +202,7 @@
     </div> -->
 
     <!-- 注册流程 -->
-    <div class="step warp clearfix animated">
+    <div class="step warp clearfix emerging">
       <div class="top clearfix">
         <div class="headertitle">
         仅需4步即可在CPT Markets交易
@@ -240,7 +247,7 @@
       </div>
     </div>
 
-    <div class="payway warp clearfix animated">
+    <div class="payway warp clearfix emerging">
       <div class="top clearfix">
         <div class="headertitle">
         我们接受
@@ -284,7 +291,17 @@ export default {
   data(){
     return {
       publicPath: process.env.BASE_URL,
-      banner:[{
+      banner:[
+        {
+          "img": require('@/assets/bannerfont_03.png')
+        },
+        {
+          "img": require('../../../public/images/banner.jpg')
+        },
+        {
+          "img": require('../../../public/images/banner.jpg')
+        },
+        {
           "img": require('../../../public/images/banner.jpg')
         },
         {
@@ -365,6 +382,9 @@ export default {
 }
 </script>
 <style lang="scss">
+.videowarp{width: 100%;height:auto;position: absolute;top: 155px;left: 0px;z-index: 8;}
+.videomask{width:100%;height: 100%;position: absolute;background: rgba(0, 0, 0, 0.8);z-index: 10}
+.video{width: 100%;vertical-align: middle;}
   .whycpt{margin-top: 80px !important;position: relative}
   .whycpt .top{margin-bottom: 70px}
   .partleft{float: left;width: 710px}
@@ -488,17 +508,17 @@ export default {
 .payway  .paywaybox{width: 100%;margin-top: 50px}
 .payway  .paywaybox ul li{width: 16.6%;float: left;text-align: center}
 .payway  .paywaybox ul li img{height:40px;display: inline-block}
-.emerging {
-  font-size: 75px;
-  color: #000;
-  line-height: 223px;
-  font-family: montserratse;
-  width: 100%;
-  text-align: center;
-  margin-top: 10px;
-  opacity: 0;
-  transform: translate(0, 50px);
-  animation: slide-up 1s cubic-bezier(0.215, 0.61, 0.355, 1);
-  animation-fill-mode: forwards;
-}
+// .emerging {
+//   font-size: 75px;
+//   color: #000;
+//   line-height: 223px;
+//   font-family: montserratse;
+//   width: 100%;
+//   text-align: center;
+//   margin-top: 10px;
+//   opacity: 0;
+//   transform: translate(0, 50px);
+//   animation: slide-up 1s cubic-bezier(0.215, 0.61, 0.355, 1);
+//   animation-fill-mode: forwards;
+// }
 </style>
