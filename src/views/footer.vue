@@ -108,6 +108,7 @@ export default {
     height: auto;
     width: 100%;
     background: #282828;
+    margin-top:50px;
     padding-bottom: 50px;
   }
   .footernav {
