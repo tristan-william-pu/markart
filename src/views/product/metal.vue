@@ -50,7 +50,7 @@
           </p>
           <div class="clear"></div>
           <a href="javascript:void(0)">
-            <img class="arrowicon" src="./../../../public/images/metalarow.png" alt />
+            <img class="arrowicon" src="@/assets/metalarow.png" alt />
           </a>
         </div>
       </div>
@@ -302,29 +302,6 @@ export default {
     -webkit-transform: none;
     -ms-transform: none;
     transform: none;
-  }
-}
-@keyframes bounceInUps {
-  0%,
-  100%,
-  60%,
-  75%,
-  90% {
-    -webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-  }
-
-  0% {
-    opacity: 0;
-    -webkit-transform: translate3d(0, 50px, 0);
-    -ms-transform: translate3d(0, 50px, 0);
-    transform: translate3d(0, 50px, 0);
-  }
-
-  100% {
-    -webkit-transform: translate3d(0, 0, 0);
-    -ms-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
   }
 }
 </style>

@@ -2,7 +2,7 @@
  * @ Author: Diskfan
  * @ Create Time: 2019-09-02 12:42:19
  * @ Modified by: Your name
- * @ Modified time: 2019-09-02 16:33:12
+ * @ Modified time: 2019-09-03 07:00:47
  * @ Description:关于
  -->
 
@@ -45,11 +45,11 @@
         </div>
         <div class="connect">
           <div class="">
-            <img src="./../../../public/images/mobile_03.png" alt="">
+            <img src="@/assets/mobile_03.png" alt="">
             400 1001 103
           </div>
           <div class="">
-            <img src="./../../../public/images/mobile_05.png" alt="">
+            <img src="@/assets/mobile_05.png" alt="">
             cs@cptmarkets.com
           </div>
         </div>

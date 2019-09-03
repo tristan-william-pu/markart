@@ -2,7 +2,7 @@
  * @ Author: Diskfan
  * @ Create Time: 2019-09-02 13:55:38
  * @ Modified by: Your name
- * @ Modified time: 2019-09-02 22:06:22
+ * @ Modified time: 2019-09-03 07:51:39
  * @ Description: 交易数字
  -->
 
@@ -32,26 +32,26 @@
       <div class="currencyimg clearfix">
         <ul>
           <li>
-            <img src="./../../../public/images/Currency13.jpg" alt />
+            <img src="@/assets/Currency13.jpg" alt />
             <p>支付自由</p>
           </li>
           <li>
-            <img src="./../../../public/images/Currency10.jpg" alt />
+            <img src="@/assets/Currency10.jpg" alt />
             <p>流通性强</p>
           </li>
           <li>
-            <img src="./../../../public/images/Currency07.jpg" alt />
+            <img src="@/assets/Currency07.jpg" alt />
             <p>
               交易费用低
               <br />
             </p>
           </li>
           <li>
-            <img src="./../../../public/images/Currency22.png" alt />
+            <img src="@/assets/Currency22.png" alt />
             <p>安全可控</p>
           </li>
           <li>
-            <img src="./../../../public/images/Currency19.jpg" alt />
+            <img src="@/assets/Currency19.jpg" alt />
             <p>透明中立</p>
           </li>
         </ul>
@@ -204,83 +204,6 @@ export default {
         }
       }
     }
-  }
-}
-@keyframes slide-up {
-  from {
-    transform: translate(0, 50px);
-    opacity: 0;
-  }
-  to {
-    transform: translate(0, 0px);
-    opacity: 1;
-  }
-}
-@keyframes slide-left {
-  0% {
-    transform: translate(40px, 0);
-    opacity: 0;
-  }
-  25% {
-    // transform: translate(20px, 0);
-    opacity: 0.8;
-  }
-  100% {
-    transform: translate(-50px, 0);
-    opacity: 1;
-  }
-}
-@keyframes slide-left-text {
-  0% {
-    transform: translate(40px, 0);
-    opacity: 0;
-  }
-  25% {
-    // transform: translate(20px, 0);
-    opacity: 0.8;
-  }
-  100% {
-    transform: translate(0px, 0);
-    opacity: 1;
-  }
-}
-@keyframes slide-right {
-  0% {
-    transform: translate(-40px, 0);
-    opacity: 0;
-  }
-  25% {
-    // transform: translate(20px, 0);
-    opacity: 0.8;
-  }
-  100% {
-    transform: translate(0px, 0);
-    opacity: 1;
-  }
-}
-@keyframes animtrans {
-  from {
-    transform: rotateZ(360deg);
-  }
-  to {
-    transform: rotateZ(0deg);
-  }
-}
-@keyframes animtran {
-  from {
-    transform: rotateZ(0deg);
-  }
-  to {
-    transform: rotateZ(360deg);
-  }
-}
-
-@keyframes animtrans {
-  from {
-    transform: rotateZ(360deg);
-  }
-  to {
-    transform: rotateZ(0deg);
   }
 }
 </style>

@@ -2,7 +2,7 @@
  * @ Author: Diskfan
  * @ Create Time: 2019-09-02 13:55:38
  * @ Modified by: Your name
- * @ Modified time: 2019-09-02 22:10:09
+ * @ Modified time: 2019-09-03 07:51:22
  * @ Description: 差价合约
  -->
 
@@ -224,83 +224,6 @@ export default {
         color: #5b0eb2;
       }
     }
-  }
-}
-@keyframes slide-up {
-  from {
-    transform: translate(0, 50px);
-    opacity: 0;
-  }
-  to {
-    transform: translate(0, 0px);
-    opacity: 1;
-  }
-}
-@keyframes slide-left {
-  0% {
-    transform: translate(40px, 0);
-    opacity: 0;
-  }
-  25% {
-    // transform: translate(20px, 0);
-    opacity: 0.8;
-  }
-  100% {
-    transform: translate(-50px, 0);
-    opacity: 1;
-  }
-}
-@keyframes slide-left-text {
-  0% {
-    transform: translate(40px, 0);
-    opacity: 0;
-  }
-  25% {
-    // transform: translate(20px, 0);
-    opacity: 0.8;
-  }
-  100% {
-    transform: translate(0px, 0);
-    opacity: 1;
-  }
-}
-@keyframes slide-right {
-  0% {
-    transform: translate(-40px, 0);
-    opacity: 0;
-  }
-  25% {
-    // transform: translate(20px, 0);
-    opacity: 0.8;
-  }
-  100% {
-    transform: translate(0px, 0);
-    opacity: 1;
-  }
-}
-@keyframes animtrans {
-  from {
-    transform: rotateZ(360deg);
-  }
-  to {
-    transform: rotateZ(0deg);
-  }
-}
-@keyframes animtran {
-  from {
-    transform: rotateZ(0deg);
-  }
-  to {
-    transform: rotateZ(360deg);
-  }
-}
-
-@keyframes animtrans {
-  from {
-    transform: rotateZ(360deg);
-  }
-  to {
-    transform: rotateZ(0deg);
   }
 }
 </style>
