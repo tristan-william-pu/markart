@@ -19,7 +19,7 @@ export default new Router({
     }, {
       path: '/about',
       name: 'about',
-      component: importModule('about/about')
+      component: importModule('about/safety')
     }, {
       // 交易平台
       path: '/platform',
@@ -52,7 +52,7 @@ export default new Router({
     }, {
       path: '/product',
       name: 'product',
-      redirect: '/foreign'
+      component: importModule('product/product')
     }, {
       // 外汇
       path: '/foreign',

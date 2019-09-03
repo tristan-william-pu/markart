@@ -2,7 +2,7 @@
  * @ Author: Diskfan
  * @ Create Time: 2019-09-02 13:55:38
  * @ Modified by: Your name
- * @ Modified time: 2019-09-02 22:07:10
+ * @ Modified time: 2019-09-03 07:52:03
  * @ Description: 外汇
  -->
 
@@ -33,19 +33,19 @@
         <div class="leftart">
           <ul>
             <li class="clearfix">
-              <img src="./../../../public/images/Oil10.png" alt />
+              <img src="@/assets/Oil10.png" alt />
               <span>采用T+0交易规则，交易灵活</span>
             </li>
             <li class="clearfix">
-              <img src="./../../../public/images/Oil10.png" alt />
+              <img src="@/assets/Oil10.png" alt />
               <span>点差低，交易成本低</span>
             </li>
             <li class="clearfix">
-              <img src="./../../../public/images/Oil10.png" alt />
+              <img src="@/assets/Oil10.png" alt />
               <span>杠杆交易提高资金利用率</span>
             </li>
             <li class="clearfix">
-              <img src="./../../../public/images/Oil10.png" alt />
+              <img src="@/assets/Oil10.png" alt />
               <span>供需影响价格，容易把握行情</span>
             </li>
           </ul>
@@ -204,83 +204,6 @@ export default {
           margin-right: 50px;
         }
     }
-  }
-}
-@keyframes slide-up {
-  from {
-    transform: translate(0, 50px);
-    opacity: 0;
-  }
-  to {
-    transform: translate(0, 0px);
-    opacity: 1;
-  }
-}
-@keyframes slide-left {
-  0% {
-    transform: translate(40px, 0);
-    opacity: 0;
-  }
-  25% {
-    // transform: translate(20px, 0);
-    opacity: 0.8;
-  }
-  100% {
-    transform: translate(-50px, 0);
-    opacity: 1;
-  }
-}
-@keyframes slide-left-text {
-  0% {
-    transform: translate(40px, 0);
-    opacity: 0;
-  }
-  25% {
-    // transform: translate(20px, 0);
-    opacity: 0.8;
-  }
-  100% {
-    transform: translate(0px, 0);
-    opacity: 1;
-  }
-}
-@keyframes slide-right {
-  0% {
-    transform: translate(-40px, 0);
-    opacity: 0;
-  }
-  25% {
-    // transform: translate(20px, 0);
-    opacity: 0.8;
-  }
-  100% {
-    transform: translate(0px, 0);
-    opacity: 1;
-  }
-}
-@keyframes animtrans {
-  from {
-    transform: rotateZ(360deg);
-  }
-  to {
-    transform: rotateZ(0deg);
-  }
-}
-@keyframes animtran {
-  from {
-    transform: rotateZ(0deg);
-  }
-  to {
-    transform: rotateZ(360deg);
-  }
-}
-
-@keyframes animtrans {
-  from {
-    transform: rotateZ(360deg);
-  }
-  to {
-    transform: rotateZ(0deg);
   }
 }
 </style>

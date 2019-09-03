@@ -30,7 +30,8 @@ const messages = {
 const i18n = new VueI18n({
   locale: 'cn',
   fallbackLocale: 'en',
-  messages
+  messages,
+  silentTranslationWarn: true
 })
 // const i18n = new VueI18n({
 //   locale: 'zh-CN',    // 语言标识

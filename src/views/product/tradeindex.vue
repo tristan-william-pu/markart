@@ -2,7 +2,7 @@
  * @ Author: Diskfan
  * @ Create Time: 2019-09-02 13:55:38
  * @ Modified by: Your name
- * @ Modified time: 2019-09-02 22:07:04
+ * @ Modified time: 2019-09-03 07:52:14
  * @ Description: 指数
  -->
 
@@ -41,14 +41,14 @@
         <div class="indexicon">
           <ul>
             <li>
-              <img src="./../../../public/images/index13.jpg" alt />
+              <img src="@/assets/index13.jpg" alt />
               <p>
                 有效的
                 <br />风险控制
               </p>
             </li>
             <li>
-              <img src="./../../../public/images/index17.jpg" alt />
+              <img src="@/assets/index17.jpg" alt />
               <p>
                 极具竞争力的
                 <br />点差
@@ -62,14 +62,14 @@
         <div class="indexicon">
           <ul>
             <li>
-              <img src="./../../../public/images/index10.jpg" alt />
+              <img src="@/assets/index10.jpg" alt />
               <p>
                 保证金低
                 <br />成本低
               </p>
             </li>
             <li>
-              <img src="./../../../public/images/index19.png" alt />
+              <img src="@/assets/index19.png" alt />
               <p>
                 交易品种多样
                 <br />杠杆灵活
@@ -240,83 +240,6 @@ export default {
       margin: 0px auto;
       float: left;
     }
-  }
-}
-@keyframes slide-up {
-  from {
-    transform: translate(0, 50px);
-    opacity: 0;
-  }
-  to {
-    transform: translate(0, 0px);
-    opacity: 1;
-  }
-}
-@keyframes slide-left {
-  0% {
-    transform: translate(40px, 0);
-    opacity: 0;
-  }
-  25% {
-    // transform: translate(20px, 0);
-    opacity: 0.8;
-  }
-  100% {
-    transform: translate(-50px, 0);
-    opacity: 1;
-  }
-}
-@keyframes slide-left-text {
-  0% {
-    transform: translate(40px, 0);
-    opacity: 0;
-  }
-  25% {
-    // transform: translate(20px, 0);
-    opacity: 0.8;
-  }
-  100% {
-    transform: translate(0px, 0);
-    opacity: 1;
-  }
-}
-@keyframes slide-right {
-  0% {
-    transform: translate(-40px, 0);
-    opacity: 0;
-  }
-  25% {
-    // transform: translate(20px, 0);
-    opacity: 0.8;
-  }
-  100% {
-    transform: translate(0px, 0);
-    opacity: 1;
-  }
-}
-@keyframes animtrans {
-  from {
-    transform: rotateZ(360deg);
-  }
-  to {
-    transform: rotateZ(0deg);
-  }
-}
-@keyframes animtran {
-  from {
-    transform: rotateZ(0deg);
-  }
-  to {
-    transform: rotateZ(360deg);
-  }
-}
-
-@keyframes animtrans {
-  from {
-    transform: rotateZ(360deg);
-  }
-  to {
-    transform: rotateZ(0deg);
   }
 }
 </style>
