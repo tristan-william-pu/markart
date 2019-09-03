@@ -1,11 +1,11 @@
 
 <template>
-	<div id="banner" >
+	<div id="banner" class="sildewarp">
 		<div class="swiper-container"  >
 			<div class="swiper-wrapper" >
  
 				<div class="swiper-slide" v-for="(item,index) in banner" :key="index">
-                    <img   :src="item.img" />
+                    <img class="" :src="item.img" />
                 </div>
 				
 			</div>
@@ -65,4 +65,15 @@
 
 <style lang="scss" scoped>
 
+.swiper-container {
+  width: 100%;
+  height:100%;
+}
+.swiper-slide{
+  text-align: center;
+  color: #fff
+}
+.swiper-slide img {
+    width: 100%;
+}
 </style>

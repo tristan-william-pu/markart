@@ -59,7 +59,7 @@
     </div>
 
     <!-- 交易市场 -->
-  <div class="warp gupao clearfix cn animated">
+  <div class="warp gupao clearfix cn animated jiaoyi">
     <div class="top clearfix">
       <div class="headertitle">
         {{$t('home.want')}}
@@ -87,7 +87,7 @@
   <img class="imgnav"  :src='`${publicPath}/images/imgnav.jpg`' alt="">
 
       <!-- 交易平台 -->
-      <div class="warp trading clearfix animated">
+      <div class="warp trading clearfix animated jiaoyi">
         <div class="top clearfix">
           <div class="headertitle">
             {{$t('home.station')}}
@@ -136,8 +136,7 @@
           <div>
             <svg :width='width' :height='height' @mousemove='listener($event)'>
                 <a :href="tag.href" v-for='(tag,index) in tags' :key="index">
-                    <text :x='tag.x' :y='tag.y' :font-size='20 * (600/(600-tag.z))' :fill-opacity='((400+tag.z)/600)'>{{tag.text}}</text>
-                    
+                    <text :x='tag.x' :y='tag.y' :font-size='20 * (600/(600-tag.z))' :fill-opacity='((400+tag.z)/600)' v-html="tag.text"></text>
                 </a>
             </svg>
         
@@ -145,7 +144,7 @@
         </div>
       </div>
     <!-- 邀请 -->
-      <div class="navbanner animated">
+      <div class="navbanner animated jiaoyi">
         <div class="title"><span class="blod">{{$t('home.friend')}}</span> <br>{{$t('home.invit')}}<span class="yel">{{$t('home.makeMoney')}}</span></div>
         <div class="grid btn pupradio2" id="join">
           <div class="grid__item theme-1">
@@ -301,6 +300,7 @@ export default {
       speedX:Math.PI/360,
       speedY:Math.PI/360,
       tags: [],
+      img:require('@/assets/icon5.png'),
     }
   },
   components: { Header , Footer , Banner},
@@ -319,7 +319,8 @@ export default {
           let k = -1 + (2 * (i + 1) - 1) / this.tagsNum;
           let a = Math.acos(k);
           let b = a * Math.sqrt(this.tagsNum * Math.PI);
-          tag.text = this.$t('home.AI');
+          // tag.text = `<span>${this.$t('home.AI')}</span>`
+          tag.text = "abc"
           tag.x = this.CX +  this.RADIUS * Math.sin(a) * Math.cos(b);
           tag.y = this.CY +  this.RADIUS * Math.sin(a) * Math.sin(b); 
           tag.z = this.RADIUS * Math.cos(a);
@@ -489,5 +490,17 @@ export default {
 .payway  .paywaybox{width: 100%;margin-top: 50px}
 .payway  .paywaybox ul li{width: 16.6%;float: left;text-align: center}
 .payway  .paywaybox ul li img{height:40px;display: inline-block}
-
+.emerging {
+  font-size: 75px;
+  color: #000;
+  line-height: 223px;
+  font-family: montserratse;
+  width: 100%;
+  text-align: center;
+  margin-top: 10px;
+  opacity: 0;
+  transform: translate(0, 50px);
+  animation: slide-up 1s cubic-bezier(0.215, 0.61, 0.355, 1);
+  animation-fill-mode: forwards;
+}
 </style>
