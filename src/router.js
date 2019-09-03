@@ -118,7 +118,7 @@ export default new Router({
     }, {
       path: '/ib',
       name: 'ib',
-      component: importModule('partnets/ib')
+      component: importModule('partnerts/ib')
     }, {
       path: '/contantus',
       name: 'contantus',
