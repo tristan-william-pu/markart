@@ -5,6 +5,20 @@
   margin-bottom: 20px;
 }
 
+.emerging {
+  font-size: 75px;
+  color: #000;
+  line-height: 223px;
+  font-family: montserratse;
+  width: 100%;
+  text-align: center;
+  margin-top: 10px;
+  opacity: 0;
+  transform: translate(0, 50px);
+  animation: slide-up 1s cubic-bezier(0.215, 0.61, 0.355, 1);
+  animation-fill-mode: forwards;
+}
+
 .animated {
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
