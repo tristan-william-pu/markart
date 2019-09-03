@@ -5,7 +5,6 @@ import './styles/index.scss'
 import router from './router'
 import store from './store'
 import VueI18n from 'vue-i18n'
-import './plugins/element.js'
 import Header from '@/views/header.vue';
 import Footer from '@/views/footer.vue';
 Vue.use(VueI18n);

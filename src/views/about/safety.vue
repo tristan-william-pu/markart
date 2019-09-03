@@ -32,8 +32,8 @@
           <span class="content" v-html="mapList[active].contents.join('<br \/>')"></span>
         </div>
         <div class="map">
-          <img class="img" src="./../../../public/images/maps.png" alt="">
-          <img class="pointe" src="./../../../public/images/local_04.png" alt="">
+          <img class="img" src="images/maps.png" alt="">
+          <img class="pointe" src="images/local_04.png" alt="">
         </div>
       </div>
       <div class="service">

@@ -2,7 +2,7 @@
  * @ Author: Diskfan
  * @ Create Time: 2019-09-02 13:55:38
  * @ Modified by: Your name
- * @ Modified time: 2019-09-03 07:52:03
+ * @ Modified time: 2019-09-03 09:40:55
  * @ Description: 外汇
  -->
 
@@ -13,7 +13,7 @@
     <div class="title">原油</div>
     <div class="exp">
       <div class="leftimg">
-        <img src="./../../../public/images/Oil03.jpg" alt />
+        <img src="images/Oil03.jpg" alt />
       </div>
       <div class="content">
         <div class="space"></div>
@@ -50,7 +50,7 @@
             </li>
           </ul>
         </div>
-        <img class="rightimg" src="./../../../public/images/Oil07.jpg" alt />
+        <img class="rightimg" src="images/Oil07.jpg" alt />
       </div>
     </div>
     <Regist />
@@ -162,14 +162,7 @@ export default {
       text-align: center;
     }
     .clearfix {
-      &:after {
-        content: ".";
-        display: block;
-        clear: both;
-        visibility: hidden;
-        line-height: 0;
-        height: 0;
-      }
+      @include clearfix();
       .leftart {
         width: 600px;
         float: left;

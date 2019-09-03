@@ -13,7 +13,7 @@
     <div class="title">指数</div>
     <div class="exp">
       <div class="leftimg">
-        <img src="./../../../public/images/index03.jpg" alt />
+        <img src="images/index03.jpg" alt />
       </div>
       <div class="content">
         <div class="space"></div>
@@ -57,7 +57,7 @@
           </ul>
         </div>
       </div>
-      <img class="imgcen" src="./../../../public/images/index07.jpg" alt />
+      <img class="imgcen" src="images/index07.jpg" alt />
       <div class="part">
         <div class="indexicon">
           <ul>

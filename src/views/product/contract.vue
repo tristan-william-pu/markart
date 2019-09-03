@@ -2,7 +2,7 @@
  * @ Author: Diskfan
  * @ Create Time: 2019-09-02 13:55:38
  * @ Modified by: Your name
- * @ Modified time: 2019-09-03 07:51:22
+ * @ Modified time: 2019-09-03 09:40:02
  * @ Description: 差价合约
  -->
 
@@ -13,7 +13,7 @@
     <div class="title">差价合约(CFD)</div>
     <div class="exp">
       <div class="leftimg">
-        <img src="./../../../public/images/CFD03.jpg" alt />
+        <img src="images/CFD03.jpg" alt />
       </div>
       <div class="content">
         <div class="space"></div>
@@ -40,7 +40,7 @@
           <br />
         </div>
       </div>
-      <img class="imgright" src="./../../../public/images/CFD07.png" alt />
+      <img class="imgright" src="images/CFD07.png" alt />
     </div>
     <div class="how">
       <div class="tit">如何操作CFD交易？</div>
@@ -169,14 +169,7 @@ export default {
     margin: 0 auto;
     margin-top: 577px;
     margin-bottom: 20px;
-    &:after {
-      content: ".";
-      display: block;
-      clear: both;
-      visibility: hidden;
-      line-height: 0;
-      height: 0;
-    }
+    @include clearfix();
     .artleft {
       width: 600px;
       float: left;

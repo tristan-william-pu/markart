@@ -9,3 +9,19 @@
   align-items: $align;
   flex-direction: $direction;
 }
+@mixin animation($name: bounceInUps, $duration: 1s, $delay: 0ms) {
+  animation-name: $name;
+  animation-duration: $duration;
+  animation-fill-mode: both;
+  animation-delay: $delay;
+}
+@mixin clearfix() {
+  &:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+  }
+}

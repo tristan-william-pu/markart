@@ -13,7 +13,7 @@
     <div class="title">数字货币</div>
     <div class="exp">
       <div class="leftimg">
-        <img src="./../../../public/images/Currency03.jpg" alt />
+        <img src="images/Currency03.jpg" alt />
       </div>
       <div class="content">
         <div class="space"></div>

@@ -6,7 +6,7 @@
       <div class="leftimg">
         <img
           class="animated moneyimg fadeInLeft"
-          src="./../../../public/images/metal.jpg"
+          src="images/metal.jpg"
           alt
           style="opacity: 1;"
         />
@@ -34,7 +34,7 @@
         </div>
 
         <div class="melacenter">
-          <img class="imgcenter" src="./../../../public/images/metal7.jpg" alt />
+          <img class="imgcenter" src="images/metal7.jpg" alt />
         </div>
 
         <div class="melaright">
@@ -86,14 +86,7 @@ export default {
     margin: 0 auto;
     margin-top: -20px;
     margin-bottom: 20px;
-    &:after {
-      content: ".";
-      display: block;
-      clear: both;
-      visibility: hidden;
-      line-height: 0;
-      height: 0;
-    }
+    @include clearfix();
     .leftimg {
       margin-left: -100px;
       width: 500px;
@@ -252,13 +245,7 @@ export default {
           float: right;
         }
         .clear {
-          &:after {
-            content: "";
-            display: block;
-            height: 0;
-            clear: both;
-            visibility: hidden;
-          }
+          @include clearfix();
         }
         a {
           color: var(--color-link);
@@ -274,34 +261,5 @@ export default {
     }
   }
 }
-@keyframes fadeInLeft {
-  0% {
-    opacity: 0;
-    -webkit-transform: translate3d(-30px, 0, 0);
-    -ms-transform: translate3d(-30px, 0, 0);
-    transform: translate3d(-30px, 0, 0);
-  }
 
-  100% {
-    opacity: 1;
-    -webkit-transform: none;
-    -ms-transform: none;
-    transform: none;
-  }
-}
-@keyframes fadeInRight {
-  0% {
-    opacity: 0;
-    -webkit-transform: translate3d(140px 0, 0);
-    -ms-transform: translate3d(140px, 0, 0);
-    transform: translate3d(140px, 0, 0);
-  }
-
-  100% {
-    opacity: 1;
-    -webkit-transform: none;
-    -ms-transform: none;
-    transform: none;
-  }
-}
 </style>

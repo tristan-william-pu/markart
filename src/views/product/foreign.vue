@@ -2,7 +2,7 @@
  * @ Author: Diskfan
  * @ Create Time: 2019-09-02 13:55:38
  * @ Modified by: Your name
- * @ Modified time: 2019-09-03 07:51:47
+ * @ Modified time: 2019-09-03 09:10:33
  * @ Description: 外汇
  -->
 
@@ -13,7 +13,7 @@
     <div class="title">外汇</div>
     <div class="exp">
       <div class="leftimg">
-        <img src="./../../../public/images/echange3.jpg" alt />
+        <img src="images/echange3.jpg" alt />
       </div>
       <div class="content">
         <div class="space"></div>
@@ -68,7 +68,7 @@
             </div>
           </div>
           <div class="fenche">
-            <img class="fc" src="./../../../public/images/fenche.png" alt />
+            <img class="fc" src="images/fenche.png" alt />
             <img class="gan" src="@/assets/gan.jpg" alt />
           </div>
         </div>
@@ -197,7 +197,6 @@ export default {
           border-radius: 50%;
           position: relative;
           animation: animtran 40s linear infinite;
-          -webkit-animation: animtran 40s linear infinite;
           > span {
             width: auto;
             position: absolute;
