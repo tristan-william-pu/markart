@@ -16,8 +16,8 @@
           </el-dropdown>
          </div>
          <div class="rf">
-           <el-button class="hd-btn">{{$t('header.login')}}</el-button>
-           <el-button class="hd-btn">{{$t('header.register')}}</el-button>
+           <button class="hd-btn">{{$t('header.login')}}</button>
+           <button class="hd-btn">{{$t('header.register')}}</button>
          </div>
          <div class="nav clearfix">
             <ul :class="classNum == 0 ? 'tabs':'tabs-en'">
@@ -35,10 +35,10 @@
         </div>    
       </div>
       <div class="pullbox clearfix" 
-      :class="(n == 0 || n == 6) ? 'show' : ''"  
+      :class="( n === 0 || n === 6 ) ? '' : 'show'"  
       v-for="(list,index) in contents" 
       :key="index"  
-      v-show="index  == n"  
+      v-if=" index  == n "  
       @mouseenter="tap(index)"
       @mouseleave="tapLeave()">
             <img :src="tabsImg[index-1]" alt/>
@@ -69,23 +69,12 @@ export default {
       ],
       tabPosition: 'top',
       tabsList:['首页','关于我们','交易产品','交易平台','客户支持','合作伙伴','联系我们'],
-      tabsContent:[
-        // {},
-        // {a:'资金安全'},
-        // {a:'外汇',b:'贵金属',c:'原油'}
-        // ['资金安全',],
-        // ['外汇','贵金属','原油','差价合约','指数','数字货币',],
-        // ['MT4','交易杠杆','账户类型','Clearpro','MAM'],
-        // ['支付方式','金融学院',],
-        // ['白标合作','API接口','流动性供应商','介绍服务经纪商',],
-        // ['',]
-      ],
       classNum: 0,
       classItem:-1,
       curId:-1,
       title:[],
       contents:[],
-      n:0,
+      n:-1,
     }
   },
   computed:{
@@ -115,10 +104,10 @@ export default {
       console.log(this.contents)
     },
     tap(i){
-        this.n = i
+      this.n = i
     },
     tapLeave(){
-      this.n = 0;
+      this.n = -1;
     },
     changeLangEvent() {
       console.log(1)
@@ -174,6 +163,7 @@ p{
   border-radius: 20px;
   text-align: center;
   color: #5b0eb2;
+  background: #fff;
   float: left;
   margin-top: 25px;
   margin-right: 10px;
@@ -181,7 +171,7 @@ p{
   position: relative;
   overflow: hidden;
   font-size: 16px;
-  :hover{
+  &:hover{
     background:#5b0eb2;
     color:#fff;
   }
@@ -254,14 +244,13 @@ p{
 }
 .tabs li:hover:before , .tabs-en li:hover:before{transform: scale3d(1, 1, 1);}
 .show{
-  display:none;
+  display:block !important;
 }
 .homeTit li{
   float: left;
   text-align: left;
   width: 25%;
   margin-right: 0px;
-
   margin-bottom: 20px;
   // width: auto;
   display: block;
@@ -270,8 +259,28 @@ p{
   min-width: 100px;
   position: relative;
   cursor: pointer;
-
+  &::before{
+     content: '';
+    // height: 20px !important;
+    border-radius: 10px;
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: .3;
+    transform: scale3d(0,1,1);
+    transform-origin: 0% 50%;
+    transition: transform .5s;
+    transition-timing-function: cubic-bezier(.2,1,.3,1);
+    background: #6265fe;
+  }
+  &:hover:before{
+    transform: scale3d(1, 1, 1);
+  }
 }
+
    .pullbox {
     width: 100%;
     height: 250px;
@@ -280,7 +289,7 @@ p{
     background: #fff;
     z-index: 9;
     border-top: 1px solid #c0c0c0;
-    display: block;
+    display: none;
     padding-left: 30px;
     padding-right: 30px;
     box-sizing: border-box;

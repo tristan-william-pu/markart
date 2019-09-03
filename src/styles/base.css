@@ -21,6 +21,11 @@ input, img {
   vertical-align: bottom;
 }
 
+button {
+  cursor: pointer;
+  outline: none;
+}
+
 /*行内元素*/
 a, a:active, a:visited {
   /*下划线和颜色*/
