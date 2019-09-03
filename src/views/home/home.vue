@@ -2,7 +2,7 @@
  * @ Author: Diskfan
  * @ Create Time: 2019-09-02 12:42:19
  * @ Modified by: Your name
- * @ Modified time: 2019-09-02 13:38:15
+ * @ Modified time: 2019-09-03 14:19:10
  * @ Description:首页
  -->
 
@@ -279,8 +279,6 @@
   </div>
 </template>
 <script>
-import Header from '../header.vue';
-import Footer from '../footer.vue';
 import Banner from '@/components/swiper'
 export default {
   data(){
@@ -303,7 +301,7 @@ export default {
       img:require('@/assets/icon5.png'),
     }
   },
-  components: { Header , Footer , Banner},
+  components: { banner},
   computed:{
       CX(){
           return this.width/2;

@@ -46,6 +46,20 @@ export default new Router({
       name: 'clearpro',
       component: importModule('platform/clearpro')
     }, {
+      path: '/cpt',
+      name: 'cpt',
+      component: importModule('platform/cpt')
+    }, {
+      // CPT常见问题
+      path: '/cptanq',
+      name: 'cptanq',
+      component: importModule('platform/cptanq')
+    }, {
+      path: '/compare',
+      name: 'compare',
+      component: importModule('platform/compare')
+    }, {
+      // man
       path: '/man',
       name: 'man',
       component: importModule('platform/man')
@@ -118,7 +132,7 @@ export default new Router({
     }, {
       path: '/ib',
       name: 'ib',
-      component: importModule('partnets/ib')
+      component: importModule('partners/ib')
     }, {
       path: '/contantus',
       name: 'contantus',

@@ -2,7 +2,7 @@
  * @ Author: Diskfan
  * @ Create Time: 2019-09-02 12:42:19
  * @ Modified by: Your name
- * @ Modified time: 2019-09-02 22:18:12
+ * @ Modified time: 2019-09-03 15:31:54
  * @ Description:关于
  -->
 
@@ -108,7 +108,6 @@ export default {
     height: auto;
     width: 100%;
     background: #282828;
-    margin-top:50px;
     padding-bottom: 50px;
   }
   .footernav {
