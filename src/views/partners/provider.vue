@@ -27,20 +27,52 @@ export default {
 }
 </script>
 <style lang="scss">
-.provider .banner{width: 100%;height: 437px;position: absolute;overflow: hidden;position: relative;z-index: 1;}
-.provider .banner > .img{position: absolute;left: 50%;margin-left: -50%;height: 437px;background: url(../../../public/images/Provider_02.png);width: 100%;z-index: 10;}
-.provider .banerfont {
+.provider{
+  .banner{
+    width: 100%;
+    height: 437px;
+    position: absolute;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    > .img{
+      position: absolute;
+      left: 50%;
+      margin-left: -50%;
+      height: 437px;
+      background: url(../../../public/images/Provider_02.png);
+      width: 100%;
+      z-index: 10;
+    }
+  }
+  .banerfont {
     color: #fff;
     font-family: montserratse;
     font-size: 66px;
     width: 100%;
     text-align: center;
     line-height: 437px;
-}
-.provider .leftart {width: 850px;float: left;}
-.provider .rightimg{float: right;width: 300px;margin-right: 40px;margin-top: 20px}
-.provider .lastart{margin-top: 0px;margin-bottom: 200px}
-.provider .tit{margin-top: 150px;text-align: left}
-.provider .art{line-height: 35px}
-
+  }
+  .leftart {
+    width: 850px;
+    float: left;
+  }
+  .rightimg{
+    float: right;
+    width: 300px;
+    margin-right: 40px;
+    margin-top: 20px
+  }
+  .lastart{
+    margin-top: 0px;
+    margin-bottom: 200px
+  }
+  .tit{
+    margin-top: 150px;
+    text-align: left
+  }
+  .art{
+    line-height: 35px
+  }
+} 
 </style>
