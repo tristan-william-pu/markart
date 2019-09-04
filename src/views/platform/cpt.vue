@@ -2,7 +2,7 @@
  * @ Author: Diskfan
  * @ Create Time: 2019-09-03 15:38:04
  * @ Modified by: Your name
- * @ Modified time: 2019-09-03 19:01:10
+ * @ Modified time: 2019-09-03 23:04:45
  * @ Description: cpt cTrader
  -->
 
@@ -17,7 +17,7 @@
         </p>
       </div>
     </div>
-    <div class="nav" :class="{fixed: static}">
+    <div class="nav" :class="{fixed: posStatic}">
       <ul class="clear">
         <li :class="{active: active == 0}" @click="active=0">
           <a href="javascript:void(0)" @click="scrollTo('introduction')">CPT cTrader 介绍</a>
@@ -36,7 +36,7 @@
         </li>
       </ul>
     </div>
-    <div class="replace" v-show="static"></div>
+    <div class="replace" v-show="posStatic"></div>
     <div class="introduction">
       <div class="center">
         <h3>CPT cTrader 介绍</h3>
@@ -333,7 +333,7 @@ export default {
   data() {
     return {
       active: 0,
-      static: true,
+      posStatic: true,
       funActive: 0,
       getActive: 0
     };

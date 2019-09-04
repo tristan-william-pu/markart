@@ -25,3 +25,6 @@
     height: 0;
   }
 }
+@mixin transition($duration: 0.3s, $target: all) {
+	transition: $duration $target cubic-bezier(0.24, 0.75, 0.59, 1.01);
+}

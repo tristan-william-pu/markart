@@ -4,7 +4,7 @@
       <div class="warp">
          <img class="logo" src="@/assets/logo.png" alt="">
          <div class="rf register countryselect">
-           <el-dropdown placement="bottom-start" >
+           <!-- <el-dropdown placement="bottom-start" >
             <span>
               <img :src="imgSrc" class="flag" alt=""><i class="el-dropdown-link el-icon-arrow-down el-icon--right"></i>
             </span>
@@ -13,7 +13,7 @@
               <el-dropdown-item  @click.native="changeChinese()"><img class="flag" src="@/assets/chinese.png" alt=""><span>{{$t('language.zh')}}</span></el-dropdown-item>
               <el-dropdown-item  @click.native="changeLangEvent()"><img class="flag" src="@/assets/country.png" alt=""><span>{{$t('language.en')}}</span></el-dropdown-item>
             </el-dropdown-menu>
-          </el-dropdown>
+          </el-dropdown> -->
          </div>
          <div class="rf">
            <button class="hd-btn">{{$t('header.login')}}</button>
@@ -34,18 +34,20 @@
             </ul>
         </div>    
       </div>
-      <div class="pullbox clearfix" 
-      :class="( n === 0 || n === 6 ) ? '' : 'show'"  
-      v-for="(list,index) in contents" 
-      :key="index"  
-      v-if=" index  == n "  
-      @mouseenter="tap(index)"
-      @mouseleave="tapLeave()">
+      <template v-for="(list,index) in contents">
+        <div
+          class="pullbox clearfix" 
+          :class="( n === 0 || n === 6 ) ? '' : 'show'"  
+          :key="index"  
+          v-if=" index  == n "  
+          @mouseenter="tap(index)"
+          @mouseleave="tapLeave()">
             <img :src="tabsImg[index-1]" alt/>
             <ul class="homeTit">
               <li v-for="(abc,index) in list" :key="index">{{abc}}</li>
             </ul>
           </div>
+      </template>
     </header>
   
   </div>
