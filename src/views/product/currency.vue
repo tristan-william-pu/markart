@@ -2,14 +2,13 @@
  * @ Author: Diskfan
  * @ Create Time: 2019-09-02 13:55:38
  * @ Modified by: Your name
- * @ Modified time: 2019-09-03 07:51:39
+ * @ Modified time: 2019-09-04 10:05:51
  * @ Description: 交易数字
  -->
 
 
 <template>
   <div class="tradeindex">
-    <Header />
     <div class="title">数字货币</div>
     <div class="exp">
       <div class="leftimg">
@@ -58,7 +57,6 @@
       </div>
     </div>
     <Regist />
-    <Footer />
   </div>
 </template>
 <script>

@@ -2,13 +2,12 @@
  * @ Author: Diskfan
  * @ Create Time: 2019-09-03 14:52:02
  * @ Modified by: Your name
- * @ Modified time: 2019-09-03 15:33:23
+ * @ Modified time: 2019-09-04 10:06:36
  * @ Description: clearpro
  -->
 
 <template>
   <div class="clearpro">
-    <Header />
     <div class="banner">
       <div class="title">Clearpro</div>
       <div class="tip">为交易者创造最佳交易体验</div>
@@ -55,7 +54,6 @@
       <img class="partrightimg" src="@/assets/Clearpro_05.jpg" alt />
       <div class="clear"></div>
     </div>
-    <Footer />
   </div>
 </template>
 <script>

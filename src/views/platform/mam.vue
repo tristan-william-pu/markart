@@ -2,16 +2,15 @@
  * @ Author: Diskfan
  * @ Create Time: 2019-09-03 22:37:33
  * @ Modified by: Your name
- * @ Modified time: 2019-09-03 22:51:38
+ * @ Modified time: 2019-09-04 10:05:29
  * @ Description: man
  -->
 
 <template>
   <div class="man">
-    <Header />
     <div class="banner">
       <div class="img">
-        <div class="warp clearfix">
+        <div class="warp">
           <p class="bannerfont animated bounceInUp">MAM多账户管理</p>
         </div>
       </div>
@@ -68,7 +67,6 @@
         </ul>
       </div>
     </div>
-    <Footer />
   </div>
 </template>
 <script>
@@ -99,6 +97,7 @@ export default {};
         margin: 0 auto;
         margin-top: -20px;
         margin-bottom: 20px;
+        @include animation(bounceInUps);
         p {
           color: #fff;
           font-size: 66px;

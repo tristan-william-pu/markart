@@ -2,7 +2,7 @@
  * @ Author: Diskfan
  * @ Create Time: 2019-09-02 14:04:23
  * @ Modified by: Your name
- * @ Modified time: 2019-09-03 13:38:43
+ * @ Modified time: 2019-09-04 10:05:38
  * @ Description: mt4
  -->
 
@@ -10,7 +10,6 @@
 
 <template>
   <div class="mt4">
-    <Header />
     <div class="bar">
       <img class="title" src="@/assets/MT4tit.png" alt />
       <p class="tip" style="opacity: 1;">为您竖起价值的船帆，乘风起航</p>
@@ -173,7 +172,6 @@
         </transition>
       </dl>
     </div>
-    <Footer />
   </div>
 </template>
 <script>

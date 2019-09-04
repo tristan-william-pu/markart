@@ -2,14 +2,13 @@
  * @ Author: Diskfan
  * @ Create Time: 2019-09-02 13:55:38
  * @ Modified by: Your name
- * @ Modified time: 2019-09-03 09:40:02
+ * @ Modified time: 2019-09-04 10:05:44
  * @ Description: 差价合约
  -->
 
 
 <template>
   <div class="conctrat">
-    <Header />
     <div class="title">差价合约(CFD)</div>
     <div class="exp">
       <div class="leftimg">
@@ -63,7 +62,6 @@
       <div class="art">通过以上例子，投资者对于CPT Markets的指数CFD保证金&amp;盈亏计算方式有了一定的了解，可以根据自身的情况来判断是否需要投入差价合约交易。</div>
     </div>
     <Regist />
-    <Footer />
   </div>
 </template>
 <script>

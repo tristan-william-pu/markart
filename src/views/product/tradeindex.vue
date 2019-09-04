@@ -2,14 +2,13 @@
  * @ Author: Diskfan
  * @ Create Time: 2019-09-02 13:55:38
  * @ Modified by: Your name
- * @ Modified time: 2019-09-03 07:52:14
+ * @ Modified time: 2019-09-04 10:06:28
  * @ Description: 指数
  -->
 
 
 <template>
   <div class="tradeindex">
-    <Header />
     <div class="title">指数</div>
     <div class="exp">
       <div class="leftimg">
@@ -80,7 +79,6 @@
       </div>
     </div>
     <Regist />
-    <Footer />
   </div>
 </template>
 <script>

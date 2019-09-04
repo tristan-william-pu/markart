@@ -2,13 +2,12 @@
  * @ Author: Diskfan
  * @ Create Time: 2019-09-02 12:42:19
  * @ Modified by: Your name
- * @ Modified time: 2019-09-03 14:19:10
+ * @ Modified time: 2019-09-04 21:34:19
  * @ Description:首页
  -->
 
 <template>
   <div>
-    <Header />
     <!-- 视频 -->
     <div class="videowarp">
       <div class="videomask"></div>
@@ -112,6 +111,7 @@
         <!-- <div class="btn">start trading now</div> -->
         <div class="imgboxs">
           <img class="pcpng" src="../../../public/images/pc.png" alt="">
+          <MClound />
           <!-- 漂浮模式 -->
           <!-- <div class="icons">
             <div class="icon">
@@ -140,14 +140,14 @@
             </div>
 
           </div> -->
-          <div style="text-align:left;">
+          <!-- <div style="text-align:left;">
             <svg :width='width' :height='height' @mousemove='listener($event)'>
                 <a :href="tag.href" v-for='(tag,index) in tags' :key="index">
                     <text :x='tag.x' :y='tag.y' :font-size='20 * (600/(600-tag.z))' :fill-opacity='((400+tag.z)/600)' v-html="tag.text"></text>
                 </a>
             </svg>
         
-          </div>
+          </div> -->
         </div>
       </div>
     <!-- 邀请 -->
@@ -282,11 +282,11 @@
         </ul>
       </div>
     </div>
-    <Footer />
   </div>
 </template>
 <script>
-import Banner from '@/components/swiper'
+import Banner from '@/components/swiper';
+import MClound from '@/components/m-clound.vue';
 export default {
   data(){
     return {
@@ -318,7 +318,7 @@ export default {
       img:require('@/assets/icon5.png'),
     }
   },
-  components: { banner},
+  components: { Banner, MClound },
   computed:{
       CX(){
           return this.width/2;

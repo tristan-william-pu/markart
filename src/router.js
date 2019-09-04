@@ -10,7 +10,7 @@ export default new Router({
   routes: [
     {
       path: '/',
-      redirect: '/home'
+      component: importModule('home/home')
     },
     {
       path: '/home',
@@ -21,10 +21,14 @@ export default new Router({
       name: 'about',
       component: importModule('about/safety')
     }, {
+      path: '/safety',
+      name: 'safety',
+      component: importModule('about/safety')
+    }, {
       // 交易平台
       path: '/platform',
       name: 'platform',
-      redirect: '/mt4'
+      component: importModule('platform/mt4')
     },
     {
       // MT4
@@ -60,9 +64,9 @@ export default new Router({
       component: importModule('platform/compare')
     }, {
       // man
-      path: '/man',
-      name: 'man',
-      component: importModule('platform/man')
+      path: '/mam',
+      name: 'mam',
+      component: importModule('platform/mam')
     }, {
       path: '/product',
       name: 'product',
@@ -100,7 +104,7 @@ export default new Router({
     }, {
       path: '/suport',
       name: 'suport',
-      redirect: '/type'
+      component: importModule('suport/type')
     }, {
       path: '/type',
       name: 'type',
@@ -113,8 +117,7 @@ export default new Router({
     }, {
       path: '/partners',
       name: 'partners',
-      component: importModule('partners/partners'),
-      redirect: '/partners/white',
+      component: importModule('partners/white')
     }, {
       // 白标
       path: '/white',

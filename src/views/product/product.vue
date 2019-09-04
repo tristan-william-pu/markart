@@ -2,13 +2,12 @@
  * @ Author: Diskfan
  * @ Create Time: 2019-09-03 07:12:57
  * @ Modified by: Your name
- * @ Modified time: 2019-09-03 11:23:27
+ * @ Modified time: 2019-09-04 10:06:15
  * @ Description: 交易产品
  -->
 
 <template>
   <div class="products">
-    <Header />
     <div class="banner">
       <div class="title">交易产品</div>
       <div class="desc">在CPT Markets, 交易您想要的市场</div>
@@ -127,7 +126,6 @@
         </ul>
       </div>
     </div>
-    <Footer />
   </div>
 </template>
 <script>

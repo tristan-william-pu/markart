@@ -2,14 +2,13 @@
  * @ Author: Diskfan
  * @ Create Time: 2019-09-02 14:05:08
  * @ Modified by: Your name
- * @ Modified time: 2019-09-03 14:33:09
+ * @ Modified time: 2019-09-04 10:05:23
  * @ Description: 交易杠杆
  -->
 
 
 <template>
   <div class="leverage">
-    <Header />
     <div class="banner">
       <div class="title">交易杠杆</div>
       <div class="wrap">
@@ -73,7 +72,6 @@
     <div class="pubtn">
       <a href="/register/register">开立账户</a>
     </div>
-    <Footer />
   </div>
 </template>
 <script>

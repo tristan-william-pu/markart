@@ -1,6 +1,5 @@
 <template>
   <div class="IB">
-    <Header />
     <div class="banner pc">
       <div class="img">
         <div class="warp clearfix">
@@ -61,7 +60,6 @@
         </ul>
       </div>
     </div>
-    <Footer />
   </div>
 </template>
 <script>

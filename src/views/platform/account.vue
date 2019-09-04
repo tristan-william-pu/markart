@@ -2,13 +2,12 @@
  * @ Author: Diskfan
  * @ Create Time: 2019-09-02 14:06:01
  * @ Modified by: Your name
- * @ Modified time: 2019-09-03 14:49:18
+ * @ Modified time: 2019-09-04 10:04:59
  * @ Description: 账户类型
  -->
 
 <template>
   <div class="account">
-    <Header />
     <div class="name">账户类型</div>
     <div
       class="text"
@@ -118,7 +117,6 @@
       </div>
     </div>
     <Regist />
-    <Footer />
   </div>
 </template>
 <script>

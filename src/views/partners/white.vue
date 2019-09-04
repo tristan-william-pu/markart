@@ -1,6 +1,5 @@
 <template>
   <div class="white">
-    <Header />
     <!-- banner -->
     <div class="banner pc">
       <div class="img">
@@ -87,14 +86,12 @@
         白标合作计划您有任何疑问，<br>
         请发送邮箱至<a href="mailto:cs@cptmarkets.com" class="wblue">cs@cptmarkets.com </a> ，我们将竭诚为您服务！
       </div>
-    <Footer />
   </div>
 </template>
 <script>
-import Header from '../header.vue';
-import Footer from '../footer.vue';
+
 export default {
-  components:{Header , Footer}
+ 
 }
 </script>
 <style lang="scss">

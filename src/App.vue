@@ -1,19 +1,12 @@
 <template>
   <div id="app">
-    <router-view></router-view>
+    <Header />
+      <keep-alive>
+        <router-view />
+      </keep-alive>
+    <Footer />
   </div>
 </template>
-
-<script>
-
-export default {
-  name: 'app',
-  components: {
-    
-  }
-}
-</script>
-
 <style lang="scss">
 #app {
   font-size: 'sans-serif','Microsoft YaHei',"SF Pro SC","HanHei SC","SF Pro Text","Myriad Set Pro","SF Pro Icons","PingFang SC","Helvetica Neue","Helvetica","Arial",sans-serif

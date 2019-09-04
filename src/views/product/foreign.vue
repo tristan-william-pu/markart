@@ -2,14 +2,13 @@
  * @ Author: Diskfan
  * @ Create Time: 2019-09-02 13:55:38
  * @ Modified by: Your name
- * @ Modified time: 2019-09-03 09:10:33
+ * @ Modified time: 2019-09-04 10:05:56
  * @ Description: 外汇
  -->
 
 
 <template>
   <div class="foreign">
-    <Header />
     <div class="title">外汇</div>
     <div class="exp">
       <div class="leftimg">
@@ -75,7 +74,6 @@
       </div>
     </div>
     <Regist />
-    <Footer />
   </div>
 </template>
 <script>

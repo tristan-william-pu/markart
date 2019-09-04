@@ -1,6 +1,5 @@
 <template>
   <div class="provider">
-    <Header />
     <div class="banner pc">
       <div class="img">
           <p class="banerfont emerging">流动性供应商</p>
@@ -16,7 +15,6 @@
       <div class="clear"></div>
       <div class="art lastart">各种外汇市场报价中。他们能从各种流动性场所包括顶级银行、MTF和ECN交易模式的Hotspot和Currenex平台中获得预期报价。 在CFH Systems所能提供的系统服务中，灵活性是其中最关键的一个环节，同时也是客户能够获得他们翘首企足的流动性资源的重要方式。         </div>
     </div>
-    <Footer />
   </div>
 </template>
 <script>

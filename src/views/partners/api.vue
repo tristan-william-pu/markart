@@ -1,6 +1,5 @@
 <template>
   <div class="api">
-    <Header />
     <div class="banner pc ">
       <div class="img">
         <div class="warp clearfix bannerimg">
@@ -77,8 +76,6 @@
           </li>
       </ul>
     </div>
-
-    <Footer />
   </div>
 </template>
 <script>

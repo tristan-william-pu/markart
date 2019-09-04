@@ -2,13 +2,12 @@
  * @ Author: Diskfan
  * @ Create Time: 2019-09-03 15:38:04
  * @ Modified by: Your name
- * @ Modified time: 2019-09-03 23:04:45
+ * @ Modified time: 2019-09-04 10:05:08
  * @ Description: cpt cTrader
  -->
 
 <template>
   <div class="cpt">
-    <Header />
     <div class="big-img">
       <div class="center">
         <h6>CPT cTrader</h6>
@@ -325,7 +324,6 @@
         </ul>
       </div>
     </div>
-    <Footer />
   </div>
 </template>
 <script>

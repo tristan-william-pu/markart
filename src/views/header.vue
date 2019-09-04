@@ -2,9 +2,9 @@
   <div class="head">
     <header>
       <div class="warp">
-         <img class="logo" src="@/assets/logo.png" alt="">
-         <div class="rf register countryselect">
-           <!-- <el-dropdown placement="bottom-start" >
+        <img class="logo" src="@/assets/logo.png" alt />
+        <div class="rf register countryselect">
+          <!-- <el-dropdown placement="bottom-start" >
             <span>
               <img :src="imgSrc" class="flag" alt=""><i class="el-dropdown-link el-icon-arrow-down el-icon--right"></i>
             </span>
@@ -13,155 +13,206 @@
               <el-dropdown-item  @click.native="changeChinese()"><img class="flag" src="@/assets/chinese.png" alt=""><span>{{$t('language.zh')}}</span></el-dropdown-item>
               <el-dropdown-item  @click.native="changeLangEvent()"><img class="flag" src="@/assets/country.png" alt=""><span>{{$t('language.en')}}</span></el-dropdown-item>
             </el-dropdown-menu>
-          </el-dropdown> -->
-         </div>
-         <div class="rf">
-           <button class="hd-btn">{{$t('header.login')}}</button>
-           <button class="hd-btn">{{$t('header.register')}}</button>
-         </div>
-         <div class="nav clearfix">
-            <ul :class="classNum == 0 ? 'tabs':'tabs-en'">
-                <li v-for="(item,index) in tabsList"
-                  :key="index"
-                  :class="{active:index == n}"
-                  @mouseenter="tap(index)"
-                  @mouseleave="tapLeave()"
-                >
-                  {{item}}
-                </li>
-                
-               
-            </ul>
-        </div>    
+          </el-dropdown>-->
+        </div>
+        <div class="rf">
+          <button class="hd-btn">{{$t('header.login')}}</button>
+          <button class="hd-btn">{{$t('header.register')}}</button>
+        </div>
+        <div class="nav clearfix">
+          <ul :class="classNum == 0 ? 'tabs':'tabs-en'">
+            <li
+              v-for="(item,index) in tabsList.menu"
+              :key="index"
+              :class="{active:index == n || showSub}"
+              @mouseenter="tap(index)"
+              @mouseleave="showSub=false"
+              @click.stop="showSub=false,$router.push(tabsList.routers[index])"
+            >{{item.title}}</li>
+          </ul>
+        </div>
       </div>
-      <template v-for="(list,index) in contents">
-        <div
-          class="pullbox clearfix" 
-          :class="( n === 0 || n === 6 ) ? '' : 'show'"  
-          :key="index"  
-          v-if=" index  == n "  
-          @mouseenter="tap(index)"
-          @mouseleave="tapLeave()">
-            <img :src="tabsImg[index-1]" alt/>
-            <ul class="homeTit">
-              <li v-for="(abc,index) in list" :key="index">{{abc}}</li>
-            </ul>
-          </div>
-      </template>
+      <div
+        v-if="showSub && tabsList.menu[n].content.filter(e => e).length"
+        class="pullbox clearfix"
+        @mouseenter="showSub=true"
+        @mouseleave="showSub=false"
+      >
+        <img :src="tabsImg[n-1]" alt />
+        <ul class="homeTit">
+          <li
+            v-for="(item, key) in tabsList.menu[n].content"
+            :key="key"
+            @click.stop="showSub=false,$router.push(tabsList.subRouters[n][key])"
+          >{{item}}</li>
+        </ul>
+      </div>
     </header>
-  
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Header',
-  data(){
-    return{
-      lang:'',
-      bool:'',
-      langString:'',
-      imgSrc: require ('../assets/chinese.png'),
-      tabsImg:[
-        require('../assets/safe.png'),
-        require('../assets/train.png'),
-        require('../assets/pla.png'),
-        require('../assets/cusSup.png'),
-        require('../assets/zr.png'),
+  name: "Header",
+  data() {
+    return {
+      lang: "",
+      bool: "",
+      langString: "",
+      imgSrc: require("../assets/chinese.png"),
+      tabsImg: [
+        require("../assets/safe.png"),
+        require("../assets/train.png"),
+        require("../assets/pla.png"),
+        require("../assets/cusSup.png"),
+        require("../assets/zr.png")
       ],
-      tabPosition: 'top',
-      tabsList:['首页','关于我们','交易产品','交易平台','客户支持','合作伙伴','联系我们'],
+      tabPosition: "top",
+      // tabsList:['首页','关于我们','交易产品','交易平台','客户支持','合作伙伴','联系我们'],
       classNum: 0,
-      classItem:-1,
-      curId:-1,
-      title:[],
-      contents:[],
-      n:-1,
+      classItem: -1,
+      curId: -1,
+      title: [],
+      n: -1,
+      showSub: 0
+    };
+  },
+  computed: {
+    tabsList() {
+      const subRouters = [
+        ["/"],
+        ["/safety"],
+        ["/foreign", "/metal", "/oil", "/contract", "/tradeindex", "/currency"],
+        ["/mt4", "/leverage", "/account", "/clearpro", "/mam"],
+        ["/type", "/school"],
+        ["/white", "/api", "/provider", "/ib"],
+        ["/contantus"]
+      ];
+      const cn = [
+        { title: "首页", content: [""] },
+        { title: "关于我们", content: ["资金安全"] },
+        {
+          title: "交易产品",
+          content: ["外汇", "贵金属", "原油", "差价合约", "指数", "数字货币"]
+        },
+        {
+          title: "交易平台",
+          content: ["MT4", "交易杠杆", "账户类型", "Clearpro", "MAM"]
+        },
+        { title: "客户支持", content: ["支付方式", "金融学院"] },
+        {
+          title: "合作伙伴",
+          content: ["白标合作", "API接口", "流动性供应商", "介绍服务经纪商"]
+        },
+        { title: "联系我们", content: [""] }
+      ];
+      const en = [
+        { title: "Home", content: "" },
+        { title: "About us", content: ["资金安全"] },
+        {
+          title: "Trading Product",
+          content: ["外汇", "贵金属", "原油", "差价合约", "指数", "数字货币"]
+        },
+        {
+          title: "Trading Platform",
+          content: ["MT4", "交易杠杆", "账户类型", "Clearpro", "MAM"]
+        },
+        { title: "Customer Support", content: ["支付方式", "金融学院"] },
+        {
+          title: "Partner",
+          content: ["白标合作", "API接口", "流动性供应商", "介绍服务经纪商"]
+        },
+        { title: "Contact Us", content: [""] }
+      ];
+      const tc = [
+        { title: "首頁", content: "" },
+        { title: "關于我們", content: ["资金安全"] },
+        {
+          title: "交易産品",
+          content: ["外汇", "贵金属", "原油", "差价合约", "指数", "数字货币"]
+        },
+        {
+          title: "交易平台",
+          content: ["MT4", "交易杠杆", "账户类型", "Clearpro", "MAM"]
+        },
+        { title: "客戶支持", content: ["支付方式", "金融学院"] },
+        {
+          title: "合作夥伴",
+          content: ["白标合作", "API接口", "流动性供应商", "介绍服务经纪商"]
+        },
+        { title: "聯系我們", content: [""] }
+      ];
+      const routers = [
+        "/",
+        "/about",
+        "/product",
+        "/platform",
+        "/suport",
+        "/partners",
+        "/contantus"
+      ];
+      return {
+        menu: { cn, en, tc }[this.$i18n.locale],
+        routers,
+        subRouters
+      };
     }
   },
-  computed:{
-    objec(){
-      return 1234;
+  methods: {
+    tap(i) {
+      this.showSub = i;
+      this.n = i;
     },
-      
-  },
-  mounted(){
-    this.rote();
-  },
-  components:{
-    
-  },
-  methods:{
-    rote(){
-      let items = this.$t('tabs');
-      let arr = [];
-      this.contents = arr;
-      for(let i = 0;i < items.length;i++){
-        let lists = items[i].content;
-        arr[i] = []
-        for(let j = 0;j<lists.length;j++){
-          arr[i].push(lists[j]);
-        }
-      }
-      console.log(this.contents)
-    },
-    tap(i){
-      this.n = i
-    },
-    tapLeave(){
+    tapLeave() {
       this.n = -1;
     },
     changeLangEvent() {
-      console.log(1)
-      this.lang = 'en';
+      console.log(1);
+      this.lang = "en";
       this.$i18n.locale = this.lang; // 关键语句
       this.bool = false;
-      this.imgSrc = require('../assets/country.png');
+      this.imgSrc = require("../assets/country.png");
       this.classNum = 1;
     },
-    changeChinese(){
-      console.log(2)
-      this.lang = 'cn';
+    changeChinese() {
+      console.log(2);
+      this.lang = "cn";
       this.$i18n.locale = this.lang; // 关键语句
       this.bool = false;
-      this.imgSrc = require('../assets/chinese.png');
+      this.imgSrc = require("../assets/chinese.png");
       this.classNum = 0;
     },
-    tabs(index){
+    tabs(index) {
       this.curId = index;
     }
-
-  },
-  created(){
-   
-  },
-}
+  }
+};
 </script>
 
 <style lang="scss" scoped>
 header {
-    width: 100%;
-    font-family: montserrat;
-    display: block;
-    height: 150px;
-    position: relative;
-    z-index: 10000;
-    background: #fff;
+  width: 100%;
+  font-family: montserrat;
+  display: block;
+  height: 150px;
+  position: relative;
+  z-index: 10000;
+  background: #fff;
 }
-p{
+p {
   font-size: 16px;
 }
 
-.logo{
+.logo {
   float: left;
   margin-top: 30px;
   width: 200px;
   margin-right: 80px;
 }
-.hd-btn{
+.hd-btn {
   width: 120px;
   height: 40px;
-  border:1px solid #5b0eb2;
+  border: 1px solid #5b0eb2;
   border-radius: 20px;
   text-align: center;
   color: #5b0eb2;
@@ -173,34 +224,34 @@ p{
   position: relative;
   overflow: hidden;
   font-size: 16px;
-  &:hover{
-    background:#5b0eb2;
-    color:#fff;
+  &:hover {
+    background: #5b0eb2;
+    color: #fff;
   }
 }
 
-.register{
-    margin-top: 25px;
+.register {
+  margin-top: 25px;
   margin-right: 10px;
 }
 .countryselect {
-    float: right;
-    margin-left: 30px;
-    margin-top: 35px;
-    position: relative;
+  float: right;
+  margin-left: 30px;
+  margin-top: 35px;
+  position: relative;
 }
-.flag{
+.flag {
   width: 35px;
   display: inline-block;
   vertical-align: middle;
-  +span{
-    margin:0 10px;
+  + span {
+    margin: 0 10px;
     display: inline-block;
     vertical-align: middle;
   }
 }
 
-.tabs li{
+.tabs li {
   width: auto;
   text-align: center;
   line-height: 90px;
@@ -208,12 +259,12 @@ p{
   padding-left: 52px;
   padding-right: 52px;
   font-size: 16px;
-  transition: color .5s;
-  transition-timing-function: cubic-bezier(.2,1,.3,1);
+  transition: color 0.5s;
+  transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
   position: relative;
   color: #000;
 }
-.tabs-en li{
+.tabs-en li {
   width: auto;
   text-align: center;
   line-height: 90px;
@@ -221,34 +272,38 @@ p{
   padding-left: 32px;
   padding-right: 32px;
   font-size: 16px !important;
-  transition: color .5s;
-  transition-timing-function: cubic-bezier(.2,1,.3,1);
+  transition: color 0.5s;
+  transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
   position: relative;
   color: #000;
 }
-.tabs li::before,.tabs-en li::before{
-    content: '';
-    height: 40px !important;
-    border-radius: 10px;
-    position: absolute;
-    z-index: -1;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 20%;
-    bottom: 30%;
-    opacity: .3;
-    transform: scale3d(0,1,1);
-    transform-origin: 0% 50%;
-    transition: transform .5s;
-    transition-timing-function: cubic-bezier(.2,1,.3,1);
-    background: #6265fe;
+.tabs li::before,
+.tabs-en li::before {
+  content: "";
+  height: 40px !important;
+  border-radius: 10px;
+  position: absolute;
+  z-index: -1;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 20%;
+  bottom: 30%;
+  opacity: 0.3;
+  transform: scale3d(0, 1, 1);
+  transform-origin: 0% 50%;
+  transition: transform 0.5s;
+  transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+  background: #6265fe;
 }
-.tabs li:hover:before , .tabs-en li:hover:before{transform: scale3d(1, 1, 1);}
-.show{
-  display:block !important;
+.tabs li:hover:before,
+.tabs-en li:hover:before {
+  transform: scale3d(1, 1, 1);
 }
-.homeTit li{
+.show {
+  display: block !important;
+}
+.homeTit li {
   float: left;
   text-align: left;
   width: 25%;
@@ -261,8 +316,8 @@ p{
   min-width: 100px;
   position: relative;
   cursor: pointer;
-  &::before{
-     content: '';
+  &::before {
+    content: "";
     // height: 20px !important;
     border-radius: 10px;
     position: absolute;
@@ -271,46 +326,46 @@ p{
     left: 0;
     width: 100%;
     height: 100%;
-    opacity: .3;
-    transform: scale3d(0,1,1);
+    opacity: 0.3;
+    transform: scale3d(0, 1, 1);
     transform-origin: 0% 50%;
-    transition: transform .5s;
-    transition-timing-function: cubic-bezier(.2,1,.3,1);
+    transition: transform 0.5s;
+    transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
     background: #6265fe;
   }
-  &:hover:before{
+  &:hover:before {
     transform: scale3d(1, 1, 1);
   }
 }
 
-   .pullbox {
-    width: 100%;
-    height: 250px;
-    position: absolute;
-    top: 150px;
-    background: #fff;
-    z-index: 9;
-    border-top: 1px solid #c0c0c0;
-    display: none;
-    padding-left: 30px;
-    padding-right: 30px;
-    box-sizing: border-box;
-    z-index: 1000;
-    ul{
-      float:left;    
-      margin-top: 30px;
-      margin-left: 5%;
-      width: 72%;
-      li{
-        line-height: 40px;
-      }
+.pullbox {
+  width: 100%;
+  height: 250px;
+  position: absolute;
+  top: 150px;
+  background: #fff;
+  z-index: 9;
+  border-top: 1px solid #c0c0c0;
+  // display: none;
+  padding-left: 30px;
+  padding-right: 30px;
+  box-sizing: border-box;
+  z-index: 1000;
+  ul {
+    float: left;
+    margin-top: 30px;
+    margin-left: 5%;
+    width: 72%;
+    li {
+      line-height: 40px;
     }
-    img{
-       float:left;
-      margin-left: 13%;
-      margin-top: 50px;
-      float: left;
-      width: 6%;
-    }
+  }
+  img {
+    float: left;
+    margin-left: 13%;
+    margin-top: 50px;
+    float: left;
+    width: 6%;
+  }
 }
 </style>

@@ -1,6 +1,5 @@
 <template>
   <div class="metal">
-    <Header />
     <div class="name">贵金属</div>
     <div class="warp">
       <div class="leftimg">
@@ -56,7 +55,6 @@
       </div>
     </div>
     <Regist />
-    <Footer />
   </div>
 </template>
 <script>

@@ -2,14 +2,13 @@
  * @ Author: Diskfan
  * @ Create Time: 2019-09-03 19:03:37
  * @ Modified by: Your name
- * @ Modified time: 2019-09-03 19:36:26
+ * @ Modified time: 2019-09-04 10:05:16
  * @ Description: CPT常见问题
  -->
 
 
 <template>
   <div class="cptanq">
-    <Header />
     <div class="img">
       <h3>
         <span>CPT cTrader</span>
@@ -313,7 +312,6 @@
         </div>
       </div>
     </div>
-    <Footer />
   </div>
 </template>
 <script>

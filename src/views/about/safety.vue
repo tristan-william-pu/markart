@@ -2,13 +2,12 @@
  * @ Author: Diskfan
  * @ Create Time: 2019-09-02 12:42:19
  * @ Modified by: Your name
- * @ Modified time: 2019-09-03 07:00:47
+ * @ Modified time: 2019-09-04 10:03:50
  * @ Description:关于
  -->
 
 <template>
   <div class="about">
-    <!-- <Header /> -->
     <div class="word">
       <div class="map-contain">
         <div class="concat">
