@@ -1,8 +1,10 @@
 <template>
-  <div class="m-cloud"
+  <div
+    class="m-cloud"
     ref="wrapper"
     @mouseenter="mwrapMouseEnterHandle"
-    @mouseleave="mwrapMouseLeaveHandle">
+    @mouseleave="mwrapMouseLeaveHandle"
+  >
     <p
       style="background: #5b0eb2"
       v-for="(item, index) in data"
@@ -12,7 +14,7 @@
       @mouseenter="mouseEnterHandle"
       @mouseleave="mouseLeaveHandle"
     >
-      <img :src="item.icon" alt="">
+      <img :src="item.icon" alt />
       <span class="text">{{item.name[$i18n.locale]}}</span>
     </p>
   </div>
@@ -31,7 +33,7 @@ export default {
       rotateAngleYbase: 2000,
       currentHoverTag: null,
       wrapHover: false,
-      hover: true ,// 是否开启悬浮联动
+      hover: true, // 是否开启悬浮联动
       pointe: {
         x: 1,
         y: 1
@@ -39,46 +41,51 @@ export default {
       data: [
         {
           name: {
-            cn: '可复制的交易模式',
-            en: 'en',
-            ct: 'ct'
+            cn: "可复制的交易模式",
+            en: "en",
+            tc: "tc"
           },
-          icon:  require('@/assets/icon4.png')
-        }, {
+          icon: require("@/assets/icon4.png")
+        },
+        {
           name: {
-            cn: '多终端系统交易',
-            en: 'en',
-            ct: 'ct'
+            cn: "多终端系统交易",
+            en: "en",
+            tc: "tc"
           },
-          icon: require('@/assets/icon2.png')
-        }, {
+          icon: require("@/assets/icon2.png")
+        },
+        {
           name: {
-            cn: '清晰的账户状态',
-            en: 'en',
-            ct: 'ct'
+            cn: "清晰的账户状态",
+            en: "en",
+            tc: "tc"
           },
-          icon: require('@/assets/icon6.png')
-        }, {
+          icon: require("@/assets/icon6.png")
+        },
+        {
           name: {
-            cn: '即时买卖报价',
-            en: 'en',
-            ct: 'ct'
+            cn: "即时买卖报价",
+            en: "en",
+            tc: "tc"
           },
-          icon: require('@/assets/icon1.png')
-        }, {
+          icon: require("@/assets/icon1.png")
+        },
+        {
           name: {
-            cn: '先进的图表工具',
-            en: 'en',
-            ct: 'ct'
+            cn: "先进的图表工具",
+            en: "en",
+            tc: "tc"
           },
-          icon: require('@/assets/icon3.png')
-        }, {
+          icon: require("@/assets/icon3.png")
+        },
+        {
           name: {
-            cn: '智能的EA功能',
-            en: 'en',
-            ct: 'ct'
+            cn: "智能的EA功能",
+            en: "en",
+            tc: "tc"
           },
-          icon: require('@/assets/icon5.png')
+          icon: require("@/assets/icon5.png")
         }
       ],
       tagList: []
@@ -116,74 +123,61 @@ export default {
       this.currentHoverTag = null;
     },
     init() {
-      this.rotateAngleX = Math.PI / this.rotateAngleXbase * this.pointe.x
-      this.rotateAngleY = Math.PI / this.rotateAngleYbase * this.pointe.y
+      this.rotateAngleX = (Math.PI / this.rotateAngleXbase) * this.pointe.x;
+      this.rotateAngleY = (Math.PI / this.rotateAngleYbase) * this.pointe.y;
       // 鼠标悬浮改变转速和方向
       if (this.hover) {
-        const _self = this
+        const _self = this;
         this.$refs.wrapper.onmousemove = function(e) {
           _self.rotateAngleY =
-            (e.x - this.offsetLeft - this.offsetWidth / 2) / _self.rotateAngleYbase * .1
+            ((e.x - this.offsetLeft - this.offsetWidth / 2) /
+              _self.rotateAngleYbase) *
+            0.1;
           _self.rotateAngleX =
-            -(e.y - this.offsetTop - this.offsetHeight / 2) / _self.rotateAngleXbase * .1
-        }
+            (-(e.y - this.offsetTop - this.offsetHeight / 2) /
+              _self.rotateAngleXbase) *
+            0.1;
+        };
       } else {
-        this.$refs.wrapper.onmousemove = null
+        this.$refs.wrapper.onmousemove = null;
       }
 
       for (var i = 0, length = this.data.length; i < length; i++) {
         // 获取球面上均匀的点的经纬度 θ = arccos( ((2*num)-1)/all - 1); Φ = θ*sqrt(all * π);
-        let angleX = Math.acos((2 * (i + 1) - 1) / length - 1)
-        let angleY = angleX * Math.sqrt(length * Math.PI)
+        let angleX = Math.acos((2 * (i + 1) - 1) / length - 1);
+        let angleY = angleX * Math.sqrt(length * Math.PI);
         // 根据经纬度获取点的坐标，球中心的点坐标是 (0,0,0) x=r*sinθ*cosΦ   y=r*sinθ*sinΦ   z=r*cosθ;
-        const x = this.radius * Math.sin(angleX) * Math.cos(angleY)
-        const y = this.radius * Math.sin(angleX) * Math.sin(angleY)
-        const z = this.radius * Math.cos(angleX)
-        if (this.color) {
-          this.$refs.tag[i].style.color = this.color
-        } else {
-          // 随机颜色
-          this.$refs.tag[i].style.color =
-            'rgb(' +
-            Math.round(255 * Math.random()) +
-            ',' +
-            Math.round(255 * Math.random()) +
-            ',' +
-            Math.round(255 * Math.random()) +
-            ')'
-        }
+        const x = this.radius * Math.sin(angleX) * Math.cos(angleY);
+        const y = this.radius * Math.sin(angleX) * Math.sin(angleY);
+        const z = this.radius * Math.cos(angleX);
         // 每个标签对象都有四对值
         var tag = {
           x: x,
           y: y,
           z: z,
           ele: this.$refs.tag[i]
-        }
-        this.tagList.push(tag)
+        };
+        this.tagList.push(tag);
       }
-    const render = () => {
+      const render = () => {
         for (var i = 0; i < this.tagList.length; i++) {
           if (this.tagList[i].ele === this.currentHoverTag) {
             this.tagList[i].ele.style.opacity = 1;
             continue;
           }
-          this.rotateX(this.tagList[i]);
-          this.rotateY(this.tagList[i]);
-          this.setPosition(
-            this.tagList[i],
-            this.radius,
-            this.maxFont
-          );
+          this.rotateX(this.tagList[i], i);
+          this.rotateY(this.tagList[i], i);
+          this.setPosition(this.tagList[i], this.radius);
         }
         requestAnimationFrame(render);
       };
       requestAnimationFrame(render);
     },
-    setPosition(tag, r, maxFont) {
+    setPosition(tag, r) {
       // 设置每个标签的坐标位置和字体大小以及透明度
       if (!this.wrapHover) {
-        this.rotateAngleX = Math.PI / this.rotateAngleXbase * this.pointe.x
-        this.rotateAngleY = Math.PI / this.rotateAngleYbase * this.pointe.y
+        this.rotateAngleX = (Math.PI / this.rotateAngleXbase) * this.pointe.x;
+        this.rotateAngleY = (Math.PI / this.rotateAngleYbase) * this.pointe.y;
       }
       if (this.$refs.wrapper) {
         tag.ele.style.transform = `translate(${tag.x +
@@ -199,32 +193,28 @@ export default {
         }
       }
     },
-    rotateX(tag) {
-      var cos = Math.cos(this.rotateAngleX)
-      var sin = Math.sin(this.rotateAngleX)
-      var y1 = tag.y * cos - tag.z * sin
-      var z1 = tag.y * sin + tag.z * cos
-      tag.y = y1
-      tag.z = z1
+    rotateX(tag, index) {
+      var cos = Math.cos(this.rotateAngleX);
+      var sin = Math.sin(this.rotateAngleX);
+      var y1 = tag.y * cos - tag.z * sin;
+      var z1 = tag.y * sin + tag.z * cos;
+      tag.y = y1;
+      tag.z = z1;
     },
-    rotateY(tag) {
-      var cos = Math.cos(this.rotateAngleY)
-      var sin = Math.sin(this.rotateAngleY)
-      var x1 = tag.z * sin + tag.x * cos
-      var z1 = tag.z * cos - tag.x * sin
-      tag.x = x1
-      tag.z = z1
+    rotateY(tag, index) {
+      var cos = Math.cos(this.rotateAngleY);
+      var sin = Math.sin(this.rotateAngleY);
+      var x1 = tag.z * sin + tag.x * cos;
+      var z1 = tag.z * cos - tag.x * sin;
+      tag.x = x1;
+      tag.z = z1;
     },
     dbclickTag() {
       const render = () => {
         for (var i = 0; i < this.tagList.length; i++) {
-          this.rotateX(this.tagList[i]);
-          this.rotateY(this.tagList[i]);
-          this.setPosition(
-            this.tagList[i],
-            this.radius,
-            this.maxFont
-          );
+          this.rotateX(this.tagList[i], i);
+          this.rotateY(this.tagList[i], i);
+          this.setPosition(this.tagList[i], this.radius);
         }
         requestAnimationFrame(render);
       };
