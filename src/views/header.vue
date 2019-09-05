@@ -16,7 +16,7 @@
           </el-dropdown>-->
         </div>
         <div class="rf">
-          <button class="hd-btn"><router-link class="" to="/login">{{$t('header.login')}}</router-link> </button>
+          <button class="hd-btn">{{$t('header.login')}}</button>
           <button class="hd-btn">{{$t('header.register')}}</button>
         </div>
         <div class="nav clearfix">
@@ -227,11 +227,6 @@ p {
   &:hover {
     background: #5b0eb2;
     color: #fff;
-  }
-  .link{
-    color:#5b0eb2 !important;
-    width:100%;
-    height:100%;
   }
 }
 
