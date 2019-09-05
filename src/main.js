@@ -7,6 +7,7 @@ import store from './store'
 import VueI18n from 'vue-i18n'
 import Header from '@/views/header.vue';
 import Footer from '@/views/footer.vue';
+import Util from '@/common/util.js';
 Vue.use(VueI18n);
 
 Vue.use({
@@ -14,6 +15,11 @@ Vue.use({
     Vue.component(Header.name, Header)
   }
 });
+Object.defineProperty(Vue.prototype, '$util', {
+  value: Util,
+  enumerable: false,
+  writable: false
+})
 Vue.use({
   install: () => {
     Vue.component(Footer.name, Footer)

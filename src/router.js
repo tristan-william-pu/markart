@@ -145,6 +145,9 @@ export default new Router({
       name: 'contantus',
       component: importModule('contantus/contantus')
     }, {
+      path: '/clound',
+      component: () => import('@/components/m-clound.vue')
+    }, {
       path: '/*',
       redirect: '/'
     }
