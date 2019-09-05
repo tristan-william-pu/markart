@@ -21,6 +21,10 @@ export default new Router({
       name: 'about',
       component: importModule('about/safety')
     }, {
+      path: '/login',
+      name: 'home',
+      component: importModule('login/login')
+    },{
       path: '/safety',
       name: 'safety',
       component: importModule('about/safety')

@@ -1,12 +1,33 @@
 <template>
   <div id="app">
-    <Header />
+    <Header v-if="header_show" />
       <keep-alive>
-        <router-view />
+        <router-view  v-on:header="header" v-on:footer="footer" />
       </keep-alive>
-    <Footer />
+    <Footer v-if="footer_show" />
   </div>
 </template>
+
+<script>
+export default {
+  data(){
+    return {
+      header_show:true,
+      footer_show:true
+    }
+  },
+  methods:{
+      //是否显示头部
+      header:function (bool) {
+        this.header_show = bool;
+      },
+      //是否显示底部
+      footer:function (bool) {
+          this.footer_show = bool;
+      }
+  },
+}
+</script>
 
 <style lang="scss">
 #app {
