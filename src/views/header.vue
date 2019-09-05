@@ -3,20 +3,30 @@
     <header>
       <div class="warp">
         <img class="logo" src="@/assets/logo.png" alt />
-        <div class="rf register countryselect">
-          <!-- <el-dropdown placement="bottom-start" >
-            <span>
-              <img :src="imgSrc" class="flag" alt=""><i class="el-dropdown-link el-icon-arrow-down el-icon--right"></i>
-            </span>
-            <el-dropdown-menu slot="dropdown" size="medium">
-              <el-dropdown-item  @click.native="changeChinese()"><img class="flag" src="@/assets/chinese.png" alt=""><span>{{$t('language.cn')}}</span></el-dropdown-item>
-              <el-dropdown-item  @click.native="changeChinese()"><img class="flag" src="@/assets/chinese.png" alt=""><span>{{$t('language.zh')}}</span></el-dropdown-item>
-              <el-dropdown-item  @click.native="changeLangEvent()"><img class="flag" src="@/assets/country.png" alt=""><span>{{$t('language.en')}}</span></el-dropdown-item>
-            </el-dropdown-menu>
-          </el-dropdown>-->
-        </div>
+        <!-- <div class="rf register countryselect">
+          <span>
+            <img class="flag" :src="imgSrc" alt/>
+            <i class="downIcon"/>
+          </span>
+          <ul>
+            <li>
+              <img class="flag" src="@/assets/chinese.png" alt/>
+              <span>中文</span> 
+            </li>
+            <li>
+              <img class="flag" src="@/assets/chinese.png" alt/>
+              <span>繁体</span> 
+            </li>
+            <li>
+              <img class="flag" src="@/assets/country.png" alt/>
+              <span>英文</span> 
+            </li>
+          </ul>
+        </div> -->
         <div class="rf">
-          <button class="hd-btn">{{$t('header.login')}}</button>
+          <router-link to="/login">
+            <button class="hd-btn">{{$t('header.login')}}</button>
+          </router-link>
           <button class="hd-btn">{{$t('header.register')}}</button>
         </div>
         <div class="nav clearfix">
@@ -220,12 +230,12 @@ p {
   float: left;
   margin-top: 25px;
   margin-right: 10px;
-  transition: 0.5s;
+  transition:all 0.3s ease-in-out; 
   position: relative;
   overflow: hidden;
   font-size: 16px;
   &:hover {
-    background: #5b0eb2;
+    background-color: #5b0eb2;
     color: #fff;
   }
 }
@@ -239,6 +249,12 @@ p {
   margin-left: 30px;
   margin-top: 35px;
   position: relative;
+}
+.downIcon{
+  width: 0px;
+  height: 10px;
+  border: 10px solid;
+  border-color:  #666 transparent transparent transparent;
 }
 .flag {
   width: 35px;

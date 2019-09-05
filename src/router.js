@@ -22,7 +22,7 @@ export default new Router({
       component: importModule('about/safety')
     }, {
       path: '/login',
-      name: 'home',
+      name: 'login',
       component: importModule('login/login')
     },{
       path: '/safety',
