@@ -3,17 +3,22 @@
     <header>
       <div class="warp">
         <img class="logo" src="@/assets/logo.png" alt />
-        <div class="rf register countryselect">
-          <!-- <el-dropdown placement="bottom-start" >
-            <span>
-              <img :src="imgSrc" class="flag" alt=""><i class="el-dropdown-link el-icon-arrow-down el-icon--right"></i>
-            </span>
-            <el-dropdown-menu slot="dropdown" size="medium">
-              <el-dropdown-item  @click.native="changeChinese()"><img class="flag" src="@/assets/chinese.png" alt=""><span>{{$t('language.cn')}}</span></el-dropdown-item>
-              <el-dropdown-item  @click.native="changeChinese()"><img class="flag" src="@/assets/chinese.png" alt=""><span>{{$t('language.zh')}}</span></el-dropdown-item>
-              <el-dropdown-item  @click.native="changeLangEvent()"><img class="flag" src="@/assets/country.png" alt=""><span>{{$t('language.en')}}</span></el-dropdown-item>
-            </el-dropdown-menu>
-          </el-dropdown>-->
+        <div class="rf register countryselect" @mouseenter.stop="showLanguageList=true" @mouseleave="showLanguageList=false">
+          <div class="language-list">
+            <img :src="imgSrc" class="flag" alt />
+            <div class="pointe"></div>
+            <transition name="slide-fade">
+              <div v-show="showLanguageList" class="item-list">
+                <span
+                  v-for="(item, key) in languageList.names"
+                  :key="key"
+                  @click.stop="changeLocal(languageList.local[key])">
+                  <img :src="languageList.icons[key]" alt="">
+                  {{item}}
+                </span>
+              </div>
+            </transition>
+          </div>
         </div>
         <div class="rf">
           <button class="hd-btn">{{$t('header.login')}}</button>
@@ -67,6 +72,7 @@ export default {
         require("../assets/cusSup.png"),
         require("../assets/zr.png")
       ],
+      showLanguageList: false,
       tabPosition: "top",
       // tabsList:['首页','关于我们','交易产品','交易平台','客户支持','合作伙伴','联系我们'],
       classNum: 0,
@@ -78,6 +84,18 @@ export default {
     };
   },
   computed: {
+    languageList() {
+      const cn = ['中文', '繁体', '英语'];
+      const en = ['Chinese', 'Traditional', 'English'];
+      const tc = cn.slice();
+      const ci = require('@/assets/chinese.png');
+      const icons = [ci, ci, require('@/assets/country.png')];
+      return {
+        names: {cn, en, tc}[this.$i18n.locale],
+        local: ['cn', 'tc', 'en'],
+        icons
+      }
+    },
     tabsList() {
       const subRouters = [
         ["/"],
@@ -174,22 +192,29 @@ export default {
       this.imgSrc = require("../assets/country.png");
       this.classNum = 1;
     },
-    changeChinese() {
-      console.log(2);
-      this.lang = "cn";
-      this.$i18n.locale = this.lang; // 关键语句
-      this.bool = false;
-      this.imgSrc = require("../assets/chinese.png");
-      this.classNum = 0;
-    },
     tabs(index) {
       this.curId = index;
+    },
+    changeLocal(local) {
+      this.$util.local(local);
+      this.$i18n.locale = local;
     }
   }
 };
 </script>
 
 <style lang="scss" scoped>
+@import "@/styles/mixin.scss";
+.slide-fade-enter-active {
+  transition: all .3s ease;
+}
+.slide-fade-leave-active {
+  transition: all .3s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+.slide-fade-enter, .slide-fade-leave-to {
+  transform: translateY(10px);
+  opacity: 0;
+}
 header {
   width: 100%;
   font-family: montserrat;
@@ -198,6 +223,70 @@ header {
   position: relative;
   z-index: 10000;
   background: #fff;
+  .countryselect {
+    @include flex();
+    .language-list {
+      vertical-align: middle;
+      width: 70px;
+      height: 40px;
+      @include flex();
+      .pointe {
+        margin: 10px 0 0 13px;
+        width: 0;
+        height: 0;
+        border-width: 7px;
+        border-style: solid;
+        border-color: #000 transparent transparent transparent;
+      }
+      .item-list {
+        width: 120px;
+        min-height: 120px;
+        background: #fff;
+        padding: 5px 10px;
+        margin-top: 100px;
+        position: absolute;
+        border: 1px solid #cfcfcf;
+        z-index: 1001;
+        @include flex(center, flex-start, column);
+        &::before {
+          content: ' ';
+          z-index: 10;;
+          width: 0;
+          height: 0;
+          border-width: 13px;
+          border-style: solid;
+          position: absolute;
+          left: calc(50% - 15px);
+          top: -25px;
+          border-color: transparent transparent #fff transparent;
+        }
+        &::after {
+          content: ' ';
+          z-index: 1;
+          width: 0;
+          height: 0;
+          border-width: 13px;
+          border-style: solid;
+          position: absolute;
+          left: calc(50% - 15px);
+          top: -26px;
+          border-color: transparent transparent #cfcfcf transparent;
+        }
+        span {
+          margin: 3px 0;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          white-space: nowrap;
+          width: 100%;
+          img {
+            margin-right: 10px;
+            width: 40px;
+            height: 25px;
+          }
+        }
+      }
+    }
+  }
 }
 p {
   font-size: 16px;
@@ -234,12 +323,7 @@ p {
   margin-top: 25px;
   margin-right: 10px;
 }
-.countryselect {
-  float: right;
-  margin-left: 30px;
-  margin-top: 35px;
-  position: relative;
-}
+
 .flag {
   width: 35px;
   display: inline-block;
