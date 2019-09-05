@@ -3,28 +3,6 @@
     <header>
       <div class="warp">
         <img class="logo" src="@/assets/logo.png" alt />
-<<<<<<< HEAD
-        <!-- <div class="rf register countryselect">
-          <span>
-            <img class="flag" :src="imgSrc" alt/>
-            <i class="downIcon"/>
-          </span>
-          <ul>
-            <li>
-              <img class="flag" src="@/assets/chinese.png" alt/>
-              <span>中文</span> 
-            </li>
-            <li>
-              <img class="flag" src="@/assets/chinese.png" alt/>
-              <span>繁体</span> 
-            </li>
-            <li>
-              <img class="flag" src="@/assets/country.png" alt/>
-              <span>英文</span> 
-            </li>
-          </ul>
-        </div> -->
-=======
         <div class="rf register countryselect" @mouseenter.stop="showLanguageList=true" @mouseleave="showLanguageList=false">
           <div class="language-list">
             <img :src="imgSrc" class="flag" alt />
@@ -42,7 +20,6 @@
             </transition>
           </div>
         </div>
->>>>>>> 14d7ab9877aec695a1114bfda43968042990b2e6
         <div class="rf">
           <router-link to="/login">
             <button class="hd-btn">{{$t('header.login')}}</button>
@@ -348,22 +325,6 @@ p {
   margin-top: 25px;
   margin-right: 10px;
 }
-<<<<<<< HEAD
-.countryselect {
-  float: right;
-  margin-left: 30px;
-  margin-top: 35px;
-  position: relative;
-}
-.downIcon{
-  width: 0px;
-  height: 10px;
-  border: 10px solid;
-  border-color:  #666 transparent transparent transparent;
-}
-=======
-
->>>>>>> 14d7ab9877aec695a1114bfda43968042990b2e6
 .flag {
   width: 35px;
   display: inline-block;
