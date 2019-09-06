@@ -1,3 +1,10 @@
+<!--
+ * @Autor: Diskfan
+ * @Date: 2019-09-06 10:07:02
+ * @LastEditors: Do not edit
+ * @LastEditTime: 2019-09-06 12:48:40
+ * @Description: 
+ -->
 <template>
   <div class="metal">
     <div class="name">贵金属</div>
@@ -36,7 +43,7 @@
           <img class="imgcenter" src="images/metal7.jpg" alt />
         </div>
 
-        <div class="melaright">
+        <div class="melaright pc">
           <span class="borderfont more">公开透明，市场公正</span>
           <span class="borderfont more31">即时交收，变现容易</span>
           <span class="borderfont less">
@@ -47,6 +54,22 @@
             立即
             <br />体验
           </p>
+          <div class="clear"></div>
+          <a href="javascript:void(0)">
+            <img class="arrowicon" src="@/assets/metalarow.png" alt />
+          </a>
+        </div>
+        <div class="melaright mb">
+          <p class="purfont">
+            立即体验
+          </p>
+          <div class="list">
+            <span class="borderfont more">公开透明，市场公正</span>
+            <span class="borderfont more31">即时交收，变现容易</span>
+            <span class="borderfont less">
+              市场波动率大，<br />双向交易均可收益
+            </span>
+          </div>
           <div class="clear"></div>
           <a href="javascript:void(0)">
             <img class="arrowicon" src="@/assets/metalarow.png" alt />
@@ -63,7 +86,7 @@ export default {
   components: { Regist }
 };
 </script>
-<style lang="scss" scoped>
+<style lang="scss">
 @import "@/styles/mixin.scss";
 .metal {
   .name {
@@ -254,6 +277,33 @@ export default {
             margin-right: 0px;
             transition: 1s;
           }
+        }
+      }
+      .melaright.mb {
+        display: none;
+        width: 90%;
+        margin: 0 auto;
+        float: unset;
+        .purfont {
+          width: 50px;
+          display: inline-block;
+          float: left;
+          margin-top: 0;
+          vertical-align: middle;
+        }
+        .list {
+          width: calc(100% - 50px);
+          float: left;
+          vertical-align: middle;
+          display: flex;
+          flex-direction: column;
+          >span {
+            width: 100%;
+          }
+        }
+        >a img {
+              margin-left: calc(50% - 40px);
+              float: unset;
         }
       }
     }

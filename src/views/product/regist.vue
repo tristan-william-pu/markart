@@ -1,3 +1,10 @@
+<!--
+ * @Autor: Diskfan
+ * @Date: 2019-09-06 10:07:02
+ * @LastEditors: Do not edit
+ * @LastEditTime: 2019-09-06 11:54:33
+ * @Description: 
+ -->
 <template>
   <div class="apply">
     <div class="wrap">
@@ -17,7 +24,7 @@
 <script>
 export default {};
 </script>
-<style lang="scss" scoped>
+<style lang="scss">
 .apply {
   height: 90px;
   width: 100%;
@@ -27,7 +34,7 @@ export default {};
   box-sizing: border-box;
   padding-top: 20px;
   .wrap {
-    width: 1200px;
+    max-width: 1200px;
     display: block;
     margin: 0 auto;
     margin-top: -20px;
