@@ -1,0 +1,30 @@
+@mixin  full($w: 100%, $h: 100%) {
+  width: $w;
+  height: $h;
+}
+
+@mixin flex($content: center, $align: center, $direction: row) {
+  display: flex;
+  justify-content: $content;
+  align-items: $align;
+  flex-direction: $direction;
+}
+@mixin animation($name: bounceInUps, $duration: 1s, $delay: 0ms) {
+  animation-name: $name;
+  animation-duration: $duration;
+  animation-fill-mode: both;
+  animation-delay: $delay;
+}
+@mixin clearfix() {
+  &:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+  }
+}
+@mixin transition($duration: 0.3s, $target: all) {
+	transition: $duration $target cubic-bezier(0.24, 0.75, 0.59, 1.01);
+}
