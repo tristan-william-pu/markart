@@ -1,11 +1,10 @@
 <!--
- * @ Author: Diskfan
- * @ Create Time: 2019-09-02 13:55:38
- * @ Modified by: Your name
- * @ Modified time: 2019-09-04 10:06:28
- * @ Description: 指数
+ * @Autor: Diskfan
+ * @Date: 2019-09-06 10:07:02
+ * @LastEditors: Do not edit
+ * @LastEditTime: 2019-09-06 13:51:15
+ * @Description: 指数
  -->
-
 
 <template>
   <div class="tradeindex">
@@ -36,7 +35,7 @@
       >CPT Markets提供多种指数交易产品，涵盖道•琼斯工业平均指数、英国富时100指数、标普500指数、纳斯达克100指数、德国法兰克福DAX指数、法国40CAC指数、欧洲斯托克50指数，以及香港恒生指数等。</div>
     </div>
     <div class="choose">
-      <div class="part">
+      <div class="part pc">
         <div class="indexicon">
           <ul>
             <li>
@@ -57,6 +56,26 @@
         </div>
       </div>
       <img class="imgcen" src="images/index07.jpg" alt />
+      <div class="part mb">
+        <div class="indexicon">
+          <ul>
+            <li>
+              <img src="@/assets/index13.jpg" alt />
+              <p>
+                有效的
+                <br />风险控制
+              </p>
+            </li>
+            <li>
+              <img src="@/assets/index17.jpg" alt />
+              <p>
+                极具竞争力的
+                <br />点差
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
       <div class="part">
         <div class="indexicon">
           <ul>
@@ -87,7 +106,7 @@ export default {
   components: { Regist }
 };
 </script>
-<style lang="scss" scoped>
+<style lang="scss">
 @import "@/styles/mixin.scss";
 .tradeindex {
   margin: 0 auto;
@@ -160,7 +179,6 @@ export default {
       }
       .text {
         padding: 0 50px;
-        margin-left: 20px;
         width: 650px;
         margin-top: 135px;
         font-size: 18px;
@@ -233,6 +251,9 @@ export default {
           }
         }
       }
+    }
+    .part.mb {
+      display: none;
     }
     .imgcen {
       margin: 0px auto;

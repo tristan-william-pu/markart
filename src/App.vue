@@ -1,10 +1,17 @@
+<!--
+ * @Autor: Diskfan
+ * @Date: 2019-09-06 10:07:02
+ * @LastEditors: Do not edit
+ * @LastEditTime: 2019-09-06 11:50:23
+ * @Description: 
+ -->
 <template>
-  <div id="app">
-    <Header v-if="header_show" />
+  <div id="app" class="app">
+    <!-- <Header v-if="header_show" /> -->
       <keep-alive>
         <router-view  v-on:header="header" v-on:footer="footer" />
       </keep-alive>
-    <Footer v-if="footer_show" />
+    <!-- <Footer v-if="footer_show" /> -->
   </div>
 </template>
 
@@ -37,4 +44,5 @@ export default {
 img {
    vertical-align: middle;
 }
+@import '@/styles/app.scss';
 </style>

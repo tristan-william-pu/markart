@@ -1,11 +1,10 @@
 <!--
- * @ Author: Diskfan
- * @ Create Time: 2019-09-02 13:55:38
- * @ Modified by: Your name
- * @ Modified time: 2019-09-04 10:05:44
- * @ Description: 差价合约
+ * @Autor: Diskfan
+ * @Date: 2019-09-06 10:07:02
+ * @LastEditors: Do not edit
+ * @LastEditTime: 2019-09-06 13:29:37
+ * @Description: 差价合约
  -->
-
 
 <template>
   <div class="conctrat">
@@ -70,7 +69,7 @@ export default {
   components: { Regist }
 };
 </script>
-<style lang="scss" scoped>
+<style lang="scss">
 @import "@/styles/mixin.scss";
 .conctrat {
   margin: 0 auto;
