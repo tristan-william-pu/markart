@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <!--
  * @Autor: Diskfan
  * @Date: 2019-09-06 10:07:02
@@ -7,8 +6,6 @@
  * @Description: 关于
  -->
 
-=======
->>>>>>> ea593f1bb1bf9e7ed55ab191180709c0b4b035ab
 <template>
   <div class="cn safty">
     <div class="banner">
