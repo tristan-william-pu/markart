@@ -2,17 +2,17 @@
  * @Autor: Diskfan
  * @Date: 2019-09-06 18:03:03
  * @LastEditors: Do not edit
- * @LastEditTime: 2019-09-06 19:38:41
+ * @LastEditTime: 2019-09-06 19:56:16
  * @Description: 支持  文章预览
  -->
 <template>
   <div class="introduction">
     <div class="name">
       <h1>
-        {{current && current.name[locale]}}
+        {{current.name[locale]}}
       </h1>
     </div>
-    <div class="content" v-if="current">
+    <div class="content">
       <ul>
         <li
           v-for="(item, key) in current.contents"
@@ -42,8 +42,7 @@
         </li>
       </ul>
     </div>
-    <div v-else></div>
-    <div class="page" v-if="current && current.page">
+    <div class="page" v-if="current.page">
       <ul>
         <li
           :class="{active: index == pageidx}"
@@ -71,7 +70,7 @@ export default {
       return this.$i18n.locale
     },
     index() {
-      return this.$route.params.idx || 4;
+      return this.$route.params.idx || 0;
     },
     current() {
       const data = this.data[this.index];
