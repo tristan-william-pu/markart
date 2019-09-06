@@ -22,7 +22,7 @@ export default new Router({
       component: importModule('about/safety')
     }, {
       path: '/login',
-      name: 'home',
+      name: 'login',
       component: importModule('login/login')
     },{
       path: '/safety',
@@ -116,8 +116,12 @@ export default new Router({
     }, {
       // school
       path: '/school',
-      name: 'school',
-      component: importModule('suport/school')
+      component: importModule('suport/school'),
+      
+    },{
+      path:'/AZ',
+      name: 'AZ',
+      component: importModule('suport/AZ'),
     }, {
       path: '/partners',
       name: 'partners',

@@ -21,7 +21,9 @@
           </div>
         </div>
         <div class="rf">
-          <button class="hd-btn"><router-link class="" to="/login">{{$t('header.login')}}</router-link> </button>
+          <router-link to="/login">
+            <button class="hd-btn">{{$t('header.login')}}</button>
+          </router-link>
           <button class="hd-btn">{{$t('header.register')}}</button>
         </div>
         <div class="nav clearfix">
@@ -309,18 +311,13 @@ p {
   float: left;
   margin-top: 25px;
   margin-right: 10px;
-  transition: 0.5s;
+  transition:all 0.3s ease-in-out; 
   position: relative;
   overflow: hidden;
   font-size: 16px;
   &:hover {
-    background: #5b0eb2;
+    background-color: #5b0eb2;
     color: #fff;
-  }
-  .link{
-    color:#5b0eb2 !important;
-    width:100%;
-    height:100%;
   }
 }
 
@@ -328,7 +325,6 @@ p {
   margin-top: 25px;
   margin-right: 10px;
 }
-
 .flag {
   width: 35px;
   display: inline-block;
