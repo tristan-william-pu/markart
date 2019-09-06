@@ -4,7 +4,11 @@
     <div class="banner pc">
       <div class="img">
         <div class="warp clearfix">
+<<<<<<< HEAD
             <p class="bannerfont emerging">{{$t('white.cooperation')}}</p>
+=======
+            <p class="bannerfont emerging">白标合作</p>
+>>>>>>> 8498b8599e636b32f2adc667b4302c4d4c108d5d
         </div>
       </div>
     </div>
@@ -12,6 +16,7 @@
     <!-- <img class="bannerimg mob" src="/Public/addheader/images/white-label_mob_03.jpg" alt=""> -->
 
     <div class="warp">
+<<<<<<< HEAD
       <div class="tit">{{$t('white.cooperation')}}</div>
       <p class="art arttext">
         {{$t('white.quality')}}<br>
@@ -19,12 +24,25 @@
         {{$t('white.qualitybr')}}<br>
         {{$t('white.qualitybrb')}}<br>
         {{$t('white.qualitybrbr')}}
+=======
+      <div class="tit">白标合作</div>
+      <p class="art arttext">
+        我们为客户量身打造优质的白标解决方案，降低合作伙伴的运营成本；<br>
+        我们的商业模式保障客户的交易环境公平、透明； <br>
+        我们有竞争力的点差和良好的交易环境让客户获利更便捷；<br>
+        我们专为有意创建自己品牌的资本经营者和代理经纪商提供合作方案；<br>
+        我们专注于与合作伙伴培养长期稳定的合作关系。
+>>>>>>> 8498b8599e636b32f2adc667b4302c4d4c108d5d
       </p>
     </div>
     <div class="QShare warp clearfix pc">
       <div class="left">
         <img src="@/assets/white-label_11.png" alt/>
+<<<<<<< HEAD
         <p>{{$t('white.clients')}}</p>
+=======
+        <p>客户</p>
+>>>>>>> 8498b8599e636b32f2adc667b4302c4d4c108d5d
       </div>
       <img class="arrowicon" src="@/assets/step5.png" alt/>
       <div class="centerbox">
@@ -35,13 +53,21 @@
         </div>
         <div class="imgdet">
           <img src="@/assets/white-label_16.png" alt/>
+<<<<<<< HEAD
           <p>{{$t('white.CRM')}}</p>
+=======
+          <p>CRM 系统</p>
+>>>>>>> 8498b8599e636b32f2adc667b4302c4d4c108d5d
         </div>
       </div>
       <img class="arrowicon" src="@/assets/step5.png" alt="">
       <div class="left">
         <img src="@/assets/white-label_08.png" alt/>
+<<<<<<< HEAD
         <p>{{$t('white.label')}}</p>
+=======
+        <p>白标</p>
+>>>>>>> 8498b8599e636b32f2adc667b4302c4d4c108d5d
       </div>
     </div>
 
@@ -49,6 +75,7 @@
       <ul>
         <li class="clearfix">
             <img src="@/assets/Oil10.png" alt/>
+<<<<<<< HEAD
             <p>{{$t('white.competitive')}}</p>
         </li>
         <li class="clearfix">
@@ -73,13 +100,49 @@
           <li class="clearfix">
               <img src="@/assets/Oil10.png" alt/>
               <p>{{$t('white.monitoring')}}</p>
+=======
+            <p>极具竞争力的合作方案</p>
+        </li>
+        <li class="clearfix">
+            <img src="@/assets/Oil10.png" alt/>
+            <p>量身定做的CRM系统</p>
+        </li>
+        <li class="clearfix">
+            <img src="@/assets/Oil10.png" alt/>
+            <p>量身定做的CRM系统</p>
+        </li>
+          <li class="clearfix">
+              <img src="@/assets/Oil10.png" alt/>
+              <p>支持MT4，PC端，网页端，手机端</p>
+          </li>
+          <li class="clearfix">
+              <img src="@/assets/Oil10.png" alt/>
+              <p>强大优势的市场深度</p>
+          </li>
+          <!-- <li class="clearfix">
+              <img src="/Public/addheader/images/Oil10.png" alt="">
+              <p class="pafg">手机端</p>
+          </li> -->
+          <li class="clearfix">
+              <img src="@/assets/Oil10.png" alt/>
+              <p>一线流动性合作伙伴</p>
+          </li>
+          <li class="clearfix">
+              <img src="@/assets/Oil10.png" alt/>
+              <p>24H 实时监控</p>
+>>>>>>> 8498b8599e636b32f2adc667b4302c4d4c108d5d
           </li>
         </ul>
       </div>
 
       <div class="warp bottomtips">
+<<<<<<< HEAD
         {{$t('white.questions')}}<br>
         {{$t('white.send')}}<a href="mailto:cs@cptmarkets.com" class="wblue">cs@cptmarkets.com</a>{{$t('white.glad')}}
+=======
+        白标合作计划您有任何疑问，<br>
+        请发送邮箱至<a href="mailto:cs@cptmarkets.com" class="wblue">cs@cptmarkets.com </a> ，我们将竭诚为您服务！
+>>>>>>> 8498b8599e636b32f2adc667b4302c4d4c108d5d
       </div>
   </div>
 </template>
@@ -115,8 +178,14 @@ export default {
     font-weight: bold
   }
   .art{
+<<<<<<< HEAD
     line-height:60px;
     font-size: 16px;
+=======
+    line-height: 20px;
+    font-size: 18px;
+    line-height: 60px;
+>>>>>>> 8498b8599e636b32f2adc667b4302c4d4c108d5d
     margin-top: 50px;
     text-align: center;
   }
@@ -186,7 +255,10 @@ export default {
         width: 80%;
         float: left;
         margin-left: 20px;
+<<<<<<< HEAD
         font-family: montserrat;
+=======
+>>>>>>> 8498b8599e636b32f2adc667b4302c4d4c108d5d
       }
     }
   }
@@ -200,6 +272,16 @@ export default {
   .wblue{
     color: #0073d4
   }
+<<<<<<< HEAD
+=======
+  .art {
+      line-height: 20px;
+      font-size: 18px;
+      line-height: 60px;
+      margin-top: 50px;
+      text-align: center;
+  }
+>>>>>>> 8498b8599e636b32f2adc667b4302c4d4c108d5d
 }
 
 .tit{font-family: montserratse;margin-top: 100px;font-size: 40px;text-align: center}

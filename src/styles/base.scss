@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 @font-face
 {
@@ -41,6 +42,10 @@ src: url('../../public/font/montserrat/Montserrat-SemiBold.otf');
 {
 font-family: Light;
 src: url('../../public/font/montserrat/Montserrat-Light.otf');
+=======
+*{
+    box-sizing: border-box;
+>>>>>>> 8498b8599e636b32f2adc667b4302c4d4c108d5d
 }
 body,p,h1,h2,h3,h4,h5,h6,ul,ol,dl,li,dt,dd{
     /* 默认有边距，都要清除 */
@@ -48,7 +53,11 @@ body,p,h1,h2,h3,h4,h5,h6,ul,ol,dl,li,dt,dd{
     padding: 0;
     /*字体设置*/
     font-size: 14px;
+<<<<<<< HEAD
     font-family: montserrat;
+=======
+    font-family: "Microsoft Yahei",sans-serif;
+>>>>>>> 8498b8599e636b32f2adc667b4302c4d4c108d5d
     /* 去掉列表的原点 */
     list-style: none;
     /* 默认鼠标 */

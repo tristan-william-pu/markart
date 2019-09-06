@@ -10,7 +10,11 @@
   <div class="compare">
     <div class="img">
       <div class="center">
+<<<<<<< HEAD
         <h6>{{$t('compare.software')}}</h6>
+=======
+        <h6>交易软件对比</h6>
+>>>>>>> 8498b8599e636b32f2adc667b4302c4d4c108d5d
         <p>
           <span>Meta Trader 4</span>
           <span class="cen">Meta Trader 5</span>
@@ -25,6 +29,7 @@
           <h3>Meta Trader 4</h3>
           <div class="mtCon clear">
             <div class="fl">
+<<<<<<< HEAD
               <p class="title">{{$t('compare.ideal')}}</p>
               <ul>
                 <li class="clear">
@@ -50,13 +55,44 @@
                 <li class="clear">
                   <img src="@/assets/sjx.png" class="fl" />
                   <p class="fl">{{$t('compare.currency')}}</p>
+=======
+              <p class="title">MT4 - 非常适合那些刚刚开始在线交易以及更有经验的交易者，寻找操作简约而配置多元化的平台。</p>
+              <ul>
+                <li class="clear">
+                  <img src="@/assets/sjx.png" class="fl" />
+                  <p class="fl">简单明了的导航界面</p>
+                </li>
+                <li class="clear">
+                  <img src="@/assets/sjx.png" class="fl" />
+                  <p class="fl">内置的智能交易和自定义指标商店</p>
+                </li>
+                <li class="clear">
+                  <img src="@/assets/sjx.png" class="fl" />
+                  <p class="fl">交互式可定制图表</p>
+                </li>
+                <li class="clear">
+                  <img src="@/assets/sjx.png" class="fl" />
+                  <p class="fl">可靠的虚拟专用服务器服务</p>
+                </li>
+                <li class="clear">
+                  <img src="@/assets/sjx.png" class="fl" />
+                  <p class="fl">差价合约交易</p>
+                </li>
+                <li class="clear">
+                  <img src="@/assets/sjx.png" class="fl" />
+                  <p class="fl">加密货币交易</p>
+>>>>>>> 8498b8599e636b32f2adc667b4302c4d4c108d5d
                 </li>
               </ul>
               <p class="btn">
                 <a
                   href="https://download.mql5.com/cdn/web/10957/mt4/cptmarkets4setup.exe"
                   download="cptmarkets-MT4"
+<<<<<<< HEAD
                 >{{$t('compare.dlmt')}}</a>
+=======
+                >下载MT4</a>
+>>>>>>> 8498b8599e636b32f2adc667b4302c4d4c108d5d
               </p>
             </div>
             <div class="fr">
@@ -69,6 +105,7 @@
           <h3>CPT cTrader</h3>
           <div class="mtCon clear">
             <div class="fl">
+<<<<<<< HEAD
               <p class="title">CPT cTrader - {{$t('compare.convenient')}}</p>
               <ul>
                 <li class="clear">
@@ -90,6 +127,29 @@
                 <li class="clear">
                   <img src="@/assets/sjx.png" class="fl" />
                   <p class="fl">{{$t('compare.chart')}}</p>
+=======
+              <p class="title">CPT cTrader - 方便的功能多元的交易环境，允许更多的灵活性执行交易; 高度可定制平台，可以满足任何交易者的需求。</p>
+              <ul>
+                <li class="clear">
+                  <img src="@/assets/sjx.png" class="fl" />
+                  <p class="fl">完整市场深度的二级报价</p>
+                </li>
+                <li class="clear">
+                  <img src="@/assets/sjx.png" class="fl" />
+                  <p class="fl">市场领先的点差以及低佣金</p>
+                </li>
+                <li class="clear">
+                  <img src="@/assets/sjx.png" class="fl" />
+                  <p class="fl">服务器移动止损</p>
+                </li>
+                <li class="clear">
+                  <img src="@/assets/sjx.png" class="fl" />
+                  <p class="fl">云服务将所有帐户和模板保存在一个地方</p>
+                </li>
+                <li class="clear">
+                  <img src="@/assets/sjx.png" class="fl" />
+                  <p class="fl">一键交易和高级图表交易</p>
+>>>>>>> 8498b8599e636b32f2adc667b4302c4d4c108d5d
                 </li>
                 <li class="clear">
                   <img src="@/assets/sjx.png" class="fl" />
@@ -97,6 +157,7 @@
                 </li>
                 <li class="clear">
                   <img src="@/assets/sjx.png" class="fl" />
+<<<<<<< HEAD
                   <p class="fl">LD5 IBX Equinix {{$t('compare.data')}}</p>
                 </li>
                 <li class="clear">
@@ -110,13 +171,32 @@
                 <li class="clear">
                   <img src="@/assets/sjx.png" class="fl" />
                   <p class="fl">{{$t('compare.realTime')}}</p>
+=======
+                  <p class="fl">LD5 IBX Equinix数据中心服务器</p>
+                </li>
+                <li class="clear">
+                  <img src="@/assets/sjx.png" class="fl" />
+                  <p class="fl">多种订单类型</p>
+                </li>
+                <li class="clear">
+                  <img src="@/assets/sjx.png" class="fl" />
+                  <p class="fl">扩展符号显示</p>
+                </li>
+                <li class="clear">
+                  <img src="@/assets/sjx.png" class="fl" />
+                  <p class="fl">实时市场报告</p>
+>>>>>>> 8498b8599e636b32f2adc667b4302c4d4c108d5d
                 </li>
               </ul>
               <p class="btn">
                 <a
                   href="http://cptmarkets.ctrader.com/ctrader-cptmarkets-setup.exe"
                   download="cptmarkets-cTrader"
+<<<<<<< HEAD
                 >{{$t('compare.dlct')}}</a>
+=======
+                >下载CPT cTrader</a>
+>>>>>>> 8498b8599e636b32f2adc667b4302c4d4c108d5d
               </p>
             </div>
             <div class="fr">
@@ -126,6 +206,7 @@
         </div>
         <!--性能对比-->
         <div class="contrast">
+<<<<<<< HEAD
           <h4>{{$t('compare.comparison')}}</h4>
           <p>{{$t('compare.difference')}}</p>
           <div class="tab clear">
@@ -177,6 +258,59 @@
               <li class="gang">{{$t('compare.lever')}}</li>
               <li class="ctLine"></li>
               <li>{{$t('compare.margin')}}</li>
+=======
+          <h4>性能对比</h4>
+          <p>显示差异</p>
+          <div class="tab clear">
+            <ul class="firUl">
+              <li class="first">市场执行</li>
+              <li class="ctLine"></li>
+              <li>网页交易（MACOS兼容）</li>
+              <li class="ctLine"></li>
+              <li>IOS和Android APPS</li>
+              <li class="ctLine"></li>
+              <li>套期保值</li>
+              <li class="ctLine"></li>
+              <li>二级市场深度</li>
+              <li class="ctLine"></li>
+              <li>交易量以手数计算</li>
+              <li class="ctLine"></li>
+              <li>数量计算单位</li>
+              <li class="ctLine"></li>
+              <li>信号交易</li>
+              <li class="ctLine"></li>
+              <li>自动交易</li>
+              <li class="ctLine"></li>
+              <li class="pcLi">完整尺寸跳动点图</li>
+              <li class="ctLine"></li>
+              <li>一键交易</li>
+              <li class="ctLine"></li>
+              <li>自动创建和共享图表截图</li>
+              <li class="ctLine"></li>
+              <li>一键反向交易</li>
+              <li class="ctLine"></li>
+              <li>一键建立双倍头寸</li>
+              <li class="ctLine"></li>
+              <li>加仓</li>
+              <li class="ctLine"></li>
+              <li>一键平掉所有仓位</li>
+              <li class="ctLine"></li>
+              <li class="firLin">时间表格</li>
+              <li class="ctLine"></li>
+              <li>可自定义平台时间偏移</li>
+              <li class="ctLine"></li>
+              <li>部分填充</li>
+              <li class="ctLine"></li>
+              <li>价差合约交易</li>
+              <li class="ctLine"></li>
+              <li class="dcha">点差</li>
+              <li class="ctLine"></li>
+              <li class="addc">佣金 /点差加码</li>
+              <li class="ctLine"></li>
+              <li class="gang">杠杆</li>
+              <li class="ctLine"></li>
+              <li>追加保证金/强制止损水平</li>
+>>>>>>> 8498b8599e636b32f2adc667b4302c4d4c108d5d
             </ul>
             <ul class="border">
               <li class="title">
@@ -215,7 +349,11 @@
               <li class="ctLine"></li>
               <li class="cuoLi">×</li>
               <li class="ctLine"></li>
+<<<<<<< HEAD
               <li class="leZe">{{$t('compare.nine')}}</li>
+=======
+              <li class="leZe">9个时间表格</li>
+>>>>>>> 8498b8599e636b32f2adc667b4302c4d4c108d5d
               <li class="ctLine"></li>
               <li class="cuoLi">×</li>
               <li class="ctLine"></li>
@@ -224,6 +362,7 @@
               <li class="duiLi">√</li>
               <li class="ctLine"></li>
               <li>
+<<<<<<< HEAD
                 {{$t('compare.floating')}}
                 <br />{{$t('compare.fixed')}}
               </li>
@@ -235,6 +374,19 @@
                 <br />{{$t('compare.metal')}}
                 <br />{{$t('compare.oil')}}
                 <br />{{$t('compare.crypto')}}
+=======
+                浮动，从0.4点起
+                <br />固定，2点起
+              </li>
+              <li class="ctLine"></li>
+              <li>无佣金，无加点</li>
+              <li class="ctLine"></li>
+              <li>
+                外汇&nbsp;&nbsp;1：无限
+                <br />贵金属&nbsp;&nbsp;1：无限
+                <br />原油指数&nbsp;&nbsp;1：100
+                <br />加密货币对&nbsp;&nbsp;1：10
+>>>>>>> 8498b8599e636b32f2adc667b4302c4d4c108d5d
               </li>
               <li class="ctLine"></li>
               <li class="bot">100% / 20%</li>
@@ -276,7 +428,11 @@
               <li class="ctLine"></li>
               <li class="cuoLi">×</li>
               <li class="ctLine"></li>
+<<<<<<< HEAD
               <li class="leZe">{{$t('compare.twenty')}}</li>
+=======
+              <li class="leZe">21个时间表格</li>
+>>>>>>> 8498b8599e636b32f2adc667b4302c4d4c108d5d
               <li class="ctLine"></li>
               <li class="cuoLi">×</li>
               <li class="ctLine"></li>
@@ -284,6 +440,7 @@
               <li class="ctLine"></li>
               <li class="duiLi">√</li>
               <li class="ctLine"></li>
+<<<<<<< HEAD
               <li class="flo">{{$t('compare.floa')}}</li>
               <li class="ctLine"></li>
               <li>{{$t('compare.commission')}}</li>
@@ -293,6 +450,17 @@
                 <br />{{$t('compare.metal')}}
                 <br />{{$t('compare.oil')}}
                 <br />{{$t('compare.crypto')}}
+=======
+              <li class="flo">浮动，从0.2点起</li>
+              <li class="ctLine"></li>
+              <li>无佣金，无加点</li>
+              <li class="ctLine"></li>
+              <li>
+                货币&nbsp;&nbsp;1：无限
+                <br />贵金属&nbsp;&nbsp;1：无限
+                <br />原油指数&nbsp;&nbsp;1：100
+                <br />加密货币对&nbsp;&nbsp;1：10
+>>>>>>> 8498b8599e636b32f2adc667b4302c4d4c108d5d
               </li>
               <li class="ctLine"></li>
               <li class="bot">100% / 20%</li>
@@ -333,7 +501,11 @@
               <li class="ctLine"></li>
               <li class="duiLi">√</li>
               <li class="ctLine"></li>
+<<<<<<< HEAD
               <li class="leZe">{{$t('compare.six')}}</li>
+=======
+              <li class="leZe">26个时间表格</li>
+>>>>>>> 8498b8599e636b32f2adc667b4302c4d4c108d5d
               <li class="ctLine"></li>
               <li class="duiLi">√</li>
               <li class="ctLine"></li>
@@ -341,6 +513,7 @@
               <li class="ctLine"></li>
               <li class="duiLi">√</li>
               <li class="ctLine"></li>
+<<<<<<< HEAD
               <li class="flo">{{$t('compare.floatfrom')}}</li>
               <li class="ctLine"></li>
               <li>{{$t('compare.commission')}}</li>
@@ -348,6 +521,15 @@
               <li class="duih">
                 {{$t('compare.pairs')}}
                 <br />{{$t('compare.metalup')}}
+=======
+              <li class="flo">浮动，从0点起</li>
+              <li class="ctLine"></li>
+              <li>无佣金，无加点</li>
+              <li class="ctLine"></li>
+              <li class="duih">
+                货币对高达1:1000
+                <br />贵金属高达1:1000
+>>>>>>> 8498b8599e636b32f2adc667b4302c4d4c108d5d
               </li>
               <li class="ctLine"></li>
               <li class="bot">100% / 20%</li>
@@ -553,7 +735,11 @@ export default {};
       margin: 0 auto;
       color: #ffffff;
       h6 {
+<<<<<<< HEAD
         font-family: montserratse;
+=======
+        font-family: FZLTZHK;
+>>>>>>> 8498b8599e636b32f2adc667b4302c4d4c108d5d
         text-align: center;
         font-size: 60px;
         font-weight: 100;
@@ -580,7 +766,11 @@ export default {};
         h3 {
           font-size: 40px;
           color: #000000;
+<<<<<<< HEAD
           font-family: montserratse;
+=======
+          font-family: SEMIBOLD;
+>>>>>>> 8498b8599e636b32f2adc667b4302c4d4c108d5d
           text-align: center;
           padding-top: 62px;
           font-weight: 600;
@@ -591,12 +781,21 @@ export default {};
           > .fl {
             width: 45%;
             margin: 62px 0 0 5%;
+<<<<<<< HEAD
             p.title{
               color: #0e0e0c;
               font-size: 16px;
               font-family: montserratse;
               font-weight: bold;
               line-height: 36px;
+=======
+            p {
+              color: #0e0e0c;
+              font-size: 16px;
+              font-family: SEMIBOLD;
+              line-height: 36px;
+              font-weight: 900;
+>>>>>>> 8498b8599e636b32f2adc667b4302c4d4c108d5d
             }
             ul {
               margin: 30px 0 0 23px;
@@ -611,7 +810,11 @@ export default {};
                   margin-left: 28px;
                   font-size: 18px;
                   color: #313131;
+<<<<<<< HEAD
                   font-family: Light !important;
+=======
+                  font-family: Light;
+>>>>>>> 8498b8599e636b32f2adc667b4302c4d4c108d5d
                 }
               }
             }
@@ -627,7 +830,11 @@ export default {};
               user-select: none;
               a {
                 font-size: 18px;
+<<<<<<< HEAD
                 font-family: montserratse;
+=======
+                font-family: SEMIBOLD;
+>>>>>>> 8498b8599e636b32f2adc667b4302c4d4c108d5d
                 color: #000;
                 @include transition();
               }
@@ -649,16 +856,26 @@ export default {};
           }
         }
       }
+<<<<<<< HEAD
       .ctrader {margin:10% auto;
         .btn {
           width: 226px !important;
+=======
+      .ctrader {
+        .btn {
+          width: 185px !important;
+>>>>>>> 8498b8599e636b32f2adc667b4302c4d4c108d5d
         }
       }
       .contrast {
         h4 {
           font-size: 40px;
           color: #000000;
+<<<<<<< HEAD
           font-family: montserratse;
+=======
+          font-family: FZLTZHK;
+>>>>>>> 8498b8599e636b32f2adc667b4302c4d4c108d5d
           text-align: center;
         }
         > p {
@@ -666,7 +883,11 @@ export default {};
           color: #000000;
           margin: 19px auto 66px;
           text-align: center;
+<<<<<<< HEAD
           font-family: Light;
+=======
+          font-family: LTH;
+>>>>>>> 8498b8599e636b32f2adc667b4302c4d4c108d5d
         }
         .tab {
           @include flex(center, unset);
@@ -674,11 +895,19 @@ export default {};
             width: 23%;
             margin: 0 1%;
             li {
+<<<<<<< HEAD
               font-size: 15px;
               color: #231815;
               margin-left: 9px;
               line-height: 30px;
               font-family: Light;
+=======
+              font-size: 18px;
+              color: #231815;
+              font-family: LTH;
+              margin-left: 9px;
+              line-height: 30px;
+>>>>>>> 8498b8599e636b32f2adc667b4302c4d4c108d5d
             }
             li.first {
               margin-top: 181px;
@@ -689,6 +918,7 @@ export default {};
               background-color: #ededed;
               margin: 24px auto 20px;
             }
+<<<<<<< HEAD
             li.liauBot{
                 margin: -2px auto 21px;
 
@@ -696,6 +926,8 @@ export default {};
             li.LipcBot{
               margin: 19px auto 20px;
             }
+=======
+>>>>>>> 8498b8599e636b32f2adc667b4302c4d4c108d5d
             li.flo {
                   line-height: 67px;
             }
@@ -708,11 +940,14 @@ export default {};
             li.duih {
               padding: 30px 0;
             }
+<<<<<<< HEAD
             li.cuoLi{
               font-size: 27px;
               color: #939393;
               font-weight: 900;
             }
+=======
+>>>>>>> 8498b8599e636b32f2adc667b4302c4d4c108d5d
           }
           .border {
             box-shadow: 5px 5px 5px #f4f4f4, 5px -5px 5px #f4f4f4,
@@ -722,7 +957,11 @@ export default {};
             }
             .title {
               text-align: center;
+<<<<<<< HEAD
               font-family: montserratse;
+=======
+              font-family: SEMIBOLD;
+>>>>>>> 8498b8599e636b32f2adc667b4302c4d4c108d5d
               font-size: 24px;
               color: #231815;
               margin: 72px 0;

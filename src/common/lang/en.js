@@ -70,6 +70,7 @@ module.exports = {
     makeMoney:'They Trade – You Earn!',
     jionUs:'JION US',
   },
+<<<<<<< HEAD
   //联系我们
   contact:{
     contactUs:'CONTACT US',
@@ -248,4 +249,6 @@ compare:{
 
 }
   
+=======
+>>>>>>> 8498b8599e636b32f2adc667b4302c4d4c108d5d
 }

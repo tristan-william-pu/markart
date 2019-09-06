@@ -69,6 +69,7 @@ module.exports = {
     makeMoney:'他们交易 – 您赚取佣金!',
     jionUs:'加入我们',
   },
+<<<<<<< HEAD
 
    //联系我们
    contact:{
@@ -249,4 +250,6 @@ compare:{
   metalup:'贵金属高达1:1000',
 
 }
+=======
+>>>>>>> 8498b8599e636b32f2adc667b4302c4d4c108d5d
 }

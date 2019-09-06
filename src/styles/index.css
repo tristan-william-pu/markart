@@ -5,7 +5,11 @@ body, p, h1, h2, h3, h4, h5, h6, ul, ol, dl, li, dt, dd {
   padding: 0;
   /*字体设置*/
   font-size: 14px;
+<<<<<<< HEAD
   font-family: montserrat;
+=======
+  font-family: "Microsoft Yahei",sans-serif;
+>>>>>>> 8498b8599e636b32f2adc667b4302c4d4c108d5d
   /* 去掉列表的原点 */
   list-style: none;
   /* 默认鼠标 */
