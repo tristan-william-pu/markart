@@ -3,7 +3,7 @@
     <div class="banner pc">
       <div class="img">
         <div class="warp clearfix">
-          <p class="bannerfont emerging">介绍服务经纪商</p>
+          <p class="bannerfont emerging">{{$t('IB.broker')}}</p>
         </div>
       </div>
     </div>
@@ -11,35 +11,36 @@
     <!-- <img class="bannerimg mob" src="@/assets/white-label_mob_03.jpg" alt=""> -->
 
     <div class="warp" >
-      <div class="tit">介绍服务经纪商</div>
+      <div class="tit">{{$t('IB.broker')}}</div>
       <img class="lcimg lcfirst" src="@/assets/IB_05.png" alt/>
       <img class="lcimg" src="@/assets/IB_09.png" alt/>
       <img class="lcimg" src="@/assets/IB_13.png" alt/>
-      <div class="art" style="text-align:center">我们提供符合代理自身情况的营销方案和策略，帮助客户快速高效获取市场份额！</div>
+      <div class="art" style="text-align:center">{{$t('IB.solutions')}}</div>
     </div>
 
     <div class="warp sixtype">
       <div class="tit">
-        六大特色<br>
-        让您的业务拓展能力快人一步！
+        {{$t('IB.feature')}}<br>
+        {{$t('IB.accelerate')}}<br>
+        {{$t('IB.acceleratebr')}}
       </div>
       <div class="warp anlist clearfix">
         <ul>
           <li class="clearfix">
               <img src="@/assets/Oil10.png" alt/>
-              <p>佣金结算快-隔日结算</p>
+              <p>{{$t('IB.settlement')}}</p>
           </li>
           <li class="clearfix">
               <img src="@/assets/Oil10.png" alt/>
-              <p>IB专属链接-智能归属</p>
+              <p>{{$t('IB.ownership')}}</p>
           </li>
           <li class="clearfix">
               <img src="@/assets/Oil10.png" alt/>
-              <p>权威报表功能-实时行情即时掌控</p>
+              <p>{{$t('IB.report')}}</p>
           </li>
           <li class="clearfix">
               <img src="@/assets/Oil10.png" alt/>
-              <p>完美的服务她一眼-商业延续更继张力</p>
+              <p>{{$t('IB.experience')}}</p>
           </li>
           <!-- <li class="clearfix">
               <img src="@/assets/Oil10.png" alt="">
@@ -47,11 +48,11 @@
           </li> -->
           <li class="clearfix">
               <img src="@/assets/Oil10.png" alt/>
-              <p>创新理念数字化推广-商务拓展品效合</p>
+              <p>{{$t('IB.innovative')}}</p>
           </li>
           <li class="clearfix">
               <img src="@/assets/Oil10.png" alt="">
-              <p>全领域多元化赋能-全面保障行业竞争力</p>
+              <p>{{$t('IB.empowerment')}}</p>
           </li>
           <!-- <li class="clearfix">
               <img src="@/assets/Oil10.png" alt="">
