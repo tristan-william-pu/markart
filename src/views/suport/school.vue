@@ -7,6 +7,7 @@
  -->
 <template>
   <div>
+<<<<<<< HEAD
     <!--交易学院-->
     <div class="bigImg">
       <div class="center">
@@ -240,6 +241,197 @@
         </ul>
       </div>
     </div>
+=======
+     <!--交易学院-->
+		<div class="bigImg">
+			<div class="center">
+				<h6 class="emergingSchool">交易学院</h6>
+				<p class="emergingBegin"><a href="#">立即开始交易</a></p>
+			</div>
+		</div>
+		<!--探索CPT Markets交易学院-->
+		<div class="search clearfix">
+			<div class="center clearfix">
+				<h3>探索CPT Markets交易学院</h3>
+				<p class="titCon">Explore CPT Markets Trading Academy</p>
+				<ul class="clear">
+					<li>
+						<p><a href="#video">视频中心</a></p>
+						<span>查看我们全面的市场分析师视频库，了解如何利用各种强大功能打造更稳健、更有效的交易策略。</span>
+					</li>
+					<li class="line"></li>
+					<li>
+						<p><a href="#know">知识库</a></p>
+						<span>利用我们的全套免费教育工具和资源，提升您的交易技能、提高您的金融市场知识。</span>
+					</li>
+					<li class="line"></li>
+					<li>
+						<p><a href="#teaTit">网络讲座</a></p>
+						<span>我们的专业分析师定期举办交易网络讲座，分享平台指南、高级交易策略以及更多信息。</span>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!--视频中心-->
+		<div class="video clearfix" id="video">
+			<div class="center">
+				<h3>视频中心</h3>
+				<p class="titCon">VIDEO CENTER</p>
+				<div class="vidCon clearfix">
+					<div class="fl">
+						<router-link to="/video"><img src="../../../public/images/sch/video1.png"/></router-link>
+						<div class="conBot clear">
+							<div class="fl">
+								<p class="botTit">什么是外汇?</p>
+								<span class="botTitCon">What is Forex? </span>
+							</div>
+							<p class="fr num">01</p>
+						</div>
+					</div>
+					<ul class="fr clearfix">
+						<li>
+							<router-link to="/video"><img src="../../../public/images/sch/video2.png" /></router-link>
+							<div class="conBot clear">
+								<div class="fl">
+									<p class="botTit">为什么选择外汇交易？</p>
+									<span class="botTitCon">Why to trade Forex?</span>
+								</div>
+								<p class="fr num">02</p>
+							</div>
+						</li>
+						<li>
+							<router-link to="/video"><img src="../../../public/images/sch/video3.png" /></router-link>
+							<div class="conBot clear">
+								<div class="fl">
+									<p class="botTit">外汇交易时间</p>
+									<span class="botTitCon">Forex market hours</span>
+								</div>
+								<p class="fr num">03</p>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<p class="btnMore"><router-link to="/video" style="display:block;width:100%;height:100%">更多</router-link></p>
+			</div>
+		</div>
+		<!--知识库-->
+		<div class="know" id="know">
+			<div class="center">
+				<h3>知识库</h3>
+				<p class="titCon">KNOWLEDGE BASE</p>
+				<ul class="basis clearfix">
+					<li class="line"></li>
+					<li class="liCen">
+						<p class="top">外汇入门基础</p>
+						<p class="con">新手是最容易亏损的一部分人，对于外汇交易新手来说，怎么安全的渡过新手期，可以尽可能的减少亏损。入门者们的心得体会，是在对外汇交易系统学习的过程中完成的。在进行外汇交易之前，每位交易者都必须要对外汇交易有个清晰的认知。</p>
+					</li>
+					<li class="liImg">
+						<img src="../../../public/images/sch/knowledgeTop.png" alt="" />
+					</li>
+				</ul>
+				<ul class="liConWord clearfix">
+					<li>
+						<p class="schooltit">外汇市场</p>
+						<p class="titCon">当代发展最快的金融市场</p>
+						<p class="schcontent clearfix">
+							<span class="fl"><a href="/p/Basis_market">了解详情</a></span>
+							<span class="fr"><a href="/p/Basis_market">>></a></span>
+						</p>
+					</li>
+					<li>
+						<p class="schooltit">初识外汇</p>
+						<p class="titCon">外汇基础知识</p>
+						<p class="schcontent clearfix">
+							<span class="fl"><a href="/p/Basis_first">了解详情</a></span>
+							<span class="fr"><a href="/p/Basis_first">>></a></span>
+						</p>
+					</li>
+					<li>
+						<p class="schooltit">外汇波动的背后推手</p>
+						<p class="titCon">什么在推动货币价格</p>
+						<p class="schcontent clearfix">
+							<span class="fl"><a href="/p/Basis_wave">了解详情</a></span>
+							<span class="fr"><a href="/p/Basis_wave">>></a></span>
+						</p>
+					</li>
+					<li>
+						<p class="schooltit">看清外汇市场</p>
+						<p class="titCon">外汇交易员关注的指标</p>
+						<p class="schcontent clearfix">
+							<span class="fl"><a href="/p/Basis_ realize">了解详情</a></span>
+							<span class="fr"><a href="/p/Basis_ realize">>></a></span>
+						</p>
+					</li>
+					<li>
+						<p class="schooltit">货币对</p>
+						<p class="titCon">主要货币对的概况和特性</p>
+						<p class="schcontent clearfix">
+							<span class="fl"><a href="/p/Basis_main">了解详情</a></span>
+							<span class="fr"><a href="/p/Basis_main">>></a></span>
+						</p>
+					</li>
+					<li>
+						<p class="schooltit">走进货币</p>
+						<p class="titCon">12个关键问题</p>
+						<p class="schcontent clearfix">
+							<span class="fl"><a href="/p/Basis_go">了解详情</a></span>
+							<span class="fr"><a href="/p/Basis_go">>></a></span>
+						</p>
+					</li>
+				</ul>
+				<ul class="advanced clearfix">
+					<li>
+						<img src="../../../public/images/sch/knowledgeCen.png" />
+					</li>
+					<li>
+						<p class="schooltit">进阶实操</p>
+						<p class="line"></p>
+						<p class="con">技术分析是外汇新手在进行外汇交易的过程中，应当首要学习的重要内容。技术分析是投资者对汇价走势进行判断的重要方式，外汇新手如果想要成功把握市场走势，他们就应该对该交易分析方式进行了解，从而就可以更成功地进行外汇交易。</p>
+					</li>
+				</ul>
+				<p class="dian">&bull;</p>
+				<p class="dian">&bull;</p>
+				<p class="dian">&bull;</p>
+				<ul class="list clearfix">
+					<li class="one">
+						<a href="/p/technology">
+							<p class="top">1</p>
+							<p class="cen">技术面交易策略</p>
+							<p class="bot">>></p>
+						</a>
+					</li>
+					<li class="two">
+						<a href="/p/basic">
+							<p class="top">2</p>
+							<p class="cen">基本面交易策略</p>
+							<p class="bot">>></p>
+						</a>
+					</li>
+					<li class="three">
+						<a href="/p/trends">
+							<p class="top">3</p>
+							<p class="cen">区间行情的交易手法：边缘介入法</p>
+							<p class="bot">>></p>
+						</a>
+					</li>
+					<li class="four">
+						<a href="/p/trend">
+							<p class="top">4</p>
+							<p class="cen">趋势行情的交易手法：反身介入法</p>
+							<p class="bot">>></p>
+						</a>
+					</li>
+					<li class="five">
+						<a href="/p/Candlestick Charts">
+							<p class="top">5</p>
+							<p class="cen">蜡烛图模式词典</p>
+							<p class="bot">>></p>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+>>>>>>> 127bd510d667f2bf6fb92a6569f8a9bd85df3198
     <!--A-Z-->
     <div class="az">
       <div class="center">
