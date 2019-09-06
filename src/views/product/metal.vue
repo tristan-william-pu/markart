@@ -2,12 +2,12 @@
  * @Autor: Diskfan
  * @Date: 2019-09-06 10:07:02
  * @LastEditors: Do not edit
- * @LastEditTime: 2019-09-06 12:48:40
+ * @LastEditTime: 2019-09-06 14:47:05
  * @Description: 
  -->
 <template>
   <div class="metal">
-    <div class="name">贵金属</div>
+    <div class="title">贵金属</div>
     <div class="warp">
       <div class="leftimg">
         <img
@@ -89,7 +89,7 @@ export default {
 <style lang="scss">
 @import "@/styles/mixin.scss";
 .metal {
-  .name {
+  .title {
     font-size: 75px;
     color: #000;
     line-height: 223px;

@@ -1,3 +1,10 @@
+/*
+ * @Autor: Diskfan
+ * @Date: 2019-09-06 14:02:42
+ * @LastEditors: Do not edit
+ * @LastEditTime: 2019-09-06 18:16:57
+ * @Description: 路由配置
+ */
 import Vue from 'vue'
 import Router from 'vue-router'
 
@@ -116,9 +123,13 @@ export default new Router({
     }, {
       // school
       path: '/school',
+      name: 'school',
       component: importModule('suport/school'),
-      
-    },{
+    }, {
+      path: '/introduction',
+      name: 'introduction',
+      component: importModule('suport/introduction')
+    }, {
       path:'/AZ',
       name: 'AZ',
       component: importModule('suport/AZ'),

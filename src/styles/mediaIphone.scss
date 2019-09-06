@@ -1,0 +1,35 @@
+@media screen and (max-width: 760px) {
+  .app {
+    .cpt {
+      .big-img {
+        .center {
+          width: 90%;
+          margin: 0 auto;
+          padding: 5% 0 2%;
+          width: 100%;
+          h6 {
+            font-weight: 100;
+            font-size: 2.5rem;
+            color: #fff;
+            font-family: FZLTZHK;
+            text-align: center;
+          }
+          p {
+            font-family: LTH;
+            font-size: 0.3rem;
+            color: #fff;
+            width: 9rem;
+            line-height: 1.8rem;
+            background-color: #5b0eb2;
+            border-radius: 0.7rem;
+            text-align: center;
+            margin: 0.8rem auto 0;
+          }
+        }
+      }
+      .nav {
+        display: none;
+      }
+    }
+  }
+}

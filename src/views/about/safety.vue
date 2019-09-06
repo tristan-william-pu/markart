@@ -1,14 +1,10 @@
-<<<<<<< HEAD
 <!--
  * @Autor: Diskfan
  * @Date: 2019-09-06 10:07:02
  * @LastEditors: Do not edit
- * @LastEditTime: 2019-09-06 14:04:43
+ * @LastEditTime: 2019-09-06 14:18:50
  * @Description: 关于
  -->
-
-=======
->>>>>>> ea593f1bb1bf9e7ed55ab191180709c0b4b035ab
 <template>
   <div class="cn safty">
     <div class="banner">
@@ -19,7 +15,7 @@
         </div>
       </div>
     </div>
-    <img class="mobbaner" src="../../../public/images/FundSafetymob.jpg" alt />
+    <img class="mobbaner" src="images/FundSafetymob.jpg" alt />
     <div class="warp">
       <div class="tit">权威监管</div>
       <div
@@ -486,4 +482,4 @@ export default {
     -webkit-transform: translateX(0);
   }
 }
-</style>=======
+</style>

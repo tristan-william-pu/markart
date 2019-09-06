@@ -2,7 +2,7 @@
  * @Autor: Diskfan
  * @Date: 2019-09-06 10:07:02
  * @LastEditors: Do not edit
- * @LastEditTime: 2019-09-06 11:13:34
+ * @LastEditTime: 2019-09-06 14:39:18
  * @Description: 外汇
  -->
 
@@ -16,13 +16,28 @@
       </div>
       <div class="content">
         <div class="space"></div>
-        <div class="title">什么是外汇?</div>
+        <div class="title">
+          什么是外汇？
+        </div>
         <div class="line"></div>
         <div
           class="text"
         >外汇交易是一国货币与另一国货币的交换。目前，汇率主要受国际贸易、国民经济和投资流动的政策和影响的影响。不同于其他的金融交易，外汇市场没有具体地点，也没有中央交易所，而是通过银行、企业和个人间的电子网络进行交易。因此，外汇市场信息更加透明，流动性更好，价格也更公平。其具有在5×24小时内双向交易的特点，深受大型投资机构和投资者的喜爱。</div>
       </div>
     </div>
+    <!-- <div class="exp">
+      <div class="leftimg">
+        <img src="images/echange3.jpg" alt />
+      </div>
+      <div class="content">
+        <div class="space"></div>
+        <div class="title">什么是外汇?</div>
+        <div class="line"></div>
+        <div
+          class="text"
+        >外汇交易是一国货币与另一国货币的交换。目前，汇率主要受国际贸易、国民经济和投资流动的政策和影响的影响。不同于其他的金融交易，外汇市场没有具体地点，也没有中央交易所，而是通过银行、企业和个人间的电子网络进行交易。因此，外汇市场信息更加透明，流动性更好，价格也更公平。其具有在5×24小时内双向交易的特点，深受大型投资机构和投资者的喜爱。</div>
+      </div>
+    </div> -->
     <div class="choose">
       <h1>
         选择CPT Markets

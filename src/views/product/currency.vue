@@ -1,14 +1,13 @@
 <!--
- * @ Author: Diskfan
- * @ Create Time: 2019-09-02 13:55:38
- * @ Modified by: Your name
- * @ Modified time: 2019-09-04 10:05:51
- * @ Description: 交易数字
+ * @Autor: Diskfan
+ * @Date: 2019-09-06 10:07:02
+ * @LastEditors: Do not edit
+ * @LastEditTime: 2019-09-06 14:21:13
+ * @Description: 交易数字
  -->
 
-
 <template>
-  <div class="tradeindex">
+  <div class="currency">
     <div class="title">数字货币</div>
     <div class="exp">
       <div class="leftimg">
@@ -65,9 +64,9 @@ export default {
   components: { Regist }
 };
 </script>
-<style lang="scss" scoped>
+<style lang="scss">
 @import "@/styles/mixin.scss";
-.tradeindex {
+.currency {
   margin: 0 auto;
   > .title {
     font-size: 75px;

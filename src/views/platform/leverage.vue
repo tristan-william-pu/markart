@@ -1,15 +1,15 @@
 <!--
- * @ Author: Diskfan
- * @ Create Time: 2019-09-02 14:05:08
- * @ Modified by: Your name
- * @ Modified time: 2019-09-04 10:05:23
- * @ Description: 交易杠杆
+ * @Autor: Diskfan
+ * @Date: 2019-09-06 10:07:02
+ * @LastEditors: Do not edit
+ * @LastEditTime: 2019-09-06 16:50:36
+ * @Description: 交易杠杆
  -->
 
-
+ 
 <template>
   <div class="leverage">
-    <div class="banner">
+    <div class="banner pc">
       <div class="title">交易杠杆</div>
       <div class="wrap">
         <div class="bannerleft" style="opacity: 1;">
@@ -18,6 +18,9 @@
           <p class="banerleftatr">CPT Markets为更好的方便客户进行投资，灵活的杠杆机制，极大的降低客户投资门槛的同时也更好的提供客户的资金利用率。</p>
         </div>
       </div>
+    </div>
+    <div class="banner mb">
+      <img src="images/Leverage_03.jpg" alt="">
     </div>
     <div class="tablelist">
       <div class="headers clearfix">
@@ -134,6 +137,13 @@ export default {};
           line-height: 30px;
         }
       }
+    }
+  }
+  .mb {
+    display: none;
+    height: auto;
+    img {
+      width: 100%;
     }
   }
   .tablelist {
