@@ -123,6 +123,10 @@ export default new Router({
       name: 'AZ',
       component: importModule('suport/AZ'),
     }, {
+      path:'/video',
+      name: 'video',
+      component: importModule('suport/video'),
+    }, {
       path: '/partners',
       name: 'partners',
       component: importModule('partners/white')

@@ -2,16 +2,16 @@
  * @Autor: Diskfan
  * @Date: 2019-09-06 10:07:02
  * @LastEditors: Do not edit
- * @LastEditTime: 2019-09-06 11:50:23
+ * @LastEditTime: 2019-09-06 14:03:04
  * @Description: 
  -->
 <template>
   <div id="app" class="app">
-    <!-- <Header v-if="header_show" /> -->
+    <Header v-if="header_show" />
       <keep-alive>
         <router-view  v-on:header="header" v-on:footer="footer" />
       </keep-alive>
-    <!-- <Footer v-if="footer_show" /> -->
+    <Footer v-if="footer_show" />
   </div>
 </template>
 
@@ -37,9 +37,9 @@ export default {
 </script>
 
 <style lang="scss">
-#app {
-  font-size: 'sans-serif','Microsoft YaHei',"SF Pro SC","HanHei SC","SF Pro Text","Myriad Set Pro","SF Pro Icons","PingFang SC","Helvetica Neue","Helvetica","Arial",sans-serif
-}
+// #app {
+//   font-size: 'sans-serif','Microsoft YaHei',"SF Pro SC","HanHei SC","SF Pro Text","Myriad Set Pro","SF Pro Icons","PingFang SC","Helvetica Neue","Helvetica","Arial",sans-serif
+// }
 @import '@/styles/animation.scss';
 img {
    vertical-align: middle;
