@@ -4,7 +4,7 @@
 		<div class="bigImg">
 			<div class="center">
 				<h6 class="emergingSchool">交易学院</h6>
-				<p class="emergingBegin"><a href="/register/register">立即开始交易</a></p>
+				<p class="emergingBegin"><a href="#">立即开始交易</a></p>
 			</div>
 		</div>
 		<!--探索CPT Markets交易学院-->
@@ -37,7 +37,7 @@
 				<p class="titCon">VIDEO CENTER</p>
 				<div class="vidCon clearfix">
 					<div class="fl">
-						<a href="/p/videoCon"><img src="../../../public/images/sch/video1.png"/></a>
+						<router-link to="/video"><img src="../../../public/images/sch/video1.png"/></router-link>
 						<div class="conBot clear">
 							<div class="fl">
 								<p class="botTit">什么是外汇?</p>
@@ -48,7 +48,7 @@
 					</div>
 					<ul class="fr clearfix">
 						<li>
-							<a href="/p/videoCon"><img src="../../../public/images/sch/video2.png" /></a>
+							<router-link to="/video"><img src="../../../public/images/sch/video2.png" /></router-link>
 							<div class="conBot clear">
 								<div class="fl">
 									<p class="botTit">为什么选择外汇交易？</p>
@@ -58,7 +58,7 @@
 							</div>
 						</li>
 						<li>
-							<a href="/p/videoCon"><img src="../../../public/images/sch/video3.png" /></a>
+							<router-link to="/video"><img src="../../../public/images/sch/video3.png" /></router-link>
 							<div class="conBot clear">
 								<div class="fl">
 									<p class="botTit">外汇交易时间</p>
@@ -69,7 +69,7 @@
 						</li>
 					</ul>
 				</div>
-				<p class="btnMore"><a href="/p/videoCon">更多</a></p>
+				<p class="btnMore"><router-link to="/video" style="display:block;width:100%;height:100%">更多</router-link></p>
 			</div>
 		</div>
 		<!--知识库-->
