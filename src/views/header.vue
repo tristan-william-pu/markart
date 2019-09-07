@@ -1,3 +1,10 @@
+<!--
+ * @Autor: Diskfan
+ * @Date: 2019-09-06 10:07:02
+ * @LastEditors: Do not edit
+ * @LastEditTime: 2019-09-07 10:15:50
+ * @Description: Header
+ -->
 <template>
   <div class="head">
     <header>
@@ -103,7 +110,7 @@ export default {
         ["/"],
         ["/safety"],
         ["/foreign", "/metal", "/oil", "/contract", "/tradeindex", "/currency"],
-        ["/mt4", "/leverage", "/account", "/clearpro", "/mam"],
+        ["/mt4", "/leverage", "/account", "/clearpro", "/cpt", "/cptanq", "/compare", "/mam"],
         ["/type", "/school"],
         ["/white", "/api", "/provider", "/ib"],
         ["/contantus"]
@@ -117,7 +124,7 @@ export default {
         },
         {
           title: "交易平台",
-          content: ["MT4", "交易杠杆", "账户类型", "Clearpro", "MAM"]
+          content: ["MT4", "交易杠杆", "账户类型", "Clearpro", "CPT cTrader", "CPT cTrader 常见问题", "交易软件对比", "MAM"]
         },
         { title: "客户支持", content: ["支付方式", "金融学院"] },
         {
@@ -135,7 +142,7 @@ export default {
         },
         {
           title: "Trading Platform",
-          content: ["MT4", "交易杠杆", "账户类型", "Clearpro", "MAM"]
+          content: ["MT4", "交易杠杆", "账户类型", "Clearpro", "CPT cTrader", "CPT cTrader 常见问题", "交易软件对比", "MAM"]
         },
         { title: "Customer Support", content: ["支付方式", "金融学院"] },
         {
@@ -153,7 +160,7 @@ export default {
         },
         {
           title: "交易平台",
-          content: ["MT4", "交易杠杆", "账户类型", "Clearpro", "MAM"]
+          content: ["MT4", "交易杠杆", "账户类型", "Clearpro", "CPT cTrader", "CPT cTrader 常见问题", "交易软件对比", "MAM"]
         },
         { title: "客戶支持", content: ["支付方式", "金融学院"] },
         {

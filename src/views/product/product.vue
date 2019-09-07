@@ -1,11 +1,11 @@
 <!--
- * @ Author: Diskfan
- * @ Create Time: 2019-09-03 07:12:57
- * @ Modified by: Your name
- * @ Modified time: 2019-09-04 10:06:15
- * @ Description: 交易产品
+ * @Autor: Diskfan
+ * @Date: 2019-09-06 10:07:02
+ * @LastEditors: Do not edit
+ * @LastEditTime: 2019-09-07 14:53:32
+ * @Description: 交易产品
  -->
-
+ 
 <template>
   <div class="products">
     <div class="banner">
@@ -134,7 +134,7 @@ export default {
   components: { Regist }
 };
 </script>
-<style lang="scss" scoped>
+<style lang="scss">
 @import "@/styles/mixin.scss";
 @mixin part($width, $height, $info) {
   width: $width;
@@ -205,6 +205,7 @@ export default {
 }
 .products {
   width: 100%;
+  max-width: 1200px;
   .banner {
     width: 100%;
     height: 437px;

@@ -2,7 +2,7 @@
  * @Autor: Diskfan
  * @Date: 2019-09-06 10:07:02
  * @LastEditors: Do not edit
- * @LastEditTime: 2019-09-06 17:12:48
+ * @LastEditTime: 2019-09-07 10:34:46
  * @Description:  cpt
  -->
 <template>
@@ -950,10 +950,11 @@ export default {
           }
         }
       }
-      > fr {
+      > .fr {
         width: 35%;
         float: right;
         img {
+          width: 100%;
           vertical-align: middle;
         }
       }

@@ -2,7 +2,7 @@
  * @Autor: Diskfan
  * @Date: 2019-09-06 18:03:03
  * @LastEditors: Do not edit
- * @LastEditTime: 2019-09-06 19:56:16
+ * @LastEditTime: 2019-09-07 09:57:14
  * @Description: 支持  文章预览
  -->
 <template>
@@ -70,7 +70,7 @@ export default {
       return this.$i18n.locale
     },
     index() {
-      return this.$route.params.idx || 0;
+      return this.$route.params.id || 0;
     },
     current() {
       const data = this.data[this.index];

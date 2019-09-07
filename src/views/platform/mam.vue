@@ -1,18 +1,21 @@
 <!--
- * @ Author: Diskfan
- * @ Create Time: 2019-09-03 22:37:33
- * @ Modified by: Your name
- * @ Modified time: 2019-09-04 10:05:29
- * @ Description: man
+ * @Autor: Diskfan
+ * @Date: 2019-09-06 10:07:02
+ * @LastEditors: Do not edit
+ * @LastEditTime: 2019-09-07 14:19:18
+ * @Description: man
  -->
 
 <template>
   <div class="man">
     <div class="banner">
-      <div class="img">
+      <div class="img pc">
         <div class="warp">
           <p class="bannerfont animated bounceInUp">MAM多账户管理</p>
         </div>
+      </div>
+      <div class="mb">
+        <img src="images/MAMs_03.jpg" alt="">
       </div>
     </div>
     <div class="warp">
@@ -107,9 +110,19 @@ export default {};
         }
       }
     }
+    .pc {
+      display: block;
+    }
+    .mb {
+      display: none;
+      >img {
+        width: 100%;
+      }
+    }
   }
   .warp {
-    width: 1200px;
+    max-width: 1200px;
+    width: 100%;
     display: block;
     margin: 0 auto;
     margin-top: -20px;
