@@ -92,48 +92,48 @@
 						<p class="schooltit">外汇市场</p>
 						<p class="titCon">当代发展最快的金融市场</p>
 						<p class="schcontent clearfix">
-							<span class="fl"><a href="/p/Basis_market">了解详情</a></span>
-							<span class="fr"><a href="/p/Basis_market">>></a></span>
+							<span class="fl"><router-link :to="{name:'Basis',params: {num: 0}}">了解详情</router-link></span>
+							<span class="fr"><router-link :to="{name:'Basis',params: {num: 0}}">>></router-link></span>
 						</p>
 					</li>
 					<li>
 						<p class="schooltit">初识外汇</p>
 						<p class="titCon">外汇基础知识</p>
 						<p class="schcontent clearfix">
-							<span class="fl"><a href="/p/Basis_first">了解详情</a></span>
-							<span class="fr"><a href="/p/Basis_first">>></a></span>
+							<span class="fl"><router-link :to="{name:'Basis',params: {num: 1}}">了解详情</router-link></span>
+							<span class="fr"><router-link :to="{name:'Basis',params: {num: 1}}">>></router-link></span>
 						</p>
 					</li>
 					<li>
 						<p class="schooltit">外汇波动的背后推手</p>
 						<p class="titCon">什么在推动货币价格</p>
 						<p class="schcontent clearfix">
-							<span class="fl"><a href="/p/Basis_wave">了解详情</a></span>
-							<span class="fr"><a href="/p/Basis_wave">>></a></span>
+							<span class="fl"><router-link :to="{name:'Basis',params: {num: 2}}">了解详情</router-link></span>
+							<span class="fr"><router-link :to="{name:'Basis',params: {num: 2}}">>></router-link></span>
 						</p>
 					</li>
 					<li>
 						<p class="schooltit">看清外汇市场</p>
 						<p class="titCon">外汇交易员关注的指标</p>
 						<p class="schcontent clearfix">
-							<span class="fl"><a href="/p/Basis_ realize">了解详情</a></span>
-							<span class="fr"><a href="/p/Basis_ realize">>></a></span>
+							<span class="fl"><router-link :to="{name:'Basis',params: {num: 3}}">了解详情</router-link></span>
+							<span class="fr"><router-link :to="{name:'Basis',params: {num: 3}}">>></router-link></span>
 						</p>
 					</li>
 					<li>
 						<p class="schooltit">货币对</p>
 						<p class="titCon">主要货币对的概况和特性</p>
 						<p class="schcontent clearfix">
-							<span class="fl"><a href="/p/Basis_main">了解详情</a></span>
-							<span class="fr"><a href="/p/Basis_main">>></a></span>
+						  <span class="fl"><router-link :to="{name:'Basis',params: {num: 4}}">了解详情</router-link></span>
+							<span class="fr"><router-link :to="{name:'Basis',params: {num: 4}}">>></router-link></span>
 						</p>
 					</li>
 					<li>
 						<p class="schooltit">走进货币</p>
 						<p class="titCon">12个关键问题</p>
 						<p class="schcontent clearfix">
-							<span class="fl"><a href="/p/Basis_go">了解详情</a></span>
-							<span class="fr"><a href="/p/Basis_go">>></a></span>
+							<span class="fl"><router-link :to="{name:'Basis',params: {num: 5}}">了解详情</router-link></span>
+							<span class="fr"><router-link :to="{name:'Basis',params: {num: 5}}">>></router-link></span>
 						</p>
 					</li>
 				</ul>
@@ -286,7 +286,12 @@ export default {
       return{
         words:["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"],
       }
-    }
+    },
+    methods:{
+      goRouter(url){
+        this.$router.push({name:'Basis', params: {url: url}})
+      },
+    },
 }
 </script>
 <style lang="scss">
