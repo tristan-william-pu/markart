@@ -342,343 +342,383 @@ export default {
     width: 100%;
     background: url(../../../public/images/sch/bigImg.png) no-repeat;
     background-size: 100%;
-  }
-  .bigImg .center {
-    width: 60%;
-    margin: 0 auto;
-    padding: 10% 0 7%;
-    text-align: center;
-    color: #fff;
-  }
-  .bigImg .center h6 {
-    font-size: 60px;
-    font-family: FZLTZHK;
-  }
-  .bigImg .center p {
-    font-family: LTHK;
-    font-size: 20px;
-    width: 195px;
-    line-height: 48px;
-    background-color: #5b0eb2;
-    margin: 38px auto 0;
-    border-radius: 36px;
-  }
-  .bigImg .center p a {
-    color: #fff;
+    .center {
+      width: 60%;
+      margin: 0 auto;
+      padding: 10% 0 7%;
+      text-align: center;
+      color: #fff;
+      h6 {
+        font-size: 60px;
+        font-family: FZLTZHK;
+      }
+      p {
+        font-family: LTHK;
+        font-size: 20px;
+        width: 195px;
+        line-height: 48px;
+        background-color: #5b0eb2;
+        margin: 38px auto 0;
+        border-radius: 36px;
+        a {
+          color: #fff;
+        }
+      }
+    }
   }
   /*探索CPT cTrader交易学院*/
   .search {
     width: 100%;
     background-color: #f9f9f9;
+    .center {
+      width: 63%;
+      margin: 0 auto;
+      padding: 8% 0 5%;
+      h3 {
+        font-size: 40px;
+        color: #000000;
+        text-align: center;
+        font-family: LTCHK;
+      }
+      p.titCon {
+        font-size: 14px;
+        color: #aaaaaa;
+        text-align: center;
+        margin: 25px auto 75px;
+      }
+      ul{
+        li {
+          float: left;
+          width: 26%;
+          p {
+            width: 100%;
+            line-height: 61px;
+            text-align: center;
+            border: 1px solid #222222;
+            border-radius: 10px;
+            color: #222222;
+            font-size: 28px;
+            font-family: FZLTZHK;
+            &:hover {
+              background-color: #5b0eb2;
+              color: #fff;
+              border: 1px solid #5b0eb2;
+              cursor: pointer;
+              a {
+                color: #fff;
+              }
+            }
+          }
+          span {
+            font-size: 14px;
+            line-height: 22px;
+            color: #7f7f7f;
+            text-align: center;
+            display: inline-block;
+            margin: 24px auto 0;
+          }
+        }
+        li.line {
+          width: 2px;
+          height: 24px;
+          background-color: #222222;
+          margin: 1.5% 5% 0 5%;
+        }
+      } 
+    }
   }
-  .search .center {
-    width: 63%;
-    margin: 0 auto;
-    padding: 8% 0 5%;
-  }
-  .search .center > h3 {
-    font-size: 40px;
-    color: #000000;
-    text-align: center;
-    font-family: LTCHK;
-  }
-  .search .center > p.titCon {
-    font-size: 14px;
-    color: #aaaaaa;
-    text-align: center;
-    margin: 25px auto 75px;
-  }
-  .search .center > ul li {
-    float: left;
-    width: 26%;
-  }
-  .search .center > ul li p {
-    width: 100%;
-    line-height: 61px;
-    text-align: center;
-    border: 1px solid #222222;
-    border-radius: 10px;
-    color: #222222;
-    font-size: 28px;
-    font-family: FZLTZHK;
-  }
-  .search .center > ul li p:hover {
-    background-color: #5b0eb2;
-    color: #fff;
-    border: 1px solid #5b0eb2;
-    cursor: pointer;
-  }
-  .search .center > ul li p:hover a {
-    color: #fff;
-  }
-  .search .center > ul li span {
-    font-size: 14px;
-    line-height: 22px;
-    color: #7f7f7f;
-    text-align: center;
-    display: inline-block;
-    margin: 24px auto 0;
-  }
-  .search .center > ul li.line {
-    width: 2px;
-    height: 24px;
-    background-color: #222222;
-    margin: 1.5% 5% 0 5%;
-  }
+  
   /*视频中心*/
-  .video .center {
-    width: 63%;
-    margin: 5% auto 5%;
-    font-family: LTHK;
-  }
-  .video .center > h3 {
-    font-size: 40px;
-    color: #000000;
-    font-family: LTCHK;
-    text-align: center;
-  }
-  .video .center > p.titCon {
-    font-size: 14px;
-    color: #606060;
-    text-align: center;
-    margin: 21px auto 47px;
-  }
-  .video .center > .vidCon > div.fl {
-    width: 66%;
-    overflow: hidden;
-  }
-  .video .center > .vidCon .conBot > .fl {
-    width: 70%;
-  }
-  .video .center > .vidCon .botTit {
-    font-size: 18px;
-    color: #0d0d0d;
-    margin: 19px 0 13px;
-    margin-left: 10%;
-  }
-  .video .center > .vidCon .botTitCon {
-    display: inline-block;
-    font-size: 14px;
-    color: #a2a2a2;
-    margin-left: 10%;
-  }
-  .video .center > .vidCon p.num {
-    font-size: 25px;
-    color: #e0e0e0;
-    line-height: 71px;
-    margin-right: 3%;
-  }
-  .video .center > .vidCon > ul {
-    width: 30%;
-  }
-  .video .center > .vidCon > ul li:last-child {
-    margin-top: 36px;
-  }
-  .video .center > .vidCon > div.fl,
-  .video .center > .vidCon > ul li {
-    overflow: hidden;
-  }
-  .video .center > .vidCon > div.fl > a > img,
-  .video .center > .vidCon > ul li img {
-    width: 100%;
-    cursor: pointer;
-    transition: all 0.6s;
-  }
-  .video .center > .vidCon > div.fl:hover > a > img,
-  .video .center > .vidCon > ul li:hover img {
-    transform: scale(1.05);
-  }
-  .video .center > p.btnMore {
-    font-size: 14px;
-    color: #222222;
-    width: 160px;
-    line-height: 40px;
-    text-align: center;
-    border: 1px solid #222222;
-    border-radius: 10px;
-    margin: 38px auto 150px;
-  }
-  .video .center > p.btnMore a {
-    color: #222222;
+  .video{
+    .center {
+      width: 63%;
+      margin: 5% auto 5%;
+      font-family: LTHK;
+      h3 {
+        font-size: 40px;
+        color: #000000;
+        font-family: LTCHK;
+        text-align: center;
+      }
+      p.titCon {
+        font-size: 14px;
+        color: #606060;
+        text-align: center;
+        margin: 21px auto 47px;
+      }
+      .vidCon{
+        div.fl {
+          width: 66%;
+          overflow: hidden;
+          a{
+            img{
+              width: 100%;
+              cursor: pointer;
+              transition: all 0.6s;
+              &:hover{
+                transform: scale(1.05);
+              }
+            }
+          }
+        }
+        .conBot{
+          .fl {
+            width: 70%;
+          }
+        }
+        .botTit {
+          font-size: 18px;
+          color: #0d0d0d;
+          margin: 19px 0 13px;
+          margin-left: 10%;
+        }
+        .botTitCon {
+          display: inline-block;
+          font-size: 14px;
+          color: #a2a2a2;
+          margin-left: 10%;
+        } 
+        p.num {
+          font-size: 25px;
+          color: #e0e0e0;
+          line-height: 71px;
+          margin-right: 3%;
+        }
+        ul {
+          width: 30%;
+          li {
+            overflow: hidden;
+            img{
+              width: 100%;
+              cursor: pointer;
+              transition: all 0.6s;
+              &:hover{
+                transform: scale(1.05);
+              }
+            }
+          }
+          li:last-child {
+            margin-top: 36px;
+          }
+        }
+      } 
+      p.btnMore {
+        font-size: 14px;
+        color: #222222;
+        width: 160px;
+        line-height: 40px;
+        text-align: center;
+        border: 1px solid #222222;
+        border-radius: 10px;
+        margin: 38px auto 150px;
+        a {
+          color: #222222;
+        }
+      }
+    }
   }
   /*知识库*/
-  .know .center {
-    width: 63%;
-    margin: 0 auto;
-    font-family: LTHK;
-  }
-  .know .center > h3 {
-    font-size: 40px;
-    color: #000000;
-    font-family: LTCHK;
-    text-align: center;
-  }
-  .know .center > p.titCon {
-    font-size: 14px;
-    color: #606060;
-    text-align: center;
-    margin: 21px auto 47px;
-  }
-  .know .center > ul.basis li {
-    float: left;
-    width: 50%;
-  }
-  .know .center > ul.basis li.line {
-    width: 84px;
-    height: 2px;
-    background-color: #5b0eb2;
-    margin: 12px 22px 0 57px;
-  }
-
-  .know .center > ul.basis li.liCen p.top {
-    font-size: 28px;
-    margin-bottom: 39px;
-    color: #000;
-  }
-  .know .center > ul.basis li.liCen p.con {
-    font-size: 18px;
-    line-height: 32px;
-    color: #707070;
-  }
-  .know .center > ul.basis li.liImg {
-    width: 30%;
-  }
-  .basis li.liImg img {
-    margin: 41px 0 0 174px;
-  }
-  .know .center > ul.liConWord {
-    width: 83%;
-    margin: 61px auto 91px;
-  }
-  .know .center > ul.liConWord li {
-    float: left;
-    width: 25%;
-    margin: 0 8% 39px 0;
-    border-top: 1px solid #ececec;
-  }
-  .know .center > ul.liConWord li p.schooltit {
-    color: #000000;
-    font-size: 22px;
-    padding: 19px 0;
-  }
-  .know .center > ul.liConWord li p.titCon {
-    color: #8c8c8c;
-    font-size: 18px;
-    margin-bottom: 26px;
-  }
-  .know .center > ul.liConWord li p.schcontent {
-    color: #000000;
-    font-size: 14px;
-  }
-  .know .center > ul.liConWord li p.schcontent span.fr {
-    margin-right: 15%;
-    display: none;
-  }
-  .know .center > ul.liConWord li:hover {
-    border-top: 1px solid #5b0eb2;
-  }
-  .know .center > ul.liConWord li:hover p.schcontent span.fr {
-    display: inline-block;
-  }
-  .know .center > ul.liConWord li:hover p.schcontent span a {
-    color: #5b0eb2;
-  }
-  .know .center > ul.advanced {
-    width: 80%;
-    margin: 50px auto;
-  }
-  .know .center > ul.advanced li {
-    float: left;
-  }
-  .know .center > ul.advanced li:last-child {
-    width: 45%;
-    margin: 9px 0 0 109px;
-  }
-  .know .center > ul.advanced li p.schooltit {
-    font-size: 28px;
-  }
-  .know .center > ul.advanced li p.line {
-    width: 112px;
-    height: 2px;
-    background-color: #5b0eb2;
-    margin: 15px 0 33px;
-  }
-  .know .center > ul.advanced li p.con {
-    font-size: 18px;
-    line-height: 32px;
-    color: #707070;
-  }
-  .know .center > p.dian {
-    font-size: 23px;
-    line-height: 10px;
-    color: #5b0eb2;
-    text-align: center;
-  }
-  .know .center > ul.list li {
-    float: left;
-    width: 18%;
-    height: 174px;
-    margin: 43px 1% 151px;
-    color: #fff;
-  }
-  .know .center > ul.list li a {
-    color: #fff;
-  }
-  .know .center > ul.list li.one {
-    background: url(../../../public/images/sch/kno1.png) no-repeat;
-    background-size: 100%;
-  }
-  .know .center > ul.list li.two {
-    background: url(../../../public/images/sch/kno2.png) no-repeat;
-    background-size: 100%;
-  }
-  .know .center > ul.list li.three {
-    background: url(../../../public/images/sch/kno3.png) no-repeat;
-    background-size: 100%;
-  }
-  .know .center > ul.list li.four {
-    background: url(../../../public/images/sch/kno4.png) no-repeat;
-    background-size: 100%;
-  }
-  .know .center > ul.list li.five {
-    background: url(../../../public/images/sch/kno5.png) no-repeat;
-    background-size: 100%;
-  }
-  .know .center > ul.list li p.top {
-    font-size: 20px;
-    padding: 32px 0 0 23px;
-  }
-  .know .center > ul.list li p.cen {
-    width: 90%;
-    font-size: 18px;
-    line-height: 25px;
-    margin: 23px 0 4px 23px;
-  }
-  .know .center > ul.list li.three p.cen,
-  .know .center > ul.list li.four p.cen {
-    margin: 12px 0 -7px 23px;
-  }
-  .know .center > ul.list li p.bot {
-    margin-left: 80%;
-  }
-  .know .center > ul.list li:hover {
-    background: url(../../../public/images/sch/know.png) no-repeat;
-    background-size: 100%;
-  }
+  .know{
+    .center {
+      width: 63%;
+      margin: 0 auto;
+      font-family: LTHK;
+      h3 {
+        font-size: 40px;
+        color: #000000;
+        font-family: LTCHK;
+        text-align: center;
+      }
+      p.titCon {
+        font-size: 14px;
+        color: #606060;
+        // text-align: center;
+        margin: 21px auto 47px;
+      }
+      ul.basis{
+        li {
+          float: left;
+          width: 50%;
+        }
+        li.line {
+          width: 84px;
+          height: 2px;
+          background-color: #5b0eb2;
+          margin: 12px 22px 0 57px;
+        }
+        li.liCen{
+          p.top {
+            font-size: 28px;
+            margin-bottom: 39px;
+            color: #000;
+          }
+          p.con {
+            font-size: 18px;
+            line-height: 32px;
+            color: #707070;
+          }
+        }
+        li.liImg {
+          width: 30%;
+        } 
+      } 
+    }
+  } 
+  .basis{
+    li.liImg{
+      img {
+        margin: 41px 0 0 174px;
+      }
+    }
+  } 
+  .know{
+    .center{
+      > ul.liConWord {
+        width: 83%;
+        margin: 61px auto 91px;
+        li {
+          float: left;
+          width: 25%;
+          margin: 0 8% 39px 0;
+          border-top: 1px solid #ececec;
+          p.schooltit {
+            color: #000000;
+            font-size: 22px;
+            padding: 19px 0;
+          }
+          p.titCon {
+            color: #8c8c8c;
+            font-size: 18px;
+            margin-bottom: 26px;
+          }
+          p.schcontent {
+            color: #000000;
+            font-size: 14px;
+            span.fr {
+              margin-right: 15%;
+              display: none;
+            }
+          }
+          &:hover {
+            border-top: 1px solid #5b0eb2;
+            p.schcontent{
+              span.fr {
+                display: inline-block;
+              }
+              span a {
+                color: #5b0eb2;
+              }
+            }
+          }
+        }
+      }
+      > ul.advanced {
+        width: 80%;
+        margin: 50px auto;
+        li {
+          float: left;
+          &:last-child {
+            width: 45%;
+            margin: 9px 0 0 109px;
+          }
+          p.schooltit {
+            font-size: 28px;
+          }
+          p.line {
+            width: 112px;
+            height: 2px;
+            background-color: #5b0eb2;
+            margin: 15px 0 33px;
+          }
+          p.con {
+            font-size: 18px;
+            line-height: 32px;
+            color: #707070;
+          }
+        }
+      }
+      > p.dian {
+        font-size: 23px;
+        line-height: 10px;
+        color: #5b0eb2;
+        text-align: center;
+      }
+      > ul.list{
+        li {
+          float: left;
+          width: 18%;
+          height: 174px;
+          margin: 43px 1% 151px;
+          color: #fff;
+          a {
+            color: #fff;
+          }
+          p.top {
+            font-size: 20px;
+            padding: 32px 0 0 23px;
+          }
+          p.cen {
+            width: 90%;
+            font-size: 18px;
+            line-height: 25px;
+            margin: 23px 0 4px 23px;
+          }
+          p.bot {
+            margin-left: 80%;
+          }
+          &:hover {
+            background: url(../../../public/images/sch/know.png) no-repeat;
+            background-size: 100%;
+          }
+        }
+        li.one {
+          background: url(../../../public/images/sch/kno1.png) no-repeat;
+          background-size: 100%;
+        }
+        li.two {
+          background: url(../../../public/images/sch/kno2.png) no-repeat;
+          background-size: 100%;
+        }
+        li.three {
+          background: url(../../../public/images/sch/kno3.png) no-repeat;
+          background-size: 100%;
+          p.cen {
+            margin: 12px 0 -7px 23px;
+          }
+        }
+        li.four {
+          background: url(../../../public/images/sch/kno4.png) no-repeat;
+          background-size: 100%;
+          p.cen {
+            margin: 12px 0 -7px 23px;
+          }
+        }
+        li.five {
+          background: url(../../../public/images/sch/kno5.png) no-repeat;
+          background-size: 100%;
+        }
+      }
+    } 
+  } 
 
   /*A-Z*/
-  .az .center {
-    width: 63%;
-    margin: 0 auto;
-  }
-  .az .center > div.schooltit .eng {
-    width: 20%;
-    font-family: LTCHK;
-    font-size: 28px;
-    color: #000;
-    font-style: italic;
-    margin: 2% 0 0 10%;
-  }
+  .az{
+    .center {
+      width: 63%;
+      margin: 0 auto;
+      > div.schooltit{
+        .eng {
+          width: 20%;
+          font-family: LTCHK;
+          font-size: 28px;
+          color: #000;
+          font-style: italic;
+          margin: 2% 0 0 10%;
+        }
+      } 
+    }
+  } 
+  .az .center 
   .az .center > div.schooltit .chi {
     width: 70%;
     font-family: LTCHK;
