@@ -1,9 +1,9 @@
 <!--
- * @ Author: Diskfan
- * @ Create Time: 2019-09-03 19:03:37
- * @ Modified by: Your name
- * @ Modified time: 2019-09-04 10:05:16
- * @ Description: CPT常见问题
+ * @Autor: Diskfan
+ * @Date: 2019-09-06 10:07:02
+ * @LastEditors: Do not edit
+ * @LastEditTime: 2019-09-07 12:51:52
+ * @Description: CPT常见问题
  -->
 
 
@@ -15,13 +15,19 @@
       </h3>
     </div>
     <div class="proCon">
+      <div class="rigFl mb">
+        <img src="@/assets/ctLogo.png" />
+        <p>
+          <span>CPT cTrader</span>是什么？
+        </p>
+      </div>
       <div class="center">
         <!--CPT cTrader是什么？-->
         <div class="what clear">
           <div class="fl leDiv">
             <p>CPT cTrader是CPT Markets基于领先的数字金融IT理念，针对交易者全新打造功能最强大的交易平台，提供直接市场接入(DMA)。CPT cTrader平台对止损/限价价位没有限制，允许您一键反转、翻倍或平仓所有头寸。CPT cTrader中可使用II级市场深度，可针对可用流动性提供更大的透明度。技术升级、服务升级、体验升级组成了CPT cTrader极具价值的产品服务。</p>
           </div>
-          <div class="fl rigFl">
+          <div class="fl rigFl pc">
             <img src="@/assets/ctLogo.png" />
             <p>
               <span>CPT cTrader</span>是什么？
@@ -339,15 +345,23 @@ export default {};
     }
   }
   .proCon {
+    .mb {
+      display: none;
+      margin-left: 5%;
+      p {
+        font-size: 18px;
+        font-weight: 600;
+      }
+    }
     .center {
-      width: 1207px;
+      max-width: 1207px;
+      width: 100%;
       margin: 135px auto 215px;
       .what {
         @include clearfix();
         @include flex();
         .leDiv {
-          width: 40%;
-          margin: 0 3% 0 9%;
+          width: 450px;
           background: url("./../../assets/proWhat.png") no-repeat center;
           background-size: 100%;
           p {
@@ -361,7 +375,7 @@ export default {};
           }
         }
         .rigFl {
-          width: 30%;
+          width: 250px;
           margin: 3% 0 0 5%;
           img {
             vertical-align: middle;

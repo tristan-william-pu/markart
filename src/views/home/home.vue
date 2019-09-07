@@ -1,11 +1,12 @@
 <!--
- * @ Author: Diskfan
- * @ Create Time: 2019-09-02 12:42:19
- * @ Modified by: Your name
- * @ Modified time: 2019-09-05 09:54:34
- * @ Description:首页
+ * @Autor: Diskfan
+ * @Date: 2019-09-06 10:07:02
+ * @LastEditors: Do not edit
+ * @LastEditTime: 2019-09-07 09:52:20
+ * @Description: 首页
  -->
 
+ 
 <template>
   <div>
     <!-- 视频 -->

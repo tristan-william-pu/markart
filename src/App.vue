@@ -2,7 +2,7 @@
  * @Autor: Diskfan
  * @Date: 2019-09-06 10:07:02
  * @LastEditors: Do not edit
- * @LastEditTime: 2019-09-06 17:53:12
+ * @LastEditTime: 2019-09-07 14:49:52
  * @Description: 
  -->
 <template>
@@ -11,7 +11,7 @@
       <keep-alive>
         <router-view  v-on:header="header" v-on:footer="footer" />
       </keep-alive>
-    <!-- <Footer v-if="footer_show" /> -->
+    <Footer v-if="footer_show" />
   </div>
 </template>
 
