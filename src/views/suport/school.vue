@@ -715,41 +715,40 @@ export default {
           font-style: italic;
           margin: 2% 0 0 10%;
         }
+        .chi {
+          width: 70%;
+          font-family: LTCHK;
+          font-size: 40px;
+          color: #000;
+          padding-bottom: 70px;
+          border-bottom: 1px solid #171717;
+          font-weight: 900;
+        }
+      }
+      > ul {
+        margin-top: 30px;
+        li {
+          float: left;
+          width: 45px;
+          line-height: 45px;
+          text-align: center;
+          border-right: 1px solid #f4f5f7;
+          border-bottom: 1px solid #f4f5f7;
+          border-top: 1px solid #f4f5f7;
+          color: #c9c9c9;
+          font-family: MON;
+          font-weight: 900;
+          a {
+            color: #c9c9c9;
+          }
+          &:first-child {
+            color: #000;
+            border-left: 1px solid #f4f5f7;
+          }
+        }
       } 
     }
   } 
-  .az .center 
-  .az .center > div.schooltit .chi {
-    width: 70%;
-    font-family: LTCHK;
-    font-size: 40px;
-    color: #000;
-    padding-bottom: 70px;
-    border-bottom: 1px solid #171717;
-    font-weight: 900;
-  }
-  .az .center > ul {
-    margin-top: 30px;
-  }
-  .az .center > ul li {
-    float: left;
-    width: 45px;
-    line-height: 45px;
-    text-align: center;
-    border-right: 1px solid #f4f5f7;
-    border-bottom: 1px solid #f4f5f7;
-    border-top: 1px solid #f4f5f7;
-    color: #c9c9c9;
-    font-family: MON;
-    font-weight: 900;
-  }
-  .az .center > ul li a {
-    color: #c9c9c9;
-  }
-  .az .center > ul li:first-child {
-    color: #000;
-    border-left: 1px solid #f4f5f7;
-  }
   .az .center > ul li:first-child a {
     color: #000;
   }
