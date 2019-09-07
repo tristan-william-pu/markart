@@ -138,6 +138,10 @@ export default new Router({
       name: 'video',
       component: importModule('suport/video'),
     }, {
+      path:'/Basis',
+      name: 'Basis',
+      component: importModule('suport/Basis'),
+    }, {
       path: '/partners',
       name: 'partners',
       component: importModule('partners/white')
