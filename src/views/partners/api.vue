@@ -117,6 +117,9 @@
         width: 25%;
         float: left;
         margin-bottom: 50px;
+        & :nth-child(5){
+          margin-left: 12%
+        }
         p{
           margin-top: 30px;
           font-size: 16px;
@@ -127,9 +130,19 @@
     }
   }
 }
-.api .iconlist ul li:nth-child(5){margin-left: 12%}
-.tit{font-family: montserratse;margin-top: 100px;font-size: 40px;text-align: center}
-.art{font-family: montserrat;line-height: 30px;font-size: 16px;text-align:left;margin-top: 50px}
+.tit{
+  font-family: montserratse;
+  margin-top: 100px;
+  font-size: 40px;
+  text-align: center
+}
+.art{
+  font-family: montserrat;
+  line-height: 30px;
+  font-size: 16px;
+  text-align:left;
+  margin-top: 50px
+}
 
 
 </style>

@@ -1,6 +1,6 @@
 <template>
     <div>
-        	<!--内容-->
+        <!--内容-->
 		<div class="bascontent">
 			<div class="center">
 				<h1>看清外汇市场——外汇交易员关注的指标</h1>

@@ -11,7 +11,7 @@
       <keep-alive>
         <router-view  v-on:header="header" v-on:footer="footer" />
       </keep-alive>
-    <!-- <Footer v-if="footer_show" /> -->
+    <Footer v-if="footer_show" />
   </div>
 </template>
 
