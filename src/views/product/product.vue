@@ -2,7 +2,7 @@
  * @Autor: Diskfan
  * @Date: 2019-09-06 10:07:02
  * @LastEditors: Do not edit
- * @LastEditTime: 2019-09-07 14:53:32
+ * @LastEditTime: 2019-09-07 18:24:14
  * @Description: 交易产品
  -->
  
@@ -38,14 +38,14 @@
         </div>
       </div>
     </div>
-    <Regist />
+    <Regist ref="regist" :class="{fadeIn: show.regist}" />
     <div class="wrap">
       <div class="tit">您想要的市场</div>
       <div class="welcome">欢迎来到CPT Markets</div>
     </div>
-    <div class="imgbox">
+    <div ref="imgbox" class="imgbox">
       <div class="partleft">
-        <div class="part1" style="opacity: 1;">
+        <div class="part1" style="opacity: 1;" :class="{fadeIn: show.imgbox}">
           <img src="images/trading5.jpg" alt />
           <div class="info">
             <span>外汇</span>
@@ -54,7 +54,7 @@
             </a>
           </div>
         </div>
-        <div class="part2" style="opacity: 1;">
+        <div class="part2" style="opacity: 1;" :class="{fadeIn: show.imgbox}">
           <img src="images/trading14.jpg" alt />
           <div class="info">
             <span>贵金属</span>
@@ -63,7 +63,7 @@
             </a>
           </div>
         </div>
-        <div class="part3" style="opacity: 1;">
+        <div class="part3" style="opacity: 1;" :class="{fadeIn: show.imgbox}">
           <img src="images/trading16.jpg" alt />
           <div class="info">
             <span>指数</span>
@@ -74,7 +74,7 @@
         </div>
       </div>
       <div class="partrights">
-        <div class="part4" style="opacity: 1;">
+        <div class="part4" style="opacity: 1;" :class="{fadeIn: show.imgbox}">
           <img src="images/trading7.jpg" alt />
           <div class="info">
             <span>数字货币</span>
@@ -83,7 +83,7 @@
             </a>
           </div>
         </div>
-        <div class="part5" style="opacity: 1;">
+        <div class="part5" style="opacity: 1;" :class="{fadeIn: show.imgbox}">
           <img src="images/trading10.jpg" alt />
           <div class="info">
             <span>原油</span>
@@ -92,7 +92,7 @@
             </a>
           </div>
         </div>
-        <div class="part6" style="opacity: 1;">
+        <div class="part6" style="opacity: 1;" :class="{fadeIn: show.imgbox}">
           <img src="images/trading12.jpg" alt />
           <div class="info">
             <span>CFD</span>
@@ -103,23 +103,24 @@
         </div>
       </div>
     </div>
+    <div class="imgbox"></div>
     <div class="choose">
       <div class="tit">CPT Markets, 您的第一选择!</div>
-      <div class="choiceicon">
+      <div class="choiceicon" ref="choiceicon">
         <ul>
-          <li class="iconone animated fadeInLeft" style="opacity: 1;">
+          <li class="iconone animated" style="opacity: 1;" :class="{fadeIn: show.choiceicon}">
             <img src="@/assets/tradinicon2.png" alt />
             <p>杠杆灵活</p>
           </li>
-          <li class="icontwo animated fadeInLeft" style="opacity: 1;">
+          <li class="icontwo animated" style="opacity: 1;" :class="{fadeIn: show.choiceicon}">
             <img src="@/assets/tradinicon3.png" alt />
             <p>交易成本低</p>
           </li>
-          <li class="iconthe animated fadeInLeft" style="opacity: 1;">
+          <li class="iconthe animated" style="opacity: 1;" :class="{fadeIn: show.choiceicon}">
             <img src="@/assets/tradinicon1.png" alt />
             <p>无门槛限制</p>
           </li>
-          <li class="iconfour animated fadeInLeft" style="opacity: 1;">
+          <li class="iconfour animated" style="opacity: 1;" :class="{fadeIn: show.choiceicon}">
             <img src="@/assets/tradinicon4.png" alt />
             <p>交易产品多样</p>
           </li>
@@ -131,7 +132,51 @@
 <script>
 import Regist from "./regist.vue";
 export default {
-  components: { Regist }
+  components: { Regist },
+  data() {
+    return {
+      show: {
+        regist: false,
+        imgbox: false,
+        choiceicon: false
+      }
+    }
+  },
+  methods: {
+    setShow() {
+      const show = this.show
+      window.onscroll = (e) => {
+        let react;
+        let height = this.$util.getClientHeight();
+        if (!show.regist) {
+          react = this.$refs.regist.$el.getClientRects()[0]; // bounceInUps
+          if (height > react.top) {
+            show.regist = true
+          }
+        }
+        if (!show.imgbox) {
+          react = this.$refs.imgbox.getClientRects()[0]; // bounceInUps
+          if (height > react.top) {
+            show.imgbox = true
+          }
+        }
+        if (!show.choiceicon) {
+          react = this.$refs.choiceicon.getClientRects()[0]; // bounceInUps
+          if (height > react.top) {
+            show.choiceicon = true
+          }
+        }
+        if (show.regist && show.imgbox && show.choiceicon) {
+          window.onscroll = null
+        }
+      }
+      window.onscroll();
+    }
+  },
+  mounted() {
+    window.vm = this
+    this.setShow();
+  }
 };
 </script>
 <style lang="scss">
@@ -139,7 +184,7 @@ export default {
 @mixin part($width, $height, $info) {
   width: $width;
   height: $height;
-  @include animation(bounceInUps);
+  // @include animation(bounceInUps);
   filter: grayscale(100%);
   transition: 0.6s;
   text-align: center;
@@ -205,7 +250,9 @@ export default {
 }
 .products {
   width: 100%;
-  max-width: 1200px;
+  .fadeIn {
+    @include animation(bounceInUps, 1s, 300ms);
+  }
   .banner {
     width: 100%;
     height: 437px;
@@ -213,7 +260,7 @@ export default {
     overflow: hidden;
     position: relative;
     z-index: 1;
-    background: url("./../../../public/images/trading.jpg");
+    background: url("/images/trading.jpg");
     .title {
       width: 100%;
       text-align: center;
@@ -221,9 +268,7 @@ export default {
       font-family: montserratse;
       font-size: 40px;
       margin-top: 80px;
-      animation-name: bounceInUps;
-      animation-duration: 1s;
-      animation-fill-mode: both;
+      @include animation(bounceInUps, 1s, 200ms);
     }
     .desc {
       @include animation(bounceInUps, 1s, 200ms);
@@ -270,7 +315,8 @@ export default {
   .apply {
     margin-top: 0;
   }
-  .wrap {
+  >.wrap {
+    @include animation(bounceInUps, 1s, 300ms);
     width: 1200px;
     display: block;
     margin: 0 auto;
@@ -295,17 +341,20 @@ export default {
       float: left;
       .part1 {
         @include part(732px, 620px, 200px);
+        animation-delay: 0ms;
       }
       .part2 {
         margin-top: 20px;
         float: left;
         @include part(355px, 318px, 60px);
+        animation-delay: 300ms;
       }
       .part3 {
         margin-top: 20px;
         float: left;
         margin-left: 20px;
         @include part(355px, 318px, 100px);
+        animation-delay: 400ms;
       }
     }
     .partrights {
@@ -314,17 +363,20 @@ export default {
       margin-left: 19px;
       .part4 {
         @include part(550px, 380px, 130px);
+        animation-delay: 200ms;
       }
       .part5 {
         float: left;
         margin-top: 20px;
         @include part(264px, 570px, 210px);
+        animation-delay: 500ms;
       }
       .part6 {
         float: left;
         margin-top: 20px;
         margin-left: 19px;
         @include part(264px, 570px, 210px);
+        animation-delay: 600ms;
       }
     }
   }
@@ -354,6 +406,18 @@ export default {
             margin-top: 20px;
             font-size: 20px;
           }
+        }
+        li:nth-child(1) {
+          animation-delay: 0;
+        }
+        li:nth-child(2) {
+          animation-delay: 350ms;
+        }
+        li:nth-child(3) {
+          animation-delay: 500ms;
+        }
+        li:nth-child(4) {
+          animation-delay: 750ms;
         }
       }
     }
