@@ -245,12 +245,6 @@
           <li>
             <img src="@/assets/pay5.png" alt />
           </li>
-          <!-- <li>
-            <img src="@/assets/pay6.png" alt="">
-          </li>
-          <li>
-            <img src="@/assets/pay7.png" alt="">
-          </li>-->
           <li>
             <img src="@/assets/pay8.png" alt />
           </li>
@@ -305,7 +299,7 @@ export default {
 .cloud {
   float: left;
   margin-left: 30px;
-  width: 500px;
+  width: 60%;
   height: 500px;
 }
 .videowarp {

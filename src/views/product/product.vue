@@ -145,6 +145,7 @@ export default {
   methods: {
     setShow() {
       const show = this.show
+      for (let i in show) show[i] = false;
       window.onscroll = (e) => {
         let react;
         let height = this.$util.getClientHeight();
@@ -173,8 +174,7 @@ export default {
       window.onscroll();
     }
   },
-  mounted() {
-    window.vm = this
+  activated() {
     this.setShow();
   }
 };

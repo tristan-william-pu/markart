@@ -17,7 +17,7 @@
             <li
               v-for="(item, key) in mapList"
               :key="key"
-              @click="active = key"
+              @click="clickHandle(key)"
               :class="{active: key === active}">
                 {{item.name}}
               </li>
@@ -30,9 +30,14 @@
           <span class="content" v-html="mapList[active].contents.join('<br \/>')"></span>
         </div>
         <div class="map">
-          <img class="img" src="images/maps.png" alt="">
-          <img class="pointe" src="images/local_04.png" alt="">
+          <div class="deg90">
+            <!-- <div class="img" :style="{transform: `translateY(-50px) rotateZ(${roateZ}deg) scale(0.9)`}" style="width: 100%; heigh: 100%; background: red"></div> -->
+            <img class="img" :style="{transform: `translateY(-50px) rotateZ(${roateZ}deg) scale(0.9)`}" src="images/maps.png" alt="">
+          </div>
         </div>
+        <transition name="slide-down">
+          <img class="pointe" v-show="showPointer" :style="pStyle" src="images/local_04.png" alt="">
+        </transition>
       </div>
       <div class="service">
         <div class="online">
@@ -92,20 +97,80 @@ export default {
           '台湾'
         ]
       }],
-      active: 0
+      active: 0,
+      roateZ: 0,
+      position: [
+        {
+          left: '484px',
+          top: '547px'
+        }, {
+          left: '269px',
+          top: '615px'
+        }, {
+          left: '767px',
+          top: '627px'
+        }, {
+          left: '637px',
+          top: '587px'
+        }, {
+          left: '803px',
+          top: '591px'
+        }
+      ],
+      pStyle: {},
+      showPointer: false,
+      timmer: null
     }
+  },
+  methods: {
+    clickHandle(key) {
+      // this.active = key;
+      // this.roateZ -= 360;
+      this.showPointer = false;
+      this.timmer = setTimeout(() => {
+        this.active = key;
+        this.roateZ -= 360;
+        this.pStyle = this.position[this.active];
+        this.timmer = setTimeout(() => {
+          this.showPointer = true;
+        }, 2000)
+      }, 1200);
+    }
+  },
+  activated() {
+    this.pStyle = this.position[this.active];
+    this.timmer = setTimeout(() => {
+      this.roateZ -= 360;
+      this.timmer = setTimeout(() => {
+        this.showPointer = true;
+      }, 2000)
+    }, 1200);
+  },
+  beforeDestroy() {
+    clearTimeout(this.timmer);
   }
 }
 </script>
 <style lang="scss">
+.slide-down-enter-active {
+  transition: all 1.4s ease;
+  opacity: 1;
+}
+.slide-down-leave-active {
+  transition: all 1.4s ease;
+  opacity: 1;
+}
+.slide-down-enter, .slide-down-leave-to {
+  transform: translateY(-60px);
+  opacity: 0;
+}
   @import '@/styles/mixin.scss';
   .about {
     @include full(100%, auto);
     .word {
-      position: absolute;
       width: 100vw;
       background: #242424;
-      height: 1000px;
+      height: 1360px;
       .map-contain {
         width: 1080px;
         margin: 0 auto;
@@ -116,6 +181,7 @@ export default {
           color: #ffffff;
           width: 100%;
           text-align: center;
+          @include animation(bounceInUps);
         }
         .map-list {
           @include flex();
@@ -124,6 +190,7 @@ export default {
           border: 1px solid #6714ba;
           margin: 0 auto;
           overflow: hidden;
+          @include animation(bounceInUps, 1s, 300ms);
           ul {
             @include flex();
             padding: 0;
@@ -172,33 +239,40 @@ export default {
             font-weight: 500;
           }
         }
+        transform-style: preserve-3d;
+        perspective: 1000;
         .map {
           @include full(100%, 600px);
-          margin-top: 30px;
-          transform: translateZ(0px);
-          -webkit-transform-style: preserve-3d;
-          // transform-style: preserve-3d;
-          z-index: 10;
-          -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
-          .img {
-            width: 90%;
+          margin-top: -40px;
+          z-index: 2s;
+          transition: 1s;
+          transform: rotateX(90deg) translateY(100px);
+          transform-style: preserve-3d;
+          .deg90 {
+            width: 100%;
             height: 100%;
-            transform-style: preserve-3d;
-            transform: rotateX(50deg);
-            margin-left: 5%;
+            transform: rotateX(-30deg);
+            .img {
+              transition: 2s;
+              width: 100%;
+              height: 100%;
+            }
           }
-          .pointe {
-            width: 40px;
-            position: absolute;
-            transition: 0.6s;
-            z-index: 100;
-          }
+        }
+        .pointe {
+          width: 40px;
+          position: absolute;
+          // transition: 0.6s;
+          z-index: 100;
+          left: 484px;
+          top: 547px;
         }
       }
       .service {
         @include full(100%, 360px);
+        background: #fff;
         .online {
+          padding-top: 80px;
           font-family: montserratse;
           margin-top: 42px;
           font-size: 40px;
