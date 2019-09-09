@@ -407,6 +407,9 @@ export default {
                 color: #fff;
               }
             }
+            a{
+              color:#222222;
+            }
           }
           span {
             font-size: 14px;
