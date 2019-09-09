@@ -103,7 +103,7 @@ export default {
         ["/"],
         ["/safety"],
         ["/foreign", "/metal", "/oil", "/contract", "/tradeindex", "/currency"],
-        ["/mt4", "/leverage", "/account", "/clearpro", "/mam"],
+        ["/mt4", "/leverage", "/account", "/clearpro","/cpt","/cptanq","/compare" ,"/mam"],
         ["/type", "/school"],
         ["/white", "/api", "/provider", "/ib"],
         ["/contantus"]
@@ -117,7 +117,7 @@ export default {
         },
         {
           title: "交易平台",
-          content: ["MT4", "交易杠杆", "账户类型", "Clearpro", "MAM"]
+          content: ["MT4", "交易杠杆", "账户类型", "Clearpro","CPT cTrader","CPT cTrader 常见问题","交易软件对比", "MAM"]
         },
         { title: "客户支持", content: ["支付方式", "金融学院"] },
         {
@@ -128,37 +128,37 @@ export default {
       ];
       const en = [
         { title: "Home", content: "" },
-        { title: "About us", content: ["资金安全"] },
+        { title: "About Us", content: ["Funds Safety"] },
         {
           title: "Trading Product",
-          content: ["外汇", "贵金属", "原油", "差价合约", "指数", "数字货币"]
+          content: ["Foreign Exchange", "Precious Metal", "Precious Metal", "CFD", "Index", "Digital Currency"]
         },
         {
           title: "Trading Platform",
-          content: ["MT4", "交易杠杆", "账户类型", "Clearpro", "MAM"]
+          content: ["MT4", "Trading Leverage", "Trading Leverage", "Clearpro","CPT cTrader","CPT cTrader","Trading software comparison" ,"MAM"]
         },
-        { title: "Customer Support", content: ["支付方式", "金融学院"] },
+        { title: "Customer Support", content: ["Payment Method", "Education"] },
         {
           title: "Partner",
-          content: ["白标合作", "API接口", "流动性供应商", "介绍服务经纪商"]
+          content: ["White Label", "API Interface", "Liquidity Provider", "IB"]
         },
         { title: "Contact Us", content: [""] }
       ];
       const tc = [
         { title: "首頁", content: "" },
-        { title: "關于我們", content: ["资金安全"] },
+        { title: "關于我們", content: ["資金安全"] },
         {
           title: "交易産品",
-          content: ["外汇", "贵金属", "原油", "差价合约", "指数", "数字货币"]
+          content: ["外匯", "貴金屬", "原油", "差價合約", "指數", "數字貨币"]
         },
         {
           title: "交易平台",
-          content: ["MT4", "交易杠杆", "账户类型", "Clearpro", "MAM"]
+          content: ["MT4", "交易杠杆", "賬戶類型", "Clearpro","CPT cTrader","CPT cTrader 常見問題","交易軟件對比", "MAM"]
         },
-        { title: "客戶支持", content: ["支付方式", "金融学院"] },
+        { title: "客戶支持", content: ["支付方式", "金融學院"] },
         {
           title: "合作夥伴",
-          content: ["白标合作", "API接口", "流动性供应商", "介绍服务经纪商"]
+          content: ["白标合作", "API接口", "流動性供應商", "介紹服務經紀商"]
         },
         { title: "聯系我們", content: [""] }
       ];

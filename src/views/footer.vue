@@ -13,22 +13,22 @@
         <div class="footernav">
           <ul>
             <li>
-              <a href="/p/aboutus">关于我们</a>
+              <a href="/p/aboutus">{{$t('footer.about')}}</a>
             </li>
             <li>
-              <a href="/p/products">交易产品</a>
+              <a href="/p/products">{{$t('footer.product')}}</a>
             </li>
             <li>
-              <a href="/p/MT4">交易平台</a>
+              <a href="/p/MT4">{{$t('footer.platform')}}</a>
             </li>
             <li>
-              <a href="/p/payment">客户支持</a>
+              <a href="/p/payment">{{$t('footer.support')}}</a>
             </li>
             <li>
-              <a href="/p/white">合作伙伴</a>
+              <a href="/p/white">{{$t('footer.partner')}}</a>
             </li>
             <li>
-              <a href="/p/contantus">联系我们</a>
+              <a href="/p/contantus">{{$t('footer.contact')}}</a>
             </li>
           </ul>
         </div>
