@@ -2,32 +2,32 @@
     <div class="login">
         <div class="warp clearfix">
             <p class="lefftit">
-                欢迎来到CPT Markets 交易<br/>
-                让世界近在咫尺
+                {{$t('login.welcome')}}<br/>
+                {{$t('login.world')}}
             </p>
             <div class="loginBox">
                 <div class="header clearfix">
-                    <p>登录账户</p>
+                    <p>{{$t('login.account')}}</p>
                     <p>×</p>
                 </div>
                 <div class="inputbox clearfix">
-                    <input type="text" placeholder="邮箱/MT4">
+                    <input type="text" :placeholder="$t('login.email')">
                     <img src="@/assets/login_07.png" alt/>
                 </div>
                 <div class="inputbox clearfix">
-                    <input type="passward" placeholder="密码">
+                    <input type="passward" :placeholder="$t('login.password')">
                     <img src="@/assets/login_10.png" alt/>
                 </div>
                 <div class="inputbox code clearfix">
-                    <input type="text"  placeholder="验证码">
+                    <input type="text"  :placeholder="$t('login.code')">
                     <img src="@/assets/login_13.png" alt/>
                 </div>
                 <div class="btnfooter">
-                    <div class="purbtn">登录</div>
+                    <div class="purbtn">{{$t('login.login')}}</div>
                         <p>
-                            <a href="#">忘记密码</a> 
+                            <a href="#">{{$t('login.forget')}}</a> 
                             <br/>
-                            <a href="#">没有账户? 点击开户</a> 
+                            <a href="#">{{$t('login.open')}}</a> 
                         </p>
                 </div>
             </div>
