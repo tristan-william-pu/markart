@@ -103,10 +103,10 @@ table {
   *zoom: 1;
 }
 
-.fl {
+.lf, .fl {
   float: left;
 }
 
-.fr {
+.rf, .fr {
   float: right;
 }
