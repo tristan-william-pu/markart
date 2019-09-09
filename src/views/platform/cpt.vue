@@ -11,20 +11,20 @@
       <div class="center">
         <h6>CPT cTrader</h6>
         <p>
-          <a href="http://cptmarkets.ctrader.com/ctrader-cptmarkets-setup.exe">下载CPT CTRADER</a>
+          <a href="http://cptmarkets.ctrader.com/ctrader-cptmarkets-setup.exe">{{$t('cTrader.downctrader')}}</a>
         </p>
       </div>
     </div>
     <div class="nav" :class="{fixed: posStatic}">
       <ul class="clear">
         <li :class="{active: active == 0}" @click="active=0">
-          <a href="javascript:void(0)" @click="scrollTo('introduction')">CPT cTrader 介绍</a>
+          <a href="javascript:void(0)" @click="scrollTo('introduction')">{{$t('cTrader.introduction')}}</a>
         </li>
         <li :class="{active: active == 1}" @click="active=1">
-          <a href="javascript:void(0)" @click="scrollTo('web')">CPT cTrader 网页版</a>
+          <a href="javascript:void(0)" @click="scrollTo('web')">{{$t('cTrader.web')}}</a>
         </li>
         <li :class="{active: active == 2}" @click="active=2">
-          <a href="javascript:void(0)" @click="scrollTo('ctPc')">CPT cTrader PC版</a>
+          <a href="javascript:void(0)" @click="scrollTo('ctPc')">{{$t('cTrader.ctPc')}}</a>
         </li>
         <li :class="{active: active == 3}" @click="active=3">
           <a href="javascript:void(0)" @click="scrollTo('ios')">CPT cTrader IOS</a>
@@ -37,12 +37,12 @@
     <div class="replace" v-show="posStatic"></div>
     <div class="introduction">
       <div class="center">
-        <h3>CPT cTrader 介绍</h3>
+        <h3>{{$t('cTrader.introduction')}}</h3>
         <div class="intCon">
           <div class="fl">
             <h6>CPT cTrader</h6>
-            <p>CPT cTrader是CPT Markets基于领先的数字金融IT理念，针对交易者全新打造功能最强大的交易平台，提供直接市场接入(DMA)。CPT cTrader平台对止损/限价价位没有限制，允许您一键反转、翻倍或平仓所有头寸。</p>
-            <p>CPT cTrader中可使用II级市场深度，可针对可用流动性提供更大的透明度。技术升级、服务升级、体验升级组成了CPT cTrader极具价值的产品服务。</p>
+            <p>{{$t('cTrader.base')}}</p>
+            <p>{{$t('cTrader.depth')}}</p>
             <p class="ctLine"></p>
           </div>
           <div class="fr">
@@ -54,7 +54,7 @@
     <div class="functi">
       <div class="top">
         <h3>
-          <span>CPT cTrader的</span>主要交易功能
+          <span>CPT cTrader</span>{{$t('cTrader.main')}}
         </h3>
         <p class="ctLine"></p>
       </div>
@@ -63,51 +63,47 @@
           <nav class="clear">
             <div data-con="local" :class="{active: funActive == 0}" @click="funActive = 0">
               <img src="@/assets/indFunction1.png" />
-              <p>超快的订单执行</p>
+              <p>{{$t('cTrader.fastOrder')}}</p>
             </div>
             <div data-con="global" :class="{active: funActive == 1}" @click="funActive = 1">
               <img src="@/assets/indFunction2.png" />
-              <p>全透明二级定价-市场深度</p>
+              <p>{{$t('cTrader.secondary')}}</p>
             </div>
             <div data-con="sports" :class="{active: funActive == 2}" @click="funActive = 2">
               <img src="@/assets/indFunction3.png" />
-              <p>稳定交易体验</p>
+              <p>{{$t('cTrader.stable')}}</p>
             </div>
             <div data-con="funny" :class="{active: funActive == 3}" @click="funActive = 3">
               <img src="@/assets/indFunction4.png" />
-              <p>交易指示和图表</p>
+              <p>{{$t('cTrader.chart')}}</p>
             </div>
           </nav>
           <div class="cont clear" v-show="funActive == 0">
             <p class="fl le">&gt;</p>
-            <p
-              class="word fl"
-            >交易执行的延误是每个交易者最困扰的难题。CPT cTrader服务器对订单的平均执行时间低于120ms，通过领先的数据传输框架协议发送至最近的数据中心。这种超低延迟数据中心带给您的交易环境非常适合自动化交易、高频交易。</p>
+            <p class="word fl">
+              {{$t('cTrader.troublesome')}}</p>
           </div>
           <div class="cont clear" v-show="funActive == 1">
             <p class="fl le">&gt;</p>
-            <p
-              class="word fl"
-            >CPT cTrader最独特的地方之一，就是它具备真正的无交易员处理平台（NDD）环境。通过FIX应用程序接口(API)将CPT cTrader平台直接连接到流动性提供商或者整合器，所以不存在干预交易的可能，这使得所有货币对的流动性报价对交易者完全透明。</p>
+            <p class="word fl">
+              {{$t('cTrader.unique')}}</p>
           </div>
           <div class="cont clear" v-show="funActive == 2">
             <p class="fl le">&gt;</p>
-            <p
-              class="word fl"
-            >CPT cTrader确保一次快速执行多个订单，无需任何订单的等候队列，CPT cTrader会同步处理上百个订单，而其它平台则是按照先后顺序来处理。并且允许外汇交易者在波动的市场情况下快速打开、修改和关闭交易，给您提供最稳定的交易体验。</p>
+            <p class="word fl">
+              {{$t('cTrader.multiple')}}</p>
           </div>
           <div class="cont clear" v-show="funActive == 3">
             <p class="fl le">&gt;</p>
-            <p
-              class="word fl"
-            >CPT cTrader软件在28个时间框架内提供各种图表，以适应不同类型的交易者和交易策略。创建和保存多达50个图表模板以供使用，包括各种时间框架内的各种技术分析类型，符号和图表类型。允许图表分离并成为可在多个屏幕上使用的独立应用程序，且可进行自定义以符合您的交易风格。</p>
+            <p class="word fl">
+              {{$t('cTrader.timeframes')}}</p>
           </div>
         </div>
       </div>
     </div>
     <div class="acqTop">
       <h3>
-        <span>当您选择使用CPT cTrader账户</span>进行交易时，您可以获得
+        <span>{{$t('cTrader.caccount')}}</span><span>{{$t('cTrader.get')}}</span>
       </h3>
       <p class="ctLine"></p>
     </div>
@@ -116,22 +112,22 @@
         <div class="oneDiv" :class="{active: getActive == 0}" @click="getActive=0">
           <div class="num">01</div>
           <dl>
-            <dt>简化交易难度和透明的知情决策</dt>
-            <dd>轻松市场执行</dd>
-            <dd>多兼容网页交易</dd>
-            <dd>套期保值能力</dd>
-            <dd>二级市场深度</dd>
-            <dd>以手数为单位的交易量计算</dd>
+            <dt>{{$t('cTrader.simplify')}}</dt>
+            <dd>{{$t('cTrader.easy')}}</dd>
+            <dd>{{$t('cTrader.compatible')}}</dd>
+            <dd>{{$t('cTrader.ability')}}</dd>
+            <dd>{{$t('cTrader.second')}}</dd>
+            <dd>{{$t('cTrader.volume')}}</dd>
           </dl>
         </div>
         <div data-con="two" class="twoDiv" :class="{active: getActive == 1}" @click="getActive=1">
           <div class="num fl">02</div>
           <dl>
-            <dt>高级图表和分析工具</dt>
-            <dd>全尺寸刻度线图，移动设备也适用</dd>
-            <dd>高级图表交易能力</dd>
-            <dd>可视化技术分析工具</dd>
-            <dd>能够自动创建和分享图表截图</dd>
+            <dt>{{$t('cTrader.analysis')}}</dt>
+            <dd>{{$t('cTrader.allsize')}}</dd>
+            <dd>{{$t('cTrader.advanced')}}</dd>
+            <dd>{{$t('cTrader.visual')}}</dd>
+            <dd>{{$t('cTrader.screenshots')}}</dd>
           </dl>
         </div>
         <div
@@ -142,19 +138,19 @@
         >
           <div class="num fl">03</div>
           <dl>
-            <dt>便携一键交易</dt>
-            <dd>只需点击一下即可反向交易</dd>
-            <dd>只需点击一下即可实现双倍加仓</dd>
-            <dd>只需单击一下即可关闭所有未结头寸</dd>
+            <dt>{{$t('cTrader.portable')}}</dt>
+            <dd>{{$t('cTrader.reverse')}}</dd>
+            <dd>{{$t('cTrader.double')}}</dd>
+            <dd>{{$t('cTrader.close')}}</dd>
           </dl>
         </div>
         <div data-con="four" class="fourDiv" :class="{active: getActive == 3}" @click="getActive=3">
           <div class="num fl">04</div>
           <dl>
-            <dt>优秀的客服支持</dt>
-            <dd>多语言用户界面</dd>
-            <dd>软件自动更新</dd>
-            <dd>模拟账户</dd>
+            <dt>{{$t('cTrader.customer')}}</dt>
+            <dd>{{$t('cTrader.many')}}</dd>
+            <dd>{{$t('cTrader.autoUpdate')}}</dd>
+            <dd>{{$t('cTrader.demo')}}</dd>
           </dl>
         </div>
       </div>
@@ -175,58 +171,57 @@
     </div>
     <div class="web">
       <div class="webTop">
-        <h3>CPT cTrader 网页版</h3>
-        <p
-          class="con"
-        >CPT cTrader网页版提供超快的订单执行功能，轻松、便捷,让您可以在世界任何地方享受真实的ECN外汇交易。 CPT cTrader网页版具有与CPT cTrader桌面版相同的市场领先价差，二级定价和一键式交易，以及个性化交易界面等功能，可以一目了然地监控您的持仓。</p>
+        <h3>{{$t('cTrader.webVersion')}}</h3>
+        <p class="con">
+          {{$t('cTrader.offers')}}</p>
         <div class="btn clear">
           <a href="https://ct.cptmarkets.com">
             <img src="images/XZ1.png" class="fl" />
-            <p class="fl">CPT cTrader 网页版</p>
+            <p class="fl">{{$t('cTrader.webpage')}}</p>
           </a>
         </div>
         <h6>
-          <span>随时随地访问</span>CPT cTrader网页版
+          <span>{{$t('cTrader.anytime')}}</span>{{$t('cTrader.access')}}
         </h6>
         <p class="ctLine"></p>
       </div>
       <div class="webBot">
         <div class="con clear">
           <div class="fl">
-            <div>特征</div>
-            <p class="black">在任何地方交易</p>
-            <p class="black">充分利用我们的真实ECN点差</p>
-            <p class="black">没有订单或交易限制</p>
-            <p class="black">微交易最小手数为0.01，没有最大值</p>
-            <p class="black">二级定价 - 完整的市场深度</p>
-            <p>一键交易</p>
-            <p>多种订单类型</p>
-            <p>实时交易报告</p>
-            <p>高级图表和技术分析</p>
+            <div>{{$t('cTrader.Features')}}</div>
+            <p class="black">{{$t('cTrader.anywhere')}}</p>
+            <p class="black">{{$t('cTrader.usefull')}}</p>
+            <p class="black">{{$t('cTrader.restriction')}}</p>
+            <p class="black">{{$t('cTrader.minimum')}}</p>
+            <p class="black">{{$t('cTrader.pricing')}}</p>
+            <p>{{$t('cTrader.click')}}</p>
+            <p>{{$t('cTrader.orderType')}}</p>
+            <p>{{$t('cTrader.report')}}</p>
+            <p>{{$t('cTrader.analysis')}}</p>
           </div>
           <div class="fr">
-            <div>优点</div>
-            <p>我们不干预您的市场交易</p>
-            <p>低成本交易节省资金</p>
-            <p>享受最快的超低延迟执行</p>
-            <p>通过微手数交易更好地控制交易风险</p>
-            <p>轻松地将资金转入和转出您的交易账户</p>
-            <p>支持所有主要的浏览器</p>
-            <p>在CPT cTrader PC版和CPT cTrader网页版上使用相同的帐户</p>
+            <div>{{$t('cTrader.good')}}</div>
+            <p>{{$t('cTrader.interfere')}}</p>
+            <p>{{$t('cTrader.save')}}</p>
+            <p>{{$t('cTrader.enjoy')}}</p>
+            <p>{{$t('cTrader.through')}}</p>
+            <p>{{$t('cTrader.transfer')}}</p>
+            <p>{{$t('cTrader.borwers')}}</p>
+            <p>{{$t('cTrader.allVersion')}}</p>
           </div>
         </div>
       </div>
     </div>
     <div class="ctPc">
       <div class="center">
-        <h3>CPT cTrader PC版</h3>
+        <h3>{{$t('cTrader.pcVersion')}}</h3>
         <div class="pcCon">
           <div class="fl">
-            <p>CPT cTrader平台是一个包含二级报价的功能丰富的交易平台，可针对可用流动性提供更大的透明度。人性化的操作界面与丰富的图表功能，适合每一位交易者根据自己的交易风格开启交易之旅。</p>
+            <p>{{$t('cTrader.suitable')}}</p>
             <div class="btn clear">
               <a href="http://cptmarkets.ctrader.com/ctrader-cptmarkets-setup.exe">
                 <img src="images/XZ.png" />
-                <p>下载 CPT cTrader PC版</p>
+                <p>{{$t('cTrader.dowpcVison')}}</p>
               </a>
             </div>
           </div>
@@ -243,17 +238,17 @@
         </div>
         <div class="fr">
           <h3>CPT cTrader IOS</h3>
-          <p>CPT cTrader苹果手机版作为原生应用程序为您提供最佳的外汇交易体验。直接从iOS设备访问我们领先市场的点差和无与伦比的执行速度。</p>
-          <p>您将获得与CPT cTrader网页版相同的核心功能，具有更快的启动时间和相同的易用界面。这款便携式CPT cTrader系统可以从任何iOS设备访问，因此您可以随时参与到世界上流动性最好的交易市场。</p>
+          <p>{{$t('cTrader.apple')}}</p>
+          <p>{{$t('cTrader.boot')}}</p>
           <div class="btn clear">
             <div class="leWord">
               <img src="images/IOS.png" />
               <h6>
-                下载
+                {{$t('cTrader.downios')}}
                 <span>CPT cTrader iphone/ipad</span>
               </h6>
               <p>
-                扫码一键下载
+                {{$t('cTrader.scanios')}}
                 <span>&gt;</span>
               </p>
             </div>
@@ -268,17 +263,17 @@
       <div class="center">
         <div class="fl">
           <h3>CPT cTrader Android</h3>
-          <p>CPT cTrader安卓版为您提供最佳的外汇交易作为原生应用程序。它为您提供了有效技术分析所需的所有工具，包括常见的趋势指标，振荡器，波动率测量和线图，所有这些都可以直接在图表中访问。</p>
-          <p>直接从Android设备获得我们的领先的市场点差和无与伦比的执行速度。您将获得与CPT cTrader网页版相同的核心功能，具有更快的启动时间和相同的易用界面。</p>
+          <p>{{$t('cTrader.android')}}</p>
+          <p>{{$t('cTrader.interface')}}</p>
           <div class="btn clear">
             <div class="fl leWord">
               <img src="@/assets/andIcon.png" />
               <h6>
-                下载
+                {{$t('cTrader.downios')}}
                 <span>CPT cTrader Android</span>
               </h6>
               <p>
-                扫码一键下载
+                {{$t('cTrader.scanios')}}
                 <span>&gt;</span>
               </p>
             </div>
@@ -295,30 +290,30 @@
     <div class="trading">
       <div class="center">
         <h6>
-          <span>用您的</span>iPhone/iPad/Android交易外汇!
+          <span>{{$t('cTrader.useYour')}}</span>{{$t('cTrader.tradeFo')}}
         </h6>
         <p class="ctLine"></p>
         <ul class="clear">
           <li class="oneLi">
-            <p class="tit">交易</p>
+            <p class="tit">{{$t('cTrader.trade')}}</p>
             <p class="ctLine"></p>
-            <span>超快执行外汇和大宗商品交易</span>
-            <span>单击订单执行</span>
-            <span>余额、保证金和损益表信息</span>
-            <span>查看所有品种和费率，包括您的收藏列表</span>
-            <span>可用图表</span>
+            <span>{{$t('cTrader.foreign')}}</span>
+            <span>{{$t('cTrader.execution')}}</span>
+            <span>{{$t('cTrader.balence')}}</span>
+            <span>{{$t('cTrader.list')}}</span>
+            <span>{{$t('cTrader.available')}}</span>
           </li>
           <li class="twoLi">
-            <p class="tit">账户</p>
+            <p class="tit">{{$t('cTrader.account')}}</p>
             <p class="ctLine"></p>
-            <span>完整的帐户列表 - 只需点按一下即可切换帐户</span>
-            <span>查看交易历史</span>
-            <span>查看和修改挂单</span>
+            <span>{{$t('cTrader.switch')}}</span>
+            <span>{{$t('cTrader.history')}}</span>
+            <span>{{$t('cTrader.pending')}}</span>
           </li>
           <li class="threeLi">
-            <p class="tit">平板电脑</p>
+            <p class="tit">{{$t('cTrader.ipad')}}</p>
             <p class="ctLine"></p>
-            <span>特殊的平板电脑分屏界面</span>
+            <span>{{$t('cTrader.screen')}}</span>
           </li>
         </ul>
       </div>
@@ -414,9 +409,9 @@ export default {
           color: #fff;
         }
       }
-      .active {
-        // background-color: #6714ba;
-      }
+      // .active {
+      //   // background-color: #6714ba;
+      // }
     }
   }
   .nav.fixed {
@@ -663,7 +658,7 @@ export default {
         clear: none;
         a {
           img {
-            margin: 2% 0 0 119px;
+            margin: 2% 20px 0 119px;
             float: left;
           }
           p {

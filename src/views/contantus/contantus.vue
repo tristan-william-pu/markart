@@ -10,7 +10,7 @@
     <div class="word">
       <div class="map-contain">
         <div class="concat">
-          联系我们
+          {{$t('contact.contactUs')}}
         </div>
         <div class="map-list">
           <ul>
@@ -41,10 +41,10 @@
       </div>
       <div class="service">
         <div class="online">
-          在线客服
+           {{$t('contact.onlineCus')}}
         </div>
         <div class="tip">
-          5*24小时在线客服提供在线支持与帮助
+           {{$t('contact.assistance')}}
         </div>
         <div class="connect">
           <div class="">
