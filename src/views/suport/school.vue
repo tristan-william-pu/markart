@@ -298,9 +298,7 @@
 
 export default {
     data(){
-      return{
-        words:["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"],
-      }
+      return{}
     },
     methods:{
       goRouter(url){
@@ -940,38 +938,39 @@ export default {
       width: 90%;
     }
   }
-  @media screen and (max-width: 1200px) {
-    .bigImg .center {
-      padding: 5% 0;
-    }
-    .search .center {
-      width: 90%;
-    }
-    .video .center {
-      width: 84%;
-    }
-    .video .center > .vidCon > ul li:last-child {
-      margin-top: 15px;
-    }
-
-    .know .center {
-      width: 90%;
-    }
-    .know .center > ul.advanced {
-      width: 90%;
-    }
-    .teaBg {
-      background: url(../../../public/images/sch/teacher.png) no-repeat center
-        top;
-      background-size: auto;
-    }
-    .teaBg .center {
-      width: 73%;
-      padding: 9% 0 11%;
-    }
-    .teaCon {
-      width: 95%;
-    }
-  }
+  
 }
+// @media screen and (max-width: 1200px) {
+//     .bigImg .center {
+//       padding: 5% 0;
+//     }
+//     .search .center {
+//       width: 90%;
+//     }
+//     .video .center {
+//       width: 84%;
+//     }
+//     .video .center > .vidCon > ul li:last-child {
+//       margin-top: 15px;
+//     }
+
+//     .know .center {
+//       width: 90%;
+//     }
+//     .know .center > ul.advanced {
+//       width: 90%;
+//     }
+//     .teaBg {
+//       background: url(../../../public/images/sch/teacher.png) no-repeat center
+//         top;
+//       background-size: auto;
+//     }
+//     .teaBg .center {
+//       width: 73%;
+//       padding: 9% 0 11%;
+//     }
+//     .teaCon {
+//       width: 95%;
+//     }
+//   }
 </style>
