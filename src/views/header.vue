@@ -10,6 +10,11 @@
     <header>
       <div class="warp">
         <img class="logo" src="@/assets/logo.png" alt />
+        <div class="mbBtn mb" @click="navMobile">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
         <div class="rf register countryselect" @mouseenter.stop="showLanguageList=true" @mouseleave="showLanguageList=false">
           <div class="language-list">
             <img :src="imgSrc" class="flag" alt />
@@ -27,13 +32,13 @@
             </transition>
           </div>
         </div>
-        <div class="rf">
+        <div class="rf pc">
           <router-link to="/login">
             <button class="hd-btn">{{$t('header.login')}}</button>
           </router-link>
           <button class="hd-btn">{{$t('header.register')}}</button>
         </div>
-        <div class="nav clearfix">
+        <div class="nav clearfix pc">
           <ul :class="classNum == 0 ? 'tabs':'tabs-en'">
             <li
               v-for="(item,index) in tabsList.menu"
@@ -43,6 +48,26 @@
               @mouseleave="showSub=false"
               @click.stop="showSub=false,$router.push(tabsList.routers[index])"
             >{{item.title}}</li>
+          </ul>
+        </div>
+        <div class="navbar clearfix mb" v-if="navMobileBool">
+          <ul >
+            <li
+              v-for="(item,index) in tabsList.menu"
+              :key="index"
+              :class="{active:index == n || showSub}"
+              @click.stop="showSub=false,$router.push(tabsList.routers[index])"
+            >
+            <span>{{item.title}}</span>
+            <ul 
+              v-if="showSub && tabsList.menu[n].content.filter(e => e).length"
+            >
+              <li 
+                v-for="(item, key) in tabsList.menu[n].content" :key="key" class="navbarRoute"
+                @click.stop="showSub=false,$router.push(tabsList.subRouters[n][key])"
+              >{{list}}</li>
+            </ul>
+            </li>
           </ul>
         </div>
       </div>
@@ -61,6 +86,7 @@
           >{{item}}</li>
         </ul>
       </div>
+
     </header>
   </div>
 </template>
@@ -89,7 +115,8 @@ export default {
       curId: -1,
       title: [],
       n: -1,
-      showSub: 0
+      showSub: 0,
+      navMobileBool:false,
     };
   },
   computed: {
@@ -207,12 +234,15 @@ export default {
     changeLocal(local) {
       this.$util.local(local);
       this.$i18n.locale = local;
-    }
+    },
+    navMobile(){
+      this.navMobileBool = !this.navMobileBool;
+    },
   }
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import "@/styles/mixin.scss";
 .slide-fade-enter-active {
   transition: all .3s ease;
@@ -293,6 +323,34 @@ header {
             height: 25px;
           }
         }
+      }
+    }
+  }
+  .warp{
+    .mbBtn{
+      border: 1px solid #2a3976;
+      float: right;
+      padding: 6px;
+      margin-top: 20px;
+      margin-right: 25px;
+      margin-bottom: 8px;
+      background-color: transparent;
+      border-radius: 4px;
+      display: block;
+      span{
+        display: block;
+        width: 22px;
+        height: 2px;
+        border-radius: 1px;
+        background: #2a3976;
+        margin:3px 0;
+      }
+    }
+    .navbar{
+      .navbarRoute{
+        cursor: pointer;
+        font-size: 14px;
+        color: #666;
       }
     }
   }
