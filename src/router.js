@@ -2,7 +2,7 @@
  * @Autor: Diskfan
  * @Date: 2019-09-06 14:02:42
  * @LastEditors: Do not edit
- * @LastEditTime: 2019-09-06 18:16:57
+ * @LastEditTime: 2019-09-07 15:30:43
  * @Description: 路由配置
  */
 import Vue from 'vue'
@@ -26,7 +26,7 @@ export default new Router({
     }, {
       path: '/about',
       name: 'about',
-      component: importModule('about/safety')
+      component: importModule('about/about')
     }, {
       path: '/login',
       name: 'login',

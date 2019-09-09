@@ -560,14 +560,14 @@ export default {
           position: absolute;
           padding:0;
           margin-left: 19px;
-          margin-top: -36px;
+          margin-top: -37px;
           border-bottom:18px solid  #f2eee6;
           border-top:18px solid transparent;
           border-left:18px solid transparent;
           border-right:18px solid transparent;
           display: block;
           content:'';
-          z-index:10
+          z-index:11;
         }
       }
     }
