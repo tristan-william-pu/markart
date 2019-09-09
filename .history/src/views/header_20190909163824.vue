@@ -2,7 +2,7 @@
  * @Autor: Diskfan
  * @Date: 2019-09-06 10:07:02
  * @LastEditors: Do not edit
- * @LastEditTime: 2019-09-09 17:01:45
+ * @LastEditTime: 2019-09-07 10:15:50
  * @Description: Header
  -->
 <template>
@@ -36,9 +36,7 @@
           <router-link to="/login">
             <button class="hd-btn">{{$t('header.login')}}</button>
           </router-link>
-          <router-link to="/regist">
-            <button class="hd-btn">{{$t('header.register')}}</button>
-          </router-link>
+          <button class="hd-btn">{{$t('header.register')}}</button>
         </div>
         <div class="nav clearfix pc">
           <ul :class="classNum == 0 ? 'tabs':'tabs-en'">
