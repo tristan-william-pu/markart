@@ -2,7 +2,7 @@
  * @Autor: Diskfan
  * @Date: 2019-09-06 10:07:02
  * @LastEditors: Do not edit
- * @LastEditTime: 2019-09-09 16:37:13
+ * @LastEditTime: 2019-09-09 16:34:57
  * @Description: 
  -->
 <template>
@@ -13,8 +13,8 @@
         <div @click="regist(0)">{{$t('regist.real')}}</div>
       </div>
       <div class="btn blue">
-        <div @click="regist(1)">
-          {{$t('regist.demo')}}
+        <div @click="regist(1)"
+          >{{$t('regist.demo')}}
         </div>
       </div>
     </div>

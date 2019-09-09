@@ -1,10 +1,3 @@
-<!--
- * @Autor: Diskfan
- * @Date: 2019-09-09 16:27:23
- * @LastEditors: Do not edit
- * @LastEditTime: 2019-09-09 16:27:23
- * @Description: 
- -->
 <template>
     <div class="login">
         <div class="warp clearfix">
@@ -48,6 +41,9 @@
             return {
              
             }
+        },
+        created:function () {
+            this.$emit('footer', false);
         }
     }
 </script>

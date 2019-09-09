@@ -2,7 +2,7 @@
  * @Autor: Diskfan
  * @Date: 2019-09-06 10:07:02
  * @LastEditors: Do not edit
- * @LastEditTime: 2019-09-09 16:37:13
+ * @LastEditTime: 2019-09-06 11:54:33
  * @Description: 
  -->
 <template>
@@ -10,12 +10,13 @@
     <div class="registerWrap">
       <p>{{$t('regist.now')}}</p>
       <div class="btn yels">
-        <div @click="regist(0)">{{$t('regist.real')}}</div>
+        <a href="javascript:void(0)" @click="regist(0)">{{$t('regist.real')}}</a>
       </div>
       <div class="btn blue">
-        <div @click="regist(1)">
-          {{$t('regist.demo')}}
-        </div>
+        <a
+          href="javascript:void(0)"
+          @click="regist(1)"
+        >{{$t('regist.demo')}}</a>
       </div>
     </div>
   </div>

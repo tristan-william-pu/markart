@@ -2,7 +2,7 @@
  * @Autor: Diskfan
  * @Date: 2019-09-09 10:59:59
  * @LastEditors: Do not edit
- * @LastEditTime: 2019-09-09 16:29:55
+ * @LastEditTime: 2019-09-09 14:49:08
  * @Description: 注册
  -->
 <template>
@@ -1006,9 +1006,6 @@ export default {
       active: 0,
       step: 0
     };
-  },
-  activated() {
-    this.active = this.$route.params.active || 0;
   }
 };
 </script>

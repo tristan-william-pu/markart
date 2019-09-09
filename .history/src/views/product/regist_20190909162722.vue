@@ -2,7 +2,7 @@
  * @Autor: Diskfan
  * @Date: 2019-09-06 10:07:02
  * @LastEditors: Do not edit
- * @LastEditTime: 2019-09-09 16:37:13
+ * @LastEditTime: 2019-09-06 11:54:33
  * @Description: 
  -->
 <template>
@@ -10,29 +10,19 @@
     <div class="registerWrap">
       <p>{{$t('regist.now')}}</p>
       <div class="btn yels">
-        <div @click="regist(0)">{{$t('regist.real')}}</div>
+        <a href="/register/register" onclick="ga('send', 'event', 'TR', 'play', 'OPEN');">{{$t('regist.real')}}</a>
       </div>
       <div class="btn blue">
-        <div @click="regist(1)">
-          {{$t('regist.demo')}}
-        </div>
+        <a
+          href="/simulationRegister/simulationRegister"
+          onclick="ga('send', 'event', 'DR', 'play', 'OPEN');"
+        >{{$t('regist.demo')}}</a>
       </div>
     </div>
   </div>
 </template>
 <script>
-export default {
-  methods: {
-    regist(type) {
-      this.$router.push({
-        name: 'regist',
-        params: {
-          active: type
-        }
-      })
-    }
-  }
-};
+export default {};
 </script>
 <style lang="scss">
 .apply {
