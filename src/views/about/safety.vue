@@ -2,10 +2,9 @@
  * @Autor: Diskfan
  * @Date: 2019-09-06 10:07:02
  * @LastEditors: Do not edit
- * @LastEditTime: 2019-09-06 14:04:43
+ * @LastEditTime: 2019-09-06 14:18:50
  * @Description: 关于
  -->
-
 <template>
   <div class="cn safty">
     <div class="banner">
@@ -16,7 +15,7 @@
         </div>
       </div>
     </div>
-    <img class="mobbaner" src="../../../public/images/FundSafetymob.jpg" alt />
+    <img class="mobbaner" src="images/FundSafetymob.jpg" alt />
     <div class="warp">
       <div class="tit">{{$t('safety.regula')}}</div>
       <div class="art">
@@ -479,4 +478,4 @@ export default {
     -webkit-transform: translateX(0);
   }
 }
-</style>=======
+</style>

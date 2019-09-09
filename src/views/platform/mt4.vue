@@ -1,9 +1,9 @@
 <!--
- * @ Author: Diskfan
- * @ Create Time: 2019-09-02 14:04:23
- * @ Modified by: Your name
- * @ Modified time: 2019-09-04 10:05:38
- * @ Description: mt4
+ * @Autor: Diskfan
+ * @Date: 2019-09-06 10:07:02
+ * @LastEditors: Do not edit
+ * @LastEditTime: 2019-09-06 16:33:03
+ * @Description: mt4
  -->
 
 
@@ -91,6 +91,7 @@
       </div>
     </div>
     <div class="androiddown">
+      <img src="images/MT4_18.png" class="bg" alt="">
       <div class="warp">
         <div class="downinfo">
           <p class="infotite">MetaTrader 4 Android</p>
@@ -192,7 +193,7 @@ export default {
   },
 };
 </script>
-<style lang="scss" scoped>
+<style lang="scss">
 @import "@/styles/mixin.scss";
 .fade-enter-active {
   transition: all .5s ease-out;
@@ -346,7 +347,7 @@ export default {
       .infoart {
         margin-top: 30px;
         font-size: 18px;
-        width: 700px;
+        width: auto;
         line-height: 40px;
         box-sizing: border-box;
       }
@@ -402,6 +403,14 @@ export default {
     background-position: right center;
     overflow: hidden;
     top: -100px;
+    .bg {
+      display: none;
+      height: auto;
+      width: 90%;
+      margin-left: 5%;
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
     .warp {
       width: 1200px;
       display: block;
@@ -417,7 +426,6 @@ export default {
         .infoart {
           margin-top: 30px;
           font-size: 18px;
-          width: 700px;
           line-height: 40px;
         }
         > a {
@@ -461,6 +469,7 @@ export default {
             margin-top: 10px;
             margin-left: 10px;
             font-size: 16px;
+            color: #000;
             span {
               color: #5b0eb2;
             }
@@ -551,14 +560,14 @@ export default {
           position: absolute;
           padding:0;
           margin-left: 19px;
-          margin-top: -36px;
+          margin-top: -37px;
           border-bottom:18px solid  #f2eee6;
           border-top:18px solid transparent;
           border-left:18px solid transparent;
           border-right:18px solid transparent;
           display: block;
           content:'';
-          z-index:10
+          z-index:11;
         }
       }
     }

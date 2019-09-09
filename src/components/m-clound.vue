@@ -28,7 +28,7 @@ window.requestAnimationFrame =
 export default {
   data() {
     return {
-      radius: 200, // 滚动半径，单位px
+      radius: 250, // 滚动半径，单位px
       rotateAngleXbase: 2000, // 默认旋转速度基数，数越小速度越快
       rotateAngleYbase: 2000,
       currentHoverTag: null,
@@ -129,12 +129,13 @@ export default {
       if (this.hover) {
         const _self = this;
         this.$refs.wrapper.onmousemove = function(e) {
+          const react = _self.$refs.wrapper.getClientRects()[0];
           _self.rotateAngleY =
-            ((e.x - this.offsetLeft - this.offsetWidth / 2) /
+            ((e.x - react.left - this.offsetLeft - this.offsetWidth / 2) /
               _self.rotateAngleYbase) *
             0.1;
           _self.rotateAngleX =
-            (-(e.y - this.offsetTop - this.offsetHeight / 2) /
+            (-(e.y - react.top - this.offsetTop - this.offsetHeight / 2) /
               _self.rotateAngleXbase) *
             0.1;
         };
@@ -257,7 +258,7 @@ export default {
       font-size: 16px;
       text-align: center;
       width: 100%;
-      line-height: 40px;
+      line-height: 25px;
       color: #fff;
     }
   }

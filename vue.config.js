@@ -6,7 +6,6 @@ module.exports = {
     outputDir: 'dist',
     // eslint-loader 是否在保存的时候检查
     lintOnSave: true,
-   
     // 第三方插件配置
     pluginOptions: {
       i18n: {

@@ -1,9 +1,9 @@
 <!--
- * @ Author: Diskfan
- * @ Create Time: 2019-09-03 19:42:53
- * @ Modified by: Your name
- * @ Modified time: 2019-09-03 21:44:14
- * @ Description: 软件对比
+ * @Autor: Diskfan
+ * @Date: 2019-09-06 14:02:42
+ * @LastEditors: Do not edit
+ * @LastEditTime: 2019-09-07 14:09:23
+ * @Description: 软件对比
  -->
 
 <template>
@@ -128,7 +128,7 @@
         <div class="contrast">
           <h4>{{$t('compare.comparison')}}</h4>
           <p>{{$t('compare.difference')}}</p>
-          <div class="tab clear">
+          <div class="tab clear pc">
             <ul class="firUl">
               <li class="first">{{$t('compare.execution')}}</li>
               <li class="ctLine"></li>
@@ -225,16 +225,20 @@
               <li class="ctLine"></li>
               <li>
                 {{$t('compare.floating')}}
-                <br />{{$t('compare.fixed')}}
+                <br />
+                {{$t('compare.fixed')}}
               </li>
               <li class="ctLine"></li>
               <li>{{$t('compare.commission')}}</li>
               <li class="ctLine"></li>
               <li>
                 {{$t('compare.forex')}}
-                <br />{{$t('compare.metal')}}
-                <br />{{$t('compare.oil')}}
-                <br />{{$t('compare.crypto')}}
+                <br />
+                {{$t('compare.metal')}}
+                <br />
+                {{$t('compare.oil')}}
+                <br />
+                {{$t('compare.crypto')}}
               </li>
               <li class="ctLine"></li>
               <li class="bot">100% / 20%</li>
@@ -290,9 +294,12 @@
               <li class="ctLine"></li>
               <li>
                 {{$t('compare.huobi')}}
-                <br />{{$t('compare.metal')}}
-                <br />{{$t('compare.oil')}}
-                <br />{{$t('compare.crypto')}}
+                <br />
+                {{$t('compare.metal')}}
+                <br />
+                {{$t('compare.oil')}}
+                <br />
+                {{$t('compare.crypto')}}
               </li>
               <li class="ctLine"></li>
               <li class="bot">100% / 20%</li>
@@ -347,13 +354,14 @@
               <li class="ctLine"></li>
               <li class="duih">
                 {{$t('compare.pairs')}}
-                <br />{{$t('compare.metalup')}}
+                <br />
+                {{$t('compare.metalup')}}
               </li>
               <li class="ctLine"></li>
               <li class="bot">100% / 20%</li>
             </ul>
           </div>
-          <!-- <table>
+          <table class="mb">
             <tbody>
               <tr>
                 <th></th>
@@ -530,7 +538,7 @@
                 <td>100% / 20%</td>
               </tr>
             </tbody>
-          </table>-->
+          </table>
         </div>
       </div>
     </div>
@@ -539,7 +547,7 @@
 <script>
 export default {};
 </script>
-<style lang="scss" scoped>
+<style lang="scss">
 @import "@/styles/mixin.scss";
 .compare {
   > .img {
@@ -570,9 +578,16 @@ export default {};
     }
   }
   .conTab {
+    .pc {
+      display: block;
+    }
+    .mb {
+      display: none;
+    }
     .center {
-      width: 1207px;
+      max-width: 1207px;
       margin: 134px auto 229px;
+      width: 100%;
       .mt4,
       .ctrader {
         box-shadow: 5px 5px 5px #fbfbfb, 5px -5px 5px #fbfbfb,
@@ -591,7 +606,7 @@ export default {};
           > .fl {
             width: 45%;
             margin: 62px 0 0 5%;
-            p.title{
+            p.title {
               color: #0e0e0c;
               font-size: 16px;
               font-family: montserratse;
@@ -649,12 +664,17 @@ export default {};
           }
         }
       }
-      .ctrader {margin:10% auto;
+      .ctrader {
+        margin: 10% auto;
         .btn {
           width: 226px !important;
         }
       }
       .contrast {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         h4 {
           font-size: 40px;
           color: #000000;
@@ -669,16 +689,17 @@ export default {};
           font-family: Light;
         }
         .tab {
+          width: 100%;
           @include flex(center, unset);
           > ul {
             width: 23%;
             margin: 0 1%;
             li {
-              font-size: 15px;
+              font-size: 18px;
               color: #231815;
+              font-family: LTH;
               margin-left: 9px;
               line-height: 30px;
-              font-family: Light;
             }
             li.first {
               margin-top: 181px;
@@ -689,26 +710,22 @@ export default {};
               background-color: #ededed;
               margin: 24px auto 20px;
             }
-            li.liauBot{
-                margin: -2px auto 21px;
-
-            }
-            li.LipcBot{
+            li.LipcBot {
               margin: 19px auto 20px;
             }
             li.flo {
-                  line-height: 67px;
+              line-height: 67px;
             }
             li.dcha {
               line-height: 55px;
             }
             li.gang {
-                  line-height: 118px;
+              line-height: 118px;
             }
             li.duih {
               padding: 30px 0;
             }
-            li.cuoLi{
+            li.cuoLi {
               font-size: 27px;
               color: #939393;
               font-weight: 900;
@@ -736,6 +753,37 @@ export default {};
               font-size: 20px;
               color: #590bb1;
               font-weight: 900;
+            }
+          }
+        }
+        > table {
+          border-collapse: collapse;
+          text-align: center;
+          font-size: 1rem;
+          color: #231815;
+          font-family: LTH;
+          tbody {
+            tr {
+              th {
+                font-family: SEMIBOLD;
+                font-size: 1.2em;
+                color: #231815;
+                padding: 0.5rem;
+                span {
+                  color: #590bb1;
+                }
+              }
+              td {
+                border: 1px solid #ededed;
+                font-size: 1.2em;
+                color: #231815;
+                line-height: 2rem;
+                padding: 0.5rem;
+              }
+              .dui {
+                color: #732cc4;
+                font-weight: 900;
+              }
             }
           }
         }

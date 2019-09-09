@@ -1,19 +1,23 @@
 <!--
- * @ Author: Diskfan
- * @ Create Time: 2019-09-03 14:52:02
- * @ Modified by: Your name
- * @ Modified time: 2019-09-04 10:06:36
- * @ Description: clearpro
+ * @Autor: Diskfan
+ * @Date: 2019-09-06 14:02:42
+ * @LastEditors: Do not edit
+ * @LastEditTime: 2019-09-07 10:07:59
+ * @Description: clearpro
  -->
 
+ 
 <template>
   <div class="clearpro">
-    <div class="banner">
+    <div class="banner pc">
       <div class="wrap">
       <div class="title">Clearpro</div>
       <div class="tip">{{$t('clearpro.experience')}}</div>
       <img src="images/Clearpro3_03.png" alt />
       </div>
+    </div>
+    <div class="banner mb">
+      <img src="images/Clearpro_02.jpg" alt="">
     </div>
     <div class="wrap">
       <div class="tit">Clearpro</div>
@@ -60,7 +64,7 @@
 <script>
 export default {};
 </script>
-<style lang="scss" scoped>
+<style lang="scss">
 @import "@/styles/mixin.scss";
 .clearpro {
   width: 100%;
@@ -91,6 +95,14 @@ export default {};
     img {
       margin-top: 75px;
       @include animation(fadeInLeft, 1s, 400ms);
+    }
+  }
+  .mb {
+    display: none;
+    width: 100%;
+    height: unset;
+    img {
+      width: 100%;
     }
   }
   .wrap {

@@ -1,11 +1,12 @@
 <!--
- * @ Author: Diskfan
- * @ Create Time: 2019-09-02 14:06:01
- * @ Modified by: Your name
- * @ Modified time: 2019-09-04 10:04:59
- * @ Description: 账户类型
+ * @Autor: Diskfan
+ * @Date: 2019-09-06 14:02:42
+ * @LastEditors: Do not edit
+ * @LastEditTime: 2019-09-07 10:08:06
+ * @Description: 账户类型
  -->
 
+ 
 <template>
   <div class="account">
     <div class="name">{{$t('account.type')}}</div>

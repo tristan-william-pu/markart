@@ -1,11 +1,10 @@
 <!--
- * @ Author: Diskfan
- * @ Create Time: 2019-09-03 15:38:04
- * @ Modified by: Your name
- * @ Modified time: 2019-09-04 10:05:08
- * @ Description: cpt cTrader
+ * @Autor: Diskfan
+ * @Date: 2019-09-06 10:07:02
+ * @LastEditors: Do not edit
+ * @LastEditTime: 2019-09-07 10:34:46
+ * @Description:  cpt
  -->
-
 <template>
   <div class="cpt">
     <div class="big-img">
@@ -340,7 +339,7 @@ export default {
   }
 };
 </script>
-<style lang="scss" scoped>
+<style lang="scss">
 @import "@/styles/mixin.scss";
 .cpt {
   width: 100%;
@@ -946,10 +945,11 @@ export default {
           }
         }
       }
-      > fr {
+      > .fr {
         width: 35%;
         float: right;
         img {
+          width: 100%;
           vertical-align: middle;
         }
       }

@@ -1,3 +1,10 @@
+/*
+ * @Autor: Diskfan
+ * @Date: 2019-09-06 14:02:42
+ * @LastEditors: Do not edit
+ * @LastEditTime: 2019-09-07 15:30:43
+ * @Description: 路由配置
+ */
 import Vue from 'vue'
 import Router from 'vue-router'
 
@@ -19,7 +26,7 @@ export default new Router({
     }, {
       path: '/about',
       name: 'about',
-      component: importModule('about/safety')
+      component: importModule('about/about')
     }, {
       path: '/login',
       name: 'login',
@@ -116,9 +123,13 @@ export default new Router({
     }, {
       // school
       path: '/school',
+      name: 'school',
       component: importModule('suport/school'),
-      
-    },{
+    }, {
+      path: '/introduction',
+      name: 'introduction',
+      component: importModule('suport/introduction')
+    }, {
       path:'/AZ',
       name: 'AZ',
       component: importModule('suport/AZ'),
@@ -126,6 +137,10 @@ export default new Router({
       path:'/video',
       name: 'video',
       component: importModule('suport/video'),
+    }, {
+      path:'/Basis',
+      name: 'Basis',
+      component: importModule('suport/Basis'),
     }, {
       path: '/partners',
       name: 'partners',

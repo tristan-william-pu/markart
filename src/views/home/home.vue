@@ -1,11 +1,12 @@
 <!--
- * @ Author: Diskfan
- * @ Create Time: 2019-09-02 12:42:19
- * @ Modified by: Your name
- * @ Modified time: 2019-09-05 09:54:34
- * @ Description:首页
+ * @Autor: Diskfan
+ * @Date: 2019-09-06 10:07:02
+ * @LastEditors: Do not edit
+ * @LastEditTime: 2019-09-07 09:52:20
+ * @Description: 首页
  -->
 
+ 
 <template>
   <div>
     <!-- 视频 -->
@@ -244,12 +245,6 @@
           <li>
             <img src="@/assets/pay5.png" alt />
           </li>
-          <!-- <li>
-            <img src="@/assets/pay6.png" alt="">
-          </li>
-          <li>
-            <img src="@/assets/pay7.png" alt="">
-          </li>-->
           <li>
             <img src="@/assets/pay8.png" alt />
           </li>
@@ -304,7 +299,7 @@ export default {
 .cloud {
   float: left;
   margin-left: 30px;
-  width: 500px;
+  width: 60%;
   height: 500px;
 }
 .videowarp {
