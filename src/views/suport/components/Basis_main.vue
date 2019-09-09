@@ -1,3 +1,10 @@
+<!--
+ * @Autor: Diskfan
+ * @Date: 2019-09-09 09:48:07
+ * @LastEditors: Do not edit
+ * @LastEditTime: 2019-09-09 09:48:07
+ * @Description: 
+ -->
 <template>
     <div>
         <!--内容-->
@@ -83,7 +90,3 @@
         
     }
 </script>
-
-<style lang="scss" scoped>
-@import "@/styles/Basis.scss";
-</style>

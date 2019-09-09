@@ -92,7 +92,3 @@
         
     }
 </script>
-
-<style lang="scss" scoped>
-@import "@/styles/Basis.scss";
-</style>
