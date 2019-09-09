@@ -324,6 +324,7 @@ export default {
 .fl {
   float: left;
 }
+
 .emergingSchool {
   opacity: 0;
   transform: translate(0, 50px);
@@ -744,52 +745,55 @@ export default {
           &:first-child {
             color: #000;
             border-left: 1px solid #f4f5f7;
+            a {
+              color: #000;
+            }
           }
         }
       } 
+      > .con {
+        margin-top: 77px;
+        > p.fl {
+          font-family: ALB;
+          font-size: 73px;
+          color: #5b0eb2;
+          font-style: italic;
+          margin-left: 10%;
+        }
+        > div.fr {
+          width: 77%;
+          font-size: 17px;
+          line-height: 48px;
+          color: #333333;
+          font-family: LTHK;
+          margin-left: 5%;
+        }
+        p.botDian {
+          letter-spacing: 21px;
+        }
+      }
     }
   } 
-  .az .center > ul li:first-child a {
-    color: #000;
-  }
-  .az .center > .con {
-    margin-top: 77px;
-  }
-  .az .center > .con > p.fl {
-    font-family: ALB;
-    font-size: 73px;
-    color: #5b0eb2;
-    font-style: italic;
-    margin-left: 10%;
-  }
-  .az .center > .con > div.fr {
-    width: 77%;
-    font-size: 17px;
-    line-height: 48px;
-    color: #333333;
-    font-family: LTHK;
-    margin-left: 5%;
-  }
-  .az .center > .con > div.fr p.botDian {
-    letter-spacing: 21px;
-  }
   /*网络讲座*/
-  .teaTit .center {
-    width: 63%;
-    margin: 8% auto;
-  }
-  .teaTit .center > h3 {
-    font-size: 40px;
-    color: #000000;
-    font-family: LTCHK;
-    text-align: center;
-  }
-  .teaTit .center > p.titCon {
-    font-size: 14px;
-    color: #606060;
-    text-align: center;
-    margin: 21px auto 47px;
-  }
+  .teaTit{
+    .center {
+      width: 63%;
+      margin: 8% auto;
+      > h3 {
+        font-size: 40px;
+        color: #000000;
+        font-family: LTCHK;
+        text-align: center;
+      }
+      > p.titCon {
+        font-size: 14px;
+        color: #606060;
+        text-align: center;
+        margin: 21px auto 47px;
+      }
+    }
+  } 
+
   .teaBgPh {
     display: none;
   }
@@ -797,94 +801,98 @@ export default {
     width: 100%;
     background: url(../../../public/images/sch/teacher.png) no-repeat;
     background-size: 100%;
-  }
-  .teaBg .center {
-    width: 50%;
-    margin: 0 auto;
-    padding: 5% 0 4%;
-  }
-  .teaBg .center > div.fl {
-    border: 1px solid #f9f9f9;
-    padding: 30px 23px 21px;
-  }
-  .teaBg .center > div.fl p.sec {
-    font-size: 12px;
-    margin: 7px auto 13px;
-    color: #fffefc;
-    font-family: LTHK;
-  }
-  .teaBg .center > div.fl .cenWord p {
-    font-family: LTHK;
-    font-size: 49px;
-    color: #fffefc;
-    margin-bottom: 8px;
-  }
-  .teaBg .center > div.fl .cenWord p span {
-    display: block;
-    font-size: 16px;
-  }
-  .teaBg .center > div.fl > p.bot {
-    font-size: 45px;
-    font-family: LTHK;
-    color: #fffefc;
-  }
-  .teaBg .center > div.fl > p.bot span {
-    font-size: 49px;
-  }
-  .teaBg .center > div.fr {
-    position: relative;
-    right: 5%;
-    top: 20%;
-  }
-  .teaBg .center > div.fr > p.fl {
-    font-size: 20px;
-    color: #fffefc;
-    writing-mode: tb-rl;
-    position: absolute;
-    right: 155%;
-    top: 59%;
-  }
-  .teaBg .center > div.fr > p.fr {
-    font-size: 12px;
-    color: #c5c5c5;
-    writing-mode: tb-rl;
-    margin-top: 18%;
+    .center {
+      width: 50%;
+      margin: 0 auto;
+      padding: 5% 0 4%;
+      > div.fl {
+        border: 1px solid #f9f9f9;
+        padding: 30px 23px 21px;
+        p.sec {
+          font-size: 12px;
+          margin: 7px auto 13px;
+          color: #fffefc;
+          font-family: LTHK;
+        }
+        .cenWord{
+          p {
+            font-family: LTHK;
+            font-size: 49px;
+            color: #fffefc;
+            margin-bottom: 8px;
+            span {
+              display: block;
+              font-size: 16px;
+            }
+          }
+        } 
+        > p.bot {
+          font-size: 45px;
+          font-family: LTHK;
+          color: #fffefc;
+          span {
+            font-size: 49px;
+          }
+        }
+      }
+      > div.fr {
+        position: relative;
+        right: 5%;
+        top: 20%;
+        > p.fl {
+          font-size: 20px;
+          color: #fffefc;
+          writing-mode: tb-rl;
+          position: absolute;
+          right: 155%;
+          top: 59%;
+        }
+        > p.fr {
+          font-size: 12px;
+          color: #c5c5c5;
+          writing-mode: tb-rl;
+          margin-top: 18%;
+        }
+      }
+    }
   }
   .teaCon {
     width: 60%;
     margin: 5% auto 8%;
-  }
-  .teaCon > div.fl > p.name {
-    font-size: 70px;
-    color: #8b8b8b;
-    font-family: LTHK;
-    margin-top: 49px;
-  }
-  .teaCon > div.fl > p.line {
-    width: 131px;
-    height: 17px;
-    background-color: #5b0eb2;
-    margin-bottom: 37px;
-  }
-  .teaCon > div.fl > p.eng {
-    font-size: 64px;
-    color: #5b5b5b;
-    font-family: MON;
-  }
-  .teaCon > div.fr {
-    width: 50%;
-  }
-  .teaCon > div.fr > p.line {
-    width: 42px;
-    height: 1px;
-    background-color: #4a4a4a;
-    margin-bottom: 27px;
-  }
-  .teaCon > div.fr > p.con {
-    font-size: 14px;
-    color: #606060;
-    line-height: 28px;
-    font-family: LTHK;
+    > div.fl{
+      > p.name {
+        font-size: 70px;
+        color: #8b8b8b;
+        font-family: LTHK;
+        margin-top: 49px;
+      }
+      > p.line {
+        width: 131px;
+        height: 17px;
+        background-color: #5b0eb2;
+        margin-bottom: 37px;
+      }
+      > p.eng {
+        font-size: 64px;
+        color: #5b5b5b;
+        font-family: MON;
+      }
+    } 
+    > div.fr {
+      width: 50%;
+      > p.line {
+        width: 42px;
+        height: 1px;
+        background-color: #4a4a4a;
+        margin-bottom: 27px;
+      }
+      > p.con {
+        font-size: 14px;
+        color: #606060;
+        line-height: 28px;
+        font-family: LTHK;
+      }
+    }
   }
   @media screen and (min-width: 1200px) and (max-width: 1680px) {
     .bigImg .center {
