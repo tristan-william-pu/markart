@@ -8,7 +8,7 @@
 
 <template>
   <div class="conctrat">
-    <div class="title">差价合约(CFD)</div>
+    <div class="title">{{$t('CFD.contract')}}</div>
     <div class="exp">
       <div class="leftimg">
         <img src="images/CFD03.jpg" alt />
@@ -16,49 +16,49 @@
       <div class="content">
         <div class="space"></div>
         <div class="title">
-          什么是
-          <br />差价合约（CFD）？
+          {{$t('CFD.what')}}
+          <br />{{$t('CFD.cfd')}}
         </div>
         <div class="line"></div>
         <div class="text">
-          <p>CFD差价合约交易最早出现在20世纪70年代, 80年代主要集中在银行间和大机构之间交易。1999年正式在境外零售市场交易，2000年在英国推出英国股票差价合约。</p>
-          <p>差价合约是一种新兴的金融衍生品，是以某个商品的价格所进行的买卖，并不会涉及该商品实体的交易，可以说这是一种计算商品的开仓价值与平仓价值差额的投资行为。</p>
+          <p>{{$t('CFD.appeared')}}</p>
+          <p>{{$t('CFD.behavior')}}</p>
         </div>
       </div>
     </div>
     <div class="wrap">
       <div class="artleft">
-        <div class="tit">差价合约特征</div>
+        <div class="tit">{{$t('CFD.characteristics')}}</div>
         <div class="art">
-          可以保证金交易
-          <br />自由买卖, 上升下跌市场都可交易
-          <br />采用T+0交易模式
-          <br />影响力较大的杠杆交易模式
-          <br />市场波动大、投资回报高
+          {{$t('CFD.margin')}}
+          <br />{{$t('CFD.tradable')}}
+          <br />{{$t('CFD.mode')}}
+          <br />{{$t('CFD.powerful')}}>
+          <br />{{$t('CFD.high')}}
           <br />
         </div>
       </div>
       <img class="imgright" src="images/CFD07.png" alt />
     </div>
     <div class="how">
-      <div class="tit">如何操作CFD交易？</div>
+      <div class="tit">{{$t('CFD.how')}}</div>
       <div
         class="art"
-      >CFD交易有许多的类型. CPT Markets就以指数差价合约为例，为交易者简单的演示指数CFD保证金&amp;盈亏计算方式， 以便投资者对于差价合约有更清晰的认识。</div>
+      >{{$t('CFD.types')}}</div>
       <div class="art">
-        <span class="pupcolor">CFD保证金计算的公式为:</span>
-        <br />CFD保证金计算的公式为:手数× 合约量 × 市价× 预付款百分比 =保证金
-        <br />举例：
-        <br />U30USD（道琼斯工业平均）的合约量为10, 当前指数为20000.0，预付款百分比为1%，则交易1手U30USD的保证金为：1 × 10 × 20000.0 × 1% = 2000 USD
+        <span class="pupcolor">{{$t('CFD.formula')}}</span>
+        <br />{{$t('CFD.losts')}}
+        <br />{{$t('CFD.example')}}
+        <br />{{$t('CFD.average')}}
       </div>
       <div class="art">
-        <span class="pupcolor">CFD盈亏计算的方式：</span>
-        <br />（平仓价 – 开仓价） × 合约量 × 手数 =盈亏
-        <br />举例：
-        <br />还是上例，如果买单入场价为20000.0，出场价为20001.0，
-        <br />则盈利为：(20001.0 – 20000.0) × 1 × 10 = 10 USD
+        <span class="pupcolor">{{$t('CFD.method')}}</span>
+        <br />{{$t('CFD.closing')}}
+        <br />{{$t('CFD.example')}}
+        <br />{{$t('CFD.above')}}
+        <br />{{$t('CFD.profit')}}
       </div>
-      <div class="art">通过以上例子，投资者对于CPT Markets的指数CFD保证金&amp;盈亏计算方式有了一定的了解，可以根据自身的情况来判断是否需要投入差价合约交易。</div>
+      <div class="art">{{$t('CFD.invertor')}}</div>
     </div>
     <Regist />
   </div>

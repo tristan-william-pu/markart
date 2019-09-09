@@ -9,66 +9,66 @@
 <template>
   <div class="products">
     <div class="banner">
-      <div class="title">交易产品</div>
-      <div class="desc">在CPT Markets, 交易您想要的市场</div>
+      <div class="title">{{$t('product.trading')}}</div>
+      <div class="desc">{{$t('product.want')}}</div>
       <div class="list-wrap">
         <div class="item">
           <img src="@/assets/proicons1.png" alt />
-          外汇
+          {{$t('product.forign')}}
         </div>
         <div class="item">
           <img src="@/assets/proicons2.png" alt />
-          贵金属
+          {{$t('product.metal')}}
         </div>
         <div class="item">
           <img src="@/assets/proicons3.png" alt />
-          原油
-        </div>
-        <div class="item">
-          <img src="@/assets/proicons4.png" alt />
-          指数
+          {{$t('product.oil')}}
         </div>
         <div class="item">
           <img src="@/assets/proicons5.png" alt />
-          CFD
+          {{$t('product.index')}}
+        </div>
+        <div class="item">
+          <img src="@/assets/proicons4.png" alt />
+        {{$t('product.contract')}}
         </div>
         <div class="item">
           <img src="@/assets/proicons6.png" alt />
-          数字货币
+          {{$t('product.currency')}}
         </div>
       </div>
     </div>
     <Regist ref="regist" :class="{fadeIn: show.regist}" />
     <div class="wrap">
-      <div class="tit">您想要的市场</div>
-      <div class="welcome">欢迎来到CPT Markets</div>
+      <div class="tit">{{$t('product.markets')}}</div>
+      <div class="welcome">{{$t('product.welcome')}}</div>
     </div>
     <div ref="imgbox" class="imgbox">
       <div class="partleft">
         <div class="part1" style="opacity: 1;" :class="{fadeIn: show.imgbox}">
           <img src="images/trading5.jpg" alt />
           <div class="info">
-            <span>外汇</span>
+            <span>{{$t('product.forign')}}</span>
             <a href="/p/exchange">
-              <div class="readerbtn">更多详情</div>
+              <div class="readerbtn">{{$t('product.more')}}</div>
             </a>
           </div>
         </div>
         <div class="part2" style="opacity: 1;" :class="{fadeIn: show.imgbox}">
           <img src="images/trading14.jpg" alt />
           <div class="info">
-            <span>贵金属</span>
+            <span>{{$t('product.metal')}}</span>
             <a href="/p/Metal">
-              <div class="readerbtn">更多详情</div>
+              <div class="readerbtn">{{$t('product.more')}}</div>
             </a>
           </div>
         </div>
         <div class="part3" style="opacity: 1;" :class="{fadeIn: show.imgbox}">
           <img src="images/trading16.jpg" alt />
           <div class="info">
-            <span>指数</span>
+            <span>{{$t('product.index')}}</span>
             <a href="/p/tradeindex">
-              <div class="readerbtn">更多详情</div>
+              <div class="readerbtn">{{$t('product.more')}}</div>
             </a>
           </div>
         </div>
@@ -77,18 +77,18 @@
         <div class="part4" style="opacity: 1;" :class="{fadeIn: show.imgbox}">
           <img src="images/trading7.jpg" alt />
           <div class="info">
-            <span>数字货币</span>
+            <span>{{$t('product.currency')}}</span>
             <a href="/p/Currency">
-              <div class="readerbtn">更多详情</div>
+              <div class="readerbtn">{{$t('product.more')}}</div>
             </a>
           </div>
         </div>
         <div class="part5" style="opacity: 1;" :class="{fadeIn: show.imgbox}">
           <img src="images/trading10.jpg" alt />
           <div class="info">
-            <span>原油</span>
+            <span>{{$t('product.oil')}}</span>
             <a href="/p/oil">
-              <div class="readerbtn">更多详情</div>
+              <div class="readerbtn">{{$t('product.more')}}</div>
             </a>
           </div>
         </div>
@@ -97,7 +97,7 @@
           <div class="info">
             <span>CFD</span>
             <a href="/p/CFD">
-              <div class="readerbtn">更多详情</div>
+              <div class="readerbtn">{{$t('product.more')}}</div>
             </a>
           </div>
         </div>
@@ -105,24 +105,24 @@
     </div>
     <div class="imgbox"></div>
     <div class="choose">
-      <div class="tit">CPT Markets, 您的第一选择!</div>
+      <div class="tit">{{$t('product.first')}}</div>
       <div class="choiceicon" ref="choiceicon">
         <ul>
           <li class="iconone animated" style="opacity: 1;" :class="{fadeIn: show.choiceicon}">
             <img src="@/assets/tradinicon2.png" alt />
-            <p>杠杆灵活</p>
+            <p>{{$t('product.flexible')}}</p>
           </li>
           <li class="icontwo animated" style="opacity: 1;" :class="{fadeIn: show.choiceicon}">
             <img src="@/assets/tradinicon3.png" alt />
-            <p>交易成本低</p>
+            <p>{{$t('product.cost')}}</p>
           </li>
           <li class="iconthe animated" style="opacity: 1;" :class="{fadeIn: show.choiceicon}">
             <img src="@/assets/tradinicon1.png" alt />
-            <p>无门槛限制</p>
+            <p>{{$t('product.limit')}}</p>
           </li>
           <li class="iconfour animated" style="opacity: 1;" :class="{fadeIn: show.choiceicon}">
             <img src="@/assets/tradinicon4.png" alt />
-            <p>交易产品多样</p>
+            <p>{{$t('product.option')}}</p>
           </li>
         </ul>
       </div>
@@ -280,7 +280,7 @@ export default {
       margin-top: 20px;
     }
     .list-wrap {
-      width: 96%;
+      width: 1200px;
       height: 180px;
       @include flex();
       margin: 0 auto;

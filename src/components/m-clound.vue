@@ -42,48 +42,48 @@ export default {
         {
           name: {
             cn: "可复制的交易模式",
-            en: "en",
-            tc: "tc"
+            en: "Replicable Transaction Mode",
+            tc: "可複制的交易模式"
           },
           icon: require("@/assets/icon4.png")
         },
         {
           name: {
             cn: "多终端系统交易",
-            en: "en",
-            tc: "tc"
+            en: "Multi-Terminal System Trading",
+            tc: "多終端系統交易"
           },
           icon: require("@/assets/icon2.png")
         },
         {
           name: {
             cn: "清晰的账户状态",
-            en: "en",
-            tc: "tc"
+            en: "Clear Account Status",
+            tc: "清晰的賬戶狀態"
           },
           icon: require("@/assets/icon6.png")
         },
         {
           name: {
             cn: "即时买卖报价",
-            en: "en",
-            tc: "tc"
+            en: "Instant Buying and Selling Quotation",
+            tc: "即時買賣報價"
           },
           icon: require("@/assets/icon1.png")
         },
         {
           name: {
             cn: "先进的图表工具",
-            en: "en",
-            tc: "tc"
+            en: "Advanced Charting Tools",
+            tc: "先進的圖表工具"
           },
           icon: require("@/assets/icon3.png")
         },
         {
           name: {
             cn: "智能的EA功能",
-            en: "en",
-            tc: "tc"
+            en: "Intelligent Expert Adviser (EA) Function",
+            tc: "智能的EA功能"
           },
           icon: require("@/assets/icon5.png")
         }

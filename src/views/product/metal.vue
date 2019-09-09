@@ -7,7 +7,7 @@
  -->
 <template>
   <div class="metal">
-    <div class="title">贵金属</div>
+    <div class="title">{{$t('metal.precious')}}</div>
     <div class="warp">
       <div class="leftimg">
         <img
@@ -18,25 +18,25 @@
         />
       </div>
       <div class="floatfont">
-        <div class="title" style="opacity: 1;">为什么选择交易贵金属?</div>
+        <div class="title" style="opacity: 1;">{{$t('metal.why')}}<br>{{$t('metal.trade')}}</div>
         <div class="line" style="opacity: 1;"></div>
         <div
           class="text"
           style="opacity: 1;"
-        >贵金属交易是一个“双向”的交易，由于地球贵金属的存储量是恒定的，因而产生了非常高的价值。投资者在对贵金属市场看好的情况下，可以通过低买高卖赚取差价；也可以是在不看好经济前景的情况下通过购买贵金属来达到一种规避风险、保值增产的手段。CPT Markets现有可交易的贵金属产品有：黄金、白银。投资人可以根据自身喜好进行购买投资。</div>
+        >{{$t('metal.way')}}</div>
       </div>
     </div>
     <div class="choose">
-      <div class="tit">交易贵金属的优势</div>
+      <div class="tit">{{$t('metal.advantages')}}<br>{{$t('metal.advantagesbr')}}</div>
       <div class="clearfix">
         <div class="melaleft">
           <p class="purfont">
             +
-            <br />我们的优势
+            <br />{{$t('metal.our')}}
           </p>
-          <span class="borderfont">T+0模式，24小时交易</span>
-          <span class="borderfont">高保值抵抗通货膨胀</span>
-          <span class="borderfont">风险较低回报较高</span>
+          <span class="borderfont">{{$t('metal.mode')}}</span>
+          <span class="borderfont">{{$t('metal.value')}}</span>
+          <span class="borderfont">{{$t('metal.lower')}}</span>
         </div>
 
         <div class="melacenter">
@@ -44,15 +44,15 @@
         </div>
 
         <div class="melaright pc">
-          <span class="borderfont more">公开透明，市场公正</span>
-          <span class="borderfont more31">即时交收，变现容易</span>
+          <span class="borderfont more">{{$t('metal.public')}}</span>
+          <span class="borderfont more31">{{$t('metal.delivery')}}</span>
           <span class="borderfont less">
-            市场波动率大，
-            <br />双向交易均可收益
+            {{$t('metal.volatility')}}
+            <br />{{$t('metal.trip')}}
           </span>
           <p class="purfont">
-            立即
-            <br />体验
+            {{$t('metal.experience')}}
+            <!-- <br />{{$t('metal.precious')}}体验 -->
           </p>
           <div class="clear"></div>
           <a href="javascript:void(0)">
@@ -61,13 +61,13 @@
         </div>
         <div class="melaright mb">
           <p class="purfont">
-            立即体验
+            {{$t('metal.experience')}}
           </p>
           <div class="list">
-            <span class="borderfont more">公开透明，市场公正</span>
-            <span class="borderfont more31">即时交收，变现容易</span>
+            <span class="borderfont more">{{$t('metal.public')}}</span>
+            <span class="borderfont more31">{{$t('metal.delivery')}}</span>
             <span class="borderfont less">
-              市场波动率大，<br />双向交易均可收益
+              {{$t('metal.volatility')}}<br />{{$t('metal.trip')}}
             </span>
           </div>
           <div class="clear"></div>
