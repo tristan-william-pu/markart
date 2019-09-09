@@ -7,16 +7,16 @@
  -->
 <template>
   <div class="apply">
-    <div class="wrap">
-      <p>现在申请，开始交易</p>
+    <div class="registerWrap">
+      <p>{{$t('regist.now')}}</p>
       <div class="btn yels">
-        <a href="/register/register" onclick="ga('send', 'event', 'TR', 'play', 'OPEN');">注册真实账户</a>
+        <a href="/register/register" onclick="ga('send', 'event', 'TR', 'play', 'OPEN');">{{$t('regist.real')}}</a>
       </div>
       <div class="btn blue">
         <a
           href="/simulationRegister/simulationRegister"
           onclick="ga('send', 'event', 'DR', 'play', 'OPEN');"
-        >注册模拟账户</a>
+        >{{$t('regist.demo')}}</a>
       </div>
     </div>
   </div>
@@ -33,7 +33,7 @@ export default {};
   transition: 0.5s;
   box-sizing: border-box;
   padding-top: 20px;
-  .wrap {
+  .registerWrap{
     max-width: 1200px;
     display: block;
     margin: 0 auto;

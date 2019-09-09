@@ -8,7 +8,7 @@
 
 <template>
   <div class="tradeindex">
-    <div class="title">指数</div>
+    <div class="title">{{$t('tradeIndex.trade')}}</div>
     <div class="exp">
       <div class="leftimg">
         <img src="images/index03.jpg" alt />
@@ -16,23 +16,23 @@
       <div class="content">
         <div class="space"></div>
         <div class="title">
-          什么是
-          <br />交易指数？
+         {{$t('tradeIndex.what')}} 
+          <br />{{$t('tradeIndex.index')}}
         </div>
         <div class="line"></div>
         <div
           class="text"
-        >指数交易是在股指交易基础上的衍生市场。指数差价合约反映了交易所相关期货的价格波动。其变动跟随相关期货的变动。CPT Markets 提供的指数差价合约是以盈亏保证金的形式给到您的账户，即交易当前值与交易未来值间的差额。严格来说，指数差价合约与普通差价合约原理相同。</div>
+        >{{$t('tradeIndex.derivative')}}</div>
       </div>
     </div>
     <div class="wrap">
       <div class="tit">
-        选择CPT Markets
-        <br />指数交易的原因
+        {{$t('tradeIndex.choose')}}
+        <br />{{$t('tradeIndex.why')}}
       </div>
       <div
         class="art"
-      >CPT Markets提供多种指数交易产品，涵盖道•琼斯工业平均指数、英国富时100指数、标普500指数、纳斯达克100指数、德国法兰克福DAX指数、法国40CAC指数、欧洲斯托克50指数，以及香港恒生指数等。</div>
+      >{{$t('tradeIndex.offer')}}</div>
     </div>
     <div class="choose">
       <div class="part pc">
@@ -41,15 +41,15 @@
             <li>
               <img src="@/assets/index13.jpg" alt />
               <p>
-                有效的
-                <br />风险控制
+                {{$t('tradeIndex.effective')}}
+                <br />{{$t('tradeIndex.risk')}}
               </p>
             </li>
             <li>
               <img src="@/assets/index17.jpg" alt />
               <p>
-                极具竞争力的
-                <br />点差
+                {{$t('tradeIndex.competitive')}}
+                <br />{{$t('tradeIndex.spread')}}
               </p>
             </li>
           </ul>
@@ -62,15 +62,15 @@
             <li>
               <img src="@/assets/index13.jpg" alt />
               <p>
-                有效的
-                <br />风险控制
+               {{$t('tradeIndex.effective')}} 
+                <br />{{$t('tradeIndex.risk')}}
               </p>
             </li>
             <li>
               <img src="@/assets/index17.jpg" alt />
               <p>
-                极具竞争力的
-                <br />点差
+                {{$t('tradeIndex.competitive')}}
+                <br />{{$t('tradeIndex.spread')}}
               </p>
             </li>
           </ul>
@@ -82,15 +82,15 @@
             <li>
               <img src="@/assets/index10.jpg" alt />
               <p>
-                保证金低
-                <br />成本低
+                {{$t('tradeIndex.margin')}}
+                <br />{{$t('tradeIndex.low')}}
               </p>
             </li>
             <li>
               <img src="@/assets/index19.png" alt />
               <p>
-                交易品种多样
-                <br />杠杆灵活
+                {{$t('tradeIndex.samply')}}
+                <br />{{$t('tradeIndex.leverage')}}
               </p>
             </li>
           </ul>

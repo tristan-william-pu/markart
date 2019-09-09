@@ -11,7 +11,7 @@
     <div class="banner">
       <div class="img pc">
         <div class="warp">
-          <p class="bannerfont animated bounceInUp">MAM多账户管理</p>
+          <p class="bannerfont animated bounceInUp">{{$t('mam.management')}}</p>
         </div>
       </div>
       <div class="mb">
@@ -19,53 +19,53 @@
       </div>
     </div>
     <div class="warp">
-      <div class="tit">MAM多账户管理</div>
+      <div class="tit">{{$t('mam.manager')}}</div>
 
       <div
         class="art"
-      >CPT Markets MAM 多账户管理系统是特别为专业交易者和资金管理服务团队量身打造的账户管理软件；可以帮助用户同时对2个或以上的交易账户进行操作，极大方便了交易者进行高效交易同时还可以实现同一界面管理多个账户。</div>
+      >{{$t('mam.system')}}</div>
       <div
         class="art"
-      >CPT Markets MAM多账户管理系统人性化的操作界面、先进而成熟的技术，备受专业资金管理者青睐。它不仅集合了MT4交易软件的所有优势，让交易者使用EA智能交易系统，图表、指标等所有功能外它还是一个综合性集合下单的软件工具，能快速执行大批客户订单，无交易账户数量限制,高效的满足投资者的定制化交易需求。</div>
+      >{{$t('mam.operation')}}</div>
 
-      <div class="tit">MAM 多账户管理系统优势</div>
+      <div class="tit">{{$t('mam.key')}}</div>
       <div class="clelist">
         <ul>
           <li class="clearfix">
             <img src="@/assets/Oil10.png" alt />
-            <p>主账户及时同步操作多个子账户；</p>
+            <p>{{$t('mam.primary')}}</p>
           </li>
           <li class="clearfix">
             <img src="@/assets/Oil10.png" alt />
-            <p>每个账户最小交易手数 0.01；</p>
+            <p>{{$t('mam.minimum')}}</p>
           </li>
           <li class="clearfix">
             <img src="@/assets/Oil10.png" alt />
-            <p>每个账户均可生成账户管理报告；</p>
+            <p>{{$t('mam.reports')}}</p>
           </li>
           <li class="clearfix">
             <img src="@/assets/Oil10.png" alt />
-            <p>每个账户持仓、余额、保证金水平一览无遗；</p>
+            <p>{{$t('mam.summary')}}</p>
           </li>
           <li class="clearfix">
             <img src="@/assets/Oil10.png" alt />
-            <p>订单批量成交，瞬时分配多个管理账户；</p>
+            <p>{{$t('mam.filled')}}</p>
           </li>
           <li class="clearfix">
             <img src="@/assets/Oil10.png" alt />
-            <p>支持智能EA运行；</p>
+            <p>{{$t('mam.support')}}</p>
           </li>
           <li class="clearfix">
             <img src="@/assets/Oil10.png" alt />
-            <p>多种分配类型：可按手数、净值比例分配；</p>
+            <p>{{$t('mam.allocation')}}</p>
           </li>
           <li class="clearfix">
             <img src="@/assets/Oil10.png" alt />
-            <p>允许所有下单指令：包括市价单、止盈/止损单、止价/限价挂单；</p>
+            <p>{{$t('mam.allow')}}</p>
           </li>
           <li class="clearfix">
             <img src="@/assets/Oil10.png" alt />
-            <p>允许单一平仓指令：包括追踪止损，平仓；</p>
+            <p>{{$t('mam.liquidation')}}</p>
           </li>
         </ul>
       </div>

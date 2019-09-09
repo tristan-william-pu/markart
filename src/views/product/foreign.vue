@@ -9,7 +9,7 @@
 
 <template>
   <div class="foreign">
-    <div class="title">外汇</div>
+    <div class="title">{{$t('exchange.forign')}}</div>
     <div class="exp">
       <div class="leftimg">
         <img src="images/echange3.jpg" alt />
@@ -17,67 +17,54 @@
       <div class="content">
         <div class="space"></div>
         <div class="title">
-          什么是外汇？
+          {{$t('exchange.what')}}<br>{{$t('exchange.waihui')}}
         </div>
         <div class="line"></div>
         <div
           class="text"
-        >外汇交易是一国货币与另一国货币的交换。目前，汇率主要受国际贸易、国民经济和投资流动的政策和影响的影响。不同于其他的金融交易，外汇市场没有具体地点，也没有中央交易所，而是通过银行、企业和个人间的电子网络进行交易。因此，外汇市场信息更加透明，流动性更好，价格也更公平。其具有在5×24小时内双向交易的特点，深受大型投资机构和投资者的喜爱。</div>
+        >{{$t('exchange.rate')}}</div>
       </div>
     </div>
-    <!-- <div class="exp">
-      <div class="leftimg">
-        <img src="images/echange3.jpg" alt />
-      </div>
-      <div class="content">
-        <div class="space"></div>
-        <div class="title">什么是外汇?</div>
-        <div class="line"></div>
-        <div
-          class="text"
-        >外汇交易是一国货币与另一国货币的交换。目前，汇率主要受国际贸易、国民经济和投资流动的政策和影响的影响。不同于其他的金融交易，外汇市场没有具体地点，也没有中央交易所，而是通过银行、企业和个人间的电子网络进行交易。因此，外汇市场信息更加透明，流动性更好，价格也更公平。其具有在5×24小时内双向交易的特点，深受大型投资机构和投资者的喜爱。</div>
-      </div>
-    </div> -->
     <div class="choose">
       <h1>
-        选择CPT Markets
-        <br />外汇交易的理由
+        {{$t('exchange.choose')}}
+        <br />{{$t('exchange.resion')}}
       </h1>
       <div>
         <div class="loop">
           <div class="bg1">
             <div>
               <span class="icon01">
-                外汇市场
-                <br />参与度高
+               {{$t('exchange.high')}} 
+                <br />{{$t('exchange.market')}}
               </span>
               <span class="icon02">
-                根据交易策略
-                <br />设置自动化交易
+               {{$t('exchange.automate')}}  
+                <br />{{$t('exchange.base')}}
               </span>
               <span class="icon03">
-                即时市场分析
-                <br />降低交易风险
+                {{$t('exchange.instant')}}
+                <br />{{$t('exchange.risk')}}
               </span>
               <span class="icon04">
-                交易迅速即时
-                <br />可以即时成交
+                {{$t('exchange.quick')}}
+                <br />{{$t('exchange.execute')}}
               </span>
               <span class="icon05">
-                交易量大、
-                <br />流通性强、透明度高
+                {{$t('exchange.volume')}}
+                <br />{{$t('exchange.trans')}} 
               </span>
               <span class="icon06">
-                杠杆高达1:500
-                <br />交易成本低
+                {{$t('exchange.up')}}
+                <br />{{$t('exchange.to')}} 
               </span>
               <span class="icon07">
-                每周5×24小时
-                <br />不间断交易
+                {{$t('exchange.week')}}
+                <br />{{$t('exchange.stop')}}
               </span>
               <span class="icon08">
-                多种交易货币对
-                <br />任意选择
+                {{$t('exchange.variety')}}
+                <br />{{$t('exchange.select')}}
               </span>
             </div>
           </div>

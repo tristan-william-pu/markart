@@ -9,7 +9,7 @@
 
 <template>
   <div class="oil">
-    <div class="title">原油</div>
+    <div class="title">{{$t('oil.crude')}}</div>
     <div class="exp">
       <div class="leftimg">
         <img src="images/Oil03.jpg" alt />
@@ -17,35 +17,35 @@
       <div class="content">
         <div class="space"></div>
         <div class="title">
-          为什么选择CPT Markets
-          <br />原油交易？
+          {{$t('oil.choose')}}
+          <br />{{$t('oil.trading')}}
         </div>
         <div class="line"></div>
         <div
           class="text"
-        >原油交易起源于20世纪70年代初发生的石油危机。由于造成石油价格剧烈波动，使得石油交易量一直呈现快速增长之势，现已超过金属产品的交易量。在石油期货合约之中，当属原油期货是交易量最大，也是交易最频繁的品种。目前，CPT Markets交易的原油产品为伦敦布伦特原油（UKOUSD）和美国原油（USOUSD）两种。投资者可根据个人对市场的理解，自由选择品种进行交易。</div>
+        >{{$t('oil.originated')}}</div>
       </div>
     </div>
     <div class="choose">
-      <h1>原油交易运营模式</h1>
+      <h1>{{$t('oil.operation')}}</h1>
       <div class="clearfix">
         <div class="leftart">
           <ul>
             <li class="clearfix">
               <img src="@/assets/Oil10.png" alt />
-              <span>采用T+0交易规则，交易灵活</span>
+              <span>{{$t('oil.rule')}}</span>
             </li>
             <li class="clearfix">
               <img src="@/assets/Oil10.png" alt />
-              <span>点差低，交易成本低</span>
+              <span>{{$t('oil.spread')}}</span>
             </li>
             <li class="clearfix">
               <img src="@/assets/Oil10.png" alt />
-              <span>杠杆交易提高资金利用率</span>
+              <span>{{$t('oil.improve')}}</span>
             </li>
             <li class="clearfix">
               <img src="@/assets/Oil10.png" alt />
-              <span>供需影响价格，容易把握行情</span>
+              <span>{{$t('oil.supply')}}</span>
             </li>
           </ul>
         </div>

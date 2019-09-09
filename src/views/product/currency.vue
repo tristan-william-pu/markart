@@ -8,7 +8,7 @@
 
 <template>
   <div class="currency">
-    <div class="title">数字货币</div>
+    <div class="title">{{$t('currency.number')}}</div>
     <div class="exp">
       <div class="leftimg">
         <img src="images/Currency03.jpg" alt />
@@ -16,41 +16,41 @@
       <div class="content">
         <div class="space"></div>
         <div class="title">
-          什么是
-          <br />数字货币?
+          {{$t('currency.what')}}
+          <br />{{$t('currency.currency')}}
         </div>
         <div class="line"></div>
         <div
           class="text"
-        >自2009起，随着数字货币的诞生和兴起，全球进入到了一个去中心化的货币时代。以比特币为代表的数字加密货币，摆脱了传统的货币发行机制，依靠特定算法和P2P形式，让其拥有了安全、私密、稀缺等特别点，在长期实践中获得了全球投资者们的广泛认同。</div>
+        >{{$t('currency.emergence')}}</div>
       </div>
     </div>
     <div class="wrap">
-      <div class="tit">数字货币的核心优势</div>
+      <div class="tit">{{$t('currency.core')}}</div>
       <div class="currencyimg clearfix">
         <ul>
           <li>
             <img src="@/assets/Currency13.jpg" alt />
-            <p>支付自由</p>
+            <p>{{$t('currency.pay')}}</p>
           </li>
           <li>
             <img src="@/assets/Currency10.jpg" alt />
-            <p>流通性强</p>
+            <p>{{$t('currency.strong')}}</p>
           </li>
           <li>
             <img src="@/assets/Currency07.jpg" alt />
             <p>
-              交易费用低
+              {{$t('currency.low')}}
               <br />
             </p>
           </li>
           <li>
             <img src="@/assets/Currency22.png" alt />
-            <p>安全可控</p>
+            <p>{{$t('currency.safety')}}</p>
           </li>
           <li>
             <img src="@/assets/Currency19.jpg" alt />
-            <p>透明中立</p>
+            <p>{{$t('currency.neutral')}}</p>
           </li>
         </ul>
       </div>
