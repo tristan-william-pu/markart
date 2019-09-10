@@ -144,8 +144,6 @@ module.exports = {
   //联系我们
   contact:{
     contactUs:'CONTACT US',
-    onlineCus:'ONLINE CUSTOMER SERVICE',
-    assistance:'5*24 Hours Online Customer Service providing online support and assistance',
     belize:'Belize',
     mala:'Malaysia',
     dubai:'Dubai',

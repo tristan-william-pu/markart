@@ -2,13 +2,13 @@
   <div class="IB">
     <div class="banner pc">
       <div class="img">
-        <div class="warp clearfix">
+        <div class="warp clearfix bannerimg">
           <p class="bannerfont emerging">{{$t('IB.broker')}}</p>
         </div>
       </div>
     </div>
 
-    <!-- <img class="bannerimg mob" src="@/assets/white-label_mob_03.jpg" alt=""> -->
+   <img class="bannerimg mob mb" src="../../../public/images/IB-02-mb.jpg" alt="">
 
     <div class="warp" >
       <div class="tit">{{$t('IB.broker')}}</div>
@@ -142,6 +142,7 @@
         margin-top: 10px;
       }
       p{
+        font-size: 16px;
         width: 92%;
         float: left;
         margin-left: 20px;

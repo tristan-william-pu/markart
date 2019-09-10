@@ -982,6 +982,172 @@
     }
     // ------ 产品交易结束 -------
 
+    // ------ 白标开始 ------- 
+    .white{
+      .bannerimg {
+        width: 100%;
+        height: auto;
+      }
+      .tit{
+        font-size: 21px;
+      }
+      .warp{
+        padding:0 15px;
+      }
+      .art{
+        line-height: 40px;
+      }
+      .anlist{
+        margin-top: 40px;
+        ul li{
+          width: 100%;
+        }
+      }
+      .bottomtips{
+        margin-top: 40px;
+        margin-bottom: 60px;
+      }
+     
+    }
+    // ------ 白标结束------
+
+    // ------ API开始------
+    .api{
+      .bannerimg {
+        width: 100%;
+        height: auto;
+      }
+      .tit{
+        font-size: 21px;
+        margin-top:50px;
+      }
+      .warp{
+        padding:0 15px;
+      }
+      .art{
+        line-height: 32px;
+      }
+      .iconlist{
+        margin-top: 0px;
+        ul{
+          margin-top: 40px;
+        }
+        ul li {
+          display: block;
+          float: none;
+          width: 100%;
+          
+          &:nth-child(5){
+            margin-left: 0px;
+          }
+          p{
+            margin-top: 20px;
+          }
+        }
+      }
+     
+    }
+    // ------ API结束------
+    // ------ 流动性供应商开始------
+    .provider{
+      .bannerimg {
+        width: 100%;
+        height: auto;
+      }
+      .tit{
+        font-size: 21px;
+        margin-top:50px;
+      }
+      .warp{
+        padding:0 15px;
+      }
+      .art{
+        line-height: 32px;
+      }
+      .leftart{
+        width: auto;
+        float: none;
+      }
+      .lastart{
+        margin-top: 20px;
+        margin-bottom: 60px;
+      }
+    }
+    // ------ 流动性供应商结束------
+    // ------ IB开始------
+    .IB{
+      .bannerimg {
+        width: 100%;
+        height: auto;
+      }
+      .tit{
+        font-size: 21px;
+        margin-top:50px;
+      }
+      .warp{
+        padding:0 15px;
+      }
+      .art{
+        line-height: 32px;
+      }
+      .sixtype{
+        margin-top: 80px;
+        line-height: 40px;
+      }
+      .anlist{
+        margin-top: 60px;
+        padding:0 ;
+
+        ul li{
+          width: 100%;
+          height:40px;
+          padding-left: 0;
+          float:none;
+
+          p{
+            width: 87%;
+          }
+        }
+      }
+    }
+    // ------ IB结束------
+    // ------ 联系我们开始------
+    .contantus{
+      .tit{
+        font-size: 21px;
+        margin-top:50px;
+      }
+      .contantbox .warp{
+        padding:0 15px;
+        width: auto;
+      }
+      .art{
+        line-height: 32px;
+      }
+      .contantbox .pur .lianxisd{
+          display: block;
+     
+       > div {
+        display: block;
+        width: 90%;
+        float:none;
+        padding-left: 20%;
+        margin-bottom: 20px;
+        img{
+          float:left;
+          margin-right: 10px;
+        }
+        span{
+          float:left;
+          font-size: 14px;
+        }
+      }
+      }
+      
+    }
+    // ------ 联系我们结束------
+
+
     .apply {
       width: 100% !important;
       margin-left: 0 !important;
