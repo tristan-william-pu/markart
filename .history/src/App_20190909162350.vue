@@ -2,24 +2,21 @@
  * @Autor: Diskfan
  * @Date: 2019-09-06 10:07:02
  * @LastEditors: Do not edit
- * @LastEditTime: 2019-09-09 16:28:39
+ * @LastEditTime: 2019-09-09 16:23:50
  * @Description: 
  -->
 <template>
-  <div id="app" class="app clearfix">
+  <div id="app" class="app">
     <Header v-show="!~header.indexOf($route.fullPath.replace(/.*\//, ''))" />
       <keep-alive>
         <router-view  v-on:header="header" v-on:footer="footer" />
       </keep-alive>
-    <Footer v-show="!~footer.indexOf($route.fullPath.replace(/.*\//, ''))" />
+    <Footer v-show="!~footer.indexOf($route.fullPath.replace(/.*\//, '')) />
   </div>
 </template>
 
 <script>
-import Header from './views/header.vue';
-import Footer from './views/footer.vue';
 export default {
-  components: { Header, Footer },
   data(){
     return {
       header: [],

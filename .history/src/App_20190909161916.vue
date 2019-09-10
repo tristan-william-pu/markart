@@ -2,30 +2,47 @@
  * @Autor: Diskfan
  * @Date: 2019-09-06 10:07:02
  * @LastEditors: Do not edit
- * @LastEditTime: 2019-09-09 16:28:39
+ * @LastEditTime: 2019-09-09 16:19:16
  * @Description: 
  -->
 <template>
-  <div id="app" class="app clearfix">
-    <Header v-show="!~header.indexOf($route.fullPath.replace(/.*\//, ''))" />
+  <div id="app" class="app">
+    <Header v-if="header_show" />
       <keep-alive>
         <router-view  v-on:header="header" v-on:footer="footer" />
       </keep-alive>
-    <Footer v-show="!~footer.indexOf($route.fullPath.replace(/.*\//, ''))" />
+    <Footer v-if="footer_show" />
   </div>
 </template>
 
+
+
+
+
+
+
+
+
+
+
 <script>
-import Header from './views/header.vue';
-import Footer from './views/footer.vue';
 export default {
-  components: { Header, Footer },
   data(){
     return {
-      header: [],
-      footer: ['login']
+      header_show:true,
+      footer_show:true
     }
-  }
+  },
+  methods:{
+      //是否显示头部
+      header:function (bool) {
+        this.header_show = bool;
+      },
+      //是否显示底部
+      footer:function (bool) {
+          this.footer_show = bool;
+      }
+  },
 }
 </script>
 

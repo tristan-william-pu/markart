@@ -9,6 +9,14 @@
     margin-top: 70px;
   }
 }
+.app {
+  .pc {
+    display: block !important;
+  }
+  .mb {
+    display: none !important;
+  }
+}
 @media (max-width: 1200px) {
   
   .app {
@@ -18,6 +26,282 @@
     .mb {
       display: block !important;
     }
+
+    // ---------- 头部 -------------
+    .head{
+      header{
+        height:60px;
+        .warp{
+          >img.logo{
+            width: 160px;
+            margin-top: 20px;
+            margin-left: 20px;
+            margin-right: 0px;
+          }
+          .countryselect {
+              margin-top: 15px;
+              margin-right: 20px;
+          }
+          .navbar{
+            width: 100%;
+            position: absolute;
+            top: 60px;
+            background: #fff;
+            z-index: 1000;
+            line-height: 50px;
+            text-align: center;
+            border-bottom: 1px solid #666;
+            border-top: 1px solid #ccc;
+          }
+        }
+
+      }      
+      
+    }
+
+    // ----------- 尾部 --------------
+    .foot{
+      footer{
+        overflow: hidden;
+        height: 200px;
+        padding-top: 30px;
+        box-sizing: border-box;
+        .footMain{
+          width:100%;
+          margin-top: -20px;
+          margin-bottom: 20px;
+          .lianxi{
+            float: none;
+            display: block;
+            margin: 0 auto;
+            width: 230px;
+            margin-top: 20px;
+          }
+        }
+        .art{
+          width: 90%;
+          margin-left: 5%;
+        }
+      }
+      
+      
+    }
+
+
+
+    // --------- 主页 ---------------
+    .home{
+      .warp{
+        .top{
+          .headertitle{
+            padding-left: 0px;
+            font-size: 28px;
+          }
+          .pupradio{
+            float: initial;
+            margin-left: 30px;
+            margin-top: 20px;
+          }
+          
+        }
+        .partleft {
+          float: initial;
+          box-sizing: border-box;
+          width: 100%;
+          padding-left: 20px;
+          padding-right: 20px;
+          .art{
+            padding-left: 20px;
+            width: auto;
+            padding-right: 20px;
+            font-size: 16px;
+            margin-left: 5%;
+          }
+        }
+        .btnbox{
+          width: 90%;
+          margin-left: 5%;
+        }
+      }
+      .gupao{
+        padding:0;
+      }
+      .trading{
+        margin-top: 80px;
+        height:700px;
+        .headertitle{
+          text-align: center !important;
+        }
+        .imgboxs {
+          height: 280px;
+          .pcpng {
+            width: 90%;
+            position: initial;
+            right: 0px;
+            opacity: 1;
+            margin-top: 30px;
+          }
+        }
+      }
+      .navbanner{
+        z-index: 10;
+        height:auto;
+        .title{
+          font-size: 20px;
+          margin-top: 40px;
+          line-height: 40px;
+        }
+        .btn{
+          margin-top: 40px;
+        }
+      }
+      .indSch{
+        .center{
+          width: 90%;
+          margin:3rem auto 0;
+          ul{
+            li{
+              float: left;
+              width: 48%;
+              margin-right:4%;
+            }
+            li:first-child{
+              width: 100%;
+              color:red;
+              margin: 0 auto 3rem;
+              img{
+                width:100%;
+              }
+            }
+            li.schCen{
+              span{
+                display: inline-block;
+                font-size: 1.2rem;
+                line-height: 1.8rem;
+                color: #767678;
+              }
+              p.linTop{
+                width: 3rem;
+                height: 0.5rem;
+                background-color: #5b0eb2;
+                margin: 4rem 0 1rem;
+              }
+              p.con{
+                font-size: 1.5rem;
+                line-height: 2.2rem;
+                color: #333333;
+              }
+              p.three{
+                font-size: 1.2rem;
+                color: #5b0eb2;
+                margin: 5rem 0 1rem;
+              }
+              p.linBot{
+                width: 1rem;
+                height: 2.5rem;
+                background-color: #5b0eb2;
+              }
+            } 
+            li.rigLi{
+              margin-right:0;
+              p{
+                font-size: 2rem;
+                color: #989898;
+                line-height: 2.5rem;
+                font-weight: 900;
+                span{
+                  display: block;
+                  color: #5b0eb2;
+                }
+                h6{
+                  font-size: 2rem;
+                  color: #000;
+                  margin: 3rem 0 1rem;
+                }
+              }
+            } 
+          } 
+        }
+      
+      } 
+ 
+      .schBot{
+        width: 100%;
+        height: 6rem;
+        background:url(../public/images/sch/indBotBgA.jpg) no-repeat;
+        background-size: 100%;
+        .center{
+          width: 90%;
+          margin:0 auto;
+          p.fl{
+            font-size: 0.8rem;
+            color: #fff;
+            line-height: 1.5rem;
+            margin-top:4%;
+            width: 49%;
+          }
+          div.fl{
+            margin-left: 24%;
+            p{
+              width: 1.5rem;
+              height: 1.5rem;
+              line-height: 1.5rem;
+              color: #fff;
+              border: 2px solid #fff;
+              margin: 28% 0 6%;
+              text-align: center;
+              font-weight: 900;
+            }
+            span{
+              font-size: 1.2rem;
+              color: #fff;
+              font-weight: 900;
+            }
+            a{
+              color: #fff;
+            }
+          }
+        }
+      }
+
+      .step,.warp{
+        width:100%;
+        .headertitle {
+          padding-left: 0px;
+          font-size: 28px;
+          text-align: center !important;
+        }
+        .stepbox {
+          ul{
+            li{
+              width: 100%;
+              float: none;
+              margin-top: 30px;
+            }
+          }
+          .radio{
+            margin: 0 auto;
+          }
+        }
+      }
+      .payway,.warp{
+        width:100%;
+        .headertitle {
+          width: 100%;
+          text-align: center;
+        }
+        .paywaybox{
+          ul{
+            li{
+              width: 33.3%;
+              margin-bottom: 20px;
+            }
+          }
+        }
+      }
+    }
+
+
     // ------关于我们开始 -------
     .about {
       >div:not(.banner) {
@@ -615,6 +899,7 @@
       }
     }
   }
+  
 }
 
 @import './mediaIphone.scss';

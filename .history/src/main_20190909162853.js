@@ -43,9 +43,6 @@ const i18n = new VueI18n({
 //   }
 // })
 
-router.afterEach((to,from,next) => {
-  window.scrollTo(0,0);
-})
 
 window.$root = new Vue({
   router,

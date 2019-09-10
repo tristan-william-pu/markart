@@ -8,7 +8,7 @@
 
  
 <template>
-  <div>
+  <div class="home">
     <!-- 视频 -->
     <div class="videowarp">
       <div class="videomask"></div>
@@ -21,11 +21,11 @@
     <!-- 主体 -->
     <div class="warp whycpt clearfix cn">
       <div class="top clearfix">
-        <div class="headertitle">{{$t('home.why')}}</div>
-        <div class="grid pupradio" id="abouts">
+        <div class="headertitle clearfix">{{$t('home.why')}}</div>
+        <div class="grid pupradio clearfix" id="abouts">
           <button class="particles-button">{{$t('home.readMore')}}</button>
         </div>
-        <div class="line"></div>
+        <div class="line pc"></div>
       </div>
       <div class="partleft">
         <p class="tit">{{$t('home.success')}}</p>
@@ -39,7 +39,7 @@
       </div>
 
       <!-- 右边栏电脑端 -->
-      <div class="partright">
+      <div class="partright pc">
         <div class="numcount">
           <span class="num onenum">3</span>
           <span class="tips">{{$t('home.continents')}}</span>
@@ -73,7 +73,7 @@
         <div class="grid pupradio" id="abouts">
           <button class="particles-button">{{$t('home.readMore')}}</button>
         </div>
-        <div class="line"></div>
+        <div class="line pc"></div>
       </div>
       <div class="partleft">
         <p class="art">
@@ -92,12 +92,12 @@
           </div>
         </div>
       </div>
-      <div class="pad cn">
+      <div class="pad cn pc">
         <div class="gupiao"></div>
       </div>
-      <img class="mobpad" src="images/padimg.jpg" alt />
+      <img class="mobpad " src="images/padimg.jpg" alt />
     </div>
-    <img class="imgnav" src="images/imgnav.jpg" alt />
+    <img class="imgnav pc" src="images/imgnav.jpg" alt />
 
     <!-- 交易平台 -->
     <div class="warp trading clearfix emerging">
@@ -114,9 +114,9 @@
         </div>
       </div>
       <!-- <div class="btn">start trading now</div> -->
-      <div class="imgboxs">
-        <img class="pcpng" src="images/pc.png" alt />
-        <div class="cloud">
+      <div class="imgboxs clearfix">
+        <img class="pcpng " src="images/pc.png" alt />
+        <div class="cloud pc">
           <MClound />
         </div>
       </div>
@@ -143,7 +143,7 @@
     <!-- 工具 -->
     <div class="indSch">
       <div class="center">
-        <ul class="clear">
+        <ul class="clearfix">
           <li>
             <img src="images/sch/indTopLe.png" />
           </li>
@@ -162,14 +162,14 @@
               <span>COLLEGE</span>
             </p>
             <h6>交易学院</h6>
-            <img src="images/sch/indTopRig.png" />
+            <img src="images/sch/indTopRig.png" class="indSchImg" />
           </li>
         </ul>
       </div>
     </div>
 
-    <!-- <div class="schBot">
-        <div class="center clear">
+    <div class="schBot">
+        <div class="center clearfix">
             <p class="fl">利用我们的全套免费教育工具和资源，提升您的交易技能。</p>
             <div class="fl">
                 <a href="index.php?m=P&a=school">
@@ -178,7 +178,7 @@
                 </a>
             </div>
         </div>
-    </div>-->
+    </div>
 
     <!-- 注册流程 -->
     <div class="step warp clearfix emerging">
@@ -193,7 +193,7 @@
             </div>
             <p>1. 注册</p>
           </li>
-          <li>
+          <li class="pc">
             <img class="stepicon" src="@/assets/step5.png" alt />
           </li>
           <li>
@@ -202,7 +202,7 @@
             </div>
             <p>2. 认证</p>
           </li>
-          <li>
+          <li class="pc">
             <img class="stepicon" src="@/assets/step5.png" alt />
           </li>
           <li>
@@ -211,7 +211,7 @@
             </div>
             <p>3. 入金</p>
           </li>
-          <li>
+          <li class="pc">
             <img class="stepicon" src="@/assets/step5.png" alt />
           </li>
           <li>
@@ -306,7 +306,6 @@ export default {
   width: 100%;
   height: auto;
   position: absolute;
-  top: 155px;
   left: 0px;
   z-index: 8;
 }
@@ -441,8 +440,9 @@ export default {
   display: block;
 }
 .partright {
-  position: absolute;
-  right: -100px;
+    position: absolute;
+    right: 0;
+    top: 116px;
 }
 
 .gupao {
@@ -719,6 +719,7 @@ export default {
 }
 .payway {
   margin-top: 100px;
+  margin-bottom: 20px;
 }
 .payway .headertitle {
   width: 100%;
@@ -737,17 +738,101 @@ export default {
   height: 40px;
   display: inline-block;
 }
-// .emerging {
-//   font-size: 75px;
-//   color: #000;
-//   line-height: 223px;
-//   font-family: montserratse;
-//   width: 100%;
-//   text-align: center;
-//   margin-top: 10px;
-//   opacity: 0;
-//   transform: translate(0, 50px);
-//   animation: slide-up 1s cubic-bezier(0.215, 0.61, 0.355, 1);
-//   animation-fill-mode: forwards;
-// }
+.indSch .center{
+    width: 84%;
+    margin:130px auto 0;
+  }
+  .indSch .center ul li{
+    float: left;
+    width: 19%;
+    margin-right:4%;
+  }
+  .indSch .center ul li:first-child{
+      width: 46%;
+      margin-right: 12%;
+  }
+  .indSch .center ul li.schCen span{
+    display: inline-block;
+    font-size: 16px;
+    line-height: 20px;
+    color: #767678;
+  }
+  .indSch .center ul li.schCen p.linTop{
+    width: 79px;
+    height: 6px;
+    background-color: #5b0eb2;
+    margin:96px 0 43px;
+  }
+  .indSch .center ul li.schCen p.con{
+    font-size: 24px;
+    line-height: 40px;
+    color: #333333;
+  }
+  .indSch .center ul li.schCen p.three{
+    font-size: 16px;
+    color: #5b0eb2;
+    margin:153px 0 32px;
+  }
+  .indSch .center ul li.schCen p.linBot{
+    width: 14px;
+    height: 35px;
+    background-color: #5b0eb2;
+  }
+  .indSch .center ul li.rigLi{
+    margin-right:0;
+  }
+  .indSch .center ul li.rigLi p{
+    font-size: 58px;
+    color: #989898;
+    line-height: 56px;
+    font-weight: 900;
+  }
+  .indSch .center ul li.rigLi p span{
+    display: block;
+    color: #5b0eb2;
+  }
+  .indSch .center ul li.rigLi h6{
+    font-size: 45px;
+    color: #000;
+    margin:125px 0 85px;
+  }
+  .schBot{
+    width: 100%;
+    height: 167px;
+    background:url(../../../public/images/sch/indBotBg.png) no-repeat;
+    background-size: 100% 100%;
+  }
+  .schBot .center{
+    width: 63%;
+    margin:0 auto;
+  }
+  .schBot .center p.fl{
+    font-size: 32px;
+    color: #fff;
+    line-height: 40px;
+    margin-top:4%;
+    width: 49%;
+  }
+  .schBot .center div.fl{
+    margin-left: 30%;
+  }
+  .schBot .center div.fl p{
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    color: #fff;
+    border:2px solid #fff;
+    margin:50% 0 6%;
+    text-align: center;
+    font-weight: 900;
+  }
+  .schBot .center div.fl span{
+    font-size: 27px;
+    color: #fff;
+    font-weight: 900;
+  }
+  .schBot .center div.fl a{
+    color: #fff;
+  }
+    
 </style>

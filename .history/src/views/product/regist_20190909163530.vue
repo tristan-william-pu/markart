@@ -2,7 +2,7 @@
  * @Autor: Diskfan
  * @Date: 2019-09-06 10:07:02
  * @LastEditors: Do not edit
- * @LastEditTime: 2019-09-09 16:37:13
+ * @LastEditTime: 2019-09-09 16:35:29
  * @Description: 
  -->
 <template>
@@ -24,6 +24,7 @@
 export default {
   methods: {
     regist(type) {
+      alert(type)
       this.$router.push({
         name: 'regist',
         params: {

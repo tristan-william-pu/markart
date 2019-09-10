@@ -1,10 +1,3 @@
-/*
- * @Autor: Diskfan
- * @Date: 2019-09-09 15:27:52
- * @LastEditors: Do not edit
- * @LastEditTime: 2019-09-09 15:27:52
- * @Description: 
- */
 import Vue from 'vue'
 import App from './App.vue'
 import 'font-awesome/scss/font-awesome.scss'
@@ -12,15 +5,26 @@ import './styles/index.scss'
 import router from './router'
 import store from './store'
 import VueI18n from 'vue-i18n'
+import Header from '@/views/header.vue';
+import Footer from '@/views/footer.vue';
 import Util from '@/common/util.js';
 Vue.use(VueI18n);
 
+Vue.use({
+  install: () => {
+    Vue.component(Header.name, Header)
+  }
+});
 Object.defineProperty(Vue.prototype, '$util', {
   value: Util,
   enumerable: false,
   writable: false
 })
-
+Vue.use({
+  install: () => {
+    Vue.component(Footer.name, Footer)
+  }
+});
 Vue.config.productionTip = false
 
 const messages = {
@@ -43,9 +47,6 @@ const i18n = new VueI18n({
 //   }
 // })
 
-router.afterEach((to,from,next) => {
-  window.scrollTo(0,0);
-})
 
 window.$root = new Vue({
   router,

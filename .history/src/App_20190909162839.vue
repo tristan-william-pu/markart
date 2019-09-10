@@ -6,7 +6,7 @@
  * @Description: 
  -->
 <template>
-  <div id="app" class="app clearfix">
+  <div id="app" class="app">
     <Header v-show="!~header.indexOf($route.fullPath.replace(/.*\//, ''))" />
       <keep-alive>
         <router-view  v-on:header="header" v-on:footer="footer" />

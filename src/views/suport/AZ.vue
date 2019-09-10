@@ -11,7 +11,7 @@
 				<ul class="clearfix changecolor">
                     <li v-for="(word,index) in words" :key="index" @click="wordsCHange(index)" :class="index == num ?'wordActive':''">{{word}}</li>
 				</ul>
-				<div class="con clearfix" v-for="(content,index) in contents" :key="index" v-show="index == num ">
+				<div class="con clearfix" v-for="(content,index) in contents" :key="index" v-show=" num == index ">
 					<p class="fl setfontsize">{{content.big}}</p>
 					<div class="fr setfontsizes">
 						<p v-for="(sentence,index) in content.long" :key="index">{{sentence}}</p>
@@ -32,9 +32,15 @@ import {contents} from './js/contents'
                 num:0,
             }
         },
-        created(){
-            console.log(this.$route.params.freezeMon)
-            this.num = this.$route.params.freezeMon;
+        mounted(){
+			console.log(this.$route.params.freezeMon)
+			var father = this.$route.params.freezeMon;
+			if( father == undefined ){
+				this.num = 0;
+			}else{
+				this.num = this.$route.params.freezeMon;
+			}
+            
         },
         methods:{
             wordsCHange(index){
