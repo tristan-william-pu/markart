@@ -6,7 +6,7 @@
  * @Description: 
  -->
 <template>
-  <div class="apply">
+  <div class="apply clearfix">
     <div class="registerWrap">
       <p>{{$t('regist.now')}}</p>
       <div class="btn yels">
