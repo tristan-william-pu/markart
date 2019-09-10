@@ -10,29 +10,29 @@
     <!--交易学院-->
 		<div class="bigImg">
 			<div class="center">
-				<h6 class="emergingSchool">交易学院</h6>
-				<p class="emergingBegin"><a href="#">立即开始交易</a></p>
+				<h6 class="emergingSchool">{{$t('school.academy')}}</h6>
+				<p class="emergingBegin"><a href="#">{{$t('school.start')}}</a></p>
 			</div>
 		</div>
 		<!--探索CPT Markets交易学院-->
 		<div class="search clearfix">
 			<div class="center clearfix">
-				<h3>探索CPT Markets交易学院</h3>
-				<p class="titCon">Explore CPT Markets Trading Academy</p>
+				<h3>{{$t('school.explore')}}</h3>
+				<p class="titCon">{{$t('school.exploreEn')}}</p>
 				<ul class="clear">
 					<li>
-						<p><a href="#video">视频中心</a></p>
-						<span>查看我们全面的市场分析师视频库，了解如何利用各种强大功能打造更稳健、更有效的交易策略。</span>
+						<p><a href="#video">{{$t('school.video')}}</a></p>
+						<span>{{$t('school.check')}}</span>
 					</li>
 					<li class="line"></li>
 					<li>
-						<p><a href="#know">知识库</a></p>
-						<span>利用我们的全套免费教育工具和资源，提升您的交易技能、提高您的金融市场知识。</span>
+						<p><a href="#know">{{$t('school.knowledge')}}</a></p>
+						<span>{{$t('school.free')}}</span>
 					</li>
 					<li class="line"></li>
 					<li>
-						<p><a href="#teaTit">网络讲座</a></p>
-						<span>我们的专业分析师定期举办交易网络讲座，分享平台指南、高级交易策略以及更多信息。</span>
+						<p><a href="#teaTit">{{$t('school.webinars')}}</a></p>
+						<span>{{$t('school.regularly')}}</span>
 					</li>
 				</ul>
 			</div>
@@ -40,15 +40,15 @@
 		<!--视频中心-->
 		<div class="video clearfix" id="video">
 			<div class="center">
-				<h3>视频中心</h3>
-				<p class="titCon">VIDEO CENTER</p>
+				<h3>{{$t('school.video')}}</h3>
+				<p class="titCon">{{$t('school.videoEn')}}</p>
 				<div class="vidCon clearfix">
 					<div class="fl">
 						<router-link to="/video"><img src="../../../public/images/sch/video1.png"/></router-link>
 						<div class="conBot clear">
 							<div class="fl">
-								<p class="botTit">什么是外汇?</p>
-								<span class="botTitCon">What is Forex? </span>
+								<p class="botTit">{{$t('school.exchange')}}</p>
+								<span class="botTitCon">{{$t('school.exchangeEn')}}</span>
 							</div>
 							<p class="fr num">01</p>
 						</div>
@@ -58,8 +58,8 @@
 							<router-link to="/video"><img src="../../../public/images/sch/video2.png" /></router-link>
 							<div class="conBot clear">
 								<div class="fl">
-									<p class="botTit">为什么选择外汇交易？</p>
-									<span class="botTitCon">Why to trade Forex?</span>
+									<p class="botTit">{{$t('school.choose')}}</p>
+									<span class="botTitCon">{{$t('school.chooseEn')}}</span>
 								</div>
 								<p class="fr num">02</p>
 							</div>
@@ -68,27 +68,27 @@
 							<router-link to="/video"><img src="../../../public/images/sch/video3.png" /></router-link>
 							<div class="conBot clear">
 								<div class="fl">
-									<p class="botTit">外汇交易时间</p>
-									<span class="botTitCon">Forex market hours</span>
+									<p class="botTit">{{$t('school.time')}}</p>
+									<span class="botTitCon">{{$t('school.timeEn')}}</span>
 								</div>
 								<p class="fr num">03</p>
 							</div>
 						</li>
 					</ul>
 				</div>
-				<p class="btnMore"><router-link to="/video" style="display:block;width:100%;height:100%">更多</router-link></p>
+				<p class="btnMore"><router-link to="/video" style="display:block;width:100%;height:100%">{{$t('school.more')}}</router-link></p>
 			</div>
 		</div>
 		<!--知识库-->
 		<div class="know" id="know">
 			<div class="center">
-				<h3>知识库</h3>
-				<p class="titCon">KNOWLEDGE BASE</p>
+				<h3>{{$t('school.knowledge')}}</h3>
+				<p class="titCon center">{{$t('school.knowledgeEn')}}</p>
 				<ul class="basis clearfix">
 					<li class="line"></li>
 					<li class="liCen">
-						<p class="top">外汇入门基础</p>
-						<p class="con">新手是最容易亏损的一部分人，对于外汇交易新手来说，怎么安全的渡过新手期，可以尽可能的减少亏损。入门者们的心得体会，是在对外汇交易系统学习的过程中完成的。在进行外汇交易之前，每位交易者都必须要对外汇交易有个清晰的认知。</p>
+						<p class="top">{{$t('school.introduction')}}</p>
+						<p class="con">{{$t('school.novice')}}</p>
 					</li>
 					<li class="liImg">
 						<img src="../../../public/images/sch/knowledgeTop.png" alt="" />
@@ -96,50 +96,50 @@
 				</ul>
 				<ul class="liConWord clearfix">
 					<li>
-						<p class="schooltit">外汇市场</p>
-						<p class="titCon">当代发展最快的金融市场</p>
+						<p class="schooltit">{{$t('school.forex')}}</p>
+						<p class="titCon">{{$t('school.fastest')}}</p>
 						<p class="schcontent clearfix">
-							<span class="fl"><router-link :to="{name:'Basis',params: {num: 0}}">了解详情</router-link></span>
+							<span class="fl"><router-link :to="{name:'Basis',params: {num: 0}}">{{$t('school.detail')}}</router-link></span>
 							<span class="fr"><router-link :to="{name:'Basis',params: {num: 0}}">>></router-link></span>
 						</p>
 					</li>
 					<li>
-						<p class="schooltit">初识外汇</p>
-						<p class="titCon">外汇基础知识</p>
+						<p class="schooltit">{{$t('school.learn')}}</p>
+						<p class="titCon">{{$t('school.basic')}}</p>
 						<p class="schcontent clearfix">
-							<span class="fl"><router-link :to="{name:'Basis',params: {num: 1}}">了解详情</router-link></span>
+							<span class="fl"><router-link :to="{name:'Basis',params: {num: 1}}">{{$t('school.detail')}}</router-link></span>
 							<span class="fr"><router-link :to="{name:'Basis',params: {num: 1}}">>></router-link></span>
 						</p>
 					</li>
 					<li>
-						<p class="schooltit">外汇波动的背后推手</p>
-						<p class="titCon">什么在推动货币价格</p>
+						<p class="schooltit">{{$t('school.wave')}}</p>
+						<p class="titCon">{{$t('school.driving')}}</p>
 						<p class="schcontent clearfix">
-							<span class="fl"><router-link :to="{name:'Basis',params: {num: 2}}">了解详情</router-link></span>
+							<span class="fl"><router-link :to="{name:'Basis',params: {num: 2}}">{{$t('school.detail')}}</router-link></span>
 							<span class="fr"><router-link :to="{name:'Basis',params: {num: 2}}">>></router-link></span>
 						</p>
 					</li>
 					<li>
-						<p class="schooltit">看清外汇市场</p>
-						<p class="titCon">外汇交易员关注的指标</p>
+						<p class="schooltit">{{$t('school.clearly')}}</p>
+						<p class="titCon">{{$t('school.focuse')}}</p>
 						<p class="schcontent clearfix">
-							<span class="fl"><router-link :to="{name:'Basis',params: {num: 3}}">了解详情</router-link></span>
+							<span class="fl"><router-link :to="{name:'Basis',params: {num: 3}}">{{$t('school.detail')}}</router-link></span>
 							<span class="fr"><router-link :to="{name:'Basis',params: {num: 3}}">>></router-link></span>
 						</p>
 					</li>
 					<li>
-						<p class="schooltit">货币对</p>
-						<p class="titCon">主要货币对的概况和特性</p>
+						<p class="schooltit">{{$t('school.pairs')}}</p>
+						<p class="titCon">{{$t('school.overview')}}</p>
 						<p class="schcontent clearfix">
-						  <span class="fl"><router-link :to="{name:'Basis',params: {num: 4}}">了解详情</router-link></span>
+						  <span class="fl"><router-link :to="{name:'Basis',params: {num: 4}}">{{$t('school.detail')}}</router-link></span>
 							<span class="fr"><router-link :to="{name:'Basis',params: {num: 4}}">>></router-link></span>
 						</p>
 					</li>
 					<li>
-						<p class="schooltit">走进货币</p>
-						<p class="titCon">12个关键问题</p>
+						<p class="schooltit">{{$t('school.walk')}}</p>
+						<p class="titCon">{{$t('school.key')}}</p>
 						<p class="schcontent clearfix">
-							<span class="fl"><router-link :to="{name:'Basis',params: {num: 5}}">了解详情</router-link></span>
+							<span class="fl"><router-link :to="{name:'Basis',params: {num: 5}}">{{$t('school.detail')}}</router-link></span>
 							<span class="fr"><router-link :to="{name:'Basis',params: {num: 5}}">>></router-link></span>
 						</p>
 					</li>
@@ -149,9 +149,9 @@
 						<img src="../../../public/images/sch/knowledgeCen.png" />
 					</li>
 					<li>
-						<p class="schooltit">进阶实操</p>
+						<p class="schooltit">{{$t('school.operation')}}</p>
 						<p class="line"></p>
-						<p class="con">技术分析是外汇新手在进行外汇交易的过程中，应当首要学习的重要内容。技术分析是投资者对汇价走势进行判断的重要方式，外汇新手如果想要成功把握市场走势，他们就应该对该交易分析方式进行了解，从而就可以更成功地进行外汇交易。</p>
+						<p class="con">{{$t('school.analysis')}}</p>
 					</li>
 				</ul>
 				<p class="dian">&bull;</p>
@@ -161,35 +161,35 @@
           <li class="one" @click="article(0)">
             <a href="javascript:void(0)">
               <p class="top">1</p>
-              <p class="cen">技术面交易策略</p>
+              <p class="cen">{{$t('school.strategy')}}</p>
               <p class="bot">>></p>
             </a>
           </li>
           <li class="two" @click="article(1)">
             <a href="javascript:void(0)">
               <p class="top">2</p>
-              <p class="cen">基本面交易策略</p>
+              <p class="cen">{{$t('school.fund')}}</p>
               <p class="bot">>></p>
             </a>
           </li>
           <li class="three" @click="article(2)">
             <a href="javascript:void(0)">
               <p class="top">3</p>
-              <p class="cen">区间行情的交易手法：边缘介入法</p>
+              <p class="cen">{{$t('school.method')}}</p>
               <p class="bot">>></p>
             </a>
           </li>
           <li class="four" @click="article(3)">
             <a href="javascript:void(0)">
               <p class="top">4</p>
-              <p class="cen">趋势行情的交易手法：反身介入法</p>
+              <p class="cen">{{$t('school.reflexive')}}</p>
               <p class="bot">>></p>
             </a>
           </li>
           <li class="five" @click="article(4)">
            <a href="javascript:void(0)">
               <p class="top">5</p>
-              <p class="cen">蜡烛图模式词典</p>
+              <p class="cen">{{$t('school.candlestick')}}</p>
               <p class="bot">>></p>
             </a>
           </li>
@@ -201,7 +201,7 @@
       <div class="center">
         <div class="schooltit clearfix">
           <p class="fl eng">A-Z</p>
-          <p class="fl chi">外汇交易术语及词汇</p>
+          <p class="fl chi">{{$t('school.glossary')}}</p>
         </div>
         <ul id="goroute" class="clearfix">
           <li v-for="(list,index) in ('ABCDEFGHIJKLMNOPQRSTUVWXYZ').split('')" :key="index">
@@ -211,9 +211,9 @@
         <div class="con clearfix">
           <p class="fl">A</p>
           <div class="fr">
-            <p>Accrual：累积，在每一次交易期间内，远期外汇交易所分配的升水或折扣直接关系至利益套汇交易。</p>
-            <p>Account balance/account value：账户余额/账户价值在计算所有的进项和贷项后，某个账户在某个时间所持的净额。</p>
-            <p>Adjustment：调整，官方行动，用于调整内部经济政策来修正国际收支或货币。</p>
+            <p>{{$t('school.accrual')}}</p>
+            <p>{{$t('school.value')}}A</p>
+            <p>{{$t('school.adjustment')}}</p>
             <p class="botDian">&bull;&bull;&bull;&bull;&bull;&bull;</p>
           </div>
         </div>
@@ -222,8 +222,8 @@
     <!--网络讲座-->
     <div class="teaTit" id="teaTit">
       <div class="center">
-        <h3>网络讲座</h3>
-        <p class="titCon">WEBINAR</p>
+        <h3>{{$t('school.webinars')}}</h3>
+        <p class="titCon">{{$t('school.webinarsEn')}}</p>
       </div>
     </div>
     <!--PC-->
@@ -280,16 +280,16 @@
 
     <div class="teaCon clearfix">
       <div class="fl">
-        <p class="name">沈墨</p>
+        <p class="name">{{$t('school.ray')}}</p>
         <p class="line"></p>
         <p class="eng">CHIEF ANALYST</p>
       </div>
       <div class="fr">
         <p class="line"></p>
-        <p class="con">毕业于加拿大TRU大学金融系，国家级黄金交易员</p>
-        <p class="con">从业金融行业多年，从事私募募集、操作等，2008年从事贵金属研发，亲历黄金辉煌及衰退，曾在2011年成功预测1920顶部，对于宏观经济有独特的见解</p>
-        <p class="con">曾担任资产管理公司投资总监</p>
-        <p class="con">拥有丰富的实战操作经验，担任多家网络，杂志，媒体特约撰稿人，包括工商银行、建设银行、上海银行等多家银行客席讲师，擅长短线+波段的中短期操作及套利稳健的投资</p>
+        <p class="con">{{$t('school.canada')}}</p>
+        <p class="con">{{$t('school.work')}}</p>
+        <p class="con">{{$t('school.invest')}}</p>
+        <p class="con">{{$t('school.media')}}</p>
       </div>
     </div>
   </div>
@@ -534,8 +534,10 @@ export default {
       p.titCon {
         font-size: 14px;
         color: #606060;
-        // text-align: center;
         margin: 21px auto 47px;
+      }
+      p.center{
+        text-align: center;
       }
       ul.basis{
         li {
