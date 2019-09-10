@@ -2,7 +2,7 @@
  * @Autor: Diskfan
  * @Date: 2019-09-06 10:07:02
  * @LastEditors: Do not edit
- * @LastEditTime: 2019-09-09 16:59:33
+ * @LastEditTime: 2019-09-09 16:56:49
  * @Description: 工具函数
  */
 function createXhr() {
@@ -38,12 +38,7 @@ const downloadPdf = (path = '', name = '') => {
   xhr.onreadystatechange = () => {
     if (xhr.readyState === 4) {
       if (xhr.status >= 200 || xhr.status <= 304) {
-        let aLink = document.createElement('a');
-        aLink.href = window.URL.createObjectURL(xhr.response);
-        aLink.download = name;
-        aLink.click();
-        aLink = null;
-        xhr = null;
+        
       } else {
         console.error(xhr);
         throw new Error('XHR On Error')
