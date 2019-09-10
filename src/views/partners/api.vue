@@ -8,10 +8,11 @@
       </div>
     </div>
 
-    <!-- <img class="bannerimg mob" src="../../../public/images/Api_mob.jpg" alt /> -->
-    <div class="bgimg">
+    <img class="bannerimg mob mb" src="../../../public/images/Api_mob.jpg" alt />
+
+    <!-- <div class="bgimg">
       <p>{{$t('API.interface')}}</p>
-    </div>
+    </div> -->
 
     <div class="warp">
       <div class="tit">Fix Api</div>
@@ -54,7 +55,7 @@
           </p>
         </li>
         <li>
-          <img src="@/assets/Api_23.png" alt />>
+          <img src="@/assets/Api_23.png" alt />
           <p>
             {{$t('API.design')}}<br>
             {{$t('API.designbr')}}
@@ -117,7 +118,7 @@
         width: 25%;
         float: left;
         margin-bottom: 50px;
-        & :nth-child(5){
+        &:nth-child(5){
           margin-left: 12%
         }
         p{

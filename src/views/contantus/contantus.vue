@@ -41,8 +41,8 @@
         </transition>
       </div>
       <div class="service">
-        <div class="online">{{$t('contact.onlineCus')}}</div>
-        <div class="tip">{{$t('contact.assistance')}}</div>
+        <div class="online">{{$t('contact.online')}}</div>
+        <div class="tip">{{$t('contact.help')}}</div>
         <div class="connect">
           <div class>
             <img src="@/assets/mobile_03.png" alt />
@@ -468,13 +468,12 @@ export default {
       .loclart {
         margin: 40px 0;
         color: #333;
+        font-size: 16px;
       }
       .lianxisd {
         display: flex;
         > div {
           width: 100%;
-          display: flex;
-
           color: #6714ba;
           font-weight: 600;
           a {

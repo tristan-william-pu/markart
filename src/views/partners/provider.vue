@@ -2,10 +2,12 @@
   <div class="provider">
     <div class="banner pc">
       <div class="img">
+        <div class="warp clearfix bannerimg">
           <p class="banerfont emerging">{{$t('provider.liquidity')}}</p>
+        </div>
       </div>
     </div>
-    <!-- <img class="mobbaner" src="/Public/addheader/images/Provider_mob_03.jpg" alt=""> -->
+   <img class="bannerimg mob mb" src="../../../public/images/Provider_mob_03.jpg" alt=""> 
 
     <div class="warp">
       <div class="tit">CFH Clearing</div>

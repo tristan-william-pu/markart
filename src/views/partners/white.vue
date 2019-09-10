@@ -9,7 +9,7 @@
       </div>
     </div>
   
-    <!-- <img class="bannerimg mob" src="/Public/addheader/images/white-label_mob_03.jpg" alt=""> -->
+    <img class="bannerimg mob mb" src="../../../public/images/white-label_mob_03.jpg" alt="">
 
     <div class="warp">
       <div class="tit">{{$t('white.cooperation')}}</div>
@@ -195,18 +195,20 @@ export default {
     text-align: center;
     color: #606060;
     line-height: 30px;
-    margin-bottom: 140px
+    margin-bottom: 140px;
+    font-size: 16px;
   }
   .wblue{
     color: #0073d4
   }
-}
-
-.tit{font-family: montserratse;margin-top: 100px;font-size: 40px;text-align: center}
+  .tit{font-family: montserratse;margin-top: 100px;font-size: 40px;text-align: center}
 p {
     font-size: 16px;
     box-sizing: border-box;
 }
+}
+
+
 
 
 </style>

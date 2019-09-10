@@ -140,12 +140,18 @@ safety:{
   regulated:'CPT Markets 拥有世界顶级的权威监管',
   now:'立即体验',
 },
-   //联系我们
-   contact:{
-    contactUs:'联系我们',
-    onlineCus:'在线客服',
-    assistance:'5*24小时在线客服提供在线支持与帮助',
-  },
+contact:{
+  contactUs:'联系我们',
+  belize:'伯利兹',
+  mala:'马来西亚',
+  dubai:'迪拜',
+  taiwan:'台湾',
+  name:'(Citypoint Trading Ltd 的交易名称)',
+  london:'伦敦',
+  india:'印度',
+  online:'在线客服',
+  help:'5*24小时在线客服提供在线支持与帮助',
+},
    //API
    API:{
     interface:'API 接口',
@@ -175,6 +181,7 @@ safety:{
     solutions:'我们提供符合代理自身情况的营销方案和策略，帮助客户快速高效获取市场份额！',
     feature:'六大特色',
     accelerate:'让您的业务拓展能力快人一步！',
+    acceleratebr:'',
     settlement:'佣金结算快-隔日结算',
     ownership:'IB专属链接-智能归属',
     report:'权威报表功能-实时行情即时掌控',
