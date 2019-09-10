@@ -131,6 +131,15 @@ module.exports = {
     exchange:'As the foreign exchange market is a 24-hour uninterrupted trading market, therefore, in order to solve the various problems in the transactions faced by traders in the Asia-Pacific region and global Chinese-speaking customers, and in order to provide excellent trading experience without time difference and language barrier, CPT Markets Asia Pacific Customer Service Center is officially put into operation, providing traders with weekly 5*24 hours of excellent customer service.',
     advance:'With advanced online trading system that encompasses professional Forex and CFD markets, CPT Markets is committed to help customers to get the accurate quotations quickly through solid risk management system. CPT Markets works with various institutions,professional clients and experienced retail customers to create tailored solutions that enable them to build and manage their business in a positive and sound manner. Many years of experience in trading and compliance, gained brokerage business knowledge from both traders and sellers and keen market insight are the most important feature of our CPT Markets team members, which enable us to understand our customer needs and the ever-changing market challenges better.',
     industry:'Combined with experienced industry elites and high-level IT service team, CPT Markets aims to provide a safe, stable and transparent trading platform for traders and continue to achieve innovative breakthroughs.',
+    chooese:'Trade with',
+    CPT:'CPTMarkets',
+    earth:'Trade With A International, Fair And Customer-oriented Broker',
+    Customer:'24/5 Customer Support',
+    new:'Continuous innovation',
+    competitiveness:'Competitive spread',
+    again:'Win many awards',
+    simulation:'Open Demo Account',
+    trueth:'Open Live Account',
   },
   //联系我们
   contact:{

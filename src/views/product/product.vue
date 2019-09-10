@@ -7,8 +7,8 @@
  -->
  
 <template>
-  <div class="products">
-    <div class="banner">
+  <div class="products ">
+    <div class="banner pc">
       <div class="title">{{$t('product.trading')}}</div>
       <div class="desc">{{$t('product.want')}}</div>
       <div class="list-wrap">
@@ -38,6 +38,9 @@
         </div>
       </div>
     </div>
+
+    <img class="mobbaner mb" src="../../../public/images/Productbanner.jpg" alt="">
+
     <Regist ref="regist" :class="{fadeIn: show.regist}" />
     <div class="wrap">
       <div class="tit">{{$t('product.markets')}}</div>

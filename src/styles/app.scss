@@ -304,6 +304,9 @@
 
     // ------关于我们开始 -------
     .about {
+      width: 100%;
+      margin-top: 0px;
+      padding-bottom: 30px;
       >div:not(.banner) {
         width: 90%;
         margin-left: 5%;
@@ -318,16 +321,115 @@
           width: 100%;
           ul {
             flex-direction: column;
+            li{
+              float: none;
+              width:90%;
+              align-items: center;
+            }
           }
         }
+      }
+      .tradestep{
+        >.tit{
+          width: 100%;
+          text-align: center;
+          font-size: 20px;
+        }
+      }
+      .btnbox{
+        margin-top: 40px !important;
       }
       .aboutart {
         .tit {
           font-size: 21px !important;
         }
       }
+      .tradestep{
+        .stepbox{
+          width: 100%;
+          ul{
+            li{
+              width:50%;
+              p{
+                font-size: 14px;  
+                height: 70px;
+              }
+            }
+          }
+        }
+      } 
     }
     // ------关于我们开始 -------
+
+    // ------资金安全开始 -------
+    .safty{
+      .warp{
+        width: 100%;
+        .tit{
+          margin-top: 60px;
+          font-size: 22px !important;
+        }
+        .art {
+          width: 90%;
+          margin-left: 5%;
+        }
+      }
+      .bottombg {
+        height: auto;
+        padding-bottom: 80px;
+        .fh{
+          font-size: 100px;
+        }
+        .tits{
+          font-size: 13px;
+          span{
+            font-size: 18px;
+          }
+        }
+      }
+      .accounticons{
+        ul{
+          li {
+            width: 100%;
+          }
+        }
+      } 
+      .bottomline {
+        text-align: center;
+        height: auto;
+        padding-bottom: 1px;
+        overflow: hidden;
+        padding-top: 20px;
+        p {
+          float: none;
+          font-size: 16px;
+          line-height: 30px
+        }
+        .yelbtn {
+          float: none;
+          margin: 20px auto;
+        }
+      }
+    }
+
+    // ------资金安全结束 -------
+
+    // ------交易产品结束 -------
+    .products{
+      .mobbaner {
+        width: 100%;
+        display: block;
+      }
+      .products .bottomline {
+        text-align: center;
+        height: auto;
+      }
+    }
+
+
+    // ------交易产品结束 -------
+
+
     // ------ 交易平台开始 -------
     
     .mt4 {
@@ -602,6 +704,7 @@
         }
       }
     }
+
     // ------ 产品交易开始 -------
     // 产品交易公共部分
     >div {

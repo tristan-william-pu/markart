@@ -54,6 +54,48 @@
       >{{$t('about.advance')}}</div>
       <div class="art">{{$t('about.industry')}}</div>
     </div>
+
+    <div class="tradestep">
+        <div class="tit">
+            选择 <span class="pupcolor">CPTMarkets</span><br>
+            您就选择了一个遍布全球、公平诚信、以人为本的经纪商
+        </div>
+        <div class="stepbox warp clearfix">
+          <ul>
+            <li>
+              <img src="@/assets/icon05.png" alt="">
+              <p>24/5客服支持</p>
+            </li>
+            <span class="arrow pc">></span>
+            <li>
+                <img src="@/assets/icon06.png" alt="">
+                <p>不断创新</p>
+            </li>
+            <span class="arrow pc">></span>
+            <li>
+                <img src="@/assets/icon07.png" alt="">
+                <p>具有竞争力的点差</p>
+              </li>
+              <span class="arrow pc">></span>
+              <li>
+                  <img src="@/assets/icon08.png" alt="">
+                  <p>屡获殊荣</p>
+                </li>
+          </ul>
+        </div>
+      </div>
+
+       <div class="btnbox aboutuse">
+        <div class="btn">
+          <a href="index.php?m=simulationRegister&a=simulationRegister" onclick="ga('send', 'event', 'DR', 'play', 'OPEN');">注册模拟账户</a>
+        </div>
+        <div class="btn active">
+          <a href="index.php?m=register&a=register" onclick="ga('send', 'event', 'TR', 'play', 'OPEN');">注册真实账户</a> 
+        </div>
+       
+      </div>
+
+
   </div>
 </template>
 <script>
@@ -62,6 +104,7 @@ export default {};
 <style lang="scss">
 @import "@/styles/mixin.scss";
 .about {
+  margin-bottom: 20px;
   .pc {
     display: block;
   }
@@ -155,5 +198,76 @@ export default {};
       margin-top: 50px;
     }
   }
+  .tradestep{
+    .tit{
+      width: 100%;
+      font-size: 40px;
+      font-family: montserratse;
+      text-align: center;
+      margin-top: 150px;
+      line-height: 70px;
+      .pupcolor {
+          color: #5b0eb2;
+      }
+    }
+    .stepbox{
+      margin-top: 50px;
+      ul{
+        li{
+          float: left;
+          text-align: center;
+          width: 20%;
+          img{
+            height: 112px;
+          }
+          p{
+            font-size: 21px;
+            font-family:montserrat;
+            margin-top: 40px 
+          }
+        }
+      } 
+    }
+  } 
+
+  .aboutuse.btnbox{
+    width: 100%;
+    text-align: center;
+    margin-top: 100px;
+    .btn{
+      border-radius: 20px;
+      width: 200px;
+      height: 40px;
+      border: 1px solid #5b0eb2;
+      font-family: montserratse;
+      background: none;
+      color: #5b0eb2;
+      text-align: center;
+      line-height: 40px;
+      font-size: 16px;
+      display: inline-block;
+      position: relative;
+      overflow: hidden;
+      margin-right: 20px;
+      a{
+        color: #000;
+        display: block;
+        &:hover{
+          color:#fff !important;
+        }
+      }
+      &:hover{
+        background: #5b0eb2;
+      }
+     
+    }
+  }
+}
+.arrow{
+  float: left;
+  font-size: 55px;
+  color: #319bd6;
+  line-height: 200px;
+  width: 6%
 }
 </style>
