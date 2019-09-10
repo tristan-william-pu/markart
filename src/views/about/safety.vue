@@ -7,7 +7,7 @@
  -->
 <template>
   <div class="cn safty">
-    <div class="banner">
+    <div class="banner pc">
       <div class="img">
         <div class="warp">
           <img class="box emergingleft" src="@/assets/bg1_03.png" alt />
@@ -15,7 +15,7 @@
         </div>
       </div>
     </div>
-    <img class="mobbaner" src="images/FundSafetymob.jpg" alt />
+    <img class="mobbaner mb" src="images/FundSafetymob.jpg" alt />
     <div class="warp">
       <div class="tit">{{$t('safety.regula')}}</div>
       <div class="art">
@@ -284,8 +284,7 @@ export default {
 }
 
 .mobbaner {
-  display: none;
-  width: auto;
+  width: 100%;
   height: auto;
 }
 .banner {
