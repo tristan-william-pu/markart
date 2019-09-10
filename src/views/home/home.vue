@@ -193,7 +193,7 @@
             </div>
             <p>1. 注册</p>
           </li>
-          <li>
+          <li class="pc">
             <img class="stepicon" src="@/assets/step5.png" alt />
           </li>
           <li>
@@ -202,7 +202,7 @@
             </div>
             <p>2. 认证</p>
           </li>
-          <li>
+          <li class="pc">
             <img class="stepicon" src="@/assets/step5.png" alt />
           </li>
           <li>
@@ -211,7 +211,7 @@
             </div>
             <p>3. 入金</p>
           </li>
-          <li>
+          <li class="pc">
             <img class="stepicon" src="@/assets/step5.png" alt />
           </li>
           <li>
@@ -719,6 +719,7 @@ export default {
 }
 .payway {
   margin-top: 100px;
+  margin-bottom: 20px;
 }
 .payway .headertitle {
   width: 100%;
@@ -738,7 +739,7 @@ export default {
   display: inline-block;
 }
 .indSch .center{
-    width: 63%;
+    width: 84%;
     margin:130px auto 0;
   }
   .indSch .center ul li{
@@ -747,7 +748,7 @@ export default {
     margin-right:4%;
   }
   .indSch .center ul li:first-child{
-      width: 100%;
+      width: 46%;
       margin-right: 12%;
   }
   .indSch .center ul li.schCen span{
@@ -799,7 +800,7 @@ export default {
     width: 100%;
     height: 167px;
     background:url(../../../public/images/sch/indBotBg.png) no-repeat;
-    background-size: 100%;
+    background-size: 100% 100%;
   }
   .schBot .center{
     width: 63%;

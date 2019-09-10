@@ -59,16 +59,43 @@
       
     }
 
+    // ----------- 尾部 --------------
+    .foot{
+      footer{
+        overflow: hidden;
+        height: 200px;
+        padding-top: 30px;
+        box-sizing: border-box;
+        .footMain{
+          width:100%;
+          margin-top: -20px;
+          margin-bottom: 20px;
+          .lianxi{
+            float: none;
+            display: block;
+            margin: 0 auto;
+            width: 230px;
+            margin-top: 20px;
+          }
+        }
+        .art{
+          width: 90%;
+          margin-left: 5%;
+        }
+      }
+      
+      
+    }
+
+
 
     // --------- 主页 ---------------
     .home{
       .warp{
         .top{
           .headertitle{
-            padding-left: 30px;
-            float: initial;
+            padding-left: 0px;
             font-size: 28px;
-            text-align: left;
           }
           .pupradio{
             float: initial;
@@ -79,6 +106,7 @@
         }
         .partleft {
           float: initial;
+          box-sizing: border-box;
           width: 100%;
           padding-left: 20px;
           padding-right: 20px;
@@ -131,66 +159,70 @@
         .center{
           width: 90%;
           margin:3rem auto 0;
-        }
-        ul{
-          li{
-            float: left;
-            width: 48%;
-            margin-right:4%;
-            & :first-child{
+          ul{
+            li{
+              float: left;
+              width: 48%;
+              margin-right:4%;
+            }
+            li:first-child{
               width: 100%;
+              color:red;
               margin: 0 auto 3rem;
+              img{
+                width:100%;
+              }
             }
-           
-          }
-          li.schCen{
-            span{
-              display: inline-block;
-              font-size: 1.2rem;
-              line-height: 1.8rem;
-              color: #767678;
-            }
-            p.linTop{
-              width: 3rem;
-              height: 0.5rem;
-              background-color: #5b0eb2;
-              margin: 4rem 0 1rem;
-            }
-            p.con{
-              font-size: 1.5rem;
-              line-height: 2.2rem;
-              color: #333333;
-            }
-            p.three{
-              font-size: 1.2rem;
-              color: #5b0eb2;
-              margin: 5rem 0 1rem;
-            }
-            p.linBot{
-              width: 1rem;
-              height: 2.5rem;
-              background-color: #5b0eb2;
-            }
-          } 
-          li.rigLi{
-            margin-right:0;
-            p{
-              font-size: 2rem;
-              color: #989898;
-              line-height: 2.5rem;
-              font-weight: 900;
+            li.schCen{
               span{
-                display: block;
+                display: inline-block;
+                font-size: 1.2rem;
+                line-height: 1.8rem;
+                color: #767678;
+              }
+              p.linTop{
+                width: 3rem;
+                height: 0.5rem;
+                background-color: #5b0eb2;
+                margin: 4rem 0 1rem;
+              }
+              p.con{
+                font-size: 1.5rem;
+                line-height: 2.2rem;
+                color: #333333;
+              }
+              p.three{
+                font-size: 1.2rem;
                 color: #5b0eb2;
+                margin: 5rem 0 1rem;
               }
-              h6{
+              p.linBot{
+                width: 1rem;
+                height: 2.5rem;
+                background-color: #5b0eb2;
+              }
+            } 
+            li.rigLi{
+              margin-right:0;
+              p{
                 font-size: 2rem;
-                color: #000;
-                margin: 3rem 0 1rem;
+                color: #989898;
+                line-height: 2.5rem;
+                font-weight: 900;
+                span{
+                  display: block;
+                  color: #5b0eb2;
+                }
+                h6{
+                  font-size: 2rem;
+                  color: #000;
+                  margin: 3rem 0 1rem;
+                }
               }
-            }
+            } 
           } 
-        } 
+        }
+      
       } 
  
       .schBot{
@@ -208,30 +240,64 @@
             margin-top:4%;
             width: 49%;
           }
+          div.fl{
+            margin-left: 24%;
+            p{
+              width: 1.5rem;
+              height: 1.5rem;
+              line-height: 1.5rem;
+              color: #fff;
+              border: 2px solid #fff;
+              margin: 28% 0 6%;
+              text-align: center;
+              font-weight: 900;
+            }
+            span{
+              font-size: 1.2rem;
+              color: #fff;
+              font-weight: 900;
+            }
+            a{
+              color: #fff;
+            }
+          }
         }
       }
-      
-      .schBot .center 
-      .schBot .center div.fl{
-        margin-left: 24%;
+
+      .step,.warp{
+        width:100%;
+        .headertitle {
+          padding-left: 0px;
+          font-size: 28px;
+          text-align: center !important;
+        }
+        .stepbox {
+          ul{
+            li{
+              width: 100%;
+              float: none;
+              margin-top: 30px;
+            }
+          }
+          .radio{
+            margin: 0 auto;
+          }
+        }
       }
-      .schBot .center div.fl p{
-          width: 1.5rem;
-          height: 1.5rem;
-          line-height: 1.5rem;
-          color: #fff;
-          border: 2px solid #fff;
-          margin: 28% 0 6%;
+      .payway,.warp{
+        width:100%;
+        .headertitle {
+          width: 100%;
           text-align: center;
-          font-weight: 900;
-      }
-      .schBot .center div.fl span{
-        font-size: 1.2rem;
-        color: #fff;
-        font-weight: 900;
-      }
-      .schBot .center div.fl a{
-        color: #fff;
+        }
+        .paywaybox{
+          ul{
+            li{
+              width: 33.3%;
+              margin-bottom: 20px;
+            }
+          }
+        }
       }
     }
 
