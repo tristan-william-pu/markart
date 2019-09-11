@@ -7,45 +7,71 @@
  -->
 
 <template>
-  <div class="footer-wrap">
+  <div class="foot">
     <footer>
-      <div class="warp">
-        <div class="footernav">
+      <div class="warp footMain">
+        <div class="footernav pc">
           <ul>
             <li>
-              <a href="/p/aboutus">{{$t('footer.about')}}</a>
+              <router-link to="/about">{{$t('footer.about')}}</router-link>
             </li>
             <li>
-              <a href="/p/products">{{$t('footer.product')}}</a>
+              <router-link to="/product">{{$t('footer.product')}}</router-link>
             </li>
             <li>
-              <a href="/p/MT4">{{$t('footer.platform')}}</a>
+              <router-link to="/platform">{{$t('footer.platform')}}</router-link>
             </li>
             <li>
-              <a href="/p/payment">{{$t('footer.support')}}</a>
+              <router-link to="/suport">{{$t('footer.support')}}</router-link>
             </li>
             <li>
-              <a href="/p/white">{{$t('footer.partner')}}</a>
+              <router-link to="/partners">{{$t('footer.partner')}}</router-link>
             </li>
             <li>
-              <a href="/p/contantus">{{$t('footer.contact')}}</a>
+              <router-link to="/contantus">{{$t('footer.contact')}}</router-link>
             </li>
           </ul>
         </div>
+        
         <div class="lianxi clearfix">
           <img src="../assets/moible_05.png" alt />
           <span>
-            <a href="mailto:cs@cptmarkets.com">cs@cptmarkets.com</a>
+            <a href="mailto:cs@cptmarkets.com" class="Cptmail">cs@cptmarkets.com</a>
           </span>
         </div>
+
+         
+
         <div class="lianxi clearfix">
           <img src="../assets/moible_03.png" alt />
           <span>400-1001-103</span>
         </div>
-        <div class="wxercode">
+        
+        <div class="wxercode pc">
           <img src="../assets/ercode_07.png" alt />
           <img class="ercode" src="../assets/ercode_03.png" alt />
         </div>
+
+        <div class="clearfix"></div>
+        <div class="footer_follow clearfix pc">
+          <p class="fl">Follow us</p>
+          <a href="https://www.facebook.com/cptmarketslimited/">
+            <img src="@/assets/facebook.png" alt/>
+          </a>
+          <a href="https://www.instagram.com/cptmarkets/">
+            <img src="@/assets/instagram.png" alt/>
+          </a>
+          <a href="https://www.youtube.com/channel/UCBFFLYCjE8KKU9x7AghbtEA">
+            <img src="@/assets/Youtube.png" alt/>
+          </a>
+          <a href="https://twitter.com/cptmarketsglobe">
+            <img src="@/assets/twitter.png" alt/>
+          </a>
+          <a href="https://t.me/CPTMarketsglobetraders">
+            <img src="@/assets/telegram.png" alt/>
+          </a>
+        </div>
+
         <div class="clear"></div>
         <div class="pc">
           <p class="art">
@@ -92,6 +118,8 @@
             {{$t('footer.money')}}
           </p>
         </div>
+       
+          
         <p class="art">{{$t('footer.copyright')}}</p>
       </div>
     </footer>
@@ -103,12 +131,27 @@ export default {
 };
 </script>
 <style lang="scss">
-.footer-wrap {
+.foot{
   footer {
     height: auto;
     width: 100%;
     background: #282828;
     padding-bottom: 50px;
+    .footer_follow{
+      margin: 20px 0 0;
+      >p{
+        float: left;
+        margin-right: 10px;
+        color: #fff;
+      }
+      a{
+        img{
+          width: 27px;
+          margin: 0 10px;
+          opacity: 0.5;
+        }
+      }
+    }
   }
   .footernav {
     float: left;
@@ -129,7 +172,7 @@ export default {
     width: 20px;
     float: left;
   }
-  .lianxi span {
+  .lianxi span,.Cptmail {
     margin-left: 20px;
     float: left;
     color: #565656;

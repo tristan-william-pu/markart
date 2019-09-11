@@ -41,8 +41,8 @@
         </transition>
       </div>
       <div class="service">
-        <div class="online">{{$t('contact.onlineCus')}}</div>
-        <div class="tip">{{$t('contact.assistance')}}</div>
+        <div class="online">{{$t('contact.online')}}</div>
+        <div class="tip">{{$t('contact.help')}}</div>
         <div class="connect">
           <div class>
             <img src="@/assets/mobile_03.png" alt />
@@ -57,40 +57,40 @@
     </div>
     <div class="contantbox mb">
       <div class="warp">
-        <div class="tit animated titan bounceInUp">联系我们</div>
+        <div class="tit animated titan bounceInUp">{{$t('contact.contactUs')}}</div>
         <div class="localselect animated pc bounceInUp" style="opacity: 1;">
           <ul>
             <li class>CPT Markets UK</li>
-            <li class="active">CPT Markets 伯利兹</li>
-            <li>CPT Markets 马来西亚</li>
-            <li>CPT Markets 迪拜</li>
-            <li>CPT Markets 台湾</li>
+            <li class="active">CPT Markets {{$t('contact.belize')}}</li>
+            <li>CPT Markets {{$t('contact.mala')}}</li>
+            <li>CPT Markets {{$t('contact.dubai')}}</li>
+            <li>CPT Markets {{$t('contact.taiwan')}}</li>
           </ul>
         </div>
         <div class="infoboxs pc">
           <p class>
             <span class="companynam">CPT Markets UK</span>
-            <br />（Citypoint Trading Ltd的交易名称）
-            <br />伦敦
+            <br />{{$t('contact.name')}}
+            <br />{{$t('contact.london')}}
           </p>
           <p class="active">
             <span class="companynam">CPT Markets</span>
-            <br />伯利兹
+            <br />{{$t('contact.belize')}}
             <br />
           </p>
           <p>
             <span class="companynam">CPT Markets</span>
-            <br />马来西亚
+            <br />{{$t('contact.mala')}}
             <br />
           </p>
           <p>
             <span class="companynam">CPT Markets</span>
-            <br />迪拜
+            <br />{{$t('contact.dubai')}}
             <br />
           </p>
           <p>
             <span class="companynam">CPT Markets</span>
-            <br />台湾
+            <br />{{$t('contact.taiwan')}}
             <br />
           </p>
         </div>
@@ -113,36 +113,36 @@
         <div class="mobinfoboxs mob">
           <p class="mobactive">
             <span class="companynam">CPT Markets UK</span>
-            <br />(Citypoint Trading Ltd的交易名称)
-            <br />伦敦
+            <br />{{$t('contact.name')}}
+            <br />{{$t('contact.london')}}
           </p>
           <p class="mobactive">
             <span class="companynam">CPT Markets</span>
-            <br />伯利兹
+            <br />{{$t('contact.belize')}}
             <br />
           </p>
           <p class="mobactive">
             <span class="companynam">CPT Markets</span>
-            <br />马来西亚
+            <br />{{$t('contact.mala')}}
             <br />
           </p>
 
           <p class="mobactive">
             <span class="companynam">CPT Markets</span>
-            <br />印度
+            <br />{{$t('contact.india')}}
             <br />
           </p>
           <p class="mobactive">
             <span class="companynam">CPT Markets</span>
-            <br />台湾
+            <br />{{$t('contact.taiwan')}}
             <br />
           </p>
         </div>
       </div>
       <div class="tit pur">
         <div class="warp">
-          <div class="tit">在线客服</div>
-          <p class="loclart">5*24小时在线客服提供在线支持与帮助</p>
+          <div class="tit">{{$t('contact.online')}}</div>
+          <p class="loclart">{{$t('contact.help')}}</p>
           <div class="lianxisd clearfix">
             <div class="left clearfix">
               <img src="@/assets/mobile_03.png" alt />
@@ -468,13 +468,12 @@ export default {
       .loclart {
         margin: 40px 0;
         color: #333;
+        font-size: 16px;
       }
       .lianxisd {
         display: flex;
         > div {
           width: 100%;
-          display: flex;
-
           color: #6714ba;
           font-weight: 600;
           a {

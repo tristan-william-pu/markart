@@ -260,7 +260,6 @@ header {
   width: 100%;
   font-family: montserrat;
   display: block;
-  height: 150px;
   position: relative;
   z-index: 10000;
   background: #fff;

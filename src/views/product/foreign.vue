@@ -11,12 +11,12 @@
   <div class="foreign">
     <div class="title">{{$t('exchange.forign')}}</div>
     <div class="exp">
-      <div class="leftimg">
+      <div class="leftimg ">
         <img src="images/echange3.jpg" alt />
       </div>
-      <div class="content">
-        <div class="space"></div>
-        <div class="title">
+      <div class="content ">
+        <div class="space "></div>
+        <div class="title ">
           {{$t('exchange.what')}}<br>{{$t('exchange.waihui')}}
         </div>
         <div class="line"></div>
