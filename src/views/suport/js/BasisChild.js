@@ -54,9 +54,26 @@ const contents = {
 
 const contentEn = {
     market:{
-        name:"",
+        name:"Forex market:the contemporary fastest growing financial market",
         content:[
-            "",
+            "1. The comparison of the Forex market with futures and stock market",
+            "It is not only the developing of online Forex trade that stimulates the whole Forex market’s transaction amount. Along with the volatility of Forex market rose in the past few years, many investors realized that the volatility of Forex market will also affect the stock market and bond market. Thus, only if considered and tracked the change of Forex market, that could stock, bond and commodity investors make wise trade decisions. There are some historical examples for Forex market affecting the stock market and the bond market.",
+            "EUR/USD and company profit",
+            "For stock traders, especially those who invest in a large number of European companies which export to the US, paying close attention to exchange rate changes is very important for predicting the company's earnings and profitability. Since 2003, European manufacturers have complained about the appreciation of the euro and the depreciation of the dollar. The chief culprit in the dollar’s weakness is the fast-growing US trade deficit and budget deficit, the so-called “double deficit” issue. This problem caused the euro to rise against the dollar, which in turn made the Eurozone's exports to American consumers more expensive, which ultimately led to a decline in the profits of Eurozone companies. In 2003, the German Volkswagen Company did not conduct sufficient exchange rate hedging, resulting in a loss of profits of approximately 1 billion euros. While the Dutch national mining company, the chemical group warned that a one percent change in the exchange rate of the euro verse the US dollar would lead to the company 7 million to 11 million euros loss. Unfortunately, inadequate exchange rate hedging remains a common problem in the 2008 Eurozone. Therefore, paying close attention to the exchange rate changes between the euro and the US dollar is extremely important for predicting the income and profit levels of euro exporters.",
+            "Nikkei index and US dollar",
+            "Japanese stock investors should also pay close attention to US dollar trends, and how the trend affecting Nikkei index. Japan has experienced economic stagnation for about ten years. In this period, the US mutual fund and hedge fund have substantially reduced their Japanese stocks. When the Japanese economy began to recover, these funds rushed into the market, and they adjusted their portfolio to not miss the investment chance brought by Japanese economic recovery. Hedge funds borrowed dollars to buy Japanese stocks and increase their exposure to Japanese stocks. However, this action made them extremely sensitive to dollar’s exchange rate, and also to the Fed’s monetary policy of its tightening cycle. The increase cost of US debt will hit the upward trend of the Nikkei, as higher interest rate will lead higher cost of dollar loans. The United States has a huge deficit account, and the Fed must continue to raise interest rates to maintain the dollar assets with attraction. Thus, the continued rate hike along with the slow growth of the Japanese economy may make it unprofitable, for excessive financing to buy Japanese stocks. Therefore, the change for US dollar has significant impact on Nikkei index.",
+            "2. The comparison of the Forex market with futures and the stock market.",
+            "Traditionally, the Forex market is not pursued by the public, because the regulations, capital requirements and technical limitations. Which made the initial Forex market participants are limited only to large funds organizations such as hedge funds and commodity management funds and other large companies. The cause for the limitation of large organization is because the risk for traders are personalized. For example, one trader may adapt 100 times leverage, while another trader may not use any leverage. However, in recent years, many companies started to provide entrance to Forex market for individual investors (small retail traders). These companies provide trade financing and leverage, free trading platform, markets charts as well as real-time news for individual traders. This makes the Forex market more attractive as one of the finance instruments and Forex trade becomes more popular.",
+            "Many investors are adding Forex into their trading pool or they may only trade Forex. Because these traders began to realize that Forex trade is more attractive than stock and futures trade.",
+            "The comparison between Forex and stock",
+            "Forex spot trading has the following differences compared with securities stock trading:",
+            "Main features of the Forex market",
+            "The Forex market is the largest financial market, and the transaction amount and liquidity is constantly growing.",
+            "The Forex market runs 24/5.",
+            "Traders could made profits in an upward trend or a downward trend.",
+            "No trading restrictions."
+
+
         ]
     }
 }
