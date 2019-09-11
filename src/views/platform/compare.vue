@@ -21,33 +21,33 @@
     <div class="conTab">
       <div class="center">
         <!--MT4-->
-        <div class="mt4">
+        <div class="mt4 clearfix">
           <h3>Meta Trader 4</h3>
-          <div class="mtCon clear">
+          <div class="mtCon clearfix">
             <div class="fl">
               <p class="title">{{$t('compare.ideal')}}</p>
               <ul>
-                <li class="clear">
+                <li class="clearfix">
                   <img src="@/assets/sjx.png" class="fl" />
                   <p class="fl">{{$t('compare.simple')}}</p>
                 </li>
-                <li class="clear">
+                <li class="clearfix">
                   <img src="@/assets/sjx.png" class="fl" />
                   <p class="fl">{{$t('compare.built')}}</p>
                 </li>
-                <li class="clear">
+                <li class="clearfix">
                   <img src="@/assets/sjx.png" class="fl" />
                   <p class="fl">{{$t('compare.interactive')}}</p>
                 </li>
-                <li class="clear">
+                <li class="clearfix">
                   <img src="@/assets/sjx.png" class="fl" />
                   <p class="fl">{{$t('compare.reliable')}}</p>
                 </li>
-                <li class="clear">
+                <li class="clearfix">
                   <img src="@/assets/sjx.png" class="fl" />
                   <p class="fl">{{$t('compare.spreed')}}</p>
                 </li>
-                <li class="clear">
+                <li class="clearfix">
                   <img src="@/assets/sjx.png" class="fl" />
                   <p class="fl">{{$t('compare.currency')}}</p>
                 </li>
@@ -67,47 +67,47 @@
         <!--CPT cTrader-->
         <div class="ctrader">
           <h3>CPT cTrader</h3>
-          <div class="mtCon clear">
+          <div class="mtCon clearfix">
             <div class="fl">
               <p class="title">CPT cTrader - {{$t('compare.convenient')}}</p>
               <ul>
-                <li class="clear">
+                <li class="clearfix">
                   <img src="@/assets/sjx.png" class="fl" />
                   <p class="fl">{{$t('compare.second')}}</p>
                 </li>
-                <li class="clear">
+                <li class="clearfix">
                   <img src="@/assets/sjx.png" class="fl" />
                   <p class="fl">{{$t('compare.leading')}}</p>
                 </li>
-                <li class="clear">
+                <li class="clearfix">
                   <img src="@/assets/sjx.png" class="fl" />
                   <p class="fl">{{$t('compare.server')}}</p>
                 </li>
-                <li class="clear">
+                <li class="clearfix">
                   <img src="@/assets/sjx.png" class="fl" />
                   <p class="fl">{{$t('compare.cloud')}}</p>
                 </li>
-                <li class="clear">
+                <li class="clearfix">
                   <img src="@/assets/sjx.png" class="fl" />
                   <p class="fl">{{$t('compare.chart')}}</p>
                 </li>
-                <li class="clear">
+                <li class="clearfix">
                   <img src="@/assets/sjx.png" class="fl" />
                   <p class="fl">FIX API</p>
                 </li>
-                <li class="clear">
+                <li class="clearfix">
                   <img src="@/assets/sjx.png" class="fl" />
                   <p class="fl">LD5 IBX Equinix {{$t('compare.data')}}</p>
                 </li>
-                <li class="clear">
+                <li class="clearfix">
                   <img src="@/assets/sjx.png" class="fl" />
                   <p class="fl">{{$t('compare.multiple')}}</p>
                 </li>
-                <li class="clear">
+                <li class="clearfix">
                   <img src="@/assets/sjx.png" class="fl" />
                   <p class="fl">{{$t('compare.extend')}}</p>
                 </li>
-                <li class="clear">
+                <li class="clearfix">
                   <img src="@/assets/sjx.png" class="fl" />
                   <p class="fl">{{$t('compare.realTime')}}</p>
                 </li>
@@ -128,7 +128,7 @@
         <div class="contrast">
           <h4>{{$t('compare.comparison')}}</h4>
           <p>{{$t('compare.difference')}}</p>
-          <div class="tab clear pc">
+          <div class="tab clearfix pc">
             <ul class="firUl">
               <li class="first">{{$t('compare.execution')}}</li>
               <li class="ctLine"></li>

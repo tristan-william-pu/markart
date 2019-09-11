@@ -57,7 +57,7 @@
       </a>
       <div class="imgboxs">
         <img class="pcpng" src="images/pc.png" alt="">
-        <clound />
+        <clound class="pc"/>
       </div>
       
     </div>

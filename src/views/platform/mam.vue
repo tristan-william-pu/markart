@@ -153,7 +153,6 @@ export default {};
             width: 10px;
           }
           p {
-            float: left;
             font-size: 16px;
             width: 90%;
             margin-left: 30px;

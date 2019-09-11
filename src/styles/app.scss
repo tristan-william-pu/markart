@@ -414,22 +414,6 @@
 
     // ------资金安全结束 -------
 
-    // ------交易产品结束 -------
-    .products{
-      .mobbaner {
-        width: 100%;
-        display: block;
-      }
-      .products .bottomline {
-        text-align: center;
-        height: auto;
-      }
-    }
-
-
-    // ------交易产品结束 -------
-
-
     // ------ 交易平台开始 -------
     
     .mt4 {
@@ -454,6 +438,16 @@
         .headertitle {
           font-size: 28px !important;
           margin-bottom: 25px !important;
+        }
+        .imgboxs{
+          height: 280px;
+          .pcpng{
+            width: 90%;
+            position: initial;
+            right: 0px;
+            opacity: 1;
+            margin-top: 30px;
+          }
         }
       }
       .downloadtit {
@@ -562,6 +556,11 @@
       >div:not(.banner) {
         width: 90%;
         margin-left: 5%;
+      }
+      .mb{
+        >img{
+          margin-top:0;
+        }
       }
       >.wrap {
         .tit {
@@ -676,6 +675,7 @@
         margin-top: -10px;
         .center {
           width: 100%;
+          margin-bottom: 50px;
         }
       }
     }
@@ -704,7 +704,99 @@
         }
       }
     }
+    .compare{
+      .img{
+        width: 100%;
+        background-size: 100%;
+        .center{
+          width: 90%;
+          margin: 0 auto;
+          color: #ffffff;
+          padding: 5% 0 6%;
+          box-sizing: border-box;
+          h6{
+            font-family: FZLTZHK;
+            text-align: center;
+            font-size: 20px;
+            font-weight: 600;
+          }
+          p{
+            font-family: Light;
+            width: 380px;
+            margin: 14px auto 0;
+            font-size: 14px;
+          }
+        }
+      }
+      .conTab{
+        .center{
+          width: 90%;
+          margin: 20px auto 20px;
+          div.mt4,div.ctrader{
+            box-shadow: 0.5rem 0.5rem 0.5rem #fbfbfb, 0.5rem -0.5rem 0.5rem #fbfbfb, -0.5rem 0.5rem 0.5rem #fbfbfb, -0.5rem -0.5rem 0.5rem #fbfbfb;
+            h3{
+              font-size: 22px;
+              color: #000000;
+              text-align: center;
+              padding-top: 48px;
+            }
+            .mtCon{
+              width: 100%;
+              height:660px;
+              position: relative;
 
+              >.fl{
+                width: 47%;
+                margin: 32px 0 0 3%;
+                position: absolute;
+                top:0;
+                left:0;
+                p.title{
+                  color: #0e0e0c;
+                  font-size: 18px;
+                  font-family: SEMIBOLD;
+                  line-height: 2rem;
+                  font-weight: 900;
+                  
+                }
+                ul{
+                  margin: 2rem 0 0 1.5rem;
+                  li{
+                    margin-top: 1.8rem;
+                    width: 290px;
+                    img{
+                      margin-top: 0.8%;
+                    }
+                    p{
+                      font-size: 16px;
+                      color: #313131;
+                      font-family: LTH;
+                      
+                    }
+                  }
+                }
+              }
+              >.fr{
+                width: 45%;
+                height:auto;
+                margin: 0 5% 0 0;
+                position: absolute;
+                top:37px;
+                right:0;
+                img{
+                  width: 100%;
+                }
+              }
+            } 
+          }
+          div.ctrader{
+            .mtCon{
+              height:982px;
+            }
+          }
+        }
+      }
+    }
     // ------ 产品交易开始 -------
     // 产品交易公共部分
     >div {
@@ -712,6 +804,9 @@
         font-size: 24px;
         line-height: 60px;
         margin-top: 10px;
+      }
+      .mobbaner{
+        width:100%;
       }
       >.exp {
         display: block;
@@ -726,6 +821,8 @@
           background: #f8f7f7;
           >img {
             position: relative;
+            display: block;
+            margin: 0 auto;
           }
         }
         .content {
@@ -737,13 +834,13 @@
           justify-content: center;
           .title {
             font-size: 24px;
-            margin: 0px 0 0 5%; 
+            margin: 0px 0 0 15%; 
             line-height: unset;
             position: relative;
           }
           .line {
             float: none;
-            margin: 20px 0 0 5%;
+            margin: 20px 0 0 15%;
             position: relative;
           }
           .text {
@@ -761,6 +858,7 @@
       }
     }
     .products {
+      
       .banner {
         height: auto;
         .title {
@@ -801,6 +899,13 @@
           }
         }
       }
+      .part1{
+        .info {
+          span{
+            margin-top: 60px !important;
+          }
+        }
+      } 
       .choose {
         .tit {
           font-size: 1.5em;
@@ -881,12 +986,45 @@
       }
     }
     .metal {
+      .warp{
+        width:100%;
+        .leftimg{
+          width: 100%;
+          float: none;
+          margin-left: 0px;
+        } 
+        .floatfont{
+          float: none;
+          width: 90%;
+          margin-left: 5%;
+          .title {
+            font-size: 24px;
+            position: relative;
+            margin:20px 0;
+            line-height: 34px;
+            text-align: left;
+          }
+          .line{
+            float: none;
+            margin: 20px;
+            position: relative;
+          }
+          .text{
+            float: none;
+            width: 100%;
+            margin-top: 20px;
+            padding: 0;
+          }
+        }
+      }
+      
       .choose {
         width: 100%;
         .tit {
           font-size: 21px !important;
           margin-top: 30px;
         }
+
         .clearfix {
           width: 100%;
           .melaleft {
@@ -895,6 +1033,15 @@
           }
           .melaright {
             width: 100%;
+            .purfont{
+              
+              float: none !important;
+              text-align: center;
+              width:100%!important;
+            }
+            a{
+              display: block;
+            }
           }
           
           .melacenter {
@@ -932,9 +1079,11 @@
           .tit {
             font-size: 21px !important;
           }
-          .imgright {
-            width: 100%；
-          }
+          
+        }
+        .imgright {
+          width: 100%;
+          float: none;
         }
       }
       .how {
@@ -980,6 +1129,45 @@
         }
       }
     }
+    // .products{
+    //   .mobbaner {
+    //     width: 100%;
+    //     display: block;
+    //   }
+    //   .products .bottomline {
+    //     text-align: center;
+    //     height: auto;
+    //   }
+    //   .warp{
+    //     width:100%;  
+    //   }
+    //   .tit{
+    //     font-size: 22px !important;
+    //   }
+    //   .imgbox{
+        
+    //   }
+    // }
+    // 注册组件开始
+    .apply{
+      text-align: center;
+      height: auto;
+      .registerWrap {
+        p{
+          float: none;
+          display: inline-block;
+        }
+        .btn{
+          float: none;
+          margin: 10px auto;
+        }
+      }
+      
+    }
+
+    // 注册组件结束
+    
+
     // ------ 产品交易结束 -------
 
     // ------ 白标开始 ------- 

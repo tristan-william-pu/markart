@@ -9,7 +9,7 @@
   <div class="metal">
     <div class="title">{{$t('metal.precious')}}</div>
     <div class="warp">
-      <div class="leftimg">
+      <div class="leftimg ">
         <img
           class="animated moneyimg fadeInLeft"
           src="images/metal.jpg"
@@ -60,9 +60,7 @@
           </a>
         </div>
         <div class="melaright mb">
-          <p class="purfont">
-            {{$t('metal.experience')}}
-          </p>
+         
           <div class="list">
             <span class="borderfont more">{{$t('metal.public')}}</span>
             <span class="borderfont more31">{{$t('metal.delivery')}}</span>
@@ -71,6 +69,9 @@
             </span>
           </div>
           <div class="clear"></div>
+           <p class="purfont">
+            {{$t('metal.experience')}}
+          </p>
           <a href="javascript:void(0)">
             <img class="arrowicon" src="@/assets/metalarow.png" alt />
           </a>
@@ -105,7 +106,6 @@ export default {
     width: 1200px;
     display: block;
     margin: 0 auto;
-    margin-top: -20px;
     margin-bottom: 20px;
     @include clearfix();
     .leftimg {
@@ -132,6 +132,7 @@ export default {
       position: relative;
       z-index: 99;
       width: calc(100% - 500px);
+      height:auto;
       .title {
         animation-name: fadeInRight;
         animation-duration: 1s;
