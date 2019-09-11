@@ -29,6 +29,10 @@
   font-family: Light;
   src: url("../../public/font/montserrat/Montserrat-Light.otf");
 }
+@font-face {
+  font-family: ALB;
+  src: url("../../public/font/fz/A_ALBIONICEXP.TTF");
+}
 
 body, p, h1, h2, h3, h4, h5, h6, ul, ol, dl, li, dt, dd {
   /* 默认有边距，都要清除 */
