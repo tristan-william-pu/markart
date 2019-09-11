@@ -8,12 +8,12 @@
 <template>
     <div class="login">
         <div class="warp clearfix">
-            <p class="lefftit">
+            <p class="lefftit pc">
                 {{$t('login.welcome')}}<br/>
                 {{$t('login.world')}}
             </p>
             <div class="loginBox">
-                <div class="header clearfix">
+                <div class="headertit clearfix">
                     <p>{{$t('login.account')}}</p>
                     <p>×</p>
                 </div>
@@ -52,7 +52,7 @@
     }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .login{
     width: 100%;
     height: 100vh;
@@ -79,11 +79,11 @@
         border-radius: 5px;
         background: #fff;
         top: 150px;
-        right: 0px;
+        right: 3%;
         box-sizing: border-box;
         padding: 30px;
         padding-bottom: 40px;
-        .header{
+        .headertit{
             margin-bottom: 30px;
             p{margin: 0 0 10px;}
             & p:first-child{
@@ -109,7 +109,7 @@
             padding-left: 20px;
         }
         input{
-            width: 80%;
+            width: 70%;
             float: left;
             background: none;
             border: none;

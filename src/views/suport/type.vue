@@ -1,11 +1,12 @@
 <template>
   <div  class="payment clearfix">
+      <table/>
       <div class="tit warp emergingType">支付方式</div>
       <div class="art warp emergingTypeCont">
         作为老牌外汇及差价合约经纪商，CPT Markets 多年来一直为交易者提供多途径的出入金方式，使您的交易过程更加的高效便捷。您可以根据自身需求，自由的选择交易支付方式。
       </div>
       <!-- 轮播 -->
-       <div class="swiper-container warp slider">
+       <div class="swiper-container1 warp slider">
         <div class="swiper-wrapper ">
           <div v-for='(el,index) in banner1' :key="index" class="swiper-slide ">
             <div class="divImg">
@@ -13,15 +14,18 @@
             </div>
             <p class="bankTit">{{el.tit}}</p>
             <p class="bankCOnt">{{el.cont}}</p>
-            <div class="checkBtn">
-              <button>&lt;-</button>
-              <button>查看</button>
-              <button>-&gt;</button>
-            </div>
+            
           </div>
         </div>
+        <div class="checkBtn ">
+          <button class="swiper-button-prev1">上一页</button>
+          <button>查看</button>
+          <button class="swiper-button-next1">下一页</button>
+        </div>
+         
       </div>
-       <div class="swiper-container warp slider">
+      
+       <div class="swiper-container2 warp slider">
         <div class="swiper-wrapper ">
           <div v-for='(el,index) in banner2' :key="index" class="swiper-slide ">
             <div class="divImg">
@@ -29,12 +33,14 @@
             </div>
             <p class="bankTit">{{el.tit}}</p>
             <p class="bankCOnt">{{el.cont}}</p>
-            <div class="checkBtn">
-              <button>&lt;-</button>
-              <button>查看</button>
-              <button>-&gt;</button>
-            </div>
+            
           </div>
+         
+        </div>
+        <div class="checkBtn">
+          <button class="swiper-button-prev2">上一页</button>
+          <button>查看</button>
+          <button class="swiper-button-next2">下一页</button>
         </div>
       </div>
   </div>
@@ -59,10 +65,23 @@ export default {
     }
   },
   mounted(){
-      new Swiper('.swiper-container', {
+      let mySwiper1 = new Swiper('.swiper-container1', {
         loop: true, // 循环模式选项
-        autoplay:true,
-        speed:100,
+        navigation:{
+          nextEl : '.swiper-button-next1',
+          prevEl: '.swiper-button-prev1',
+        },
+        
+        autoplay:false,
+      })
+      let mySwiper2 = new Swiper('.swiper-container2', {
+        loop: true, // 循环模式选项
+        navigation:{
+          nextEl : '.swiper-button-next2',
+          prevEl: '.swiper-button-prev2',
+        },
+        
+        autoplay:false,
       })
   },
 
@@ -123,11 +142,14 @@ export default {
         margin: 0 auto;
       }
       .checkBtn{
+        margin-top:20px;
         button{
-          font-size: 1.31em;
-          position: relative;
+          font-size: 18px;
+          width:80px;
+          height:40px;
+          // position: relative;
           display: inline-block;
-          overflow: hidden;
+          // overflow: hidden;
           margin: 0 25px;
           padding: 0;
           cursor: pointer;
@@ -160,4 +182,17 @@ export default {
   animation: slide-up 1s cubic-bezier(0.215, 0.61, 0.355, 1) .5s;
   animation-fill-mode: forwards;
 }
+
+.checkBtn{
+  button.swiper-button-prev{
+    position: inherit
+  }
+  button.swiper-button-next{
+    position: inherit
+  }
+} 
+.swiper-container1,.swiper-container2{
+  overflow: hidden;
+}
+
 </style>

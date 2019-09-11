@@ -1,6 +1,5 @@
 const contents = {
     market:{
-        cn:{
             name:"外汇市场：当代发展最快的金融市场",
             content:[
                 "一、外汇市场与期货及股票市场的比较",
@@ -50,12 +49,17 @@ const contents = {
                 "交易型开放式指数基金",
             ],
         },
-        en:{
+}
 
-        }
-    },
+const contentEn = {
+    market:{
+        name:"abdfghjkl",
+        content:[
+            "dfghjkl",
+        ]
+    }
 }
 
 export {
-    contents,
+    contents,contentEn
 }

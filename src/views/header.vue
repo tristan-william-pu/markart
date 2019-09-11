@@ -25,7 +25,7 @@
                   v-for="(item, key) in languageList.names"
                   :key="key"
                   @click.stop="changeLocal(languageList.local[key])">
-                  <img :src="languageList.icons[key]" alt="">
+                  <img :src="languageList.icons[key]" alt/>
                   {{item}}
                 </span>
               </div>

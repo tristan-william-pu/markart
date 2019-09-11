@@ -574,18 +574,18 @@
           <p class="titles">
             <span style="color:#5b0eb2;">*</span>&nbsp;交易平台
           </p>
-          <select id="selCM" style="opacity: 0;">
+          <select name="mct" style="opacity: 1;" v-model="selectChooese" @change="consoel">
             <option value="mt4" class="mt4">MT4</option>
             <option value="ct" class="ctrader">cTrader</option>
           </select>
           <div class="replay">
-            <p id="hide-sel" class="MTactive">
-              MT4
-              <img src="@/assets/pullla.png" />
+            <p id="hide-sel" class="MTactive" @click="Show" :style="{background: 'url('+bgImg+') no-repeat center'}">
+              {{name}}
+              <span class="sanjiao_down" />
             </p>
-            <ul id="chooseUL" class="MTCT" style>
-              <li id="chooseMT" class="chooseMT">MT4</li>
-              <li id="chooseCT" class="choose">cTrader</li>
+            <ul id="chooseUL" class="MTCT" v-show="selectShow">
+              <li id="chooseMT" class="chooseMT" @click="choose(1)">{{liImg[1].name}}</li>
+              <li id="chooseCT" class="choose" @click="choose(2)">{{liImg[0].name}}</li>
             </ul>
           </div>
 
@@ -599,7 +599,7 @@
           </p>
           <select id="currency_type" name="currency_type">
             <option value="USD">美元</option>
-            <option value="USC" id="Quater" style="display: block;">美分</option>
+            <option value="USC" id="Quater" style="display: block;" v-if="selectChooese == 'mt4'? true :false">美分</option>
           </select>
           <p class="tips"></p>
         </div>
@@ -1004,8 +1004,41 @@ export default {
   data() {
     return {
       active: 0,
-      step: 0
+      step: 0,
+      selectShow:false,
+      selectChooese:'mt4',
+      bgImg:require('@/assets/MT4B.png'),
+      name:'MT4',
+      liImg:[
+        {img:require('@/assets/ctB.png'),name:'cTrader'}, 
+        {img:require('@/assets/MT4B.png'),name:'MT4'}, 
+      ],
     };
+  },
+  methods:{
+    Show(){
+      this.selectShow = !this.selectShow;
+    },
+    choose(index){
+      if( index == 1){
+        this.bgImg = this.liImg[1].img;
+        this.name = 'MT4';
+        this.selectChooese = 'mt4';
+      }else{
+        this.bgImg = this.liImg[0].img;
+        this.name = 'cTrader',
+        this.selectChooese = 'ct';
+      }
+       this.selectShow = false;
+       console.log(this.selectChooese);
+    },
+    consoel(){
+      console.log("abc")
+      console.log(this.selectChooese);
+    }
+  },
+  created(){
+    this.selectChooese = 'mt4'
   },
   activated() {
     this.active = this.$route.params.active || 0;
@@ -1058,7 +1091,6 @@ export default {
   .titleaccout {
     display: flex;
     align-items: center;
-    width: 550px;
     margin: 0 auto;
     .accounttype {
       width: 49%;
@@ -1204,7 +1236,7 @@ export default {
         .replay {
           width: 100%;
           position: absolute;
-          top: 35px;
+          top: 54px;
           left: 0;
           #hide-sel {
             width: 80%;
@@ -1224,23 +1256,31 @@ export default {
             }
           }
           .MTactive {
-            background: #f0f0f0 url(./../../assets/MT4B.png) no-repeat center !important;
+            background-color: #f0f0f0 !important;
+            background: url(./../../assets/MT4B.png) no-repeat center ;
           }
           .MTCT {
             width: 80%;
             border: 1px solid #b4b4b4;
-            height: 82px;
+            height: auto;
             line-height: 40px;
             margin: 0;
-            display: none;
             background: #fff;
             #chooseMT {
               padding-left: 5px;
               background: #f0f0f0 url(./../../assets/MT4B.png) no-repeat center;
+              &:hover{
+                color:#fff;
+                background: #5b0eb2  url(./../../assets/MT4W.png) no-repeat center;
+              }
             }
             #chooseCT {
               padding-left: 5px;
               background: #f0f0f0 url(./../../assets/ctB.png) no-repeat center;
+              &:hover{
+                color:#fff;
+                background: #5b0eb2  url(./../../assets/ctW.png) no-repeat center;
+              }
             }
           }
         }
@@ -1326,5 +1366,19 @@ export default {
       }
     }
   }
+}
+// 三角
+.sanjiao_down{
+    width:0;
+    height:0;
+    overflow:hidden;
+    font-size: 0;     /*是因为, 虽然宽高度为0, 但在IE6下会具有默认的 */
+    line-height: 0;  /* 字体大小和行高, 导致盒子呈现被撑开的长矩形 */
+    border-width:5px;
+    border-style:solid dashed dashed dashed;/*IE6下, 设置余下三条边的border-style为dashed,即可达到透明的效果*/
+    border-color:black transparent transparent transparent;
+    float: right;
+    display: block;
+    margin:15px;
 }
 </style>

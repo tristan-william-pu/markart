@@ -87,9 +87,39 @@
       
     }
 
-
-
-    // --------- 主页 ---------------
+    // ----- 登录 -------
+    .login{
+      .warp{
+        .loginBox {
+          position: absolute;
+          width: 90%;
+          top: 0px;
+          height: 480px;
+          top: 100px;
+          left: 5%;
+        }
+      }
+      .purbtn {
+        width: 100% !important;
+      }
+      
+    }
+    // ----- 登录结束 -------
+    
+    // ----- 注册开始 ------
+    .regist{
+      .accountwarp{
+        width:100% !important;
+        .left{
+          .center{
+            margin-left: 0;
+          }
+        }
+      }
+    }
+    // ----- 注册结束 ------
+    
+    // --------- 主页 ------
     .home{
       .warp{
         .top{
@@ -1357,6 +1387,29 @@
     }
   }
   
+}
+
+@media (max-width:768px){
+  .regist{
+    .accountwarp{
+      .titleaccout{
+        .accounttype{
+          div{
+            span{
+              font-size:22px !important;
+            }
+          }
+        }
+      }
+      .standac{
+        .conTit{
+          div{
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
 }
 
 @import './mediaIphone.scss';

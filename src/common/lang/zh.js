@@ -737,5 +737,4 @@ tradeIndex:{
     media:'',
   },
 
-
 }
