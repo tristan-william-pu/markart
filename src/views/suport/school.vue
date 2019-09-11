@@ -349,12 +349,10 @@ export default {
       color: #fff;
       h6 {
         font-size: 60px;
-        font-family: FZLTZHK;
       }
       p {
-        font-family: LTHK;
         font-size: 20px;
-        width: 195px;
+        width: 260px;
         line-height: 48px;
         background-color: #5b0eb2;
         margin: 38px auto 0;
@@ -377,7 +375,6 @@ export default {
         font-size: 40px;
         color: #000000;
         text-align: center;
-        font-family: LTCHK;
       }
       p.titCon {
         font-size: 14px;
@@ -397,7 +394,7 @@ export default {
             border-radius: 10px;
             color: #222222;
             font-size: 28px;
-            font-family: FZLTZHK;
+            font-weight: 800;
             &:hover {
               background-color: #5b0eb2;
               color: #fff;
@@ -435,11 +432,9 @@ export default {
     .center {
       width: 63%;
       margin: 5% auto 5%;
-      font-family: LTHK;
       h3 {
         font-size: 40px;
         color: #000000;
-        font-family: LTCHK;
         text-align: center;
       }
       p.titCon {
@@ -524,17 +519,16 @@ export default {
     .center {
       width: 63%;
       margin: 0 auto;
-      font-family: LTHK;
       h3 {
         font-size: 40px;
         color: #000000;
-        font-family: LTCHK;
         text-align: center;
       }
       p.titCon {
         font-size: 14px;
         color: #606060;
         margin: 21px auto 47px;
+        font-family: Light;
       }
       p.center{
         text-align: center;
@@ -555,11 +549,13 @@ export default {
             font-size: 28px;
             margin-bottom: 39px;
             color: #000;
+            font-family: Light;
           }
           p.con {
             font-size: 18px;
             line-height: 32px;
             color: #707070;
+            font-family: Light;
           }
         }
         li.liImg {
@@ -587,20 +583,24 @@ export default {
           border-top: 1px solid #ececec;
           p.schooltit {
             color: #000000;
-            font-size: 22px;
+            font-size: 18px;
             padding: 19px 0;
+            font-family: Light;
           }
           p.titCon {
             color: #8c8c8c;
-            font-size: 18px;
+            font-size: 16px;
             margin-bottom: 26px;
+            font-family: Light;
           }
           p.schcontent {
             color: #000000;
             font-size: 14px;
+            font-family: Light;
             span.fr {
               margin-right: 15%;
               display: none;
+              font-family: Light;
             }
           }
           &:hover {
@@ -622,11 +622,12 @@ export default {
         li {
           float: left;
           &:last-child {
-            width: 45%;
-            margin: 9px 0 0 109px;
+            width: 56%;
+            margin: 9px 0 0 5%;
           }
           p.schooltit {
             font-size: 28px;
+            font-family: Light;
           }
           p.line {
             width: 112px;
@@ -659,7 +660,7 @@ export default {
           }
           p.top {
             font-size: 20px;
-            padding: 32px 0 0 23px;
+            padding: 20px 0 0 23px;
           }
           p.cen {
             width: 90%;
@@ -670,10 +671,7 @@ export default {
           p.bot {
             margin-left: 80%;
           }
-          &:hover {
-            background: url(../../../public/images/sch/know.png) no-repeat;
-            background-size: 100%;
-          }
+         
         }
         li.one {
           background: url(../../../public/images/sch/kno1.png) no-repeat;
@@ -701,6 +699,10 @@ export default {
           background: url(../../../public/images/sch/kno5.png) no-repeat;
           background-size: 100%;
         }
+        li:hover {
+            background: url(../../../public/images/sch/know.png) no-repeat;
+            background-size: 100%;
+          }
       }
     } 
   } 
@@ -713,7 +715,6 @@ export default {
       > div.schooltit{
         .eng {
           width: 20%;
-          font-family: LTCHK;
           font-size: 28px;
           color: #000;
           font-style: italic;
@@ -721,7 +722,6 @@ export default {
         }
         .chi {
           width: 70%;
-          font-family: LTCHK;
           font-size: 40px;
           color: #000;
           padding-bottom: 70px;
@@ -744,6 +744,7 @@ export default {
           font-weight: 900;
           a {
             color: #c9c9c9;
+            font-size: 16px;
           }
           &:first-child {
             color: #000;
@@ -768,11 +769,14 @@ export default {
           font-size: 17px;
           line-height: 48px;
           color: #333333;
-          font-family: LTHK;
           margin-left: 5%;
+        }
+        p{
+          font-size: 16px;
         }
         p.botDian {
           letter-spacing: 21px;
+          font-weight: bold;
         }
       }
     }
@@ -785,7 +789,6 @@ export default {
       > h3 {
         font-size: 40px;
         color: #000000;
-        font-family: LTCHK;
         text-align: center;
       }
       > p.titCon {
@@ -815,11 +818,9 @@ export default {
           font-size: 12px;
           margin: 7px auto 13px;
           color: #fffefc;
-          font-family: LTHK;
         }
         .cenWord{
           p {
-            font-family: LTHK;
             font-size: 49px;
             color: #fffefc;
             margin-bottom: 8px;
@@ -831,7 +832,6 @@ export default {
         } 
         > p.bot {
           font-size: 45px;
-          font-family: LTHK;
           color: #fffefc;
           span {
             font-size: 49px;
@@ -866,7 +866,6 @@ export default {
       > p.name {
         font-size: 70px;
         color: #8b8b8b;
-        font-family: LTHK;
         margin-top: 49px;
       }
       > p.line {
@@ -893,7 +892,6 @@ export default {
         font-size: 14px;
         color: #606060;
         line-height: 28px;
-        font-family: LTHK;
       }
     }
   }
