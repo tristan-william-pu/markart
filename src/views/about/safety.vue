@@ -82,34 +82,6 @@
 export default {
   data() {
     return {
-      showMap: true,
-      mapList: [
-        {
-          name: "CPT Markets UK",
-          title: "CPT Markets UK ",
-          contents: ["（Citypoint Trading Ltd的交易名称）", "伦敦"]
-        },
-        {
-          name: "CPT Markets 伯利兹",
-          title: "CPT Markets ",
-          contents: ["伯利兹"]
-        },
-        {
-          name: "CPT Markets 马来西亚",
-          title: "CPT Markets",
-          contents: ["马来西亚"]
-        },
-        {
-          name: "CPT Markets 迪拜",
-          title: "CPT Markets",
-          contents: ["迪拜"]
-        },
-        {
-          name: "CPT Markets 台湾",
-          title: "CPT Markets",
-          contents: ["台湾"]
-        }
-      ],
       active: 0
     };
   },
@@ -118,6 +90,11 @@ export default {
       this.showMap = !this.showMap;
     },
     reset() {}
+  },
+  created(){
+    // this.$util.local(local);
+    // this.$i18n.locale = local;
+    // console.log(this.$i18n.locale);
   },
   mounted() {
     window.vm = this;

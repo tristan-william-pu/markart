@@ -146,7 +146,6 @@ module.exports = {
     advance:'With advanced online trading system that encompasses professional Forex and CFD markets, CPT Markets is committed to help customers to get the accurate quotations quickly through solid risk management system. CPT Markets works with various institutions,professional clients and experienced retail customers to create tailored solutions that enable them to build and manage their business in a positive and sound manner. Many years of experience in trading and compliance, gained brokerage business knowledge from both traders and sellers and keen market insight are the most important feature of our CPT Markets team members, which enable us to understand our customer needs and the ever-changing market challenges better.',
     industry:'Combined with experienced industry elites and high-level IT service team, CPT Markets aims to provide a safe, stable and transparent trading platform for traders and continue to achieve innovative breakthroughs.',
     chooese:'Trade with',
-    CPT:'CPTMarkets',
     earth:'Trade With A International, Fair And Customer-oriented Broker',
     Customer:'24/5 Customer Support',
     new:'Continuous innovation',
