@@ -5,54 +5,57 @@
  * @LastEditTime: 2019-09-07 09:57:14
  * @Description: 支持  文章预览
  -->
-<template>
+<template> 
   <div class="introduction">
-    <div class="name">
-      <h1>
-        {{current.name[locale]}}
-      </h1>
-    </div>
-    <div class="content">
-      <ul>
-        <li
-          v-for="(item, key) in current.contents"
-          :key="key">
-          <template v-if="item[locale].icon">
-            <div>
-              <div class="icon">
-                <!--图标-->
-                <img :src="item[locale].icon" alt="">
+    <div class="mainCont">
+      <div class="name">
+        <h1>
+          {{current.name[locale]}}
+        </h1>
+      </div>
+      <div class="content">
+        <ul>
+          <li
+            v-for="(item, key) in current.contents"
+            :key="key">
+            <template v-if="item[locale].icon">
+              <div>
+                <div class="icon">
+                  <!--图标-->
+                  <img :src="item[locale].icon" alt="">
+                </div>
+                <div class="text">
+                  <h3>
+                    {{item[locale].title}}
+                  </h3>
+                  <p>
+                    {{item[locale].content}}
+                  </p>
+                </div>
               </div>
-              <div class="text">
-                <h3>
-                  {{item[locale].title}}
-                </h3>
-                <p>
-                  {{item[locale].content}}
-                </p>
-              </div>
-            </div>
-          </template>
-          <template v-else>
-            <h2>
-              {{item[locale].title}}
-            </h2>
-            <p v-html="item[locale].content"></p>
-          </template>
-        </li>
-      </ul>
+            </template>
+            <template v-else>
+              <h2>
+                {{item[locale].title}}
+              </h2>
+              <p v-html="item[locale].content"></p>
+            </template>
+          </li>
+        </ul>
+      </div>
+      <div class="page" v-if="current.page">
+        <ul>
+          <li
+            :class="{active: index == pageidx}"
+            v-for="index in Math.ceil(data[index].contents.length / page) "
+            :key="index"
+            @click="pageidx = index">
+            {{index}}
+          </li>
+        </ul>
+      </div>
     </div>
-    <div class="page" v-if="current.page">
-      <ul>
-        <li
-          :class="{active: index == pageidx}"
-          v-for="index in Math.ceil(data[index].contents.length / page) "
-          :key="index"
-          @click="pageidx = index">
-          {{index}}
-        </li>
-      </ul>
-    </div>
+    
   </div>
 </template>
 <script>
@@ -91,49 +94,65 @@ export default {
 <style lang="scss">
   @import '@/styles/mixin.scss';
   .introduction {
-    .name {
+    .mainCont{
+      width:80%;
+      margin:0 auto;
+      margin-bottom: 60px;  
+      >*{
+        margin: 54px 29px 0 29px !important;
+      }
+      .name {
       margin-top: 80px;
       h1 {
-        text-align: center;
-        font-size: 36px;
+          text-align: center;
+          font-size: 36px;
+        }
       }
-    }
-    .content {
-      margin: 0 auto;
-      max-width: 1200px;
-      width: 100%;
-      ul {
-        li {
-          h2 {
-            margin-top: 50px;
-            font-size: 22px;
-            line-height: 65px;
-          }
-          p {
-            font-size: 17px;
-            margin-top: 16px;  
-            color: #676767;          
-          }
-          >div {
-            margin: 30px 0 60px 0;
-            .icon {
-              width: 160px;
-              display: inline-block;
+       .content {
+        margin: 0 auto;
+        max-width: 1200px;
+        width: 100%;
+        ul {
+          li {
+            h2 {
+              margin-top: 50px;
+              font-size: 22px;
+              line-height: 65px;
             }
-            .text {
-              display: inline-block;
-              width: calc(100% - 163px);
-              h3 {
-                font-size: 18px;
+            p {
+              font-size: 17px;
+              margin-top: 16px;  
+              color: #676767;  
+              line-height: 35px; 
+              h3{
+                font-size: 22px;
+                line-height: 65px;
+                color: #000000;
+              }       
+            }
+            >div {
+              margin: 30px 0 60px 0;
+              .icon {
+                width: 160px;
+                display: inline-block;
               }
-              p {
-                font-size: 18px;
+              .text {
+                display: inline-block;
+                width: calc(100% - 163px);
+                h3 {
+                  font-size: 18px;
+                }
+                p {
+                  font-size: 18px;
+                }
               }
             }
           }
         }
       }
     }
+    
+   
     .page {
       margin: 0 auto;
       max-width: 1200px;
@@ -156,4 +175,5 @@ export default {
       }
     }
   }
+  
 </style>
