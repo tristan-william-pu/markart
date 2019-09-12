@@ -694,6 +694,7 @@ export default {};
           > ul {
             width: 23%;
             margin: 0 1%;
+            float:left;
             li {
               font-size: 18px;
               color: #231815;

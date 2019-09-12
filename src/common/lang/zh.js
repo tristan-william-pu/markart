@@ -92,6 +92,20 @@ module.exports = {
     invit:'邀请客户到 CPT Markets.',
     makeMoney:'他们交易 – 您赚取佣金!',
     jionUs:'加入我们',
+    tools:'一系列免费的外汇学习工具。',
+    videoCenter:'视频中心',
+    knowledge:'知识库',
+    webninar:'网络讲座',
+    education:'3大教育板块',
+    tradeCollege:'交易学院',
+    improve:'利用我们的全套免费教育工具和资源，提升您的交易技能。',
+    seemore:'查看更多',
+    steps:'仅需4步即可在CPT Markets交易',
+    register:'注册',
+    verify:'认证',
+    deposit:'入金',
+    tradeStep:'交易',
+    accept:'我们接受',
   },
   //关于我们
   about:{
@@ -736,6 +750,5 @@ tradeIndex:{
     invest:'拥有丰富的实战操作经验，担任多家网络，杂志，媒体特约撰稿人，包括工商银行、建设银行、上海银行等多家银行客席讲师，擅长短线+波段的中短期操作及套利稳健的投资',
     media:'',
   },
-
 
 }

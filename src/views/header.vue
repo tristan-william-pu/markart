@@ -25,7 +25,7 @@
                   v-for="(item, key) in languageList.names"
                   :key="key"
                   @click.stop="changeLocal(languageList.local[key])">
-                  <img :src="languageList.icons[key]" alt="">
+                  <img :src="languageList.icons[key]" alt/>
                   {{item}}
                 </span>
               </div>
@@ -58,7 +58,7 @@
               v-for="(item,index) in tabsList.menu"
               :key="index"
               :class="{active:index == n || showSub}"
-              @click.stop="showSub=false,$router.push(tabsList.routers[index])"
+
             >
             <span>{{item.title}}</span>
             <ul 
@@ -67,9 +67,13 @@
               <li 
                 v-for="(item, key) in tabsList.menu[n].content" :key="key" class="navbarRoute"
                 @click.stop="showSub=false,$router.push(tabsList.subRouters[n][key])"
-              >{{list}}</li>
+              >{{list}}
+              </li>
+             
             </ul>
+
             </li>
+             <li  class="navbarRoute"><router-link to="/login" style="color:black">登录</router-link></li>
           </ul>
         </div>
       </div>
@@ -94,6 +98,7 @@
 </template>
 
 <script>
+import '../store'
 export default {
   name: "Header",
   data() {
@@ -111,7 +116,6 @@ export default {
       ],
       showLanguageList: false,
       tabPosition: "top",
-      // tabsList:['首页','关于我们','交易产品','交易平台','客户支持','合作伙伴','联系我们'],
       classNum: 0,
       classItem: -1,
       curId: -1,
@@ -228,7 +232,6 @@ export default {
       this.$i18n.locale = this.lang; // 关键语句
       this.bool = false;
       this.imgSrc = require("../assets/country.png");
-      this.classNum = 1;
     },
     tabs(index) {
       this.curId = index;
@@ -236,6 +239,21 @@ export default {
     changeLocal(local) {
       this.$util.local(local);
       this.$i18n.locale = local;
+      // console.log(this.$i18n.locale)
+      if(this.$i18n.locale == "cn" || this.$i18n.locale == "tc") {
+        this.classNum = 0;
+        this.imgSrc = require("../assets/chinese.png");
+        if(this.$i18n.locale == "tc"){
+          this.$store.commit('storageLang','tc')
+        }else{
+          this.$store.commit('storageLang','cn')
+        }
+      }else{
+        this.classNum = 1;
+        this.imgSrc = require("../assets/country.png");
+        this.$store.commit('storageLang','en')
+      }
+      console.log(this.$store.state.language);
     },
     navMobile(){
       this.navMobileBool = !this.navMobileBool;
