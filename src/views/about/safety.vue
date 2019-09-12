@@ -11,7 +11,7 @@
       <div class="img">
         <div class="warp">
           <img class="box emergingleft" src="@/assets/bg1_03.png" alt />
-          <p class="bannerfont emergingp">{{$t('safety.funds')}}</p>
+          <p class="bannerfont emergingp" :class="num == 1?'enmargin':''">{{$t('safety.funds')}}</p>
         </div>
       </div>
     </div>
@@ -78,11 +78,12 @@
 </template>
 
 <script>
-
+import '@/store'
 export default {
   data() {
     return {
-      active: 0
+      active: 0,
+      num:0,
     };
   },
   methods: {
@@ -92,12 +93,16 @@ export default {
     reset() {}
   },
   created(){
-    // this.$util.local(local);
-    // this.$i18n.locale = local;
-    // console.log(this.$i18n.locale);
+    
   },
   mounted() {
     window.vm = this;
+    console.log(this.$store.state.language);
+    if(this.$store.state.language == "cn" || this.$store.state.language == "tc"){
+      this.num = 0
+    }else{
+      this.num =1;
+    }
   }
 };
 </script>
@@ -300,6 +305,9 @@ export default {
   top: 127px;
   text-align: right;
   opacity: 0;
+}
+.cn .safty .banner .enmargin{
+  top:0 !important;
 }
 .cn.safty .banner p {
   top: 167px;
