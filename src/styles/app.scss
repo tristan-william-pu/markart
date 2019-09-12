@@ -627,21 +627,7 @@
         width: 90%;
         margin-left: 5%;
       }
-      .introduction {
-        width: 90%;
-        margin: 5%;
-        .center {
-          width: 100%;
-          .intCon {
-            .fl {
-              width: 50%;
-            }
-            .fr {
-              width: 50%;
-            }
-          }
-        }
-      }
+      
       .functi {
         .top {
           width: 100%;
@@ -1829,7 +1815,25 @@
       width: 13rem;
     }
   }
-    // ------ 金融学院结束------
+
+  //introduction
+  .introduction{
+    .mainCont{
+      width: 80%;
+      >*{
+        margin:0 !important;
+      }
+      .name{
+        h1{
+          margin-top:30px ;
+        }
+      }
+      
+       
+    } 
+  } 
+
+  // ------ 金融学院结束------
     // ------ 外汇交易术语A-Z开始------
   .azacontent{
     padding:0 15px;
@@ -1897,26 +1901,65 @@
 }
 
 @media (max-width:768px){
-  .regist{
-    .accountwarp{
-      .titleaccout{
-        .accounttype{
-          div{
-            span{
-              font-size:22px !important;
+  .app{
+    .regist{
+      .accountwarp{
+        .titleaccout{
+          .accounttype{
+            div{
+              span{
+                font-size:22px !important;
+              }
+            }
+          }
+        }
+        .standac{
+          .conTit{
+            div{
+              font-size: 16px;
             }
           }
         }
       }
-      .standac{
-        .conTit{
-          div{
+    }
+  
+    //introduction
+    .introduction{
+      .mainCont{
+        width: 100%;
+        >*{
+          margin:0 !important;
+        }
+        .name{
+          h1{
+            margin-top:30px ;
             font-size: 16px;
           }
+          
+          
         }
-      }
-    }
+        .content{
+          ul{
+            margin: 24px 12.8px 0 12.8px !important;
+            li{
+              h2{
+                font-size: 14.4px;
+                line-height: 28.8px;
+                font-weight: 900;
+              }
+              p{
+                font-size: 7.52px;
+                line-height: 19.2px;
+                color: #676767;
+              }
+            }
+          }
+        }
+         
+      } 
+    } 
   }
+  
 }
 
 @import './mediaIphone.scss';
