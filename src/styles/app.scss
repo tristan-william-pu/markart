@@ -58,7 +58,11 @@
       }      
       
     }
-
+    @media (max-width:320px){
+      header .warp .mbBtn{
+        margin-right:10px;
+      }
+    }
     // ----------- 尾部 --------------
     .foot{
       footer{
@@ -145,7 +149,6 @@
             width: auto;
             padding-right: 20px;
             font-size: 16px;
-            margin-left: 5%;
           }
         }
         .btnbox{
@@ -156,11 +159,16 @@
       .gupao{
         padding:0;
       }
+      .particles-button{
+        margin-top:20px;
+      }
       .trading{
         margin-top: 80px;
-        height:700px;
         .headertitle{
           text-align: center !important;
+        }
+        .tipstit{
+          font-size: 16px;
         }
         .imgboxs {
           height: 280px;
@@ -243,11 +251,11 @@
                   display: block;
                   color: #5b0eb2;
                 }
-                h6{
-                  font-size: 2rem;
-                  color: #000;
-                  margin: 3rem 0 1rem;
-                }
+              }
+              h6{
+                font-size: 2rem;
+                color: #000;
+                margin: 3rem 0 1rem;
               }
             } 
           } 

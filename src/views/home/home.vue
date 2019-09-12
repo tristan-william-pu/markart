@@ -52,7 +52,7 @@
         </div>
         <div class="numcount">
           <span class="num">
-            <span class="binum" style="font-size: 70px;vertical-align: middle;">∞</span>:1
+            <span class="binum" style="font-size: 70px;vertical-align: middle;">∞&nbsp;</span>:&nbsp;1
           </span>
           <span class="tips">{{$t('home.leverage')}}</span>
         </div>
@@ -148,12 +148,12 @@
             <img src="images/sch/indTopLe.png" />
           </li>
           <li class="schCen">
-            <span>一系列免费的外汇学习工具。</span>
+            <span>{{$t('home.tools')}}</span>
             <p class="linTop"></p>
-            <p class="con">视频中心</p>
-            <p class="con">知识库</p>
-            <p class="con">网络讲座</p>
-            <p class="three">3大教育板块</p>
+            <p class="con">{{$t('home.videoCenter')}}</p>
+            <p class="con">{{$t('home.knowledge')}}</p>
+            <p class="con">{{$t('home.webninar')}}</p>
+            <p class="three">{{$t('home.education')}}</p>
             <p class="linBot"></p>
           </li>
           <li class="rigLi">
@@ -161,7 +161,7 @@
               TRADING
               <span>COLLEGE</span>
             </p>
-            <h6>交易学院</h6>
+            <h6>{{$t('home.tradeCollege')}}</h6>
             <img src="images/sch/indTopRig.png" class="indSchImg" />
           </li>
         </ul>
@@ -170,11 +170,11 @@
 
     <div class="schBot">
         <div class="center clearfix">
-            <p class="fl">利用我们的全套免费教育工具和资源，提升您的交易技能。</p>
+            <p class="fl">{{$t('home.improve')}}</p>
             <div class="fl">
                 <a href="index.php?m=P&a=school">
                     <p>+</p>
-                    <span>查看更多</span>
+                    <span>{{$t('home.seemore')}}</span>
                 </a>
             </div>
         </div>
@@ -183,7 +183,7 @@
     <!-- 注册流程 -->
     <div class="step warp clearfix emerging">
       <div class="top clearfix">
-        <div class="headertitle">仅需4步即可在CPT Markets交易</div>
+        <div class="headertitle">{{$t('home.steps')}}</div>
       </div>
       <div class="stepbox">
         <ul>
@@ -191,7 +191,7 @@
             <div class="radio">
               <img src="@/assets/setp1.png" alt />
             </div>
-            <p>1. 注册</p>
+            <p>1. {{$t('home.register')}}</p>
           </li>
           <li class="pc">
             <img class="stepicon" src="@/assets/step5.png" alt />
@@ -200,7 +200,7 @@
             <div class="radio">
               <img src="@/assets/setp2.png" alt />
             </div>
-            <p>2. 认证</p>
+            <p>2. {{$t('home.verify')}}</p>
           </li>
           <li class="pc">
             <img class="stepicon" src="@/assets/step5.png" alt />
@@ -209,7 +209,7 @@
             <div class="radio">
               <img src="@/assets/setp3.png" alt />
             </div>
-            <p>3. 入金</p>
+            <p>3. {{$t('home.deposit')}}</p>
           </li>
           <li class="pc">
             <img class="stepicon" src="@/assets/step5.png" alt />
@@ -218,7 +218,7 @@
             <div class="radio">
               <img src="@/assets/setp4.png" alt />
             </div>
-            <p>4. 交易</p>
+            <p>4. {{$t('home.tradeStep')}}</p>
           </li>
         </ul>
       </div>
@@ -226,7 +226,7 @@
 
     <div class="payway warp clearfix emerging">
       <div class="top clearfix">
-        <div class="headertitle">我们接受</div>
+        <div class="headertitle">{{$t('home.accept')}}</div>
       </div>
       <div class="paywaybox">
         <ul>
@@ -506,6 +506,7 @@ export default {
   position: relative;
   overflow: hidden;
   margin-right: 20px;
+  margin-top:10px;
 }
 .cn .btnbox > .btn {
   border-radius: 20px;
@@ -719,7 +720,7 @@ export default {
 }
 .payway {
   margin-top: 100px;
-  margin-bottom: 20px;
+  margin-bottom: 60px;
 }
 .payway .headertitle {
   width: 100%;
@@ -739,7 +740,7 @@ export default {
   display: inline-block;
 }
 .indSch .center{
-    width: 84%;
+    width: 1200px;
     margin:130px auto 0;
   }
   .indSch .center ul li{
@@ -811,10 +812,10 @@ export default {
     color: #fff;
     line-height: 40px;
     margin-top:4%;
-    width: 49%;
+    width: 61%;
   }
   .schBot .center div.fl{
-    margin-left: 30%;
+    margin-left: 17%;
   }
   .schBot .center div.fl p{
     width: 30px;
@@ -822,7 +823,7 @@ export default {
     line-height: 30px;
     color: #fff;
     border:2px solid #fff;
-    margin:50% 0 6%;
+    margin:35% 0 6%;
     text-align: center;
     font-weight: 900;
   }
