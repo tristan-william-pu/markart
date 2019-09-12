@@ -2,7 +2,7 @@
  * @Autor: Diskfan
  * @Date: 2019-09-09 15:27:52
  * @LastEditors: Do not edit
- * @LastEditTime: 2019-09-09 15:27:52
+ * @LastEditTime: 2019-09-10 10:17:41
  * @Description: 
  */
 import Vue from 'vue'
@@ -29,7 +29,7 @@ const messages = {
 }
 
 const i18n = new VueI18n({
-  locale: 'cn',
+  locale: Util.local(),
   fallbackLocale: 'en',
   messages,
   silentTranslationWarn: true

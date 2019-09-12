@@ -2,7 +2,7 @@
  * @Autor: Diskfan
  * @Date: 2019-09-06 10:07:02
  * @LastEditors: Do not edit
- * @LastEditTime: 2019-09-07 18:24:14
+ * @LastEditTime: 2019-09-12 14:15:55
  * @Description: 交易产品
  -->
  
@@ -179,6 +179,9 @@ export default {
   },
   activated() {
     this.setShow();
+  },
+  deactivated() {
+    window.onscroll = null;
   }
 };
 </script>

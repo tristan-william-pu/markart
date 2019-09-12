@@ -2,7 +2,7 @@
  * @Autor: Diskfan
  * @Date: 2019-09-06 10:07:02
  * @LastEditors: Do not edit
- * @LastEditTime: 2019-09-09 16:59:33
+ * @LastEditTime: 2019-09-10 10:17:15
  * @Description: 工具函数
  */
 function createXhr() {
@@ -15,7 +15,7 @@ function createXhr() {
 const local = ( lg ) => {
   const key = 'market_local';
   if ( lg ) localStorage.setItem( key, lg );
-  else lg = localStorage.getItem( key ) || /zh/i.test( window.navigator.language ) ? 'cn' : 'en';
+  else lg = localStorage.getItem( key ) || (/zh/i.test( window.navigator.language ) ? 'cn' : 'en');
   return lg;
 }
 
