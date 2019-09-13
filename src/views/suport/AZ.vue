@@ -11,12 +11,14 @@
 				<ul class="clearfix changecolor">
                     <li v-for="(word,index) in words" :key="index" @click="wordsCHange(index)" :class="index == num ?'wordActive':''">{{word}}</li>
 				</ul>
-				<div class="con clearfix" v-for="(content,index) in contents" :key="index" v-show=" num == index ">
-					<p class="fl setfontsize">{{content.big}}</p>
-					<div class="fr setfontsizes">
-						<p v-for="(sentence,index) in content.long" :key="index">{{sentence}}</p>
+				<template v-for="(content,index) in contents">
+					<div class="con clearfix" :key="index" v-if="num == index ">
+						<p class="fl setfontsize">{{content.big}}</p>
+						<div class="fr setfontsizes">
+							<p v-for="(sentence,index) in content[$i18n.locale + 'long']" :key="index">{{sentence}}</p>
+						</div>
 					</div>
-				</div>
+				</template>
 			</div>
 		</div>
     </div>
@@ -31,7 +33,7 @@ import {contents} from './js/contents'
                 contents:contents,
                 num:0,
             }
-        },
+		},
         mounted(){
 			console.log(this.$route.params.freezeMon)
 			var father = this.$route.params.freezeMon;
