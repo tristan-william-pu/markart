@@ -218,6 +218,9 @@ export default {
       };
     }
   },
+  mounted(){
+    this.langChange()
+  },
   methods: {
     tap(i) {
       this.showSub = i;
@@ -236,10 +239,7 @@ export default {
     tabs(index) {
       this.curId = index;
     },
-    changeLocal(local) {
-      this.$util.local(local);
-      this.$i18n.locale = local;
-      // console.log(this.$i18n.locale)
+    langChange(){
       if(this.$i18n.locale == "cn" || this.$i18n.locale == "tc") {
         this.classNum = 0;
         this.imgSrc = require("../assets/chinese.png");
@@ -253,6 +253,12 @@ export default {
         this.imgSrc = require("../assets/country.png");
         this.$store.commit('storageLang','en')
       }
+    },
+    changeLocal(local) {
+      this.$util.local(local);
+      this.$i18n.locale = local;
+      // console.log(this.$i18n.locale)
+      this.langChange()
       console.log(this.$store.state.language);
     },
     navMobile(){

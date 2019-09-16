@@ -449,7 +449,8 @@
         },
         created(){
             // console.log( this.$route.params.num);
-            this.lang = localStorage.getItem( 'market_local' );
+			this.lang = localStorage.getItem( 'market_local' );
+			console.log(this.lang)
             if( this.lang == 'en' ){
                 this.list = contentEn;
             }else{
