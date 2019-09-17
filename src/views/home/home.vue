@@ -23,7 +23,9 @@
       <div class="top clearfix">
         <div class="headertitle clearfix">{{$t('home.why')}}</div>
         <div class="grid pupradio clearfix" id="abouts">
+          <router-link to="/about">
           <button class="particles-button">{{$t('home.readMore')}}</button>
+          </router-link>
         </div>
         <div class="line pc"></div>
       </div>
@@ -71,7 +73,9 @@
       <div class="top clearfix">
         <div class="headertitle">{{$t('home.want')}}</div>
         <div class="grid pupradio" id="abouts">
+          <router-link to="/product">
           <button class="particles-button">{{$t('home.readMore')}}</button>
+          </router-link>
         </div>
         <div class="line pc"></div>
       </div>
@@ -134,7 +138,10 @@
           <!-- <button class="action"><svg class="icon icon--rewind">
                 <use xlink:href="#icon-rewind"></use>
           </svg></button>-->
-          <button class="particles-button">{{$t('home.jionUs')}}</button>
+          <router-link to="/ib">
+              <button class="particles-button">{{$t('home.jionUs')}}</button>
+          </router-link>
+        
         </div>
       </div>
       <!-- <div class="btn">JOIN US</div> -->
@@ -172,10 +179,10 @@
         <div class="center clearfix">
             <p class="fl">{{$t('home.improve')}}</p>
             <div class="fl">
-                <a href="index.php?m=P&a=school">
+                <router-link to="/school">
                     <p>+</p>
                     <span>{{$t('home.seemore')}}</span>
-                </a>
+                </router-link>
             </div>
         </div>
     </div>
