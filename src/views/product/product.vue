@@ -266,7 +266,7 @@ export default {
     overflow: hidden;
     position: relative;
     z-index: 1;
-    background: url("/images/trading.jpg");
+    background: url("../../../public/images/trading.jpg");
     .title {
       width: 100%;
       text-align: center;
