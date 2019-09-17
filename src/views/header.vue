@@ -58,22 +58,21 @@
               v-for="(item,index) in tabsList.menu"
               :key="index"
               :class="{active:index == n || showSub}"
-
+              @click="listID(index)"
             >
-            <span>{{item.title}}</span>
-            <ul 
-              v-if="showSub && tabsList.menu[n].content.filter(e => e).length"
-            >
-              <li 
-                v-for="(item, key) in tabsList.menu[n].content" :key="key" class="navbarRoute"
-                @click.stop="showSub=false,$router.push(tabsList.subRouters[n][key])"
-              >{{list}}
-              </li>
-             
-            </ul>
+              <p>{{item.title}}</p>
+              <ul v-if="index == listNum">
+                <li 
+                v-for="(list,num) in tabsList.menu[index].content" 
+                :key="num" 
+                class="mbLi"
+                @click="navMobileBool=false , $router.push(tabsList.subRouters[index][num])"
+                >
+                {{list}}</li>
+              </ul>
 
             </li>
-             <li  class="navbarRoute"><router-link to="/login" style="color:black">登录</router-link></li>
+             <li  class="navbarRoute" @click="navMobileBool=false"><router-link to="/login" style="color:black" >登录</router-link></li>
           </ul>
         </div>
       </div>
@@ -123,6 +122,7 @@ export default {
       n: -1,
       showSub: 0,
       navMobileBool:false,
+      listNum:0,
     };
   },
   computed: {
@@ -263,6 +263,18 @@ export default {
     },
     navMobile(){
       this.navMobileBool = !this.navMobileBool;
+    },
+    listID(i){
+      this.listNum = i;
+      console.log(this.listNum);
+      if(i == 0){
+        this.$router.push({path:'/'});
+        this.navMobileBool = false;
+      }
+    },
+    mbRouter(index,num){
+      this.navMobileBool = false;
+      this.tabsList.subRouters[index][num];
     },
   }
 };
@@ -542,5 +554,10 @@ p {
     float: left;
     width: 6%;
   }
+}
+.mbLi{
+    cursor: pointer;
+    font-size: 14px;
+    color: #666;
 }
 </style>

@@ -176,7 +176,7 @@
           {{$t('cTrader.offers')}}</p>
         <div class="btn clear">
           <a href="https://ct.cptmarkets.com">
-            <img src="images/XZ1.png" class="fl" />
+            <img src="images/XZ1.png" class="fl" :class="enBool == false ? 'enImg':''" />
             <p class="fl">{{$t('cTrader.webpage')}}</p>
           </a>
         </div>
@@ -188,7 +188,7 @@
       <div class="webBot">
         <div class="con clear">
           <div class="fl">
-            <div>{{$t('cTrader.Features')}}</div>
+            <div :class="enBool == false ? 'enWidth':''">{{$t('cTrader.Features')}}</div>
             <p class="black">{{$t('cTrader.anywhere')}}</p>
             <p class="black">{{$t('cTrader.usefull')}}</p>
             <p class="black">{{$t('cTrader.restriction')}}</p>
@@ -200,7 +200,7 @@
             <p>{{$t('cTrader.analysis')}}</p>
           </div>
           <div class="fr">
-            <div>{{$t('cTrader.good')}}</div>
+            <div :class="enBool == false ? 'enWidth':''">{{$t('cTrader.good')}}</div>
             <p>{{$t('cTrader.interfere')}}</p>
             <p>{{$t('cTrader.save')}}</p>
             <p>{{$t('cTrader.enjoy')}}</p>
@@ -220,7 +220,7 @@
             <p>{{$t('cTrader.suitable')}}</p>
             <div class="btn clear">
               <a href="http://cptmarkets.ctrader.com/ctrader-cptmarkets-setup.exe">
-                <img src="images/XZ.png" />
+                <img :class="enBool == false ?'enImg':''" src="images/XZ.png" />
                 <p>{{$t('cTrader.dowpcVison')}}</p>
               </a>
             </div>
@@ -327,8 +327,16 @@ export default {
       active: 0,
       posStatic: true,
       funActive: 0,
-      getActive: 0
+      getActive: 0,
+      enBool:false,
     };
+  },
+  mounted(){  
+    if( this.$i18n.locale == 'en' ){
+      this.enBool = false;
+    }else{
+      this.enBool = true;
+    }
   },
   methods: {
     scrollTo(select) {
@@ -1038,5 +1046,14 @@ export default {
       }
     }
   }
+}
+.enImg{
+  margin:2% 0px 0 50px !important;
+}
+.enImg{
+  margin:3% 20px 0 31px !important;
+}
+.enWidth{
+  width: 155px !important;
 }
 </style>

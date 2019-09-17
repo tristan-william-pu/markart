@@ -57,29 +57,29 @@
 
     <div class="tradestep">
         <div class="tit">
-            选择 <span class="pupcolor">CPTMarkets</span><br>
-            您就选择了一个遍布全球、公平诚信、以人为本的经纪商
+            {{$t('about.chooese')}} <span class="pupcolor">{{$t('about.CPT')}}</span><br>
+            {{$t('about.earth')}}
         </div>
         <div class="stepbox warp clearfix">
           <ul>
             <li>
               <img src="@/assets/icon05.png" alt="">
-              <p>24/5客服支持</p>
+              <p>{{$t('about.Customer')}}</p>
             </li>
             <span class="arrow pc">></span>
             <li>
                 <img src="@/assets/icon06.png" alt="">
-                <p>不断创新</p>
+                <p>{{$t('about.new')}}</p>
             </li>
             <span class="arrow pc">></span>
             <li>
                 <img src="@/assets/icon07.png" alt="">
-                <p>具有竞争力的点差</p>
+                <p>{{$t('about.competitiveness')}}</p>
               </li>
               <span class="arrow pc">></span>
               <li>
                   <img src="@/assets/icon08.png" alt="">
-                  <p>屡获殊荣</p>
+                  <p>{{$t('about.again')}}</p>
                 </li>
           </ul>
         </div>
@@ -87,10 +87,10 @@
 
        <div class="btnbox aboutuse">
         <div class="btn">
-          <a href="index.php?m=simulationRegister&a=simulationRegister" onclick="ga('send', 'event', 'DR', 'play', 'OPEN');">注册模拟账户</a>
+          <a href="index.php?m=simulationRegister&a=simulationRegister" onclick="ga('send', 'event', 'DR', 'play', 'OPEN');">{{$t('about.simulation')}}</a>
         </div>
         <div class="btn active">
-          <a href="index.php?m=register&a=register" onclick="ga('send', 'event', 'TR', 'play', 'OPEN');">注册真实账户</a> 
+          <a href="index.php?m=register&a=register" onclick="ga('send', 'event', 'TR', 'play', 'OPEN');">{{$t('about.trueth')}}</a> 
         </div>
        
       </div>

@@ -55,9 +55,12 @@
           <span>{{$t('MT4.downloadPC')}}</span>
         </div>
       </a>
-      <div class="imgboxs">
-        <img class="pcpng" src="images/pc.png" alt="">
-        <clound class="pc"/>
+      <div class="imgboxs clearfix" style="">
+        <img class="pcpng clearfix" src="images/pc.png" alt="">
+        <div class="pc floating">
+          <clound style="margin-top:300px;"/> 
+        </div>
+        
       </div>
       
     </div>
@@ -251,20 +254,22 @@ export default {
         float: left;
         @include clearfix();
       }
-      .imgboxs{
+      
+
+    }
+    .imgboxs{
         height: 705px;
         position: relative;
-
-        img{
+        width:100%;
+        >img{
           position: absolute;
           right: -100px;
           width: 1100px;
           top: 0px;
           opacity: 0.8;
         }
+        
       }
-
-    }
     .tipstit {
       font-size: 18px;
       text-align: left;
@@ -586,5 +591,12 @@ export default {
       }
     }
   }
+}
+.floating{
+  position:absolute;
+  top:0;
+  left:0;
+  min-height:336px;
+  min-width:700px;
 }
 </style>

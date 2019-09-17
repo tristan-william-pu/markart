@@ -128,7 +128,7 @@
         <div class="contrast">
           <h4>{{$t('compare.comparison')}}</h4>
           <p>{{$t('compare.difference')}}</p>
-          <div class="tab clearfix pc">
+          <div class="tab clearfix pc" :class="enBool == false ?'enFontSize':''">
             <ul class="firUl">
               <li class="first">{{$t('compare.execution')}}</li>
               <li class="ctLine"></li>
@@ -378,161 +378,161 @@
                 </th>
               </tr>
               <tr>
-                <td>市场执行</td>
+                <td>{{$t('compare.execution')}}</td>
                 <td class="dui">√</td>
                 <td class="dui">√</td>
                 <td class="dui">√</td>
               </tr>
               <tr>
-                <td>网页交易（MACOS兼容）</td>
+                <td>{{$t('compare.web')}}</td>
                 <td class="dui">√</td>
                 <td class="dui">√</td>
                 <td class="dui">√</td>
               </tr>
               <tr>
-                <td>IOS和Android APPS</td>
+                <td>{{$t('compare.and')}}</td>
                 <td class="dui">√</td>
                 <td class="dui">√</td>
                 <td class="dui">√</td>
               </tr>
               <tr>
-                <td>套期保值</td>
+                <td>{{$t('compare.hedging')}}</td>
                 <td class="dui">√</td>
                 <td class="dui">√</td>
                 <td class="dui">√</td>
               </tr>
               <tr>
-                <td>二级市场深度</td>
+                <td>{{$t('compare.secondary')}}</td>
                 <td class="cuo">×</td>
                 <td class="cuo">×</td>
                 <td class="dui">√</td>
               </tr>
               <tr>
-                <td>交易量以手数计算</td>
+                <td>{{$t('compare.volume')}}</td>
                 <td class="dui">√</td>
                 <td class="dui">√</td>
                 <td class="dui">√</td>
               </tr>
               <tr>
-                <td>数量计算单位</td>
+                <td>{{$t('compare.unit')}}</td>
                 <td class="cuo">×</td>
                 <td class="dui">√</td>
                 <td class="dui">√</td>
               </tr>
               <tr>
-                <td>信号交易</td>
+                <td>{{$t('compare.signal')}}</td>
                 <td class="dui">√</td>
                 <td class="dui">√</td>
                 <td class="dui">√</td>
               </tr>
               <tr>
-                <td>自动交易</td>
+                <td>{{$t('compare.automatic')}}</td>
                 <td class="dui">√</td>
                 <td class="dui">√</td>
                 <td class="dui">√</td>
               </tr>
               <tr>
-                <td>完整尺寸跳动点图</td>
+                <td>{{$t('compare.full')}}</td>
                 <td class="cuo">×</td>
                 <td class="cuo">×</td>
                 <td class="dui">√</td>
               </tr>
               <tr>
-                <td>一键交易</td>
+                <td>{{$t('compare.one')}}</td>
                 <td class="dui">√</td>
                 <td class="dui">√</td>
                 <td class="dui">√</td>
               </tr>
               <tr>
-                <td>自动创建和共享图表截图</td>
+                <td>{{$t('compare.creat')}}</td>
                 <td class="cuo">×</td>
                 <td class="dui">√</td>
                 <td class="dui">√</td>
               </tr>
               <tr>
-                <td>一键反向交易</td>
+                <td>{{$t('compare.reverse')}}</td>
                 <td class="cuo">×</td>
                 <td class="cuo">×</td>
                 <td class="dui">√</td>
               </tr>
               <tr>
-                <td>一键建立双倍头寸</td>
+                <td>{{$t('compare.double')}}</td>
                 <td class="cuo">×</td>
                 <td class="cuo">×</td>
                 <td class="dui">√</td>
               </tr>
               <tr>
-                <td>加仓</td>
+                <td>{{$t('compare.add')}}</td>
                 <td class="cuo">×</td>
                 <td class="cuo">×</td>
                 <td class="dui">√</td>
               </tr>
               <tr>
-                <td>一键平掉所有仓位</td>
+                <td>{{$t('compare.close')}}</td>
                 <td class="cuo">×</td>
                 <td class="cuo">×</td>
                 <td class="dui">√</td>
               </tr>
               <tr>
-                <td>时间表格</td>
-                <td>9个时间表格</td>
-                <td>21个时间表格</td>
-                <td>26个时间表格</td>
+                <td>{{$t('compare.timet')}}</td>
+                <td>{{$t('compare.nine')}}</td>
+                <td>{{$t('compare.twenty')}}</td>
+                <td>{{$t('compare.six')}}</td>
               </tr>
               <tr>
-                <td>可自定义平台时间偏移</td>
+                <td>{{$t('compare.offset')}}</td>
                 <td class="cuo">×</td>
                 <td class="cuo">×</td>
                 <td class="dui">√</td>
               </tr>
               <tr>
-                <td>部分填充</td>
+                <td>{{$t('compare.filled')}}</td>
                 <td class="cuo">×</td>
                 <td class="cuo">×</td>
                 <td class="dui">√</td>
               </tr>
               <tr>
-                <td>价差合约交易</td>
+                <td>{{$t('compare.contract')}}</td>
                 <td class="dui">√</td>
                 <td class="dui">√</td>
                 <td class="dui">√</td>
               </tr>
               <tr>
-                <td>点差</td>
+                <td>{{$t('compare.spread')}}</td>
                 <td>
-                  浮动，从0.4点起
-                  <br />固定，2点起
+                  {{$t('compare.floating')}}
+                  <br />{{$t('compare.fixed')}}
                 </td>
-                <td>浮动，从0.2点起</td>
-                <td>浮动，从0点起</td>
+                <td>{{$t('compare.floa')}}</td>
+                <td>{{$t('compare.floatfrom')}}</td>
               </tr>
               <tr>
-                <td>佣金 /点差加码</td>
-                <td>无佣金，无加点</td>
-                <td>无佣金，无加点</td>
-                <td>无佣金，无加点</td>
+                <td>{{$t('compare.plus')}}</td>
+                <td>{{$t('compare.commission')}}</td>
+                <td>{{$t('compare.commission')}}</td>
+                <td>{{$t('compare.commission')}}</td>
               </tr>
               <tr>
                 <td>杠杆</td>
                 <td>
-                  外汇&nbsp;&nbsp;1：无限
-                  <br />贵金属&nbsp;&nbsp;1：无限
-                  <br />原油指数&nbsp;&nbsp;1：100
-                  <br />加密货币对&nbsp;&nbsp;1：10
+                  {{$t('compare.forex')}}
+                  <br />{{$t('compare.metal')}}
+                  <br />{{$t('compare.oil')}}
+                  <br />{{$t('compare.crypto')}}
                 </td>
                 <td>
-                  货币&nbsp;&nbsp;1：无限
-                  <br />贵金属&nbsp;&nbsp;1：无限
-                  <br />原油指数&nbsp;&nbsp;1：100
-                  <br />加密货币对&nbsp;&nbsp;1：10
+                  {{$t('compare.forex')}}
+                  <br />{{$t('compare.metal')}}
+                  <br />{{$t('compare.oil')}}
+                  <br />{{$t('compare.crypto')}}
                 </td>
                 <td>
-                  货币对高达1:1000
-                  <br />贵金属高达1:1000
+                  {{$t('compare.pairs')}}
+                  <br />{{$t('compare.metalup')}}
                 </td>
               </tr>
               <tr>
-                <td>追加保证金/强制止损水平</td>
+                <td>{{$t('compare.margin')}}</td>
                 <td>100% / 20%</td>
                 <td>100% / 20%</td>
                 <td>100% / 20%</td>
@@ -545,7 +545,20 @@
   </div>
 </template>
 <script>
-export default {};
+export default {
+  data(){
+    return{
+      enBool:false,
+    }
+  },
+  mounted(){
+    if( this.$i18n.locale == 'en' ){
+      this.enBool = false;
+    }else{
+      this.enBool = true;
+    }
+  },
+};
 </script>
 <style lang="scss">
 @import "@/styles/mixin.scss";
@@ -791,5 +804,14 @@ export default {};
       }
     }
   }
+}
+.enFontSize{
+  ul{
+    li{
+      font-size:15px !important;
+      line-height: 26px;
+    }
+  }
+  
 }
 </style>

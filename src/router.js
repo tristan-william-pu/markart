@@ -23,6 +23,11 @@ export default new Router({
       path: '/home',
       name: 'home',
       component: importModule('home/home')
+    },{
+      // 活动
+      path:'/plan',
+      name:'plan',
+      component: importModule('actives/plan')
     }, {
       path: '/about',
       name: 'about',

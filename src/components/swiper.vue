@@ -10,21 +10,23 @@
 						<!-- <button class="action"><svg class="icon icon--rewind">
 							<use xlink:href="#icon-rewind"></use>
 						</svg></button> -->
-						<button class="particles-button emergingBtn">立即开始交易</button>
+						<router-link :to="banner[0].url">
+							<button class="particles-button emergingBtn">立即开始交易</button>
+						</router-link>
 					</div>
                 </div>
 				<div class="swiper-slide">
-                    <img class="" :src="banner[1].img" />
+					<router-link to="">
+						<img class="" :src="banner[1].img" />
+					</router-link>
+                    
                 </div>
 				<div class="swiper-slide">
-                    <img class="" :src="banner[2].img" />
+					<router-link :to="banner[2].url">
+						<img class="" :src="banner[2].img" />
+					</router-link>
                 </div>
-				<div class="swiper-slide">
-                    <img class="" :src="banner[3].img" />
-                </div>
-				<div class="swiper-slide">
-                    <img class="" :src="banner[4].img" />
-                </div>
+				
 				
 			</div>
  
@@ -42,12 +44,35 @@
   export default {
  
 	name: 'banner',
-    props:['banner'],
 		data() {
 			return {
+				enBool:false,
+				 banner: [],
 			}
 		},
- 
+		created(){
+			if( this.$i18n.locale == 'en' ){
+				this.enBool = false;
+				this.banner = [{
+						img: require("@/assets/bannerfont_03.png"),url:'/regist',
+					},{
+						img: "images/banner2cn.jpg",url:''
+					},{
+						img: "images/bannerEn.jpg",url:'/plan'
+					},
+				];
+			}else{
+				this.enBool = true;
+				this.banner = [{
+						img: require("@/assets/bannerfont_03.png"),url:'/regist',
+					},{
+						img: "images/banner2cn.jpg",url:''
+					},{
+						img: "images/banner.jpg",url:'/plan'
+					},
+				]
+			}
+		},
 		methods: {
  
 		},
@@ -63,16 +88,16 @@
 				el: '.swiper-pagination',
 			},
 			
-				loop: true,
-				autoplay: {
-					delay: 4000,
-					stopOnLastSlide: false,
-					disableOnInteraction: false,
-				},
+			loop: true,
+			autoplay: {
+				delay: 4000,
+				stopOnLastSlide: false,
+				disableOnInteraction: false,
+			},
 
-			})
-		}
+		})
 	}
+}
 </script>
 
 <style lang="scss" scoped>
