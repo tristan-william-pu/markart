@@ -145,6 +145,9 @@ export default {
       }
     }
   },
+  mounted(){
+    console.log(this.$refs.imgbox);
+  },
   methods: {
     setShow() {
       const show = this.show

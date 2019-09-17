@@ -227,7 +227,7 @@
       </div>
     </div>
     <!--PC-->
-    <div class="teaBg">
+    <div class="teaBg" v-show="enBool == true" >
       <div class="center clearfix">
         <div class="fl">
           <img src="../../../public/images/sch/teaTop.png" alt />
@@ -251,7 +251,7 @@
       </div>
     </div>
     <!--Phone-->
-    <div class="teaBgPh">
+    <div class="teaBgPh" v-show="enBool == true">
       <div class="center">
         <div class="topDiv clearfix">
           <img src="../../../public/images/sch/tea.png" class="fl" />
@@ -278,6 +278,37 @@
       </div>
     </div>
 
+    <!-- enpc -->
+    <div class="teaBg enTeacher" v-show="enBool == false" >
+      <div class="center clearfix">
+        <div class="fl">
+          <p class="sec">The voice of <br/> Forex Market</p>
+          <div class="cenWord clearfix">
+           Throughout market movements, <br>unscramble trading password to enjoy <br> the industry opportunity
+          </div>
+        </div>
+        <div class="fr">
+          <p class="fr"></p>
+          <p class="fr">In 2014-2017, he won the title of best analyst in China for three consecutive years</p>
+        </div>
+      </div>
+    </div>
+    <!--enPhone-->
+    <div class="teaBgPh" v-show="enBool == false">
+      <div class="center clearfix">
+        <div class="fl">
+          <p class="sec">The voice of <br/> Forex Market</p>
+          <div class="cenWord clearfix">
+           Throughout market movements, <br>unscramble trading password to enjoy <br> the industry opportunity
+          </div>
+        </div>
+        <div class="fr">
+          <p class="fr"></p>
+          <p class="fr">In 2014-2017, he won the title of best analyst in China for three consecutive years</p>
+        </div>
+      </div>
+    </div>
+
     <div class="teaCon clearfix">
       <div class="fl">
         <p class="name">{{$t('school.ray')}}</p>
@@ -298,7 +329,16 @@
 
 export default {
     data(){
-      return{}
+      return{
+        enBool:false,
+      }
+    },
+    mounted(){
+      if( this.$i18n.locale == 'en' ){
+        this.enBool = false;
+      }else{
+        this.enBool = true;
+      }
     },
     methods:{
       goRouter(url){
@@ -976,4 +1016,44 @@ export default {
 //       width: 95%;
 //     }
 //   }
+.teaBg.enTeacher{
+  .center{
+    .fl{
+      border:none;
+      p.sec{
+        color: #fffefc;
+        font-size: 40px;
+        font-family: MNJ;
+        margin-bottom: 43px;
+      }
+      div.cenWord{
+        color: #dedede;
+        font-size: 16px;
+        font-family: MONLig;
+        line-height: 31px;
+      }
+    }
+    div.fr{
+      width: 30%;
+      margin: 4% 12% 0 0;
+      right:-25%;
+      p{
+        width:100%;
+        writing-mode: horizontal-tb;
+        font-size: 14px;
+        line-height: 26px;
+        color: #c4c4c4;
+        font-family: MONLig;
+        &:first-child{
+          width: 139px;
+          height: 1px;
+          background-color: #6a2eaf;
+          margin: 33% 0 0 0%;
+          float: none;
+        }
+      }
+      
+    }
+  }
+}
 </style>

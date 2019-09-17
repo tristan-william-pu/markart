@@ -25,12 +25,12 @@
         <!--CPT cTrader是什么？-->
         <div class="what clear">
           <div class="fl leDiv">
-            <p>{{$t('question.number')}}</p>
+            <p :class="lang == false ? 'pLine':''">{{$t('question.number')}}</p>
           </div>
           <div class="fl rigFl pc">
             <img src="@/assets/ctLogo.png" />
             <p>
-              <span>CPT cTrader</span>{{$t('question.what')}}
+              <span>CPT cTrader</span><br>{{$t('question.what')}}
             </p>
           </div>
         </div>
@@ -321,7 +321,20 @@
   </div>
 </template>
 <script>
-export default {};
+export default {
+  data(){
+    return{
+      lang:true,
+    }
+  },
+  mounted(){
+    if( this.$i18n.locale == 'en' ){
+      this.lang = false;
+    }else{
+      this.lang = true;
+    }
+  },
+};
 </script>
 <style lang="scss">
 @import "@/styles/mixin.scss";
@@ -472,4 +485,8 @@ export default {};
     }
   }
 }
+.pLine{
+  line-height: 21px !important;
+}
+
 </style>

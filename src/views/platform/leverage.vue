@@ -73,7 +73,7 @@
       <br />{{$t('leverage.adjust')}}
     </div>
     <div class="pubtn">
-      <a href="/register/register">{{$t('leverage.creat')}}</a>
+      <router-link to="/regist">{{$t('leverage.creat')}}</router-link>
     </div>
   </div>
 </template>

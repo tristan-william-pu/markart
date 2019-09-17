@@ -17,13 +17,15 @@
       </video>
     </div>
     <!-- 轮播图 -->
-    <Banner :banner="banner" style="z-index:1000;"></Banner>
+    <Banner style="z-index:1000;"></Banner>
     <!-- 主体 -->
     <div class="warp whycpt clearfix cn">
       <div class="top clearfix">
         <div class="headertitle clearfix">{{$t('home.why')}}</div>
         <div class="grid pupradio clearfix" id="abouts">
+          <router-link to="/about">
           <button class="particles-button">{{$t('home.readMore')}}</button>
+          </router-link>
         </div>
         <div class="line pc"></div>
       </div>
@@ -67,11 +69,13 @@
     </div>
 
     <!-- 交易市场 -->
-    <div class="warp gupao clearfix cn emerging">
+    <div class="warp gupao clearfix cn" ref="regist"  :class="{fadeIn: show.regist}">
       <div class="top clearfix">
         <div class="headertitle">{{$t('home.want')}}</div>
         <div class="grid pupradio" id="abouts">
+          <router-link to="/product">
           <button class="particles-button">{{$t('home.readMore')}}</button>
+          </router-link>
         </div>
         <div class="line pc"></div>
       </div>
@@ -100,7 +104,7 @@
     <img class="imgnav pc" src="images/imgnav.jpg" alt />
 
     <!-- 交易平台 -->
-    <div class="warp trading clearfix emerging">
+    <div class="warp trading clearfix" ref="trading" :class="{fadeIn: show.trading}">
       <div class="top clearfix">
         <div class="headertitle">{{$t('home.station')}}</div>
       </div>
@@ -114,7 +118,7 @@
         </div>
       </div>
       <!-- <div class="btn">start trading now</div> -->
-      <div class="imgboxs clearfix">
+      <div class="imgboxs clearfix" >
         <img class="pcpng " src="images/pc.png" alt />
         <div class="cloud pc">
           <MClound />
@@ -122,7 +126,7 @@
       </div>
     </div>
     <!-- 邀请 -->
-    <div class="navbanner emerging">
+    <div class="navbanner" ref="navbanner" :class="{fadeIn: show.navbanner}">
       <div class="title">
         <span class="blod">{{$t('home.friend')}}</span>
         <br />
@@ -134,7 +138,10 @@
           <!-- <button class="action"><svg class="icon icon--rewind">
                 <use xlink:href="#icon-rewind"></use>
           </svg></button>-->
-          <button class="particles-button">{{$t('home.jionUs')}}</button>
+          <router-link to="/ib">
+              <button class="particles-button">{{$t('home.jionUs')}}</button>
+          </router-link>
+        
         </div>
       </div>
       <!-- <div class="btn">JOIN US</div> -->
@@ -172,10 +179,10 @@
         <div class="center clearfix">
             <p class="fl">{{$t('home.improve')}}</p>
             <div class="fl">
-                <a href="index.php?m=P&a=school">
+                <router-link to="/school">
                     <p>+</p>
                     <span>{{$t('home.seemore')}}</span>
-                </a>
+                </router-link>
             </div>
         </div>
     </div>
@@ -259,29 +266,19 @@ import MClound from "@/components/m-clound.vue";
 export default {
   data() {
     return {
-      banner: [
-        {
-          img: require("@/assets/bannerfont_03.png")
-        },
-        {
-          img: "images/banner.jpg"
-        },
-        {
-          img: "images/banner.jpg"
-        },
-        {
-          img: "images/banner.jpg"
-        },
-        {
-          img: "images/banner.jpg"
-        }
-      ],
+     
       count: 0,
-      count1: 1
+      count1: 1,
+      show:{
+        regist:false,
+        trading:false,
+        navbanner:false,
+      },
+      scroll: '',
+
     };
   },
   components: { Banner, MClound },
-  computed: {},
   mounted() {
     setTimeout(() => {
       let flag = 0;
@@ -292,10 +289,59 @@ export default {
       }, 5);
     }, 200);
   },
-  methods: {}
+  methods: {
+    
+    menu() {
+        this.scroll = document.documentElement.scrollTop || document.body.scrollTop;
+        const show = this.show
+        // console.log(this.scroll)
+        let reacts;
+        if(document.documentElement.clientWidth > 1200){
+          reacts = [1300,2100,2900];
+        }else{
+          reacts = [1000,1400,1800];
+        }
+        let height = this.scroll;
+        if (!show.regist) {
+          let react = reacts[0]
+
+          if ( height > react ) {
+            show.regist = true
+            console.log(height)
+          }
+        }
+        if (!show.trading) {
+          let react = reacts[1]
+          if (height  > react) {
+            show.trading = true
+            console.log(height)
+          }
+        }
+        if (!show.navbanner) {
+          // react = this.$refs.navbanner.getClientRects()[0]; 
+          let react = reacts[2]
+          if (height > react) {
+            show.navbanner = true
+            console.log(height)
+          }
+        }
+        if (show.regist && show.trading && show.navbanner) {
+          window.onscroll = null
+        }
+      }
+  },
+  activated() {
+    // this.setShow();
+    window.addEventListener('scroll', this.menu)
+  },
+  deactivated() {
+    // window.onscroll = null;
+    window.removeEventListener("scroll",this.menu)
+  }
 };
 </script>
 <style lang="scss">
+@import "@/styles/mixin.scss";
 .cloud {
   float: left;
   margin-left: 30px;
@@ -835,5 +881,7 @@ export default {
   .schBot .center div.fl a{
     color: #fff;
   }
-    
+  .fadeIn {
+    @include animation(bounceInUps, 1s, 300ms);
+  }
 </style>

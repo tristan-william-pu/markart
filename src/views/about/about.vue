@@ -57,7 +57,7 @@
 
     <div class="tradestep">
         <div class="tit">
-            {{$t('about.chooese')}}<span class="pupcolor">CPTMarkets</span><br>
+            {{$t('about.chooese')}} <span class="pupcolor">{{$t('about.CPT')}}</span><br>
             {{$t('about.earth')}}
         </div>
         <div class="stepbox warp clearfix">
