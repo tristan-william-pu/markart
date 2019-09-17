@@ -1,0 +1,386 @@
+@media screen and (max-width: 760px) {
+  .app {
+    .cpt {
+      .big-img {
+        .center {
+          width: 90%;
+          margin: 0 auto;
+          padding: 5% 0 2%;
+          width: 100%;
+          h6 {
+            font-weight: 100;
+            font-size: 2.5rem;
+            color: #fff;
+            font-family: FZLTZHK;
+            text-align: center;
+          }
+          p {
+            font-family: LTH;
+            font-size: 0.3rem;
+            color: #fff;
+            width: 9rem;
+            line-height: 1.8rem;
+            background-color: #5b0eb2;
+            border-radius: 0.7rem;
+            text-align: center;
+            margin: 0.8rem auto 0;
+          }
+        }
+      }
+      .nav, .replace {
+        display: none;
+      }
+      .introduction {
+        .center {
+          width: 90%;
+          margin: 1rem auto 0rem;
+          h3 {
+            text-align: center;
+            font-size: 1.3rem;
+            color: #000;
+            margin-bottom: 0;
+          }
+          .intCon {
+            .fl {
+              width: 60%;
+              h6 {
+                font-size: 1.2rem;
+                color: #000;
+                font-family: REGULAR;
+                font-weight: 600;
+              }
+              p {
+                font-size: .82rem;
+                line-height: 1.8rem;
+                color: #171717;
+              }
+            }
+            .fr {
+              width: 38%;
+            }
+          }
+        }
+      }
+      .functi {
+        .top {
+          h3 {
+            font-size: 1.2rem;
+            line-height: 1.5rem;
+          }
+          .ctLine {
+            width: 124px;
+            height: 4px;
+            background-color: #5b0eb2;
+            margin: 15px 0 15px;
+          }
+        }
+        .bot {
+          .tabs {
+            margin-top: -20px;
+            padding: 0;
+            >.clear {
+              display: flex;
+              justify-content: center;
+              >div {
+                width: 23%;
+                margin-top: 5%;
+                display: flex;
+                flex-direction: column;
+                justify-content: centerl;
+                align-items: center;
+                >img {
+                  width: 41%;
+                }
+                p {
+                  font-size: .8em;
+                  margin: 20px 0;
+                }
+              }
+            }
+            .cont  {
+              margin-top: 10px;
+              .le {
+                display: none;
+              }
+              .word {
+                width: 90%;
+                margin-left: 5%;
+                font-size: .8em;
+              }
+            }
+          }
+        }
+      }
+      .acqTop {
+        h3 {
+          font-size: 1.2em;
+          line-height: 1.5em;
+        }
+        .ctLine {
+          width: 4em;
+          margin: 12px 0 12px;
+        }
+      }
+      .tabs {
+        .navList {
+          float: none;
+          width: 90%;
+          >div {
+            .num {
+              font-size: .8em;
+              width: 3em;
+              height: 3em;
+              line-height: 3em;
+              font-weight: 600;
+            }
+            dl {
+              transform: translateY(1em);
+              dt {
+                font-size: 0.9em;
+                margin-bottom: .7em;
+                line-height: 1.5em;
+                font-weight: 500;
+                margin-bottom: 1.7em;
+              }
+              dd {
+                font-size: 0.9em;
+                margin-bottom: .7em;
+                line-height: 1.5em;
+                font-weight: 500;
+              }
+            }
+          }
+        }
+        .fr {
+          width:100%;
+          float: none;
+          display: flex;
+          justify-content: center;
+          >div {
+            width: 46%;
+          }
+        }
+      }
+      .web {
+        .webTop {
+          margin-top: 5em;
+          h3 {
+            font-size: 1.2em;
+            margin-bottom: 1em;
+          }
+          >p {
+            font-size: 1em;
+            line-height: 1.5em;
+          }
+          .btn {
+            margin: 0 auto;
+            margin-top: 2em;
+            margin-bottom: 4em;
+            width: 15rem;
+            height: 2rem;
+            line-height: 3rem;
+            background-color: #550da5;
+            border-radius: 0.5rem;
+            box-shadow: 0px 1rem 1rem -1rem #5E5E5E;
+            a {
+              line-height: unset;
+              height: 2em;
+              @include flex();
+              img {
+                width: 7%;
+                margin: 0 0 0 2%;
+              }
+              p {
+                font-size: 1.2em;
+              }
+            }
+          }
+          h6 {
+            font-size: 1.25em;
+            line-height: 1.5em;
+          }
+          .ctLine {
+            width: 3em;
+            margin: .8em 0;
+          }
+        }
+        .webBot {
+          width: 100%;
+          background: url(/images/webIph.png) no-repeat top center;
+          background-size: 53%;
+          .con {
+            width: 90%;
+            margin: 0 auto;
+            padding: 3% 0 6%;
+            .fl, .fr {
+              margin: 1rem 0 0 0%;
+              width: 90%;
+              margin-top: 50%;
+              >div {
+                font-size: 1em;
+                width: 4em;
+                height: 2em;
+                line-height: 2em;
+              }
+              p {
+                font-size: 1em;
+                line-height: 1.5em;
+              }
+            }
+            .fr {
+              width: 100%;
+              margin-top: -2em;
+            }
+          }
+        }
+      }
+      .ctPc {
+        .center {
+          margin-top: 0;
+          margin-bottom: 3em;
+          h3 {
+            font-size: 1.2em;
+            font-weight: 600;
+            text-align: left;
+            margin-left: 5%;
+          }
+          .pcCon {
+            .fl {
+              margin-top: -3em;
+              p {
+                font-size: 1em;
+                line-height: 1.8em;
+              }
+              .btn {
+                width: 100%;
+                height: 2em;
+                a {
+                  @include flex();
+                  flex-wrap: nowrap;
+                  white-space: nowrap;
+                  p {
+                    line-height: 2em;
+                    font-size: 1em;
+                    margin-left: 2%;
+                  }
+                  img {
+                    width: 1.2em;
+                    margin: unset;
+                  }
+                }
+              }
+            }
+            .fr {
+              margin-top: -3em;
+            }
+          }
+        }
+      }
+      .ios {
+        .center {
+          .fr {
+            h3 {
+              font-size: 1.5em;
+              line-height: 1.5em;
+            }
+            p {
+              font-size: 1em;
+              line-height: 1.8em;
+            }
+            .btn {
+              width: 90vw;
+              height: 60%;
+              margin-left: -45vw;
+              .leWord {
+                img {
+                  width: 5%;
+                }
+                h6 {
+                  font-size: 1.1em;
+                  margin: .2em 0;
+                }
+              }
+              .ewm img {
+                width: 80%;
+              }
+            }
+          }
+        }
+      }
+      .android {
+        .center {
+          margin: 3em 0 0 0;
+          .fl {
+            h3 {
+              font-size: 1.5em;
+              line-height: 1.5em;
+            }
+            p {
+              font-size: 1em;
+              line-height: 1.8em;
+            }
+            .btn {
+              width: 95vw;
+              .leWord {
+                width: 58%;
+                img {
+                  width: 8%;
+                }
+                h6 {
+                  font-size: 1.2em;
+                  margin: 0;
+                }
+                p {
+                  font-size: 1.2em;
+                  color: #fff;
+                }
+              }
+              .ewm {
+                img {
+                  margin: 0;
+                }
+              }
+            }
+          }
+        }
+      }
+      .trading {
+        margin-top: 2em;
+        .center {
+          h6 {
+            font-size: 1.5em;
+            span {
+              display: inline-block;
+            }
+          }
+          .ctLine {
+            width: 5em;
+            margin: 1em 0;
+          }
+          .clear {
+            display: flex;
+            flex-direction: column;
+            li {
+              width: 100%;
+              margin-top: 1em;
+              p {
+                font-size: 1.2em;
+              }
+              .ctLine {
+                margin-left: 5%;
+                width: 3em;
+              }
+              span {
+                font-size: 1em;
+                line-height: 1.4em;
+              }
+              &:hover {
+                transform: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
