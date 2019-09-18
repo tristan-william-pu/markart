@@ -26,12 +26,12 @@
         <div class="headertitle">{{$t('MT4.cent')}}</div>
       </div>
       <div
-        class="tipstit"
-        style="text-align: center;"
-      >{{$t('MT4.low')}}</div>
+        class="tipstit">{{$t('MT4.low')}}</div>
 
       <div class="meifenacco">
+        <div class="img">
         <img src="@/assets/centAcc.png" />
+        </div>
         <div class="searchserv">
           <p>{{$t('MT4.check')}}</p>
           <a href="/Public/addheader/pdf/MT4/MT4PC.pdf" download="MT4客户端搜索服务器">
@@ -247,6 +247,7 @@ export default {
       @include clearfix();
       .headertitle {
         width: 100%;
+        margin-bottom: 20px;
         text-align: center;
         font-size: 40px;
         color: #000000;
@@ -272,7 +273,7 @@ export default {
       }
     .tipstit {
       font-size: 18px;
-      text-align: left;
+      text-align: center;
       line-height: 30px;
       margin-bottom: 60px;
       @include clearfix();
@@ -281,15 +282,19 @@ export default {
       font-size: 12px;
       line-height: 29px;
       margin: 0 auto 40px;
-      width: 500px;
+      width:600px;
       @include clearfix();
-      img {
-        float: left;
-        width: 114px;
+      .img{
+        float:left;
+        width:20%;
+      
+        img {
+          width: 114px;
+        }
       }
       .searchserv {
-        float: left;
-        margin-left: 60px;
+        float: right;
+        width:74%;
         p {
           font-size: 16px;
           box-sizing: border-box;
@@ -366,7 +371,7 @@ export default {
       .infoart {
         margin-top: 30px;
         font-size: 18px;
-        width: auto;
+        width: 700px;
         line-height: 40px;
         box-sizing: border-box;
       }
@@ -446,6 +451,7 @@ export default {
           margin-top: 30px;
           font-size: 18px;
           line-height: 40px;
+          width:700px;
         }
         > a {
           .garybtn {
@@ -485,6 +491,8 @@ export default {
             }
           }
           > p {
+            width:400px;
+            text-align: center;
             margin-top: 10px;
             margin-left: 10px;
             font-size: 16px;

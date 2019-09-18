@@ -472,6 +472,8 @@
         >div {
           width: 90%;
           margin-left: 5%;
+          font-size: 16px;
+          text-align:justify;
         }
         >a .downbtn {
           width: 90%;
@@ -491,6 +493,15 @@
             margin-top: 30px;
           }
         }
+        .meifenacco .img{
+            float:none;
+            text-align: center;
+            width:100%;
+          }
+        .meifenacco .searchserv {
+            float:none;
+            width:100%;
+          }
       }
       .downloadtit {
         font-size: 28px !important;
@@ -510,6 +521,7 @@
             text-align: center;
             margin: 0 auto;
             margin-bottom: 40px;
+            width:100%;
           }
           >a {
             width: 100%;
@@ -531,6 +543,7 @@
           .downinfo {
             p {
               text-align: center;
+              width:100%;
             }
             a {
               .garybtn {
@@ -550,6 +563,7 @@
         .art {
           width: 90%;
           margin-left: 5%;
+          text-align: justify;
         }
       }
       .anq {
