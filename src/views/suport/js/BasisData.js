@@ -78,13 +78,78 @@ module.exports = [
                     content: '<ul><li style="list-style: disc;font-size:17px;line-height:35px;">外汇市场是全球最大的金融市场，并且成交量和流动性还在不停地增长。</li><li style="list-style: disc;font-size:17px;line-height:35px;">外汇市场是全天候的24小时交易市场。</li><li style="list-style: disc;font-size:17px;line-height:35px;">交易者既可以从上涨走势中赚取利润，又可以从下跌走势中赚取利润。</li><li style="list-style: disc;font-size:17px;line-height:35px;">不存在交易限制。</li><li style="list-style: disc;font-size:17px;line-height:35px;">立即执行的交易平台最小化了成交滑移点差和错误。</li><li style="list-style: disc;font-size:17px;line-height:35px; ">即使存在更高交易杠杆带来更高风险的问题，许多交易者仍旧认为外汇市场是一个“物有所值”的市场。</li></ul>'
                 },
                 en: {
-                    title: 'The comparison between Forex and stock',
-                    content: 'Forex spot trading has the following differences compared with securities stock trading:'
+                    title: 'Main features of the Forex market',
+                    content: '<ul><li style="list-style: disc;font-size:17px;line-height:35px;">The Forex market is the largest financial market, and the transaction amount and liquidity is constantly growing.</li><li style="list-style: disc;font-size:17px;line-height:35px;">The Forex market runs 24/5.</li><li style="list-style: disc;font-size:17px;line-height:35px;"> Traders could made profits in an upward trend or a downward trend.</li><li style="list-style: disc;font-size:17px;line-height:35px;">No trading restrictions.</li><li style="list-style: disc;font-size:17px;line-height:35px;">Immediately executive trading platform minimizes transaction slip spreads and errors.</li><li style="list-style: disc;font-size:17px;line-height:35px; ">Although high risks comes along with high leverage, many investors still believe Forex market is a “worthy-trading” market.</li></ul>'
                 },
                 tc: {
-                    title: '歐元/美元匯率與公司利潤',
-                    content: '對於股票交易者，特別是投資那些大量出口美國的歐洲公司的交易者而言，密切關註匯率的變化對於預測公司的收益和利潤狀況是非常重要的。自從2003年開始，歐洲的制造商們就大肆抱怨歐元的升值和美元的貶值。導致美元走軟的罪魁禍首是美國快速增長的貿易赤字和預算赤字，也就是所謂的“雙赤字”問題。這個問題導致歐元兌美元匯率飆升，而這又使得歐元區出口給美國消費者的商品變得更加昂貴，最終導致歐元區公司的利潤下降。在2003年，由於德國大眾公司沒有進行充分的匯率對沖，造成了大約10億歐元的利潤損失，而荷蘭國家礦業公司，這家化工集團則警告說歐元兌美元匯率變動百分之壹會導致公司利潤損失700萬到1100萬歐元。不幸的是，不充分的匯率對沖在2008年的歐元區仍舊是壹個普遍存在的問題。因此，密切關註歐元兌美元的匯率變化對於預測歐元出口商們的收益和利潤水平是極其重要的。'
+                    title: '外匯市場的主要特征',
+                    content: '<ul><li style="list-style: disc;font-size:17px;line-height:35px;">外匯市場是全球最大的金融市場，並且成交量和流動性還在不停地增長。</li><li style="list-style: disc;font-size:17px;line-height:35px;">外匯市場是全天候的24小時交易市場。</li><li style="list-style: disc;font-size:17px;line-height:35px;">交易者既可以從上漲走勢中賺取利潤，又可以從下跌走勢中賺取利潤。</li><li style="list-style: disc;font-size:17px;line-height:35px;">不存在交易限制。</li><li style="list-style: disc;font-size:17px;line-height:35px;">立即執行的交易平臺最小化了成交滑移點差和錯誤。</li><li style="list-style: disc;font-size:17px;line-height:35px; ">即使存在更高交易杠桿帶來更高風險的問題，許多交易者仍舊認為外匯市場是壹個“物有所值”的市場。</li></ul>'
                 }
+            },{
+                cn: {
+                    title: '股票市场的主要特征',
+                    content: '<ul><li style="list-style: disc;font-size:17px;line-height:35px;">市场流动性有限，依赖于各月份交易合约的流动性。</li><li style="list-style: disc;font-size:17px;line-height:35px;">市场运行从纽约时间上午9:30持续到下午4点，盘后的场外电子盘交易时间存在限制。</li><li style="list-style: disc;font-size:17px;line-height:35px;"> 现有的成交和交割费用，以及佣金较高。</li><li style="list-style: disc;font-size:17px;line-height:35px;">存在上涨方能抛空的规则，也就是必须在上涨中卖空，这令日内交易者受到极大的制约。交易限制或许也对日内交易者产生了负面影响。</li><li style="list-style: disc;font-size:17px;line-height:35px;">完成交易涉及的步骤太多，以至于增加了成交滑移和错误的几率。</li></ul><br><br>外汇市场是全球最具流动性的市场，其巨大的成交量和极高的流动性允许交易者们能够以较低的交易成本和较高的杠杆参与其中。这是一个24小时运作的市场，无论牛熊市都能赚钱，错误率和成交滑移价差都被最小化，没有交易限制和上涨抛空的规定。交易者们可以运用与股票市场中采纳的一样的分析技巧来研究外汇市场。对于基本面交易者而言，可以像分析股一样分析国家，对于技术面交易者面言，外汇市场是一个使用技术分析的理想市场，因为专业交易者们已经在广泛地采用各种技术分析工具。为了更好地明白外汇市场为什么具有如此的吸引力，为什么如此值得我们去参与其中，我们应该更进一步深入地了解外汇市场的特征。'
+                },
+                en: {
+                    title: 'Main features of the stock market',
+                    content: '<ul><li style="list-style: disc;font-size:17px;line-height:35px;">Main features of the stock market</li><li style="list-style: disc;font-size:17px;line-height:35px;">The market runs from 9:00am to 4:30pm in New York time, and there are restrictions on the trading hours of off-site electronic trading.</li><li style="list-style: disc;font-size:17px;line-height:35px;"> Current the cost for transaction and commission fee is relatively high.</li><li style="list-style: disc;font-size:17px;line-height:35px;">The rule of “must selling in an upward trend”, this is the biggest limitation for intraday traders. This trading restriction therefore has negative impact to investors.</li><li style="list-style: disc;font-size:17px;line-height:35px;">Too many steps for completing a trade, which increase the probability of transaction slip spreads and errors.</li></ul><br><br>Forex market is the most liquidity market globally, the huge market volume and extreme high liquidity allow investors to trade with low cost and high leverage. This is the market that runs 24 hours and is profitable either in bear or bull market. It features with minimizing error rate and slip spreads, no rules of trading limitations or selling in upward trend. Traders could use the analysis skills in stock market for Forex market. For fundamental traders, they can analysis the nations as stocks; for technical traders, the Forex market is an ideal market to use technical analysis which is wildly used by professional traders. To better understand why Forex market is so attractive and worthy to take part in, we have to learn the characters for Forex deeply.'
+                },
+                tc: {
+                    title: '股票市場的主要特征',
+                    content: '<ul><li style="list-style: disc;font-size:17px;line-height:35px;">市場流動性有限，依賴於各月份交易合約的流動性。</li><li style="list-style: disc;font-size:17px;line-height:35px;">市場運行從紐約時間上午9:30持續到下午4點，盤後的場外電子盤交易時間存在限制。</li><li style="list-style: disc;font-size:17px;line-height:35px;"> 現有的成交和交割費用，以及傭金較高。</li><li style="list-style: disc;font-size:17px;line-height:35px;">存在上漲方能拋空的規則，也就是必須在上漲中賣空，這令日內交易者受到極大的制約。交易限制或許也對日內交易者產生了負面影響。</li><li style="list-style: disc;font-size:17px;line-height:35px;">完成交易涉及的步驟太多，以至於增加了成交滑移和錯誤的幾率。</li></ul><br><br>外匯市場是全球最具流動性的市場，其巨大的成交量和極高的流動性允許交易者們能夠以較低的交易成本和較高的杠桿參與其中。這是壹個24小時運作的市場，無論牛熊市都能賺錢，錯誤率和成交滑移價差都被最小化，沒有交易限制和上漲拋空的規定。交易者們可以運用與股票市場中采納的壹樣的分析技巧來研究外匯市場。對於基本面交易者而言，可以像分析股壹樣分析國家，對於技術面交易者面言，外匯市場是壹個使用技術分析的理想市場，因為專業交易者們已經在廣泛地采用各種技術分析工具。為了更好地明白外匯市場為什麽具有如此的吸引力，為什麽如此值得我們去參與其中，我們應該更進壹步深入地了解外匯市場的特征。' 
+                },
+            },{
+                cn: {
+                    title: '外汇与期货比较',
+                    content: '',
+                },
+                en: {
+                    title: 'The comparison of Forex market and futures market',
+                    content: ''
+                },
+                tc: {
+                    title: '外匯與期貨比較',
+                    content: '',
+                },
+            },{
+                cn: {
+                    title: '外汇市场的主要特征',
+                    content: '<ul><li style="list-style: disc;font-size:17px;line-height:35px;">它是全球最大的市场，并且流动性还在增长。</li><li style="list-style: disc;font-size:17px;line-height:35px;">24小时全天候交易。</li><li style="list-style: disc;font-size:17px;line-height:35px;"> 无论牛市还是熊市都存在获利机会。</li><li style="list-style: disc;font-size:17px;line-height:35px;">没有上涨方能做空的限制。</li><li style="list-style: disc;font-size:17px;line-height:35px;">即时执行的交易平台最小化了成交滑移价差和其他错误。</li><li style="list-style: disc;font-size:17px;line-height:35px;"> 虽然较高的杠杆水平增加了风险，但许多交易者则认为外汇市场带来了更高的潜在收益。</li></ul>' 
+                },
+                en: {
+                    title: 'Main features of the Forex market',
+                    content:  '<ul><li style="list-style: disc;font-size:17px;line-height:35px;">It is the largest markets globally, and the liquidity is increasing.</li><li style="list-style: disc;font-size:17px;line-height:35px;"> It runs 24 hours of week day.</li><li style="list-style: disc;font-size:17px;line-height:35px;"> It is profitable either in bear market or bull market.</li><li style="list-style: disc;font-size:17px;line-height:35px;">No rule of only “selling in an upward trend”.</li><li style="list-style: disc;font-size:17px;line-height:35px;">Immediately executive trading platform minimizes the transaction slip spreads and other errors.</li><li style="list-style: disc;font-size:17px;line-height:35px;">Although high leverage comes with high risks, many investors still believe Forex market brings more potential profits.</li></ul>'
+                },
+                tc: {
+                    title: '外匯市場的主要特征',
+                    content: '<ul><li style="list-style: disc;font-size:17px;line-height:35px;">它是全球最大的市場，並且流動性還在增長。</li><li style="list-style: disc;font-size:17px;line-height:35px;">24小時全天候交易。</li><li style="list-style: disc;font-size:17px;line-height:35px;"> 無論牛市還是熊市都存在獲利機會。</li><li style="list-style: disc;font-size:17px;line-height:35px;">沒有上漲方能做空的限制。</li><li style="list-style: disc;font-size:17px;line-height:35px;">即時執行的交易平臺最小化了成交滑移價差和其他錯誤。</li><li style="list-style: disc;font-size:17px;line-height:35px;"> 雖然較高的杠桿水平增加了風險，但許多交易者則認為外匯市場帶來了更高的潛在收益。</li></ul>' 
+                },
+            },{
+                cn: {
+                    title: ' 期货市场的主要特征',
+                    content: '<ul><li style="list-style: disc;font-size:17px;line-height:35px;">市场流动性有限，依赖于各月份交易合约的流动性。</li><li style="list-style: disc;font-size:17px;line-height:35px;">交易清算费用和佣金导致更高的交易成本。</li><li style="list-style: disc;font-size:17px;line-height:35px;"> 期货交易的开市时间短于现货外汇市场，并且取决于交易品种;每个交易品种或许有不同的开盘和收盘时间，盘后交易时间存在限制。</li><li style="list-style: disc;font-size:17px;line-height:35px;">期货的交易杠杆高于证券，但是远远不及外汇交易中可以运用的杠杆水平。</li><li style="list-style: disc;font-size:17px;line-height:35px;">通常情况下，期货市场中熊市持续的时间较长。</li><li style="list-style: disc;font-size:17px;line-height:35px;"> 场内交易的构架增加了成交滑移价差和其他错误的概率。</li></ul><br>正如股票市场上许多分析和交易策略可以运用于外汇市场一样，期货市场中的策略也可以运用到外汇交易中。绝大多数期货交易者都运用技术分析手段，正如之前在股票对比部分提到的一样，外汇市场是运用技术分析的理想场合。实际上，技术分析是职业交易者们运用最普遍的分析工具。' 
+                },
+                en: {
+                    title: 'Main features of the Futures market',
+                    content:  '<ul><li style="list-style: disc;font-size:17px;line-height:35px;">The market liquidity is limiting and mainly depends on contract liquidity each month.</li><li style="list-style: disc;font-size:17px;line-height:35px;"> Transaction clearing fee and commission cause higher trading cost.</li><li style="list-style: disc;font-size:17px;line-height:35px;"> The market open time for the Futures market is short than the Forex spot market, and relies on each trade category; different trade category comes with different open and close time, and there has trading hour restriction of off-site trading.</li><li style="list-style: disc;font-size:17px;line-height:35px;">The leverage level for futures is higher than securities but far lower than it in Forex market.</li><li style="list-style: disc;font-size:17px;line-height:35px;">Most of time, the bear market last longer in the futures market.</li><li style="list-style: disc;font-size:17px;line-height:35px;">The structure of the pit trade increases the probability of trade slip spreads and other errors.</li></ul><br>Just like the technical analysis skills in stock market could apply in the Forex market, the trading strategy in the futures market could also operates in the Forex market. Most of futures traders are using technical analysis, as it is mentioned for the stock market above, the Forex market is an ideal place to use these skills. Actually, technical analysis is the mostly common used analyzing tool for professional traders.'
+                },
+                tc: {
+                    title: '期貨市場的主要特征',
+                    content: '<ul><li style="list-style: disc;font-size:17px;line-height:35px;">市場流動性有限，依賴於各月份交易合約的流動性。</li><li style="list-style: disc;font-size:17px;line-height:35px;">交易清算費用和傭金導致更高的交易成本。</li><li style="list-style: disc;font-size:17px;line-height:35px;"> 期貨交易的開市時間短於現貨外匯市場，並且取決於交易品種;每個交易品種或許有不同的開盤和收盤時間，盤後交易時間存在限制。</li><li style="list-style: disc;font-size:17px;line-height:35px;">期貨的交易杠桿高於證券，但是遠遠不及外匯交易中可以運用的杠桿水平。</li><li style="list-style: disc;font-size:17px;line-height:35px;">通常情況下，期貨市場中熊市持續的時間較長。</li><li style="list-style: disc;font-size:17px;line-height:35px;"> 場內交易的構架增加了成交滑移價差和其他錯誤的概率。</li></ul><br>正如股票市場上許多分析和交易策略可以運用於外匯市場壹樣，期貨市場中的策略也可以運用到外匯交易中。絕大多數期貨交易者都運用技術分析手段，正如之前在股票對比部分提到的壹樣，外匯市場是運用技術分析的理想場合。實際上，技術分析是職業交易者們運用最普遍的分析工具。' 
+                },
+            },{
+                cn: {
+                    title: ' 三、外汇交易的不同途径',
+                    content: '<ul><li style="list-style: disc;font-size:17px;line-height:35px;">外汇现货</li><li style="list-style: disc;font-size:17px;line-height:35px;">外汇期货</li><li style="list-style: disc;font-size:17px;line-height:35px;"> 外汇期权</li><li style="list-style: disc;font-size:17px;line-height:35px;"> 交易型开放式指数基金</li>'
+                },
+                en: {
+                    title: '3. Different approached in Forex trading',
+                    content:  '<ul><li style="list-style: disc;font-size:17px;line-height:35px;">Forex spot</li><li style="list-style: disc;font-size:17px;line-height:35px;"> Forex futures</li><li style="list-style: disc;font-size:17px;line-height:35px;"> Forex options</li><li style="list-style: disc;font-size:17px;line-height:35px;"> Transactional open index fund</li>'
+                },
+                tc: {
+                    title: '三、外匯交易的不同途徑',
+                    content: '<ul><li style="list-style: disc;font-size:17px;line-height:35px;">外匯現貨</li><li style="list-style: disc;font-size:17px;line-height:35px;">外匯期貨</li><li style="list-style: disc;font-size:17px;line-height:35px;"> 外匯期權</li><li style="list-style: disc;font-size:17px;line-height:35px;"> 交易型開放式指數基金</li>'
+                },
             }
         ],
     },
@@ -92,22 +157,35 @@ module.exports = [
     {
         name:{
             cn: '初识外汇——外汇基础知识',
-            en: '初识外汇——外汇基础知识',
-            tc: '初识外汇——外汇基础知识',
+            en: 'Learn about the Forex —— Forex basic knowledge',
+            tc: '初識外匯——外匯基礎知識',
         },
         contents: [
             {
                 cn: {
-                    title: '外汇市场的主要特征',
-                    content: '<ul><li style="list-style: disc;font-size:17px;line-height:35px;">外汇市场是全球最大的金融市场，并且成交量和流动性还在不停地增长。</li><li style="list-style: disc;font-size:17px;line-height:35px;">外汇市场是全天候的24小时交易市场。</li><li style="list-style: disc;font-size:17px;line-height:35px;">交易者既可以从上涨走势中赚取利润，又可以从下跌走势中赚取利润。</li><li style="list-style: disc;font-size:17px;line-height:35px;">不存在交易限制。</li><li style="list-style: disc;font-size:17px;line-height:35px;">立即执行的交易平台最小化了成交滑移点差和错误。</li><li style="list-style: disc;font-size:17px;line-height:35px; ">即使存在更高交易杠杆带来更高风险的问题，许多交易者仍旧认为外汇市场是一个“物有所值”的市场。</li></ul>'
+                    title: '',
+                    content: '外汇交易员从来不会只买卖一种货币，市场运行的方式亦是如此。他们先卖出一种货币，再用这笔钱买进另一种货币。总之，货币不会被单独交易。<br><br><br>思考一下，1美元值多少钱？难道是1美元？同样，1英镑价值1英镑吗？任何货币与自身价值比较都是没有意义的，只有当它们被组合成对的时候才能显现出价值。当你面对一个货币对的时候，你看到的不仅仅是两种货币还包括它们之间的比较。现在，你可以用另一种方式问刚才的问题，1美元值多少英镑呢？或者说，1英镑可以购买多少美元呢？<br><br><br>将货币以成对的方式交易对新手来说是个难题，因为新手们已经习惯了买卖单一的股票或者销售单一的共有基金这种模式，货币对这一概念对他们而言还很陌生。所以，如果你还不能接受货币对的概念，别担心，还有许多人和你一样。我们保证你会逐渐熟悉。'
                 },
                 en: {
-                    title: 'The comparison between Forex and stock',
-                    content: 'Forex spot trading has the following differences compared with securities stock trading:'
+                    title: '',
+                    content: 'The Forex traders will never buy or sell one currency, this is the base of how the market operates. Traders sell a currency firstly then buy in another currency. Generally, currencies will not be traded solely.<br><br><br>Think about this: how much does 1 dollar worth? It is just 1 dollar? In the same way, is 1 pound worthy 1 pound? Any currency comparing with itself is meaningless. Only coupled them into pairs that could present meaning. When you face a currency pair, it is not only the currency pair you can view but also of their comparison. Now, you can ask the former questions again: how pound does 1 dollar worth? Or, how much dollars can 1 pound buy?<br><br><br>For beginners, it is always a hassle question that trade currency in pairs, as they may get used in trading sole stock or sole fund. They may be unfamiliar to currency pairs. So, if you cannot accept of currency pairs, don’t worry, many other traders are the same as you. It is sure that you could get used to them gradually.'
                 },
                 tc: {
                     title: '歐元/美元匯率與公司利潤',
-                    content: '對於股票交易者，特別是投資那些大量出口美國的歐洲公司的交易者而言，密切關註匯率的變化對於預測公司的收益和利潤狀況是非常重要的。自從2003年開始，歐洲的制造商們就大肆抱怨歐元的升值和美元的貶值。導致美元走軟的罪魁禍首是美國快速增長的貿易赤字和預算赤字，也就是所謂的“雙赤字”問題。這個問題導致歐元兌美元匯率飆升，而這又使得歐元區出口給美國消費者的商品變得更加昂貴，最終導致歐元區公司的利潤下降。在2003年，由於德國大眾公司沒有進行充分的匯率對沖，造成了大約10億歐元的利潤損失，而荷蘭國家礦業公司，這家化工集團則警告說歐元兌美元匯率變動百分之壹會導致公司利潤損失700萬到1100萬歐元。不幸的是，不充分的匯率對沖在2008年的歐元區仍舊是壹個普遍存在的問題。因此，密切關註歐元兌美元的匯率變化對於預測歐元出口商們的收益和利潤水平是極其重要的。'
+                    content: '外匯交易員從來不會只買賣壹種貨幣，市場運行的方式亦是如此。他們先賣出壹種貨幣，再用這筆錢買進另壹種貨幣。總之，貨幣不會被單獨交易。<br><br><br>思考壹下，1美元值多少錢？難道是1美元？同樣，1英鎊價值1英鎊嗎？任何貨幣與自身價值比較都是沒有意義的，只有當它們被組合成對的時候才能顯現出價值。當妳面對壹個貨幣對的時候，妳看到的不僅僅是兩種貨幣還包括它們之間的比較。現在，妳可以用另壹種方式問剛才的問題，1美元值多少英鎊呢？或者說，1英鎊可以購買多少美元呢？<br><br><br>將貨幣以成對的方式交易對新手來說是個難題，因為新手們已經習慣了買賣單壹的股票或者銷售單壹的共有基金這種模式，貨幣對這壹概念對他們而言還很陌生。所以，如果妳還不能接受貨幣對的概念，別擔心，還有許多人和妳壹樣。我們保證妳會逐漸熟悉。'
+                },
+            },{
+                cn: {
+                    title: '货币对',
+                    content: '在一组货币对中，左边的货币被称为基准货币，右边的货币被称为计价货币。有一个简单的方法可以让你分辨两者：基准货币的强弱决定了货币对的走势，而计价货币的强弱则决定了货币对的价格。<br><br><br>例如，最常见的货币对是欧元/美元，其中欧元是基准货币，美元是计价货币。欧元对比美元的强弱程度决定了货币对升值或贬值。如果欧元比美元强势，那么欧元/美元就会升值，反之则贬值。下面是一个帮助你理解货币对变化的口诀：<br><br><br><ul><li style="list-style: disc;font-size:17px;line-height:35px;">基本货币走强，报价货币疲软，货币对升值;</li><li style="list-style: disc;font-size:17px;line-height:35px;"> 基本货币疲软，报价货币走强，货币对贬值;</li><li style="list-style: disc;font-size:17px;line-height:35px;"> 报价货币强劲，基本货币疲软，货币对贬值;</li><li style="list-style: disc;font-size:17px;line-height:35px;"> 报价货币疲软，基本货币走强，货币对升值。;</li></ul><br><br><br>要记住，一个巴掌拍不响。基准货币和计价货币当中任何一方的变化都会影响整个货币对的变化。<br><br><br>欧元/美元的价格表示购买1欧元需要支付多少美元。比如，欧元/美元的价格是1.3055，它表示购买1欧元需要1.3055美元。与之类似，如果货币对价格涨到1.4277，那就表示购买1欧元需要1.4277美元。<br><br><br>那么，是谁决定把哪种货币作为基准货币，哪种货币作为计价货币的呢？答案很有趣一是国际标准化组织(ISO)。作为一个非政府组织，该组织致力于给混乱的世界带来一点秩序。'
+                },
+                en: {
+                    title: '',
+                    content: 'The Forex traders will never buy or sell one currency, this is the base of how the market operates. Traders sell a currency firstly then buy in another currency. Generally, currencies will not be traded solely.'
+                },
+                tc: {
+                    title: '歐元/美元匯率與公司利潤',
+                    content: '外匯交易員從來不會只買賣壹種貨幣，市場運行的方式亦是如此。他們先賣出壹種貨幣，再用這筆錢買進另壹種貨幣。總之，貨幣不會被單獨交易。'
                 }
             }
         ]
