@@ -10,7 +10,7 @@
   <div class="foot">
     <footer>
       <div class="warp footMain">
-        <div class="footernav pc">
+        <div class="footernav pc " :class="ftBool == false ?'enPadding':''">
           <ul>
             <li>
               <router-link to="/about">{{$t('footer.about')}}</router-link>
@@ -47,14 +47,14 @@
           <span>400-1001-103</span>
         </div>
         
-        <div class="wxercode pc">
+        <div class="wxercode pc" v-if="ftBool">
           <img src="../assets/ercode_07.png" alt />
           <img class="ercode" src="../assets/ercode_03.png" alt />
         </div>
 
         <div class="clearfix"></div>
-        <div class="footer_follow clearfix pc">
-          <p class="fl">Follow us</p>
+        <div class="footer_follow clearfix" v-if="!ftBool">
+          <p class="fl pc">Follow us</p>
           <a href="https://www.facebook.com/cptmarketslimited/">
             <img src="@/assets/facebook.png" alt/>
           </a>
@@ -127,7 +127,27 @@
 </template>
 <script>
 export default {
-  name: "Footer"
+  name: "Footer",
+  data(){
+    return{
+      ftBool:true,
+    }
+  },
+  methods:{
+    changeLang(){
+      if(this.$i18n.locale == 'en'){
+      this.ftBool = false
+      }else{
+        this.ftBool = true
+      }
+    },
+  },
+  mounted(){
+    this.changeLang();
+  },
+  updated(){
+    this.changeLang();
+  },
 };
 </script>
 <style lang="scss">
@@ -225,6 +245,13 @@ export default {
   }
   footer a:hover {
     color: #565656;
+  }
+}
+.enPadding{
+  ul{
+    li{
+      padding-right:20px !important;
+    }
   }
 }
 </style>

@@ -5,15 +5,23 @@
 			<div class="swiper-wrapper" >
  
 				<div class="swiper-slide">
-                    <img class="" :src="banner[0].img" />
-					<div class="grid__item theme-1 emerging">
-						<!-- <button class="action"><svg class="icon icon--rewind">
-							<use xlink:href="#icon-rewind"></use>
-						</svg></button> -->
-						<router-link :to="banner[0].url">
-							<button class="particles-button emergingBtn">立即开始交易</button>
-						</router-link>
+					<div>
+						<img class="" :src="banner[0].img" v-if="!enBool" />
+						<div class="grid__item theme-1 emerging" v-if="!enBool">
+							<!-- <button class="action"><svg class="icon icon--rewind">
+								<use xlink:href="#icon-rewind"></use>
+							</svg></button> -->
+							<router-link :to="banner[0].url">
+								<button class="particles-button emergingBtn">立即开始交易</button>
+							</router-link>
+						</div>
 					</div>
+                    <div>
+						<p v-if="enBool">WE ARE THE MARKET LEADER</p>
+						<p v-if="enBool">AT CPTMARKETS, TRADE THE MARKETS YOU WANT, TO PROVIDE THE BEST EXPERIENCE POSSIBLE TO YOU</p>
+						<button v-if="enBool">START YOUR TRANSACTION</button>
+					</div>
+					
                 </div>
 				<div class="swiper-slide">
 					<router-link to="">
@@ -30,7 +38,7 @@
 				
 			</div>
  
-			<div class="swiper-pagination"></div>
+			<!-- <div class="swiper-pagination"></div> -->
 		</div>
  
 	</div>
@@ -47,34 +55,41 @@
 		data() {
 			return {
 				enBool:false,
-				 banner: [],
+				banner: [],
+				
 			}
+		},
+		methods:{
+			changeLang(){
+				if( this.$i18n.locale == 'en' ){
+					this.enBool = true;
+					this.banner = [{
+							img: require("@/assets/bannerfont_03.png"),url:'/regist',
+						},{
+							img: "images/banner2.jpg",url:''
+						},{
+							img: "images/bannerEn.jpg",url:'/plan'
+						},
+					];
+				}else{
+					this.enBool = false;
+					this.banner = [{
+							img: require("@/assets/bannerfont_03.png"),url:'/regist',
+						},{
+							img: "images/banner2cn.jpg",url:''
+						},{
+							img: "images/banner.jpg",url:'/plan'
+						},
+					]
+				}
+			},
 		},
 		created(){
-			if( this.$i18n.locale == 'en' ){
-				this.enBool = false;
-				this.banner = [{
-						img: require("@/assets/bannerfont_03.png"),url:'/regist',
-					},{
-						img: "images/banner2cn.jpg",url:''
-					},{
-						img: "images/bannerEn.jpg",url:'/plan'
-					},
-				];
-			}else{
-				this.enBool = true;
-				this.banner = [{
-						img: require("@/assets/bannerfont_03.png"),url:'/regist',
-					},{
-						img: "images/banner2cn.jpg",url:''
-					},{
-						img: "images/banner.jpg",url:'/plan'
-					},
-				]
-			}
+			this.changeLang()
 		},
-		methods: {
- 
+		updated(){
+			// this.changeLang()
+			console.log(123)
 		},
 		components: {
  

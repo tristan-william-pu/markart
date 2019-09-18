@@ -10,8 +10,8 @@
     <div class="banner">
       <div class="img">
         <div class="warp clearfix">
-          <p class="bannerfont animated">创建交易账户</p>
-          <p class="bannertipsfont animated">开设真实账户，开始享受外汇交易乐趣</p>
+          <p class="bannerfont animated">{{$t('regist.create')}}</p>
+          <p class="bannertipsfont animated">{{$t('regist.happy')}}</p>
         </div>
       </div>
     </div>
@@ -19,22 +19,27 @@
       <div class="titleaccout">
         <div class="accounttype">
           <div @click="step=0,active=0">
-            <span :class="{active: active==0}">标准账户</span>
+            <span :class="{active: active==0}">{{$t('regist.title1')}}</span>
           </div>
         </div>
         <div class="accounttype">
           <div @click="active=1">
-            <span :class="{active: active==1}">模拟账户</span>
+            <span :class="{active: active==1}">{{$t('regist.title2')}}</span>
+          </div>
+        </div>
+        <div class="accounttype enaccounttype" v-show="!lang">
+          <div @click="active=1">
+            <span :class="{active: active==2}">QUICK ACCOUNT</span>
           </div>
         </div>
       </div>
-      <div class="art" v-show="active == 1">免费开设模拟账户，累积外汇操盘技巧</div>
+      <div class="art" v-show="active == 1">{{$t('regist.free')}}</div>
       <div class="left" v-show="active == 1">
         <div class="inputbox">
           <p class="titles">
-            <span style="color:#5b0eb2">*</span> 用户名
+            <span style="color:#5b0eb2">*</span> {{$t('regist.userName')}}
           </p>
-          <input type="text" name="user_name" id="user_name" placeholder="请设置您的用户名" />
+          <input type="text" name="user_name" id="user_name" :placeholder="$t('regist.plName')" />
           <p class="tips"></p>
         </div>
         <!-- <div class="inputbox">
@@ -49,11 +54,11 @@
 
         <div class="inputbox">
           <p class="titles">
-            <span style="color:#5b0eb2">*</span>手机号码
+            <span style="color:#5b0eb2">*</span>{{$t('regist.phone')}}
           </p>
 
           <select name="user_cell_zd" class="sel">
-            <option value="86" selected="selected">86(中国大陆)</option>
+            <option value="86" selected="selected">86({{$t('regist.China')}})</option>
             <option value="886">886(台湾)</option>
             <option value="852">852(香港)</option>
             <option value="853">853(澳门)</option>
@@ -235,42 +240,42 @@
             <option value="260">260(Zambia)</option>
             <option value="243">243(Zaire)</option>
           </select>
-          <input class="inputtt" type="text" name="user_cell" placeholder="您的手机号码" />
+          <input class="inputtt" type="text" name="user_cell" :placeholder="$t('regist.plPhone')" />
           <div class="clear"></div>
           <p class="tips" name="user_cell_tips" id="user_cell_tips"></p>
         </div>
 
         <div class="inputbox">
           <p class="titles">
-            <span style="color:#5b0eb2">*</span> 手机验证码
+            <span style="color:#5b0eb2">*</span> {{$t('regist.code')}}
           </p>
           <input
             class="inputtt"
             type="text"
             name="simulation_code"
             id="simulation_code"
-            placeholder="6位数字验证码"
+            :placeholder="$t('regist.six')"
           />
           <input
             class="codebtn"
             type="button"
             name="sms_code"
             id="sms_code"
-            value="获取验证码"
+            :value="$t('regist.get')"
             onclick="check_code();"
           />
           <div class="clear"></div>
-          <p class="tips" name="sms_code_t" id="sms_code_t" style="display: block;">请输入短信验证码</p>
+          <p class="tips" name="sms_code_t" id="sms_code_t" style="display: block;">{{$t('regist.write')}}</p>
         </div>
 
         <div class="clear"></div>
 
         <div class="inputbox">
           <p class="titles">
-            <span style="color:#5b0eb2">*</span>选择初始资金
+            <span style="color:#5b0eb2">*</span>{{$t('regist.new')}}
           </p>
           <select name="balance" id="balance">
-            <option value>选择初始资金（USD美金）</option>
+            <option value>{{$t('regist.USDT')}}</option>
             <option value="3000">3000</option>
             <option value="5000">5000</option>
             <option value="10000">10000</option>
@@ -285,10 +290,10 @@
         </div>
         <div class="inputbox">
           <p class="titles">
-            <span style="color:#5b0eb2">*</span> 选择杠杆倍数
+            <span style="color:#5b0eb2">*</span> {{$t('regist.leverage')}}
           </p>
           <select name="leverage" id="leverage">
-            <option value>选择杠杆倍数</option>
+            <option value>{{$t('regist.leverage')}}</option>
             <option value="500">1:500</option>
             <option value="400">1:400</option>
             <option value="300">1:300</option>
@@ -315,21 +320,21 @@
         <div class="clear"></div>
 
         <a>
-          <div class="sumbtn" id="simulation_register_btn">提交注册</div>
+          <div class="sumbtn" id="simulation_register_btn">{{$t('regist.post')}}</div>
         </a>
       </div>
       <div class="left standac" v-show="active == 0 && step == 0" id="one">
         <div class="conTit">
-          <div class="bgdcloo rigP" :class="{active: step == 0}" id="public1">基本资料</div>
-          <div class="bgdcloo leftP" :class="{active: step == 1}" id="public2">资料完善</div>
+          <div class="bgdcloo rigP" :class="{active: step == 0}" id="public1">{{$t('regist.basic')}}</div>
+          <div class="bgdcloo leftP" :class="{active: step == 1}" id="public2">{{$t('regist.perfect')}}</div>
           <div class="clear"></div>
         </div>
         <div class="inputbox">
           <p class="titles">
-            <span style="color:#5b0eb2">*</span> 电子邮箱
+            <span style="color:#5b0eb2">*</span> {{$t('regist.email')}}
           </p>
-          <input type="text" name="user_email" id="user_email" placeholder="账户重要信息将发送至您的邮箱" />
-          <p class="tips" style="display: none;">请输入正确的电子邮件地址</p>
+          <input type="text" name="user_email" id="user_email" :placeholder="$t('regist.info')" />
+          <p class="tips" style="display: none;">{{$t('regist.eMailworing')}}</p>
         </div>
         <!--<div class="inputbox">
               <p class="titles">* 图形验证码</p>
@@ -343,16 +348,16 @@
         <div class="clear"></div>
         <div class="inputbox">
           <p class="titles">
-            <span style="color:#5b0eb2">*</span>设置密码
+            <span style="color:#5b0eb2">*</span>{{$t('regist.setPWD')}}
           </p>
           <input
             type="password"
             name="user_password"
             id="user_password"
-            placeholder="请输入6-16位密码"
+            :placeholder="$t('regist.plWritePWD')"
             onkeyup="this.value=this.value.replace(/^[A-Za-z0-9]{16}/,'');"
           />
-          <p class="tips" style="display: none;">密码为6-16个字符</p>
+          <p class="tips" style="display: none;">{{$t('regist.WorringPWD')}}</p>
         </div>
         <!-- <div class="inputbox">
              <p class="titles">* 确认密码</p>
@@ -362,11 +367,11 @@
         <div class="clear"></div>
         <div class="inputbox">
           <p class="titles">
-            <span style="color:#5b0eb2">*</span>手机号码
+            <span style="color:#5b0eb2">*</span>{{$t('regist.phone')}}
           </p>
 
           <select name="user_cell_zd" id="user_cell_zd" class="sel">
-            <option value="86" selected="selected">86(中国大陆)</option>
+            <option value="86" selected="selected">86({{$t('regist.China')}})</option>
             <option value="886">886(台湾)</option>
             <option value="852">852(香港)</option>
             <option value="853">853(澳门)</option>
@@ -548,23 +553,23 @@
             <option value="260">260(Zambia)</option>
             <option value="243">243(Zaire)</option>
           </select>
-          <input class="inputtt" type="text" name="user_cell" id="user_cell" placeholder="您的手机号码" />
+          <input class="inputtt" type="text" name="user_cell" id="user_cell" :placeholder="$t('regist.plPhone')" />
           <div class="clear"></div>
           <p class="tips" id="user_cell_tishi" name="user_cell_tishi"></p>
         </div>
 
         <div class="inputbox">
           <p class="titles">
-            <span style="color:#5b0eb2">*</span> 手机验证码
+            <span style="color:#5b0eb2">*</span> {{$t('regist.code')}}
           </p>
-          <input class="inputtt" type="text" name="sim_code" id="sim_code" placeholder="6位数字验证码" />
+          <input class="inputtt" type="text" name="sim_code" id="sim_code" :placeholder="$t('regist.six')" />
           <input
             class="codebtn"
             type="button"
             name="sim_code_1"
             id="sim_code_1"
             onclick="get_sms_code()"
-            value="获取验证码"
+            :value="$t('regist.get')"
           />
           <div class="clear"></div>
           <p class="tips" id="sim_code_tishi" name="sim_code_tishi"></p>
@@ -572,9 +577,9 @@
 
         <div class="inputbox" style="position: relative">
           <p class="titles">
-            <span style="color:#5b0eb2;">*</span>&nbsp;交易平台
+            <span style="color:#5b0eb2;">*</span>&nbsp;{{$t('regist.station')}}
           </p>
-          <select name="mct" style="opacity: 1;" v-model="selectChooese" @change="consoel">
+          <select name="mct" style="opacity: 0;" v-model="selectChooese" @change="consoel">
             <option value="mt4" class="mt4">MT4</option>
             <option value="ct" class="ctrader">cTrader</option>
           </select>
@@ -595,54 +600,54 @@
         <div class="clear"></div>
         <div class="inputbox">
           <p class="titles">
-            <span style="color:#5b0eb2">*</span>&nbsp;账户资金类型
+            <span style="color:#5b0eb2">*</span>&nbsp;{{$t('regist.money')}}
           </p>
           <select id="currency_type" name="currency_type">
-            <option value="USD">美元</option>
-            <option value="USC" id="Quater" style="display: block;" v-if="selectChooese == 'mt4'? true :false">美分</option>
+            <option value="USD">{{$t('regist.dollor')}}</option>
+            <option value="USC" id="Quater" style="display: block;" v-if="selectChooese == 'mt4'? true :false">{{$t('regist.cents')}}</option>
           </select>
           <p class="tips"></p>
         </div>
 
         <div class="clear"></div>
         <div class="inputbox">
-          <p class="titles">推荐人（选填）</p>
+          <p class="titles">{{$t('regist.Referee')}}</p>
           <input type="text" name="account_ib" id="account_ib" />
           <p class="tips"></p>
         </div>
 
         <div class="clear"></div>
-        <div class="center clearfix">
+        <div class="center clearfix" :class="lang == false ?'enMargin':''">
           <ul>
             <li>
               <input type="checkbox" name="type" id="agreement1" checked />
-              <a class="pup" @click="$util.downloadPdf('/pdf/fx.pdf', '风险披露')">我已阅读并接受风险披露与免责声明</a>
+              <a class="pup" @click="$util.downloadPdf('/pdf/fx.pdf', '风险披露')">{{$t('regist.Iread')}}</a>
             </li>
             <li>
               <input type="checkbox" name="type" id="agreement2" checked />
               <a
                 @click="$util.downloadPdf('/pdf/CPTMarketsv2.pdf', '自动调整杠杆说明')"
                 class="pup"
-              >我已阅读并接受自动调整杠杆说明</a>
+              >{{$t('regist.say')}}</a>
             </li>
             <li>
               <input type="checkbox" name="type" id="agreement3" checked />
               <a
                 class="pup"
                 @click="$util.downloadPdf('/pdf/malicious.pdf', 'CPT Markets流动性指南')"
-              >我已阅读并接受CPT Markets流动性指南</a>
+              >{{$t('regist.agree')}}</a>
             </li>
             <div class="clear"></div>
           </ul>
         </div>
-        <div class="sumbtn" onclick="one()" id="btndk">下一页</div>
+        <div class="sumbtn" onclick="one()" id="btndk">{{$t('regist.nextOne')}}</div>
       </div>
       <div class="yanzheng" v-show="active == 0 && step == 1 ">
         <div class="left" id="two" style>
           <div class="inputbox">
-            <p class="titles">选择国籍</p>
+            <p class="titles">{{$t('regist.country')}}</p>
             <select name="user_nation" id="user_nation">
-              <option value>请选择国籍</option>
+              <option value>{{$t('regist.plCountry')}}</option>
               <option value="CN" selected="selected">中国大陆</option>
               <option value="TW">台湾</option>
               <option value="HK">香港</option>
@@ -868,50 +873,50 @@
           </div>
 
           <div class="inputbox">
-            <p class="titles">中文姓名</p>
+            <p class="titles">{{$t('regist.ChineseName')}}</p>
             <input type="text" name="first_name" id="first_name" />
-            <p class="tips" style="display: block;">请输入中文姓名</p>
+            <p class="tips" style="display: block;">{{$t('regist.PlChinese')}}</p>
           </div>
           <div class="clear"></div>
           <div class="inputbox">
-            <p class="titles">英文姓名</p>
+            <p class="titles">{{$t('regist.enName')}}</p>
             <input type="text" name="last_name" id="last_name" />
-            <p class="tips" style="display: block;">请输入英文姓名</p>
+            <p class="tips" style="display: block;">{{$t('regist.plEnName')}}</p>
           </div>
           <div class="clear"></div>
           <div class="inputbox">
-            <p class="titles">选择证件类型</p>
+            <p class="titles">{{$t('regist.CardID')}}</p>
             <select name="user_certificate_type" id="user_certificate_type">
-              <option value>请选择证件类型</option>
-              <option value="1">身份证</option>
-              <option value="2">护照</option>
+              <option value>{{$t('regist.enName')}}</option>
+              <option value="1">{{$t('regist.IDcard')}}</option>
+              <option value="2">{{$t('regist.passport')}}</option>
             </select>
-            <p class="tips" style="display: none;">请选择您的证件类型</p>
+            <p class="tips" style="display: none;">{{$t('regist.WordingCard')}}</p>
           </div>
           <div class="inputbox">
-            <p class="titles">证件号码</p>
+            <p class="titles">{{$t('regist.IDnum')}}</p>
             <input type="text" id="user_certificate_no" name="user_certificate_no" />
-            <p class="tips" style="display: block;">请输入证件号码</p>
+            <p class="tips" style="display: block;">{{$t('regist.WriteIDnum')}}</p>
           </div>
           <div class="clear"></div>
 
           <div class="inputbox">
             <div class="perid">
-              上传证件照片：
-              <span>（上传图片须小于2M,格式为.jpg/png）</span>
+              {{$t('regist.CardPhoto')}}
+              <span>{{$t('regist.photoSize')}}</span>
             </div>
             <div class="kuang">
               <div class="upload" @click="$refs.idCard0.value = '',$refs.idCard0.click()">
                 <div class="select">
                   <input type="file" ref="idCard0" style="position: absolute; visibility: hidden" />
                 </div>
-                <span class="text">证件正面（点击选择）</span>
+                <span class="text">{{$t('regist.certificate')}}</span>
               </div>
               <div class="upload" @click="$refs.idCard1.value ='' ,$refs.idCard1.click()">
                 <div class="select">
                   <input type="file" ref="idCard1" style="position: absolute; visibility: hidden" />
                 </div>
-                <span class="text">证件反面（点击选择）</span>
+                <span class="text">{{$t('regist.reverse')}}</span>
               </div>
               <!-- <iframe frameborder="0" style="width:700px;height:200px;" src="/register/addidcard"></iframe> -->
             </div>
@@ -923,27 +928,27 @@
           </div>
 
           <div class="clear"></div>
-          <div class="perid txcenter">银行卡资料</div>
+          <div class="perid txcenter">{{$t('regist.BankCard')}}</div>
 
           <div class="inputbox">
-            <p class="titles">持卡人姓名</p>
-            <input type="text" id="bank_user_name" name="bank_user_name" placeholder="需要和真实姓名一致" />
+            <p class="titles">{{$t('regist.cardholder')}}</p>
+            <input type="text" id="bank_user_name" name="bank_user_name" :placeholder="$t('regist.need')" />
             <p class="tips"></p>
           </div>
           <div class="inputbox">
-            <p class="titles">银行卡号</p>
+            <p class="titles">{{$t('regist.BankNum')}}</p>
             <input type="text" id="bank_no" name="bank_no" />
             <p class="tips"></p>
           </div>
 
           <div class="clear"></div>
           <div class="inputbox">
-            <p class="titles">银行名称</p>
+            <p class="titles">{{$t('regist.BankName')}}</p>
             <input type="text" id="bank_name" name="bank_name" />
             <p class="tips"></p>
           </div>
           <div class="inputbox">
-            <p class="titles">支行名称</p>
+            <p class="titles">{{$t('regist.branchBank')}}</p>
             <input type="text" id="bank_address" name="bank_address" />
             <p class="tips"></p>
           </div>
@@ -951,15 +956,15 @@
 
           <div class="inputbox">
             <div class="perid">
-              上传银行卡照片：
-              <span>（上传图片须小于2M,格式为.jpg/png/）</span>
+              {{$t('regist.BankPhoto')}}
+              <span>{{$t('regist.BankPhotoSize')}}</span>
             </div>
             <div class="kuang">
               <div class="upload" @click="$refs.bankCard.value = '',$refs.bankCard.click()">
                 <div class="select">
                   <input type="file" ref="bankCard" style="position: absolute; visibility: hidden" />
                 </div>
-                <span class="text">银行卡照片（点击选择）</span>
+                <span class="text">{{$t('regist.BankImage')}}</span>
               </div>
               <!-- <iframe frameborder="0" style="width:700px;height:200px;" src="/register/addidcard"></iframe> -->
             </div>
@@ -974,20 +979,19 @@
           </div>-->
           <div class="clear"></div>
           <!--<div class="sumbtn Previouspage" onclick="retwo()">Previous page</div>-->
-          <div class="sumbtn" onclick="two()">提交注册</div>
+          <div class="sumbtn" onclick="two()">{{$t('regist.post')}}</div>
         </div>
 
         <div id="three" style="display: none;">
           <div class="complete-regis">
-            <h3>欢迎来到</h3>
+            <h3>{{$t('regist.welcome')}}</h3>
             <h1>CPT Markets</h1>
-            <h2>您已成功注册账号！</h2>
+            <h2>{{$t('regist.success')}}</h2>
             <p>
-              您的资料已提交成功，客服人员会在三个工作日内完成审核。
-              资料审核成功后会通过邮件及短信的形式提醒您，请注意查收。(
+              {{$t('regist.review')}}(
               <a
                 href="/p/login"
-              >跳过</a>)
+              >{{$t('regist.skip')}}</a>)
             </p>
 
             <!-- <div class="regis-btn">
@@ -1013,6 +1017,7 @@ export default {
         {img:require('@/assets/ctB.png'),name:'cTrader'}, 
         {img:require('@/assets/MT4B.png'),name:'MT4'}, 
       ],
+      lang:true,
     };
   },
   methods:{
@@ -1035,10 +1040,21 @@ export default {
     consoel(){
       console.log("abc")
       console.log(this.selectChooese);
-    }
+    },
+    changeLang(){
+       if(this.$i18n.locale == 'en'){
+          this.lang = false
+        }else{
+          this.lang = true
+        }
+    },
   },
   created(){
     this.selectChooese = 'mt4'
+    this.changeLang();
+  },
+  updated(){
+    this.changeLang();
   },
   activated() {
     this.active = this.$route.params.active || 0;
@@ -1092,6 +1108,7 @@ export default {
     display: flex;
     align-items: center;
     margin: 0 auto;
+    
     .accounttype {
       width: 49%;
       margin: 10% 0 7% 0;
@@ -1110,7 +1127,12 @@ export default {
         }
       }
     }
+
     .accounttype:nth-child(2) {
+      border-right: none;
+    }
+    .enaccounttype{
+      border-left: 4px solid #757575;
       border-right: none;
     }
   }
@@ -1380,5 +1402,8 @@ export default {
     float: right;
     display: block;
     margin:15px;
+}
+.enMargin{
+  margin-left:0 !important;
 }
 </style>

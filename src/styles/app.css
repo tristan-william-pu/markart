@@ -1,0 +1,2044 @@
+@charset "UTF-8";
+.app .pc {
+  display: block !important;
+}
+
+.app .mb {
+  display: none !important;
+}
+
+@media (max-width: 1200px) {
+  .app {
+    /*探索CPT cTrader交易学院*/
+    /*视频中心*/
+    /*知识库*/
+    /*A-Z*/
+    /*网络讲座*/
+  }
+  .app .pc {
+    display: none !important;
+  }
+  .app .mb {
+    display: block !important;
+  }
+  .app .head header {
+    height: 60px;
+  }
+  .app .head header .warp > img.logo {
+    width: 160px;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 0px;
+  }
+  .app .head header .warp .countryselect {
+    margin-top: 15px;
+    margin-right: 20px;
+  }
+  .app .head header .warp .navbar {
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    background: #fff;
+    z-index: 1000;
+    line-height: 50px;
+    text-align: center;
+    border-bottom: 1px solid #666;
+    border-top: 1px solid #ccc;
+  }
+}
+
+@media (max-width: 1200px) and (max-width: 320px) {
+  .app header .warp .mbBtn {
+    margin-right: 10px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .app .foot footer {
+    overflow: hidden;
+    height: 200px;
+    padding-top: 30px;
+    box-sizing: border-box;
+  }
+  .app .foot footer .footMain {
+    width: 100%;
+    margin-top: -20px;
+    margin-bottom: 20px;
+  }
+  .app .foot footer .footMain .lianxi {
+    float: none;
+    display: block;
+    margin: 0 auto;
+    width: 230px;
+    margin-top: 20px;
+  }
+  .app .foot footer .art {
+    width: 90%;
+    margin-left: 5%;
+  }
+  .app .foot footer .footer_follow {
+    text-align: center;
+  }
+  .app .login .warp .loginBox {
+    position: absolute;
+    width: 90%;
+    top: 0px;
+    height: 480px;
+    top: 100px;
+    left: 5%;
+  }
+  .app .login .purbtn {
+    width: 100% !important;
+  }
+  .app .regist .accountwarp {
+    width: 100% !important;
+  }
+  .app .regist .accountwarp .left .center {
+    margin-left: 0;
+  }
+  .app .home .warp .top .headertitle {
+    padding-left: 0px;
+    font-size: 28px;
+  }
+  .app .home .warp .top .pupradio {
+    float: initial;
+    margin-left: 30px;
+    margin-top: 20px;
+  }
+  .app .home .warp .partleft {
+    float: initial;
+    box-sizing: border-box;
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .app .home .warp .partleft .art {
+    padding-left: 20px;
+    width: auto;
+    padding-right: 20px;
+    font-size: 16px;
+  }
+  .app .home .warp .btnbox {
+    width: 90%;
+    margin-left: 5%;
+  }
+  .app .home .gupao {
+    padding: 0;
+  }
+  .app .home .particles-button {
+    margin-top: 20px;
+  }
+  .app .home .trading {
+    margin-top: 80px;
+  }
+  .app .home .trading .headertitle {
+    text-align: center !important;
+  }
+  .app .home .trading .tipstit {
+    font-size: 16px;
+  }
+  .app .home .trading .imgboxs {
+    height: 280px;
+  }
+  .app .home .trading .imgboxs .pcpng {
+    width: 90%;
+    position: initial;
+    right: 0px;
+    opacity: 1;
+    margin-top: 30px;
+  }
+  .app .home .navbanner {
+    z-index: 10;
+    height: auto;
+  }
+  .app .home .navbanner .title {
+    font-size: 20px;
+    margin-top: 40px;
+    line-height: 40px;
+  }
+  .app .home .navbanner .btn {
+    margin-top: 40px;
+  }
+  .app .home .indSch .center {
+    width: 90%;
+    margin: 3rem auto 0;
+  }
+  .app .home .indSch .center ul li {
+    float: left;
+    width: 48%;
+    margin-right: 4%;
+  }
+  .app .home .indSch .center ul li:first-child {
+    width: 100%;
+    color: red;
+    margin: 0 auto 3rem;
+  }
+  .app .home .indSch .center ul li:first-child img {
+    width: 100%;
+  }
+  .app .home .indSch .center ul li.schCen span {
+    display: inline-block;
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+    color: #767678;
+  }
+  .app .home .indSch .center ul li.schCen p.linTop {
+    width: 3rem;
+    height: 0.5rem;
+    background-color: #5b0eb2;
+    margin: 4rem 0 1rem;
+  }
+  .app .home .indSch .center ul li.schCen p.con {
+    font-size: 1.5rem;
+    line-height: 2.2rem;
+    color: #333333;
+  }
+  .app .home .indSch .center ul li.schCen p.three {
+    font-size: 1.2rem;
+    color: #5b0eb2;
+    margin: 5rem 0 1rem;
+  }
+  .app .home .indSch .center ul li.schCen p.linBot {
+    width: 1rem;
+    height: 2.5rem;
+    background-color: #5b0eb2;
+  }
+  .app .home .indSch .center ul li.rigLi {
+    margin-right: 0;
+  }
+  .app .home .indSch .center ul li.rigLi p {
+    font-size: 2rem;
+    color: #989898;
+    line-height: 2.5rem;
+    font-weight: 900;
+  }
+  .app .home .indSch .center ul li.rigLi p span {
+    display: block;
+    color: #5b0eb2;
+  }
+  .app .home .indSch .center ul li.rigLi h6 {
+    font-size: 2rem;
+    color: #000;
+    margin: 3rem 0 1rem;
+  }
+  .app .home .schBot {
+    width: 100%;
+    height: 6rem;
+    background: url(../public/images/sch/indBotBgA.jpg) no-repeat;
+    background-size: 100%;
+  }
+  .app .home .schBot .center {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .app .home .schBot .center p.fl {
+    font-size: 0.8rem;
+    color: #fff;
+    line-height: 1.5rem;
+    margin-top: 4%;
+    width: 49%;
+  }
+  .app .home .schBot .center div.fl {
+    margin-left: 24%;
+  }
+  .app .home .schBot .center div.fl p {
+    width: 1.5rem;
+    height: 1.5rem;
+    line-height: 1.5rem;
+    color: #fff;
+    border: 2px solid #fff;
+    margin: 28% 0 6%;
+    text-align: center;
+    font-weight: 900;
+  }
+  .app .home .schBot .center div.fl span {
+    font-size: 1.2rem;
+    color: #fff;
+    font-weight: 900;
+  }
+  .app .home .schBot .center div.fl a {
+    color: #fff;
+  }
+  .app .home .step, .app .home .warp {
+    width: 100%;
+  }
+  .app .home .step .headertitle, .app .home .warp .headertitle {
+    padding-left: 0px;
+    font-size: 28px;
+    text-align: center !important;
+  }
+  .app .home .step .stepbox ul li, .app .home .warp .stepbox ul li {
+    width: 100%;
+    float: none;
+    margin-top: 30px;
+  }
+  .app .home .step .stepbox .radio, .app .home .warp .stepbox .radio {
+    margin: 0 auto;
+  }
+  .app .home .payway, .app .home .warp {
+    width: 100%;
+  }
+  .app .home .payway .headertitle, .app .home .warp .headertitle {
+    width: 100%;
+    text-align: center;
+  }
+  .app .home .payway .paywaybox ul li, .app .home .warp .paywaybox ul li {
+    width: 33.3%;
+    margin-bottom: 20px;
+  }
+  .app .about {
+    width: 100%;
+    margin-top: 0px;
+    padding-bottom: 30px;
+  }
+  .app .about > div:not(.banner) {
+    width: 90%;
+    margin-left: 5%;
+  }
+  .app .about .bannertips {
+    width: 100% !important;
+    margin-left: 0 !important;
+    height: auto;
+    margin-top: 0px;
+    padding-bottom: 30px;
+  }
+  .app .about .bannertips .aboutli {
+    width: 100%;
+  }
+  .app .about .bannertips .aboutli ul {
+    flex-direction: column;
+  }
+  .app .about .bannertips .aboutli ul li {
+    float: none;
+    width: 90%;
+    align-items: center;
+  }
+  .app .about .tradestep > .tit {
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+  }
+  .app .about .btnbox {
+    margin-top: 40px !important;
+  }
+  .app .about .aboutart .tit {
+    font-size: 21px !important;
+  }
+  .app .about .tradestep .stepbox {
+    width: 100%;
+  }
+  .app .about .tradestep .stepbox ul li {
+    width: 50%;
+  }
+  .app .about .tradestep .stepbox ul li p {
+    font-size: 14px;
+    height: 70px;
+  }
+  .app .safty .warp {
+    width: 100%;
+  }
+  .app .safty .warp .tit {
+    margin-top: 60px;
+    font-size: 22px !important;
+  }
+  .app .safty .warp .art {
+    width: 90%;
+    margin-left: 5%;
+  }
+  .app .safty .bottombg {
+    height: auto;
+    padding-bottom: 80px;
+  }
+  .app .safty .bottombg .fh {
+    font-size: 100px;
+  }
+  .app .safty .bottombg .tits {
+    font-size: 13px;
+  }
+  .app .safty .bottombg .tits span {
+    font-size: 18px;
+  }
+  .app .safty .accounticons ul li {
+    width: 100%;
+  }
+  .app .safty .bottomline {
+    text-align: center;
+    height: auto;
+    padding-bottom: 1px;
+    overflow: hidden;
+    padding-top: 20px;
+  }
+  .app .safty .bottomline p {
+    float: none;
+    font-size: 16px;
+    line-height: 30px;
+  }
+  .app .safty .bottomline .yelbtn {
+    float: none;
+    margin: 20px auto;
+  }
+  .app .mt4 > div {
+    width: 100%;
+  }
+  .app .mt4 .bar img {
+    width: 80%;
+    margin-left: 10%;
+  }
+  .app .mt4 .trading > div {
+    width: 90%;
+    margin-left: 5%;
+  }
+  .app .mt4 .trading > a .downbtn {
+    width: 90%;
+    margin-left: 5%;
+  }
+  .app .mt4 .trading .headertitle {
+    font-size: 28px !important;
+    margin-bottom: 25px !important;
+  }
+  .app .mt4 .trading .imgboxs {
+    height: 280px;
+  }
+  .app .mt4 .trading .imgboxs .pcpng {
+    width: 90%;
+    position: initial;
+    right: 0px;
+    opacity: 1;
+    margin-top: 30px;
+  }
+  .app .mt4 .downloadtit {
+    font-size: 28px !important;
+    margin-bottom: 20px;
+  }
+  .app .mt4 .macdown {
+    height: unset !important;
+    width: 100% !important;
+  }
+  .app .mt4 .macdown .leftimg {
+    width: 100%;
+    margin-left: 0;
+    height: unset;
+  }
+  .app .mt4 .macdown .downinfo {
+    width: 90%;
+  }
+  .app .mt4 .macdown .downinfo p {
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 40px;
+  }
+  .app .mt4 .macdown .downinfo > a {
+    width: 100%;
+  }
+  .app .mt4 .macdown .downinfo > a .garybtn {
+    width: 100%;
+  }
+  .app .mt4 .macdown .downinfo > a .garybtn .downfont p {
+    margin-bottom: 0;
+  }
+  .app .mt4 .androiddown {
+    background: unset;
+  }
+  .app .mt4 .androiddown .warp {
+    width: 90%;
+  }
+  .app .mt4 .androiddown .warp .downinfo p {
+    text-align: center;
+  }
+  .app .mt4 .androiddown .warp .downinfo a .garybtn {
+    width: 100%;
+  }
+  .app .mt4 .androiddown .bg {
+    display: block;
+  }
+  .app .mt4 .que .tit {
+    font-size: 21px !important;
+  }
+  .app .mt4 .que .art {
+    width: 90%;
+    margin-left: 5%;
+  }
+  .app .mt4 .anq {
+    padding: 20px 0;
+  }
+  .app .mt4 .anq dd {
+    width: calc(100% - 80px);
+    margin: 0 auto;
+    padding: 20px;
+  }
+  .app .leverage > div:not(.banner) {
+    width: 90%;
+    margin-left: 5%;
+  }
+  .app .leverage .tablelist .headers p {
+    font-size: 18px !important;
+  }
+  .app .account > div {
+    width: 100%;
+  }
+  .app .account .name {
+    line-height: 30px;
+    font-size: 24px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  .app .account .table {
+    margin-top: 50px;
+  }
+  .app .account .table .header span {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .app .clearpro > div:not(.banner) {
+    width: 90%;
+    margin-left: 5%;
+  }
+  .app .clearpro .mb > img {
+    margin-top: 0;
+  }
+  .app .clearpro > .wrap .tit {
+    font-size: 21px !important;
+    text-align: center !important;
+    margin-top: 30px;
+  }
+  .app .clearpro > .wrap .clearproinfo {
+    width: 100%;
+  }
+  .app .clearpro > .wrap .clearproinfo > div {
+    width: 100%;
+  }
+  .app .clearpro > .wrap .clearproinfo > img {
+    width: 100%;
+  }
+  .app .cpt .big-img .center {
+    padding: 5% 0 5%;
+  }
+  .app .cpt > div:not(.big-img) {
+    width: 90%;
+    margin-left: 5%;
+  }
+  .app .cpt .functi .top {
+    width: 100%;
+  }
+  .app .cpt .functi .bot .tabs {
+    width: 100%;
+  }
+  .app .cpt .tabs .navList {
+    width: 50%;
+  }
+  .app .cpt .tabs .fr {
+    width: 50%;
+  }
+  .app .cpt .tabs .fr .cont img {
+    width: 100%;
+  }
+  .app .cpt .web .webTop {
+    width: 100%;
+  }
+  .app .cpt .ctPc .center {
+    width: 100%;
+  }
+  .app .cpt .ios .center {
+    width: 100%;
+  }
+  .app .cpt .android .center {
+    width: 100%;
+    display: flex;
+  }
+  .app .cpt .android .center .fl {
+    width: 66%;
+    margin: 3% 0 0 3%;
+  }
+  .app .cpt .android .center .fl > img {
+    width: 14%;
+  }
+  .app .cpt .android .center .fl h3 {
+    font-size: 39px;
+    color: #000000;
+    text-align: center;
+    font-family: LTCH;
+    margin-bottom: 68px;
+  }
+  .app .cpt .android .center .fl p {
+    font-size: 18px;
+    line-height: 35px;
+    color: #171717;
+    font-family: LTH;
+  }
+  .app .cpt .android .center .fl > .btn {
+    height: unset;
+  }
+  .app .cpt .trading {
+    margin-top: -10px;
+  }
+  .app .cpt .trading .center {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+  .app .cptanq > div:not(.img) {
+    width: 90%;
+    margin-left: 5%;
+  }
+  .app .cptanq .img h3 {
+    font-size: .5em;
+  }
+  .app .man > div:not(.banner) {
+    width: 90%;
+    margin-left: 5%;
+  }
+  .app .man .banner {
+    height: unset;
+  }
+  .app .man .warp .tit {
+    font-size: 21px !important;
+  }
+  .app .compare .img {
+    width: 100%;
+    background-size: 100%;
+  }
+  .app .compare .img .center {
+    width: 90%;
+    margin: 0 auto;
+    color: #ffffff;
+    padding: 5% 0 6%;
+    box-sizing: border-box;
+  }
+  .app .compare .img .center h6 {
+    font-family: FZLTZHK;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+  }
+  .app .compare .img .center p {
+    font-family: Light;
+    width: 380px;
+    margin: 14px auto 0;
+    font-size: 14px;
+  }
+  .app .compare .conTab .center {
+    width: 90%;
+    margin: 20px auto 20px;
+  }
+  .app .compare .conTab .center div.mt4, .app .compare .conTab .center div.ctrader {
+    box-shadow: 0.5rem 0.5rem 0.5rem #fbfbfb, 0.5rem -0.5rem 0.5rem #fbfbfb, -0.5rem 0.5rem 0.5rem #fbfbfb, -0.5rem -0.5rem 0.5rem #fbfbfb;
+  }
+  .app .compare .conTab .center div.mt4 h3, .app .compare .conTab .center div.ctrader h3 {
+    font-size: 22px;
+    color: #000000;
+    text-align: center;
+    padding-top: 48px;
+  }
+  .app .compare .conTab .center div.mt4 .mtCon, .app .compare .conTab .center div.ctrader .mtCon {
+    width: 100%;
+    height: 660px;
+    position: relative;
+  }
+  .app .compare .conTab .center div.mt4 .mtCon > .fl, .app .compare .conTab .center div.ctrader .mtCon > .fl {
+    width: 47%;
+    margin: 32px 0 0 3%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .app .compare .conTab .center div.mt4 .mtCon > .fl p.title, .app .compare .conTab .center div.ctrader .mtCon > .fl p.title {
+    color: #0e0e0c;
+    font-size: 18px;
+    font-family: SEMIBOLD;
+    line-height: 2rem;
+    font-weight: 900;
+  }
+  .app .compare .conTab .center div.mt4 .mtCon > .fl ul, .app .compare .conTab .center div.ctrader .mtCon > .fl ul {
+    margin: 2rem 0 0 1.5rem;
+  }
+  .app .compare .conTab .center div.mt4 .mtCon > .fl ul li, .app .compare .conTab .center div.ctrader .mtCon > .fl ul li {
+    margin-top: 1.8rem;
+    width: 290px;
+  }
+  .app .compare .conTab .center div.mt4 .mtCon > .fl ul li img, .app .compare .conTab .center div.ctrader .mtCon > .fl ul li img {
+    margin-top: 0.8%;
+  }
+  .app .compare .conTab .center div.mt4 .mtCon > .fl ul li p, .app .compare .conTab .center div.ctrader .mtCon > .fl ul li p {
+    font-size: 16px;
+    color: #313131;
+    font-family: LTH;
+  }
+  .app .compare .conTab .center div.mt4 .mtCon > .fr, .app .compare .conTab .center div.ctrader .mtCon > .fr {
+    width: 45%;
+    height: auto;
+    margin: 0 5% 0 0;
+    position: absolute;
+    top: 37px;
+    right: 0;
+  }
+  .app .compare .conTab .center div.mt4 .mtCon > .fr img, .app .compare .conTab .center div.ctrader .mtCon > .fr img {
+    width: 100%;
+  }
+  .app .compare .conTab .center div.ctrader .mtCon {
+    height: 982px;
+  }
+  .app > div > .title {
+    font-size: 24px;
+    line-height: 60px;
+    margin-top: 10px;
+  }
+  .app > div .mobbaner {
+    width: 100%;
+  }
+  .app > div > .exp {
+    display: block;
+    height: auto;
+    width: 100%;
+    background: #fff;
+    position: relative;
+  }
+  .app > div > .exp .leftimg {
+    width: 100%;
+    margin-left: 0;
+    display: block;
+    background: #f8f7f7;
+  }
+  .app > div > .exp .leftimg > img {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+  }
+  .app > div > .exp .content {
+    margin-left: 5%;
+    margin-top: 30px;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .app > div > .exp .content .title {
+    font-size: 24px;
+    margin: 0px 0 0 15%;
+    line-height: unset;
+    position: relative;
+  }
+  .app > div > .exp .content .line {
+    float: none;
+    margin: 20px 0 0 15%;
+    position: relative;
+  }
+  .app > div > .exp .content .text {
+    width: auto;
+    padding: 0;
+    margin: 10px 0 0 0;
+  }
+  .app > div > .exp .content .space {
+    display: none;
+  }
+  .app > div > .exp .content > div {
+    position: relative;
+  }
+  .app .products .banner {
+    height: auto;
+  }
+  .app .products .banner .title {
+    margin-top: 1em;
+    font-size: 2em;
+  }
+  .app .products .banner .desc {
+    font-size: 1.5em;
+  }
+  .app .products .banner .list-wrap .item {
+    white-space: nowrap;
+  }
+  .app .products .banner .list-wrap .item img {
+    width: 60%;
+  }
+  .app .products > div:not(.banner) {
+    width: 90%;
+    margin-left: 5%;
+  }
+  .app .products .imgbox .partleft, .app .products .imgbox .partrights {
+    width: 100%;
+    margin-left: 0;
+  }
+  .app .products .imgbox .partleft > div, .app .products .imgbox .partrights > div {
+    filter: grayscale(0%);
+    float: none;
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 2em;
+    margin-left: 0;
+    height: unset;
+  }
+  .app .products .imgbox .partleft > div .info, .app .products .imgbox .partrights > div .info {
+    opacity: 1;
+  }
+  .app .products .part1 .info span {
+    margin-top: 60px !important;
+  }
+  .app .products .choose .tit {
+    font-size: 1.5em;
+    margin-top: 1em;
+  }
+  .app .products .choose .choiceicon {
+    width: 100%;
+    margin-top: 2em;
+    margin-bottom: 2em;
+  }
+  .app .products .choose .choiceicon > ul {
+    flex-direction: column;
+  }
+  .app .products .choose .choiceicon > ul li {
+    margin-bottom: 2em;
+  }
+  .app .foreign .choose {
+    margin-top: 0;
+    height: 570px;
+  }
+  .app .foreign .choose > div {
+    width: 100%;
+    height: 500px;
+    margin-top: 90px;
+  }
+  .app .foreign .choose > div .loop {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .app .foreign .choose > div .loop .bg1 {
+    width: 100%;
+    height: 100%;
+    top: -130px;
+    left: 0;
+  }
+  .app .foreign .choose > div .loop .bg1 > div {
+    width: 100%;
+    height: 100%;
+    border: none;
+    animation: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1;
+    position: absolute;
+  }
+  .app .foreign .choose > div .loop .bg1 > div span {
+    animation: none;
+    position: relative;
+    left: unset;
+    right: unset;
+    top: unset;
+    bottom: unset;
+    top: unset;
+    background: transparent;
+    line-height: 30px;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    font-size: 14px;
+  }
+  .app .foreign .choose > div .loop .bg1 > div span br {
+    display: none;
+  }
+  .app .foreign .choose > div .loop .fenche {
+    z-index: 0;
+    position: absolute;
+    opacity: .2;
+    overflow: hidden;
+  }
+  .app .foreign .choose > div .loop .fenche img {
+    animation: none;
+    width: 100%;
+    left: unset;
+    top: unset;
+    margin-left: unset;
+  }
+  .app .foreign .choose > div .loop .fenche .gan {
+    display: none;
+  }
+  .app .metal .warp {
+    width: 100%;
+  }
+  .app .metal .warp .leftimg {
+    width: 100%;
+    float: none;
+    margin-left: 0px;
+  }
+  .app .metal .warp .floatfont {
+    float: none;
+    width: 90%;
+    margin-left: 5%;
+  }
+  .app .metal .warp .floatfont .title {
+    font-size: 24px;
+    position: relative;
+    margin: 20px 0;
+    line-height: 34px;
+    text-align: left;
+  }
+  .app .metal .warp .floatfont .line {
+    float: none;
+    margin: 20px;
+    position: relative;
+  }
+  .app .metal .warp .floatfont .text {
+    float: none;
+    width: 100%;
+    margin-top: 20px;
+    padding: 0;
+  }
+  .app .metal .choose {
+    width: 100%;
+  }
+  .app .metal .choose .tit {
+    font-size: 21px !important;
+    margin-top: 30px;
+  }
+  .app .metal .choose .clearfix {
+    width: 100%;
+  }
+  .app .metal .choose .clearfix .melaleft {
+    width: 90%;
+    margin-left: 5%;
+  }
+  .app .metal .choose .clearfix .melaright {
+    width: 100%;
+  }
+  .app .metal .choose .clearfix .melaright .purfont {
+    float: none !important;
+    text-align: center;
+    width: 100% !important;
+  }
+  .app .metal .choose .clearfix .melaright a {
+    display: block;
+  }
+  .app .metal .choose .clearfix .melacenter {
+    width: 100%;
+  }
+  .app .metal .choose .clearfix .melacenter img {
+    width: 100%;
+  }
+  .app .oil .choose {
+    width: 100%;
+    margin-top: 20px;
+  }
+  .app .oil .choose h1 {
+    font-size: 21px !important;
+    font-weight: 500;
+  }
+  .app .oil .choose .clearfix {
+    display: flex;
+    flex-direction: column;
+  }
+  .app .oil .choose .clearfix .rightimg {
+    width: 100%;
+  }
+  .app .conctrat > .wrap {
+    width: 90%;
+    margin-top: 20px;
+    margin-left: 5%;
+  }
+  .app .conctrat > .wrap .artleft .tit {
+    font-size: 21px !important;
+  }
+  .app .conctrat > .wrap .imgright {
+    width: 100%;
+    float: none;
+  }
+  .app .conctrat .how {
+    width: 90%;
+    margin-left: 5%;
+  }
+  .app .conctrat .how .tit {
+    font-size: 21px !important;
+  }
+  .app .tradeindex > .wrap {
+    width: 90%;
+    margin-top: 20px;
+    margin-left: 5%;
+  }
+  .app .tradeindex > .wrap .tit {
+    font-size: 21px !important;
+    margin-top: 70px;
+  }
+  .app .tradeindex .choose {
+    height: unset;
+    width: 100%;
+    margin-bottom: 0;
+  }
+  .app .tradeindex .choose .imgcen {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+  .app .tradeindex .choose .part:nth-child(1) {
+    display: none;
+  }
+  .app .tradeindex .choose .part {
+    float: none;
+    margin: 0 auto;
+  }
+  .app .currency .wrap {
+    width: 90%;
+    margin-top: 20px;
+    margin-left: 5%;
+  }
+  .app .currency .wrap .tit {
+    font-size: 21px !important;
+    margin-top: 70px;
+  }
+  .app .currency .wrap .currencyimg ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .app .currency .wrap .currencyimg ul li {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  .app .apply {
+    text-align: center;
+    height: auto;
+  }
+  .app .apply .registerWrap p {
+    float: none;
+    display: inline-block;
+  }
+  .app .apply .registerWrap .btn {
+    float: none;
+    margin: 10px auto;
+  }
+  .app .white .bannerimg {
+    width: 100%;
+    height: auto;
+  }
+  .app .white .tit {
+    font-size: 21px;
+  }
+  .app .white .warp {
+    padding: 0 15px;
+  }
+  .app .white .art {
+    line-height: 40px;
+  }
+  .app .white .anlist {
+    margin-top: 40px;
+  }
+  .app .white .anlist ul li {
+    width: 100%;
+  }
+  .app .white .bottomtips {
+    margin-top: 40px;
+    margin-bottom: 60px;
+  }
+  .app .api .bannerimg {
+    width: 100%;
+    height: auto;
+  }
+  .app .api .tit {
+    font-size: 21px;
+    margin-top: 50px;
+  }
+  .app .api .warp {
+    padding: 0 15px;
+  }
+  .app .api .art {
+    line-height: 32px;
+  }
+  .app .api .iconlist {
+    margin-top: 0px;
+  }
+  .app .api .iconlist ul {
+    margin-top: 40px;
+  }
+  .app .api .iconlist ul li {
+    display: block;
+    float: none;
+    width: 100%;
+  }
+  .app .api .iconlist ul li:nth-child(5) {
+    margin-left: 0px;
+  }
+  .app .api .iconlist ul li p {
+    margin-top: 20px;
+  }
+  .app .provider .bannerimg {
+    width: 100%;
+    height: auto;
+  }
+  .app .provider .tit {
+    font-size: 21px;
+    margin-top: 50px;
+  }
+  .app .provider .warp {
+    padding: 0 15px;
+  }
+  .app .provider .art {
+    line-height: 32px;
+  }
+  .app .provider .leftart {
+    width: auto;
+    float: none;
+  }
+  .app .provider .lastart {
+    margin-top: 20px;
+    margin-bottom: 60px;
+  }
+  .app .IB .bannerimg {
+    width: 100%;
+    height: auto;
+  }
+  .app .IB .tit {
+    font-size: 21px;
+    margin-top: 50px;
+  }
+  .app .IB .warp {
+    padding: 0 15px;
+  }
+  .app .IB .art {
+    line-height: 32px;
+  }
+  .app .IB .sixtype {
+    margin-top: 80px;
+    line-height: 40px;
+  }
+  .app .IB .anlist {
+    margin-top: 60px;
+    padding: 0;
+  }
+  .app .IB .anlist ul li {
+    width: 100%;
+    height: 40px;
+    padding-left: 0;
+    float: none;
+  }
+  .app .IB .anlist ul li p {
+    width: 87%;
+  }
+  .app .bigImg {
+    width: 100%;
+    height: auto;
+    background: url(../public/images/sch/bigImgP.jpg) no-repeat;
+    background-size: 100%;
+  }
+  .app .bigImg .center {
+    width: 80%;
+    margin: 0 auto;
+    padding: 10% 0 7%;
+    text-align: center;
+    color: #fff;
+  }
+  .app .bigImg .center h6 {
+    font-size: 1.5rem;
+    letter-spacing: 0.2rem;
+  }
+  .app .bigImg .center p {
+    font-size: 0.8rem;
+    width: 8rem;
+    line-height: 2rem;
+    background-color: #5b0eb2;
+    margin: 0.8rem auto 0;
+    border-radius: 1.8rem;
+  }
+  .app .bigImg .center p a {
+    color: #fff;
+  }
+  .app .center > h3 {
+    font-size: 1.5rem;
+    color: #000000;
+    text-align: center;
+  }
+  .app .center > p.titCon {
+    font-size: 0.4rem;
+    color: #606060;
+    text-align: center;
+    margin: 0.8rem auto 2rem;
+  }
+  .app .search {
+    width: 100%;
+    background-color: #f9f9f9;
+  }
+  .app .search .center {
+    width: 98%;
+    margin: 0 auto;
+    padding: 11% 0;
+  }
+  .app .search .center > ul li {
+    float: left;
+    width: 28%;
+  }
+  .app .search .center > ul li p {
+    width: 100%;
+    line-height: 2.2rem;
+    text-align: center;
+    border: 1px solid #222222;
+    border-radius: 0.6rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+  .app .search .center > ul li p a {
+    color: #222222;
+  }
+  .app .search .center > ul li p:hover {
+    background-color: #5b0eb2;
+    color: #fff;
+    border: 1px solid #5b0eb2;
+    cursor: pointer;
+  }
+  .app .search .center > ul li p:hover a {
+    color: #fff;
+  }
+  .app .search .center > ul li span {
+    font-size: 0.6rem;
+    line-height: 1rem;
+    color: #7f7f7f;
+    text-align: center;
+    display: inline-block;
+    margin: 0.4rem auto 0;
+  }
+  .app .search .center > ul li.line {
+    width: 0.1rem;
+    height: 1.2rem;
+    background-color: #222222;
+    margin: 1.5% 3% 0 4%;
+    display: block;
+  }
+  .app .video .center {
+    width: 91%;
+    margin: 11% auto 5%;
+    font-family: LTHK;
+  }
+  .app .video .center > .vidCon > div.fl {
+    width: 66%;
+    overflow: hidden;
+  }
+  .app .video .center > .vidCon .conBot > .fl {
+    width: 70%;
+  }
+  .app .video .center > .vidCon .botTit {
+    font-size: 0.7rem;
+    color: #0d0d0d;
+    margin: 1rem 0 1rem;
+    margin-left: 4%;
+  }
+  .app .video .center > .vidCon .botTitCon {
+    display: inline-block;
+    font-size: 0.7rem;
+    color: #a2a2a2;
+    margin-left: 4%;
+  }
+  .app .video .center > .vidCon p.num {
+    font-size: 2rem;
+    color: #e0e0e0;
+    line-height: 4rem;
+    margin-right: 3%;
+  }
+  .app .video .center > .vidCon > div.fl {
+    float: left;
+    width: 79%;
+    margin: 0 10%;
+  }
+  .app .video .center > .vidCon > ul.fr li {
+    float: left;
+    width: 48%;
+    margin: 5% 2% 0 0;
+  }
+  .app .video .center > .vidCon > div.fl, .app .video .center > .vidCon > ul li {
+    overflow: hidden;
+  }
+  .app .video .center > .vidCon > div.fl > a > img, .app .video .center > .vidCon > ul li img {
+    width: 100%;
+    cursor: pointer;
+    transition: all 0.6s;
+  }
+  .app .video .center > .vidCon > div.fl:hover > a > img, .app .video .center > .vidCon > ul li:hover img {
+    transform: scale(1.05);
+  }
+  .app .video .center > p.btnMore {
+    font-size: 0.8rem;
+    color: #222222;
+    width: 8.8rem;
+    line-height: 2rem;
+    text-align: center;
+    border: 1px solid #222222;
+    border-radius: 0.8rem;
+    margin: 2rem auto 6rem;
+  }
+  .app .video .center > p.btnMore a {
+    color: #222222;
+  }
+  .app .know .center {
+    width: 97%;
+    margin: 0 auto;
+  }
+  .app .know .center > ul.basis li {
+    float: left;
+    width: 50%;
+  }
+  .app .know .center > ul.basis li.line {
+    width: 2.4rem;
+    height: 0.1rem;
+    background-color: #5b0eb2;
+    margin: 0.8rem 1rem 0 0.5rem;
+    display: block;
+  }
+  .app .know .center > ul.basis li.liCen p.top {
+    font-size: 1.1rem;
+    margin-bottom: 1.2rem;
+    color: #000;
+  }
+  .app .know .center > ul.basis li.liCen p.con {
+    font-size: 0.8rem;
+    line-height: 1.5rem;
+    color: #707070;
+    text-align: justify;
+  }
+  .app .know .center > ul.basis li.liImg {
+    width: 28%;
+  }
+  .app .basis li.liImg img {
+    margin: 3.5rem 0 0 1rem;
+    width: 75%;
+  }
+  .app .know .center > ul.liConWord {
+    width: 92%;
+    margin: 3rem auto 5rem;
+  }
+  .app .know .center > ul.liConWord li {
+    float: left;
+    width: 45%;
+    margin: 0 5% 2rem 0;
+    border-top: 1px solid #ececec;
+  }
+  .app .know .center > ul.liConWord li p.schooltit {
+    color: #000000;
+    font-size: 1rem;
+    padding: 1rem 0;
+  }
+  .app .know .center > ul.liConWord li p.titCon {
+    color: #8c8c8c;
+    font-size: 0.6rem;
+    margin-bottom: 1.5rem;
+  }
+  .app .know .center > ul.liConWord li p.schcontent {
+    color: #000000;
+    font-size: 0.6rem;
+  }
+  .app .know .center > ul.liConWord li p.schcontent span.fr {
+    margin-right: 15%;
+    display: none;
+  }
+  .app .know .center > ul.liConWord li:hover {
+    border-top: 1px solid #5b0eb2;
+  }
+  .app .know .center > ul.liConWord li:hover p.schcontent span.fr {
+    display: inline-block;
+  }
+  .app .know .center > ul.liConWord li:hover p.schcontent span a {
+    color: #5b0eb2;
+  }
+  .app .know .center > ul.advanced {
+    width: 95%;
+    margin: 3rem auto 1rem;
+  }
+  .app .know .center > ul.advanced li {
+    float: left;
+  }
+  .app .know .center > ul.advanced li img {
+    width: 100%;
+  }
+  .app .know .center > ul.advanced li:last-child {
+    width: 100%;
+    margin: 0.4rem 0 0 0rem;
+  }
+  .app .know .center > ul.advanced li p.schooltit {
+    font-size: 1.1rem;
+  }
+  .app .know .center > ul.advanced li p.line {
+    width: 5rem;
+    height: 0.1rem;
+    background-color: #5b0eb2;
+    margin: 0.5rem 0 0.3rem;
+  }
+  .app .know .center > ul.advanced li p.con {
+    font-size: 0.8rem;
+    line-height: 1.4rem;
+    color: #707070;
+  }
+  .app .know .center > p.dian {
+    font-size: 1.8rem;
+    line-height: 1rem;
+    color: #5b0eb2;
+    text-align: center;
+  }
+  .app .know .center > ul.list li {
+    float: left;
+    width: 31%;
+    height: 8.2rem;
+    margin: 2rem 1% 0;
+    color: #fff;
+  }
+  .app .know .center > ul.list li a {
+    color: #fff;
+  }
+  .app .know .center > ul.list li.one {
+    background: url(../public/images/sch/kno1.png) no-repeat;
+  }
+  .app .know .center > ul.list li.two {
+    background: url(../public/images/sch/kno2.png) no-repeat;
+  }
+  .app .know .center > ul.list li.three {
+    background: url(../public/images/sch/kno3.png) no-repeat;
+  }
+  .app .know .center > ul.list li.four {
+    background: url(../public/images/sch/kno4.png) no-repeat;
+  }
+  .app .know .center > ul.list li.five {
+    background: url(../public/images/sch/kno5.png) no-repeat;
+  }
+  .app .know .center > ul.list li p.top {
+    font-size: 1.2rem;
+    padding: 1rem 0 0 1.8rem;
+  }
+  .app .know .center > ul.list li p.cen {
+    width: 90%;
+    font-size: 0.6rem;
+    line-height: 1rem;
+    margin: 0.8rem 0 0.1rem 1rem;
+  }
+  .app .know .center > ul.list li.three p.cen, .app .know .center > ul.list li.four p.cen {
+    margin: 0.8rem 0 -0.2rem 1.2rem;
+  }
+  .app .know .center > ul.list li p.bot {
+    margin-left: 80%;
+  }
+  .app .know .center > ul.list li:hover {
+    background: url(../public/images/sch/know.png) no-repeat;
+  }
+  .app .az > .center {
+    width: 82%;
+    margin: 5rem auto;
+  }
+  .app .az .center > div.schooltit .eng {
+    font-size: 1rem;
+    color: #333333;
+    font-style: italic;
+    margin: 0.2rem 0 0 1rem;
+  }
+  .app .az .center > div.schooltit .chi {
+    font-size: 1.2rem;
+    color: #000000;
+    font-weight: 800;
+    border-bottom: 1px solid #000;
+    width: 71%;
+    margin-left: 9%;
+  }
+  .app .az > .center > ul {
+    width: 100%;
+    margin: 1.83rem 0.5rem 0 0;
+    border: 1px solid #e8e9ed;
+    border-right: none;
+    border-bottom: none;
+  }
+  .app .az > .center > ul > li {
+    font-weight: 900;
+    float: left;
+    width: 10.4%;
+    height: 1.02rem;
+    font-size: 0.5rem;
+    color: #c9c9c9;
+    text-align: center;
+    line-height: 1.02rem;
+    border-right: 2px solid #e8e9ed;
+    font-family: ALB;
+    border-bottom: 1px solid #e8e9ed;
+  }
+  .app .az > .center > ul > li a {
+    color: #c9c9c9;
+  }
+  .app .az > .center > ul > li:first-child a {
+    color: #000;
+  }
+  .app .az > .center > .con {
+    margin: 1rem 0.33rem 3rem 0;
+  }
+  .app .az > .center > .con > p.fl {
+    font-family: ALB;
+    font-size: 3rem;
+    color: #5b0eb2;
+    font-style: italic;
+  }
+  .app .az > .center > .con > div.fr {
+    width: 16rem;
+    font-size: 0.47rem;
+    line-height: 1.5rem;
+    color: #333333;
+  }
+  .app .az > .center > .con > div.fr > p {
+    margin-top: 0.88rem;
+    line-height: 1.5rem;
+  }
+  .app .teaTit .center {
+    width: 83%;
+    margin: 8% auto;
+  }
+  .app .teaBg {
+    display: none;
+  }
+  .app .teaBgPh {
+    width: 100%;
+    background: url(../public/images/sch/teaBg.jpg) no-repeat;
+  }
+  .app .teaBgPh .center {
+    width: 80%;
+    margin: 0 auto;
+    padding: 5% 0 4%;
+  }
+  .app .teaBgPh .center > div.botDiv {
+    border: 1px solid #f9f9f9;
+    padding: 2rem 1.8rem 1.5rem;
+  }
+  .app .teaBgPh .center > div.botDiv > * {
+    margin-left: 1.5rem;
+  }
+  .app .teaBgPh .center > div.botDiv > img {
+    width: 85%;
+  }
+  .app .teaBgPh .center > div.botDiv p.sec {
+    font-size: 0.5rem;
+    margin: 0.3rem 0 0.7rem 1.5rem;
+    color: #fffefc;
+    font-family: LTHK;
+  }
+  .app .teaBgPh .center > div.botDiv .cenWord p {
+    font-size: 2rem;
+    color: #fffefc;
+    margin: 0 0 0.5rem 2rem;
+  }
+  .app .teaBgPh .center > div.botDiv .cenWord p span {
+    display: block;
+    font-size: 0.5rem;
+    line-height: 1.2rem;
+  }
+  .app .teaBgPh .center > div.botDiv > p.bot {
+    font-size: 2.8rem;
+    color: #fffefc;
+  }
+  .app .teaBgPh .center > div.botDiv > p.bot span {
+    font-size: 2.8rem;
+  }
+  .app .teaBgPh .center > div.topDiv {
+    position: relative;
+    right: 5%;
+    top: 20%;
+  }
+  .app .teaBgPh .center > div.topDiv > img {
+    width: 67%;
+    margin-left: 7%;
+  }
+  .app .teaBgPh .center > div.topDiv p.fl {
+    font-size: 1.1rem;
+    color: #fffefc;
+    writing-mode: tb-rl;
+    position: absolute;
+    right: 7%;
+    top: 63%;
+  }
+  .app .teaBgPh .center > div.topDiv p.fr {
+    font-size: 0.5rem;
+    color: #c5c5c5;
+    writing-mode: tb-rl;
+    margin-top: 18%;
+  }
+  .app .teaCon {
+    width: 94%;
+    margin: 0% auto 10%;
+  }
+  .app .teaCon > div.fl > p.name {
+    font-size: 2.5rem;
+    color: #8b8b8b;
+    margin-top: 2rem;
+  }
+  .app .teaCon > div.fl > p.line {
+    width: 5.5rem;
+    height: 0.3rem;
+    background-color: #5b0eb2;
+    margin-bottom: 0.5rem;
+  }
+  .app .teaCon > div.fl > p.eng {
+    font-size: 1.8rem;
+    color: #5b5b5b;
+  }
+  .app .teaCon > div.fr {
+    width: 98%;
+  }
+  .app .teaCon > div.fr > p.line {
+    width: 3rem;
+    height: 0.1rem;
+    background-color: #4a4a4a;
+    margin: 1rem 0rem;
+  }
+  .app .teaCon > div.fr > p.con {
+    font-size: 0.8rem;
+    color: #606060;
+    line-height: 1.5rem;
+  }
+}
+
+@media (max-width: 1200px) and (max-width: 320px) {
+  .app .know .center > ul.liConWord li {
+    width: 48%;
+    margin: 0 2% 2rem 0;
+  }
+  .app .know .center > ul.liConWord li p.schooltit {
+    font-size: 0.8rem;
+  }
+  .app .know .center > ul.list li {
+    width: 47%;
+  }
+  .app .az > .center > .con > div.fr {
+    width: 13rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .app .introduction .mainCont {
+    width: 80%;
+  }
+  .app .introduction .mainCont > * {
+    margin: 0 !important;
+  }
+  .app .introduction .mainCont .name h1 {
+    margin-top: 30px;
+  }
+  .app .azacontent {
+    padding: 0 15px;
+  }
+  .app .contantus .tit {
+    font-size: 21px;
+    margin-top: 50px;
+  }
+  .app .contantus .contantbox .warp {
+    padding: 0 15px;
+    width: auto;
+  }
+  .app .contantus .art {
+    line-height: 32px;
+  }
+  .app .contantus .contantbox .pur .lianxisd {
+    display: block;
+  }
+  .app .contantus .contantbox .pur .lianxisd > div {
+    display: block;
+    width: 90%;
+    float: none;
+    padding-left: 20%;
+    margin-bottom: 20px;
+  }
+  .app .contantus .contantbox .pur .lianxisd > div img {
+    float: left;
+    margin-right: 10px;
+  }
+  .app .contantus .contantbox .pur .lianxisd > div span {
+    float: left;
+    font-size: 14px;
+  }
+  .app .apply {
+    width: 100% !important;
+    margin-left: 0 !important;
+    padding: 0 0 20px 0;
+    height: unset !important;
+  }
+  .app .apply .wrap {
+    width: 100%;
+    margin-top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-direction: column;
+  }
+  .app .apply .wrap p {
+    font-size: 16px;
+    line-height: 30px;
+  }
+  .app .apply .wrap .btn {
+    margin: 20px 0 0 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .app .regist .accountwarp .titleaccout .accounttype div span {
+    font-size: 22px !important;
+  }
+  .app .regist .accountwarp .standac .conTit div {
+    font-size: 16px;
+  }
+  .app .introduction .mainCont {
+    width: 100%;
+  }
+  .app .introduction .mainCont > * {
+    margin: 0 !important;
+  }
+  .app .introduction .mainCont .name h1 {
+    margin-top: 30px;
+    font-size: 16px;
+  }
+  .app .introduction .mainCont .content ul {
+    margin: 24px 12.8px 0 12.8px !important;
+  }
+  .app .introduction .mainCont .content ul li h2 {
+    font-size: 14.4px;
+    line-height: 28.8px;
+    font-weight: 900;
+  }
+  .app .introduction .mainCont .content ul li p {
+    font-size: 7.52px;
+    line-height: 19.2px;
+    color: #676767;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .app .cpt .big-img .center {
+    width: 90%;
+    margin: 0 auto;
+    padding: 5% 0 2%;
+    width: 100%;
+  }
+  .app .cpt .big-img .center h6 {
+    font-weight: 100;
+    font-size: 2.5rem;
+    color: #fff;
+    font-family: FZLTZHK;
+    text-align: center;
+  }
+  .app .cpt .big-img .center p {
+    font-family: LTH;
+    font-size: 0.3rem;
+    color: #fff;
+    width: 9rem;
+    line-height: 1.8rem;
+    background-color: #5b0eb2;
+    border-radius: 0.7rem;
+    text-align: center;
+    margin: 0.8rem auto 0;
+  }
+  .app .cpt .nav, .app .cpt .replace {
+    display: none;
+  }
+  .app .cpt .introduction .center {
+    width: 90%;
+    margin: 1rem auto 0rem;
+  }
+  .app .cpt .introduction .center h3 {
+    text-align: center;
+    font-size: 1.3rem;
+    color: #000;
+    margin-bottom: 0;
+  }
+  .app .cpt .introduction .center .intCon .fl {
+    width: 60%;
+  }
+  .app .cpt .introduction .center .intCon .fl h6 {
+    font-size: 1.2rem;
+    color: #000;
+    font-family: REGULAR;
+    font-weight: 600;
+  }
+  .app .cpt .introduction .center .intCon .fl p {
+    font-size: .82rem;
+    line-height: 1.8rem;
+    color: #171717;
+  }
+  .app .cpt .introduction .center .intCon .fr {
+    width: 38%;
+  }
+  .app .cpt .functi .top h3 {
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+  }
+  .app .cpt .functi .top .ctLine {
+    width: 124px;
+    height: 4px;
+    background-color: #5b0eb2;
+    margin: 15px 0 15px;
+  }
+  .app .cpt .functi .bot .tabs {
+    margin-top: -20px;
+    padding: 0;
+  }
+  .app .cpt .functi .bot .tabs > .clear {
+    display: flex;
+    justify-content: center;
+  }
+  .app .cpt .functi .bot .tabs > .clear > div {
+    width: 23%;
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: centerl;
+    align-items: center;
+  }
+  .app .cpt .functi .bot .tabs > .clear > div > img {
+    width: 41%;
+  }
+  .app .cpt .functi .bot .tabs > .clear > div p {
+    font-size: .8em;
+    margin: 20px 0;
+  }
+  .app .cpt .functi .bot .tabs .cont {
+    margin-top: 10px;
+  }
+  .app .cpt .functi .bot .tabs .cont .le {
+    display: none;
+  }
+  .app .cpt .functi .bot .tabs .cont .word {
+    width: 90%;
+    margin-left: 5%;
+    font-size: .8em;
+  }
+  .app .cpt .acqTop h3 {
+    font-size: 1.2em;
+    line-height: 1.5em;
+  }
+  .app .cpt .acqTop .ctLine {
+    width: 4em;
+    margin: 12px 0 12px;
+  }
+  .app .cpt .tabs .navList {
+    float: none;
+    width: 90%;
+  }
+  .app .cpt .tabs .navList > div .num {
+    font-size: .8em;
+    width: 3em;
+    height: 3em;
+    line-height: 3em;
+    font-weight: 600;
+  }
+  .app .cpt .tabs .navList > div dl {
+    transform: translateY(1em);
+  }
+  .app .cpt .tabs .navList > div dl dt {
+    font-size: 0.9em;
+    margin-bottom: .7em;
+    line-height: 1.5em;
+    font-weight: 500;
+    margin-bottom: 1.7em;
+  }
+  .app .cpt .tabs .navList > div dl dd {
+    font-size: 0.9em;
+    margin-bottom: .7em;
+    line-height: 1.5em;
+    font-weight: 500;
+  }
+  .app .cpt .tabs .fr {
+    width: 100%;
+    float: none;
+    display: flex;
+    justify-content: center;
+  }
+  .app .cpt .tabs .fr > div {
+    width: 46%;
+  }
+  .app .cpt .web .webTop {
+    margin-top: 5em;
+  }
+  .app .cpt .web .webTop h3 {
+    font-size: 1.2em;
+    margin-bottom: 1em;
+  }
+  .app .cpt .web .webTop > p {
+    font-size: 1em;
+    line-height: 1.5em;
+  }
+  .app .cpt .web .webTop .btn {
+    margin: 0 auto;
+    margin-top: 2em;
+    margin-bottom: 4em;
+    width: 15rem;
+    height: 2rem;
+    line-height: 3rem;
+    background-color: #550da5;
+    border-radius: 0.5rem;
+    box-shadow: 0px 1rem 1rem -1rem #5E5E5E;
+  }
+  .app .cpt .web .webTop .btn a {
+    line-height: unset;
+    height: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
+  .app .cpt .web .webTop .btn a img {
+    width: 7%;
+    margin: 0 0 0 2%;
+  }
+  .app .cpt .web .webTop .btn a p {
+    font-size: 1.2em;
+  }
+  .app .cpt .web .webTop h6 {
+    font-size: 1.25em;
+    line-height: 1.5em;
+  }
+  .app .cpt .web .webTop .ctLine {
+    width: 3em;
+    margin: .8em 0;
+  }
+  .app .cpt .web .webBot {
+    width: 100%;
+    background: url(/images/webIph.png) no-repeat top center;
+    background-size: 53%;
+  }
+  .app .cpt .web .webBot .con {
+    width: 90%;
+    margin: 0 auto;
+    padding: 3% 0 6%;
+  }
+  .app .cpt .web .webBot .con .fl, .app .cpt .web .webBot .con .fr {
+    margin: 1rem 0 0 0%;
+    width: 90%;
+    margin-top: 50%;
+  }
+  .app .cpt .web .webBot .con .fl > div, .app .cpt .web .webBot .con .fr > div {
+    font-size: 1em;
+    width: 4em;
+    height: 2em;
+    line-height: 2em;
+  }
+  .app .cpt .web .webBot .con .fl p, .app .cpt .web .webBot .con .fr p {
+    font-size: 1em;
+    line-height: 1.5em;
+  }
+  .app .cpt .web .webBot .con .fr {
+    width: 100%;
+    margin-top: -2em;
+  }
+  .app .cpt .ctPc .center {
+    margin-top: 0;
+    margin-bottom: 3em;
+  }
+  .app .cpt .ctPc .center h3 {
+    font-size: 1.2em;
+    font-weight: 600;
+    text-align: left;
+    margin-left: 5%;
+  }
+  .app .cpt .ctPc .center .pcCon .fl {
+    margin-top: -3em;
+  }
+  .app .cpt .ctPc .center .pcCon .fl p {
+    font-size: 1em;
+    line-height: 1.8em;
+  }
+  .app .cpt .ctPc .center .pcCon .fl .btn {
+    width: 100%;
+    height: 2em;
+  }
+  .app .cpt .ctPc .center .pcCon .fl .btn a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+  }
+  .app .cpt .ctPc .center .pcCon .fl .btn a p {
+    line-height: 2em;
+    font-size: 1em;
+    margin-left: 2%;
+  }
+  .app .cpt .ctPc .center .pcCon .fl .btn a img {
+    width: 1.2em;
+    margin: unset;
+  }
+  .app .cpt .ctPc .center .pcCon .fr {
+    margin-top: -3em;
+  }
+  .app .cpt .ios .center .fr h3 {
+    font-size: 1.5em;
+    line-height: 1.5em;
+  }
+  .app .cpt .ios .center .fr p {
+    font-size: 1em;
+    line-height: 1.8em;
+  }
+  .app .cpt .ios .center .fr .btn {
+    width: 90vw;
+    height: 60%;
+    margin-left: -45vw;
+  }
+  .app .cpt .ios .center .fr .btn .leWord img {
+    width: 5%;
+  }
+  .app .cpt .ios .center .fr .btn .leWord h6 {
+    font-size: 1.1em;
+    margin: .2em 0;
+  }
+  .app .cpt .ios .center .fr .btn .ewm img {
+    width: 80%;
+  }
+  .app .cpt .android .center {
+    margin: 3em 0 0 0;
+  }
+  .app .cpt .android .center .fl h3 {
+    font-size: 1.5em;
+    line-height: 1.5em;
+  }
+  .app .cpt .android .center .fl p {
+    font-size: 1em;
+    line-height: 1.8em;
+  }
+  .app .cpt .android .center .fl .btn {
+    width: 95vw;
+  }
+  .app .cpt .android .center .fl .btn .leWord {
+    width: 58%;
+  }
+  .app .cpt .android .center .fl .btn .leWord img {
+    width: 8%;
+  }
+  .app .cpt .android .center .fl .btn .leWord h6 {
+    font-size: 1.2em;
+    margin: 0;
+  }
+  .app .cpt .android .center .fl .btn .leWord p {
+    font-size: 1.2em;
+    color: #fff;
+  }
+  .app .cpt .android .center .fl .btn .ewm img {
+    margin: 0;
+  }
+  .app .cpt .trading {
+    margin-top: 2em;
+  }
+  .app .cpt .trading .center h6 {
+    font-size: 1.5em;
+  }
+  .app .cpt .trading .center h6 span {
+    display: inline-block;
+  }
+  .app .cpt .trading .center .ctLine {
+    width: 5em;
+    margin: 1em 0;
+  }
+  .app .cpt .trading .center .clear {
+    display: flex;
+    flex-direction: column;
+  }
+  .app .cpt .trading .center .clear li {
+    width: 100%;
+    margin-top: 1em;
+  }
+  .app .cpt .trading .center .clear li p {
+    font-size: 1.2em;
+  }
+  .app .cpt .trading .center .clear li .ctLine {
+    margin-left: 5%;
+    width: 3em;
+  }
+  .app .cpt .trading .center .clear li span {
+    font-size: 1em;
+    line-height: 1.4em;
+  }
+  .app .cpt .trading .center .clear li:hover {
+    transform: none;
+  }
+}
