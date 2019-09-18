@@ -171,11 +171,11 @@ export default {
         { title: "About Us", content: ["Funds Safety"] },
         {
           title: "Trading Product",
-          content: ["Foreign Exchange", "Precious Metal", "Precious Metal", "CFD", "Index", "Digital Currency"]
+          content: ["Foreign Exchange", "Precious Metal", "Crude Oil", "CFD", "Index", "Digital Currency"]
         },
         {
           title: "Trading Platform",
-          content: ["MT4", "Trading Leverage", "Trading Leverage", "Clearpro","CPT cTrader","CPT cTrader","Trading software comparison" ,"MAM"]
+          content: ["MT4", "Trading Leverage", "Account Types", "Clearpro","CPT cTrader","CPT cTrader Q&A","Trading software comparison" ,"MAM"]
         },
         { title: "Customer Support", content: ["Payment Method", "Education"] },
         {
@@ -545,6 +545,7 @@ p {
     width: 72%;
     li {
       line-height: 40px;
+       font-size: 16px;
     }
   }
   img {

@@ -940,6 +940,10 @@ export default {
                 display: block;
               }
             }
+            p{
+              font-size: 14px;
+              color:#ecffd2;
+            }
           }
           .ewm {
             width: 25%;

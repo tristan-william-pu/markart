@@ -18,7 +18,7 @@
       <div class="rigFl mb">
         <img src="@/assets/ctLogo.png" />
         <p>
-          <span>CPT cTrader</span>是什么？
+          {{$t('question.whatis')}}
         </p>
       </div>
       <div class="center">
@@ -29,8 +29,7 @@
           </div>
           <div class="fl rigFl pc">
             <img src="@/assets/ctLogo.png" />
-            <p>
-              <span>CPT cTrader</span><br>{{$t('question.what')}}
+            <p v-html="$t('question.what')">
             </p>
           </div>
         </div>
@@ -338,6 +337,9 @@ export default {
 </script>
 <style lang="scss">
 @import "@/styles/mixin.scss";
+a {
+  color:#5a0db2;
+}
 .cptanq {
   width: 100%;
   .img {
@@ -374,7 +376,7 @@ export default {
         @include clearfix();
         @include flex();
         .leDiv {
-          width: 450px;
+          width: 40%;
           background: url("./../../assets/proWhat.png") no-repeat center;
           background-size: 100%;
           p {
@@ -388,7 +390,7 @@ export default {
           }
         }
         .rigFl {
-          width: 250px;
+          width: 25%;
           margin: 3% 0 0 5%;
           img {
             vertical-align: middle;
@@ -444,6 +446,12 @@ export default {
             }
           }
         }
+        >div{
+          margin-top:55px;
+        }
+        .frCon{
+                margin-top:8%;
+              }
       }
       .listDiv {
         > div {
