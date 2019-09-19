@@ -166,86 +166,55 @@ export default {
     return {
       mapList: [
         {
-          name:{
-            cn:'联系我们',
-            en:'CONTACT US',
-            tc:'',
-          },
-          contents:[
-            {
-              cn:{
-                title:'',
-                content:'',
-              },
-              en:{
-                title:'CPT Markets UK',
-                content:'',
-              },
-              tc:{
-                title:'',
-                content:'',
-              },
-            },
-          ],
+          name: "CPT Markets UK",
+          title: "CPT Markets UK ",
+          contents: ["（Citypoint Trading Ltd的交易名称）", "伦敦"]
+        },
+        {
+          name: "CPT Markets 伯利兹",
+          title: "CPT Markets ",
+          contents: ["伯利兹"]
+        },
+        {
+          name: "CPT Markets 马来西亚",
+          title: "CPT Markets",
+          contents: ["马来西亚"]
+        },
+        {
+          name: "CPT Markets 迪拜",
+          title: "CPT Markets",
+          contents: ["迪拜"]
+        },
+        {
+          name: "CPT Markets 台湾",
+          title: "CPT Markets",
+          contents: ["台湾"]
         }
-        
       ],
-      // [
-      //   {
-      //     name: "CPT Markets UK",
-      //     title: "CPT Markets UK ",
-      //     contents:{
-      //       cn:'(Citypoint Trading Ltd的交易名称)',
-      //       en:'(Trading name of Citypoint Trading Ltd)',
-      //       tc:'(Citypoint Trading Ltd的交易名稱)',
-      //       },
-          
-      //   },
-      //   {
-      //     name: "CPT Markets 伯利兹",
-      //     title: "CPT Markets ",
-      //     contents: ["伯利兹"]
-      //   },
-      //   {
-      //     name: "CPT Markets 马来西亚",
-      //     title: "CPT Markets",
-      //     contents: ["马来西亚"]
-      //   },
-      //   {
-      //     name: "CPT Markets 迪拜",
-      //     title: "CPT Markets",
-      //     contents: ["迪拜"]
-      //   },
-      //   {
-      //     name: "CPT Markets 台湾",
-      //     title: "CPT Markets",
-      //     contents: ["台湾"]
-      //   }
-      // ],
-      // active: 0,
-      // roateZ: 0,
-      // position: [
-      //   {
-      //     left: "484px",
-      //     top: "547px"
-      //   },
-      //   {
-      //     left: "269px",
-      //     top: "615px"
-      //   },
-      //   {
-      //     left: "767px",
-      //     top: "627px"
-      //   },
-      //   {
-      //     left: "637px",
-      //     top: "587px"
-      //   },
-      //   {
-      //     left: "803px",
-      //     top: "591px"
-      //   }
-      // ],
+      active: 0,
+      roateZ: 0,
+      position: [
+        {
+          left: "484px",
+          top: "547px"
+        },
+        {
+          left: "269px",
+          top: "615px"
+        },
+        {
+          left: "767px",
+          top: "627px"
+        },
+        {
+          left: "637px",
+          top: "587px"
+        },
+        {
+          left: "803px",
+          top: "591px"
+        }
+      ],
       pStyle: {},
       showPointer: false,
       timmer: null
