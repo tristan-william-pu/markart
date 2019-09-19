@@ -9,13 +9,13 @@
 					<span class="fr">外汇交易术语及词汇</span>
 				</div>
 				<ul class="clearfix changecolor">
-                    <li v-for="(word,index) in words" :key="index" @click="wordsCHange(index)" :class="index == num ?'wordActive':''">{{word}}</li>
+                    <li v-for="(word,index) in words" :key="index" @click="wordsCHange(index)" :class=" index == num ?'wordActive':''">{{word}}</li>
 				</ul>
-				<template v-for="(content,index) in contents">
-					<div class="con clearfix" :key="index" v-if="num == index ">
-						<p class="fl setfontsize">{{content.big}}</p>
+				<template v-for="(content,index) in carry">
+					<div class="con clearfix" :key="index" v-if=" num == index ">
+						<p class="fl setfontsize">{{carry[index].big}}</p>
 						<div class="fr setfontsizes">
-							<p v-for="(sentence,index) in content[$i18n.locale + 'long']" :key="index">{{sentence}}</p>
+							<p v-for="(sentence,key) in carryLong" :key="key">{{sentence}}</p>
 						</div>
 					</div>
 				</template>
@@ -25,25 +25,38 @@
 </template>
 
 <script>
-import {contents} from './js/contents'
+
     export default {
         data(){
             return{
                 words:["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"],
-                contents:contents,
+                contents: require('./js/contents'),
                 num:0,
             }
 		},
-        mounted(){
-			console.log(this.$route.params.freezeMon)
-			var father = this.$route.params.freezeMon;
-			if( father == undefined ){
-				this.num = 0;
-			}else{
-				this.num = this.$route.params.freezeMon;
-			}
-            
-        },
+		computed:{
+			locale() {
+				return this.$i18n.locale
+			},
+			numbers(){
+				return this.$route.params.freezeMon || 0;
+			},
+			carry(){
+				let data = this.contents.contents;
+				return data;
+			},
+			carryLong(){
+				let data;
+				if( this.locale == 'en' ){
+					data = this.carry[this.num].enlong;
+				}else if( this.locale == 'cn' ){
+					data = this.carry[this.num].long;
+				}else{
+					data = this.carry[this.num].zhlong;
+				}
+				return data;
+			},
+		},
         methods:{
             wordsCHange(index){
                 this.num = index;

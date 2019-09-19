@@ -3,8 +3,8 @@
 		<!-- 主体 -->
 		<div class="bascontent">
 			<div class="center">
-				<h1 v-html="list[num].name[locale]"></h1>
-				<div class="basisMain" v-for="(item,index) in list[num].contents" :key="index">
+				<h1 v-html="carry.name[locale]"></h1>
+				<div class="basisMain" v-for="(item,index) in carry.contents" :key="index">
 					<h3 v-html="item[locale].title"></h3>
 					<div class="basisCont" v-html="item[locale].content"></div>
 				</div>
@@ -20,26 +20,22 @@
         data(){
             return {
 			   list:  require('./js/BasisData'),
-			   num:0,
+			 
             }
 		},
 		computed: {
 			locale() {
 				return this.$i18n.locale
 			},
+			numbers(){
+				return this.$route.params.num || 0;
+			},
 			carry(){
-				let data = this.list[this.num];
+				let data = this.list[this.numbers];
 				return data;
 			},
 		},
-        created(){
-			console.log(this.$route.params.num)
-			if(this.$route.params.num !== undefined){
-				this.num = this.$route.params.num;
-			}else{
-				this.num = 0;
-			}
-		},
+        
     }
 </script>
 
