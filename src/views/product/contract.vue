@@ -9,20 +9,19 @@
 <template>
   <div class="conctrat">
     <div class="title">{{$t('CFD.contract')}}</div>
-    <div class="exp">
+    <div class="warp clearfix">
       <div class="leftimg">
         <img src="images/CFD03.jpg" alt />
       </div>
       <div class="content">
-        <div class="space"></div>
         <div class="title">
           {{$t('CFD.what')}}
           <br />{{$t('CFD.cfd')}}
         </div>
         <div class="line"></div>
         <div class="text">
-          <p>{{$t('CFD.appeared')}}</p>
-          <p>{{$t('CFD.behavior')}}</p>
+         {{$t('CFD.appeared')}} <br>
+          {{$t('CFD.behavior')}}
         </div>
       </div>
     </div>
@@ -86,37 +85,34 @@ export default {
     animation: slide-up 1s cubic-bezier(0.215, 0.61, 0.355, 1);
     animation-fill-mode: forwards;
   }
-  .exp {
+  .warp {
     @include flex();
-    margin-top: 100px;
-    margin-top: 60px;
-    height: 550px;
-    background: #f8f7f7;
-    width: 100vw;
+    width: 1200px;
+    display: block;
     margin: 0 auto;
-    position: absolute;
-    left: 0;
+    margin-bottom: 20px;
     .leftimg {
-      width: 35%;
+      margin-left: -100px;
+      width: 500px;
+      height: 600px;
+      background: #f8f7f7;
+      position: relative;
+      overflow: hidden;
+      float: left;
       @include flex();
-      height: 100%;
       > img {
         animation: slide-right 1s cubic-bezier(0.215, 0.61, 0.355, 1);
         animation-fill-mode: forwards;
         opacity: 0;
         animation-delay: 200ms;
         position: absolute;
-        width: 500px;
-        height: 600px;
       }
     }
     .content {
-      width: 65%;
+      float:left;
       background: #ffffff;
       height: 100%;
-      .space {
-        height: 140px;
-      }
+      margin-top:50px;
       .title {
         font-size: 55px;
         color: #000;
@@ -124,15 +120,12 @@ export default {
         animation-fill-mode: forwards;
         opacity: 0;
         animation-delay: 200ms;
-        position: absolute;
-        margin-top: -85px;
-        margin-left: 10px;
       }
       .line {
         width: 100px;
         height: 1px;
         background: #5004ac;
-        margin-top: 150px;
+        margin-top: 80px;
         float: left;
         position: absolute;
         opacity: 0;
@@ -144,7 +137,7 @@ export default {
         padding: 0 50px;
         margin-left: 20px;
         width: 650px;
-        margin-top: 135px;
+        margin-top: 65px;
         font-size: 18px;
         font-family: montserrat;
         letter-spacing: 1px;
@@ -153,10 +146,6 @@ export default {
         animation: slide-left-text 1s cubic-bezier(0.215, 0.61, 0.355, 1);
         animation-fill-mode: forwards;
         animation-delay: 600ms;
-        p {
-          font-size: 16px;
-          box-sizing: border-box;
-        }
       }
     }
   }
@@ -164,7 +153,6 @@ export default {
     width: 1200px;
     display: block;
     margin: 0 auto;
-    margin-top: 577px;
     margin-bottom: 20px;
     @include clearfix();
     .artleft {
