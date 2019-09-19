@@ -10,19 +10,16 @@
 <template>
   <div class="foreign">
     <div class="title">{{$t('exchange.forign')}}</div>
-    <div class="exp">
+    <div class="warp clearfix">
       <div class="leftimg ">
         <img src="images/echange3.jpg" alt />
       </div>
-      <div class="content ">
-        <div class="space "></div>
+      <div class="content">
         <div class="title ">
           {{$t('exchange.what')}}<br>{{$t('exchange.waihui')}}
         </div>
         <div class="line"></div>
-        <div
-          class="text"
-        >{{$t('exchange.rate')}}</div>
+        <div class="text">{{$t('exchange.rate')}}</div>
       </div>
     </div>
     <div class="choose">
@@ -101,20 +98,21 @@ export default {
     animation: slide-up 1s cubic-bezier(0.215, 0.61, 0.355, 1);
     animation-fill-mode: forwards;
   }
-  .exp {
+  .warp {
     @include flex();
-    margin-top: 100px;
-    margin-top: 60px;
-    height: 550px;
-    background: #f8f7f7;
-    width: 100vw;
+    width: 1200px;
+    display: block;
     margin: 0 auto;
-    position: absolute;
-    left: 0;
+    margin-bottom: 20px;
     .leftimg {
-      width: 35%;
+      margin-left: -100px;
+      width: 500px;
+      height: 600px;
+      background: #f8f7f7;
+      position: relative;
+      overflow: hidden;
+      float: left;
       @include flex();
-      height: 100%;
       > img {
         animation: slide-right 1s cubic-bezier(0.215, 0.61, 0.355, 1);
         animation-fill-mode: forwards;
@@ -124,22 +122,17 @@ export default {
       }
     }
     .content {
-      width: 65%;
+      float:left;
       background: #ffffff;
       height: 100%;
-      .space {
-        height: 140px;
-      }
+      margin-top:50px;
       .title {
         font-size: 55px;
-        margin-top: 30px;
         color: #000;
         animation: slide-left 1s cubic-bezier(0.215, 0.61, 0.355, 1);
         animation-fill-mode: forwards;
         opacity: 0;
         animation-delay: 200ms;
-        position: absolute;
-        margin-top: -60px;
       }
       .line {
         width: 100px;
@@ -171,7 +164,6 @@ export default {
   }
   .choose {
     width: 100%;
-    margin-top: 730px;
     height: 1100px;
     h1 {
       font-size: 40px;

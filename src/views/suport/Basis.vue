@@ -75,4 +75,32 @@
 	}
 }
 
+@media (max-width:1200px) {
+	.Basis{
+      .bascontent{
+        .center{
+          width: 90%;
+          margin-left:5%;
+          
+          >h1{
+            font-size: 1rem;
+          }
+          div.basisMain{
+            >*{
+              margin: 2.13rem 0 0 0 ;
+            }
+            >h3{
+              font-size: 0.9rem;
+              line-height: 1.8rem;
+            }
+            .basisCont{
+              font-size: 0.47rem;
+			  line-height:1.2rem;
+            }
+          }
+        }
+      }
+    }
+}
+
 </style>

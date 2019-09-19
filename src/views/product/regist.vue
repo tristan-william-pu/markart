@@ -76,6 +76,7 @@ export default {
     }
     .yels {
       background: #fde428;
+      color: #450d85;
       a {
         color: #450d85;
       }

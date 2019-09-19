@@ -8,22 +8,16 @@
 <template>
   <div class="metal">
     <div class="title">{{$t('metal.precious')}}</div>
-    <div class="warp">
+    <div class="warp clearfix">
       <div class="leftimg ">
-        <img
-          class="animated moneyimg fadeInLeft"
-          src="images/metal.jpg"
-          alt
-          style="opacity: 1;"
-        />
+        <img src="images/metal.jpg" alt/>
       </div>
-      <div class="floatfont">
-        <div class="title" style="opacity: 1;">{{$t('metal.why')}}<br>{{$t('metal.trade')}}</div>
-        <div class="line" style="opacity: 1;"></div>
-        <div
-          class="text"
-          style="opacity: 1;"
-        >{{$t('metal.way')}}</div>
+      <div class="content">
+        <div class="title">
+          {{$t('metal.why')}}<br>{{$t('metal.trade')}}
+          </div>
+        <div class="line"></div>
+        <div  class="text">{{$t('metal.way')}}</div>
       </div>
     </div>
     <div class="choose">
@@ -52,12 +46,11 @@
           </span>
           <p class="purfont">
             {{$t('metal.experience')}}
-            <!-- <br />{{$t('metal.precious')}}体验 -->
           </p>
           <div class="clear"></div>
-          <a href="javascript:void(0)">
+          <router-link to="/regist">
             <img class="arrowicon" src="@/assets/metalarow.png" alt />
-          </a>
+          </router-link>
         </div>
         <div class="melaright mb">
          
@@ -72,9 +65,10 @@
            <p class="purfont">
             {{$t('metal.experience')}}
           </p>
-          <a href="javascript:void(0)">
+          <router-link to="/regist">
+          
             <img class="arrowicon" src="@/assets/metalarow.png" alt />
-          </a>
+          </router-link>
         </div>
       </div>
     </div>
@@ -90,7 +84,8 @@ export default {
 <style lang="scss">
 @import "@/styles/mixin.scss";
 .metal {
-  .title {
+   margin: 0 auto;
+  > .title {
     font-size: 75px;
     color: #000;
     line-height: 223px;
@@ -98,16 +93,17 @@ export default {
     width: 100%;
     text-align: center;
     margin-top: 10px;
-    animation-name: bounceInUps;
-    animation-duration: 1s;
-    animation-fill-mode: both;
+    opacity: 0;
+    transform: translate(0, 50px);
+    animation: slide-up 1s cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-fill-mode: forwards;
   }
   .warp {
+    @include flex();
     width: 1200px;
     display: block;
     margin: 0 auto;
     margin-bottom: 20px;
-    @include clearfix();
     .leftimg {
       margin-left: -100px;
       width: 500px;
@@ -116,60 +112,53 @@ export default {
       position: relative;
       overflow: hidden;
       float: left;
+      @include flex();
       > img {
-        display: block;
-        height: 600px;
-        animation-name: fadeInLeft;
-        animation-duration: 1s;
-        animation-fill-mode: both;
-        animation-delay: 100ms;
-      }
-    }
-    .floatfont {
-      float: left;
-      font-family: montserratse;
-      margin-top: 50px;
-      position: relative;
-      z-index: 99;
-      width: calc(100% - 500px);
-      height:auto;
-      .title {
-        animation-name: fadeInRight;
-        animation-duration: 1s;
-        animation-delay: 100ms;
-        animation-fill-mode: both;
-        font-size: 55px;
-        margin-top: 30px;
-        margin-left: -50px;
+        animation: slide-right 1s cubic-bezier(0.215, 0.61, 0.355, 1);
+        animation-fill-mode: forwards;
+        opacity: 0;
+        animation-delay: 200ms;
         position: absolute;
       }
-      .line {
-        animation-name: fadeInRight;
-        animation-duration: 1s;
-        animation-fill-mode: both;
+    }
+    .content {
+      float:left;
+      background: #ffffff;
+      height: 100%;
+      margin-top:50px;
+      .title {
+        font-size: 55px;
+        color: #000;
+        animation: slide-left 1s cubic-bezier(0.215, 0.61, 0.355, 1);
+        animation-fill-mode: forwards;
+        opacity: 0;
         animation-delay: 200ms;
+      }
+      .line {
         width: 100px;
         height: 1px;
         background: #5004ac;
-        margin-top: 188px;
-        margin-left: -50px;
-        opacity: 0;
+        margin-top: 80px;
+        float: left;
         position: absolute;
+        opacity: 0;
+        animation: slide-left 1s cubic-bezier(0.215, 0.61, 0.355, 1);
+        animation-fill-mode: forwards;
+        animation-delay: 400ms;
       }
       .text {
-        float: left;
+        padding: 0 50px;
+        margin-left: 20px;
         width: 650px;
-        margin-top: 172px;
+        margin-top: 65px;
         font-size: 18px;
         font-family: montserrat;
         letter-spacing: 1px;
         line-height: 40px;
         opacity: 0;
-        animation-name: fadeInRight;
-        animation-duration: 1s;
-        animation-fill-mode: both;
-        animation-delay: 300ms;
-        padding: 0px 70px;
+        animation: slide-left-text 1s cubic-bezier(0.215, 0.61, 0.355, 1);
+        animation-fill-mode: forwards;
+        animation-delay: 600ms;
       }
     }
   }
