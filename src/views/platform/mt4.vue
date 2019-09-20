@@ -34,13 +34,13 @@
         </div>
         <div class="searchserv">
           <p>{{$t('MT4.check')}}</p>
-          <a href="/Public/addheader/pdf/MT4/MT4PC.pdf" download="MT4客户端搜索服务器">
+          <a href="/pdf/MT4/MT4PC.pdf" download="MT4客户端搜索服务器">
             <p>{{$t('MT4.search')}}</p>
           </a>
-          <a href="/Public/addheader/pdf/MT4/MT4 IOS.pdf" download="MT4IOS手机端搜索服务器">
+          <a href="/pdf/MT4/MT4 IOS.pdf" download="MT4IOS手机端搜索服务器">
             <p>{{$t('MT4.searchios')}}</p>
           </a>
-          <a href="/Public/addheader/pdf/MT4/MT4 android.pdf" download="MT4安卓手机端搜索服务器">
+          <a href="/pdf/MT4/MT4 android.pdf" download="MT4安卓手机端搜索服务器">
             <p>{{$t('MT4.searchAndroid')}}</p>
           </a>
         </div>
@@ -74,7 +74,7 @@
         <p class="infoart">
           {{$t('MT4.downloadios')}}
           <a
-            href="/Public/addheader/pdf/MT4/Install Terminal on Mac OS_zh.pdf"
+            href="/pdf/MT4/Install Terminal on Mac OS_zh.pdf"
             download="MT4 MacOS"
           >
             <span style="text-decoration: underline;color: #206097;">{{$t('MT4.clickhere')}}</span>

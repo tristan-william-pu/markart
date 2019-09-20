@@ -88,11 +88,11 @@
           {{$t('home.chooese')}}
         </p>
         <div class="btnbox cn">
-          <div class="btn">
-            <a href="/simulationRegister/simulationRegister">{{$t('home.simulation')}}</a>
+          <div class="btn" @click="regist(1)">
+            <p >{{$t('home.simulation')}}</p>
           </div>
-          <div class="btn active">
-            <a href="/register/register">{{$t('home.tureth')}}</a>
+          <div class="btn active" @click="regist(0)">
+            <p>{{$t('home.tureth')}}</p>
           </div>
         </div>
       </div>
@@ -111,10 +111,7 @@
       <div class="tipstit">{{$t('home.ship')}}</div>
       <div class="grid btn pupradio2" id="tardingp">
         <div class="grid__item theme-1" style="width: 250px">
-          <!-- <button class="action"><svg class="icon icon--rewind">
-                <use xlink:href="#icon-rewind"></use>
-          </svg></button>-->
-          <button class="particles-button" style="width: 250px">{{$t('home.open')}}</button>
+          <router-link to="/MT4"><button class="particles-button" style="width: 250px">{{$t('home.open')}}</button></router-link>
         </div>
       </div>
       <!-- <div class="btn">start trading now</div> -->
@@ -328,6 +325,14 @@ export default {
         if (show.regist && show.trading && show.navbanner) {
           window.onscroll = null
         }
+      },
+      regist(type) {
+        this.$router.push({
+          name: 'regist',
+          params: {
+            active: type
+          }
+        })
       }
   },
   activated() {
@@ -520,11 +525,11 @@ export default {
 .pupcolor {
   color: #5b0eb2;
 }
-.btnbox .btn a {
+.btnbox .btn p {
   color: #000;
   display: block;
 }
-.btnbox .btn a:hover {
+.btnbox .btn p:hover {
   color: #fff;
 }
 .gupao .btnbox {

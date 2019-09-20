@@ -18,12 +18,12 @@
               :key="key"
               @click="clickHandle(key)"
               :class="{active: key === active}"
-            >{{item.name}}</li>
+            >{{item[locale].name}}</li>
           </ul>
         </div>
         <div class="info">
-          <span class="title">{{mapList[active].title}}</span>
-          <span class="content" v-html="mapList[active].contents.join('<br \/>')"></span>
+          <span class="title">{{mapList[active][locale].title}}</span>
+          <span class="content" v-html="mapList[active][locale].contents.join('<br \/>')"></span>
         </div>
         <div class="map">
           <div class="deg90">
@@ -166,29 +166,91 @@ export default {
     return {
       mapList: [
         {
-          name: "CPT Markets UK",
-          title: "CPT Markets UK ",
-          contents: ["（Citypoint Trading Ltd的交易名称）", "伦敦"]
+          cn:{
+            name: "CPT Markets UK",
+            title: "CPT Markets ",
+            contents: ["（Citypoint Trading Ltd的交易名称）", "伦敦"]
+          },
+          en:{
+            name: "CPT Markets UK",
+            title: "CPT Markets ",
+            contents: ["(Trading name of Citypoint Trading Ltd)）", "London"]
+          },
+          tc:{
+            name: "CPT Markets UK",
+            title: "CPT Markets ",
+            contents: ["（Citypoint Trading Ltd的交易名稱）", "倫敦"]
+          },
+          
         },
         {
-          name: "CPT Markets 伯利兹",
-          title: "CPT Markets ",
-          contents: ["伯利兹"]
+          cn:{
+            name: "CPT Markets 伯利兹",
+            title: "CPT Markets ",
+            contents: ["伯利兹"]
+          },
+          en:{
+            name: "CPT Markets Belize",
+            title: "CPT Markets  ",
+            contents: ["Belize"]
+          },
+          tc:{
+            name: "CPT Markets 伯利兹",
+            title: "CPT Markets ",
+            contents: ["伯利兹"]
+          },
+         
         },
         {
-          name: "CPT Markets 马来西亚",
-          title: "CPT Markets",
-          contents: ["马来西亚"]
+          cn:{
+            name: "CPT Markets 马来西亚",
+            title: "CPT Markets ",
+            contents: ["马来西亚"]
+          },
+          en:{
+            name: "CPT Markets Malaysia",
+            title: "CPT Markets  ",
+            contents: ["Malaysia"]
+          },
+         tc:{
+            name: "CPT Markets 馬來西亞",
+            title: "CPT Markets ",
+            contents: ["馬來西亞"]
+          },
         },
         {
-          name: "CPT Markets 迪拜",
-          title: "CPT Markets",
-          contents: ["迪拜"]
+          cn:{
+            name: "CPT Markets 迪拜",
+            title: "CPT Markets",
+            contents: ["迪拜"]
+          },
+          en:{
+            name: "CPT Markets dubai",
+            title: "CPT Markets  ",
+            contents: ["dubai"]
+          },
+         tc:{
+            name: "CPT Markets 迪拜",
+            title: "CPT Markets",
+            contents: ["迪拜"]
+          },
         },
         {
-          name: "CPT Markets 台湾",
-          title: "CPT Markets",
-          contents: ["台湾"]
+          cn:{
+            name: "CPT Markets 台湾",
+            title: "CPT Markets",
+            contents: ["台湾"]
+          },
+          en:{
+            name: "CPT Markets Taiwan",
+            title: "CPT Markets  ",
+            contents: ["Taiwan"]
+          },
+         tc:{
+            name: "CPT Markets 臺灣",
+            title: "CPT Markets ",
+            contents: ["臺灣"]
+          },
         }
       ],
       active: 0,
@@ -219,6 +281,11 @@ export default {
       showPointer: false,
       timmer: null
     };
+  },
+  computed:{
+    locale(){
+      return this.$i18n.locale;
+    },
   },
   methods: {
     clickHandle(key) {

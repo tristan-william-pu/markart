@@ -1,9 +1,9 @@
 <template>
   <div  class="payment clearfix">
       <table/>
-      <div class="tit warp emergingType">支付方式</div>
+      <div class="tit warp emergingType">{{ $t('type.title') }}</div>
       <div class="art warp emergingTypeCont">
-        作为老牌外汇及差价合约经纪商，CPT Markets 多年来一直为交易者提供多途径的出入金方式，使您的交易过程更加的高效便捷。您可以根据自身需求，自由的选择交易支付方式。
+        {{$t('type.discript')}}
       </div>
       <!-- 轮播 -->
        <div class="swiper-container1 warp slider">
@@ -12,15 +12,15 @@
             <div class="divImg">
               <img class="img" :src="el.img">
             </div>
-            <p class="bankTit">{{el.tit}}</p>
-            <p class="bankCOnt">{{el.cont}}</p>
+            <p class="bankTit">{{el[local].tit}}</p>
+            <p class="bankCOnt">{{el[local].cont}}</p>
             
           </div>
         </div>
         <div class="checkBtn ">
-          <button class="swiper-button-prev1">上一页</button>
-          <button>查看</button>
-          <button class="swiper-button-next1">下一页</button>
+          <button class="swiper-button-prev1"><img src="@/assets/leftBtn.png" alt/></button>
+          <button><img src="@/assets/searchBtn.png" alt/></button>
+          <button class="swiper-button-next1"><img src="@/assets/rightBtn.png" alt/></button>
         </div>
          
       </div>
@@ -31,16 +31,16 @@
             <div class="divImg">
               <img class="img" :src="el.img">
             </div>
-            <p class="bankTit">{{el.tit}}</p>
-            <p class="bankCOnt">{{el.cont}}</p>
+             <p class="bankTit">{{el[local].tit}}</p>
+            <p class="bankCOnt">{{el[local].cont}}</p>
             
           </div>
          
         </div>
-        <div class="checkBtn">
-          <button class="swiper-button-prev2">上一页</button>
-          <button>查看</button>
-          <button class="swiper-button-next2">下一页</button>
+        <div class="checkBtn ">
+          <button class="swiper-button-prev1"><img src="@/assets/leftBtn.png" alt/></button>
+          <button><img src="@/assets/searchBtn.png" alt/></button>
+          <button class="swiper-button-next1"><img src="@/assets/rightBtn.png" alt/></button>
         </div>
       </div>
   </div>
@@ -52,17 +52,93 @@ export default {
   data(){
     return{
       banner1:[
-        {img: require("../../../public/images/tb_03.png"),tit:'入金',cont:'中国银联'},
-        {img: require("../../../public/images/tb_07.png"),tit:'入金',cont:"电汇"},
-        {img: require("../../../public/images/tb_09.png"),tit:'入金',cont:"信用卡/借记卡（仅限海外用户）"},
-        {img: require("../../../public/images/tb_12.png"),tit:'入金',cont:"SSAC"},
-        {img: require("../../../public/images/tb_14.png"),tit:'入金',cont:"USDT"},
+        {
+          img: require("../../../public/images/tb_03.png"),
+          cn:{
+            tit:'入金',cont:'中国银联'
+          },
+          tc:{
+           tit:'入金',cont:'中國銀聯'
+          },
+          en:{
+            tit:'DEPOSIT',cont:'China UnionPay'
+          },
+        },
+        {img: require("../../../public/images/tb_07.png"),
+          cn:{
+            tit:'入金',cont:'电汇'
+          },
+          tc:{
+            tit:'入金',cont:'電匯'
+          },
+          en:{
+            tit:'DEPOSIT',cont:'Wire Transfer'
+          },
+        },
+        {img: require("../../../public/images/tb_09.png"),
+          cn:{
+            tit:'入金',cont:'信用卡/借记卡（仅限海外用户）'
+          },
+          tc:{
+            tit:'入金',cont:'信用卡/借記卡（僅限海外用戶）'
+          },
+          en:{
+            tit:'DEPOSIT',cont:' Credit Card/ Debit Card'
+          },
+        },
+        {img: require("../../../public/images/tb_12.png"),
+          cn:{
+            tit:'入金',cont:'SSAC'
+          },
+          tc:{
+            tit:'入金',cont:'SSAC'
+          },
+          en:{
+            tit:'DEPOSIT',cont:'SSAC'
+          },
+        },
+        {img: require("../../../public/images/tb_14.png"),
+          cn:{
+            tit:'入金',cont:'USDT'
+          },
+          tc:{
+            tit:'入金',cont:'USDT'
+          },
+          en:{
+            tit:'DEPOSIT',cont:'USDT'
+          },
+        },
       ],
       banner2:[
-        {img: require("../../../public/images/tb_03.png"),tit:'出金',cont:'中国银联'},
-        {img: require("../../../public/images/tb_07.png"),tit:'出金',cont:"电汇"},
+        {img: require("../../../public/images/tb_03.png"),
+          cn:{
+            tit:'出金',cont:'中国银联'
+          },
+          tc:{
+             tit:'出金',cont:'中國銀聯'
+          },
+          en:{
+            tit:'WITHDRAWAL',cont:'China UnionPay'
+          },
+        },
+        {img: require("../../../public/images/tb_07.png"),
+          cn:{
+            tit:'出金',cont:'电汇'
+          },
+          tc:{
+            tit:'出金',cont:'電匯'
+          },
+          en:{
+            tit:'WITHDRAWAL',cont:'Wire Transfer'
+          },
+        },
       ],
     }
+  },
+  computed:{
+    local(){
+      return this.$i18n.locale;
+    },
   },
   mounted(){
       let mySwiper1 = new Swiper('.swiper-container1', {

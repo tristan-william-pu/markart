@@ -15,7 +15,7 @@
           <span></span>
           <span></span>
         </div>
-        <div class="rf register countryselect" @mouseenter.stop="showLanguageList=true" @mouseleave="showLanguageList=false">
+        <div class="rf register countryselect" @mouseenter="showLanguageList=!showLanguageList" @mouseleave="showLanguageList=false">
           <div class="language-list">
             <img :src="imgSrc" class="flag" alt />
             <div class="pointe"></div>
@@ -259,7 +259,7 @@ export default {
       this.$i18n.locale = local;
       // console.log(this.$i18n.locale)
       this.langChange()
-      console.log(this.$store.state.language);
+      this.$router.go(0);
     },
     navMobile(){
       this.navMobileBool = !this.navMobileBool;
@@ -269,6 +269,9 @@ export default {
       console.log(this.listNum);
       if(i == 0){
         this.$router.push({path:'/'});
+        this.navMobileBool = false;
+      }else if( i==6 ){
+        this.$router.push({path:'/contantus'});
         this.navMobileBool = false;
       }
     },

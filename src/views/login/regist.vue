@@ -562,7 +562,7 @@
           <p class="titles">
             <span style="color:#5b0eb2">*</span> {{$t('regist.code')}}
           </p>
-          <input class="inputtt" type="text" name="sim_code" id="sim_code" :placeholder="$t('regist.six')" />
+          <input class="inputtt" type="text" :placeholder="$t('regist.six')" />
           <input
             class="codebtn"
             type="button"
@@ -1226,7 +1226,7 @@
           <p class="titles">
             <span style="color:#5b0eb2">*</span> Graphic verification code
           </p>
-          <input type="text" name="user_email" id="user_email"  />
+          <input type="text"  />
           <p class="tips" style="display: none;">{{$t('regist.eMailworing')}}</p>
         </div>
 
@@ -1234,7 +1234,7 @@
           <p class="titles">
             <span style="color:#5b0eb2">*</span> Name
           </p>
-          <input type="text" name="user_email" id="user_email" :placeholder="$t('regist.info')" />
+          <input type="text" :placeholder="$t('regist.info')" />
           <p class="tips" style="display: none;">{{$t('regist.eMailworing')}}</p>
         </div>
 
@@ -1242,7 +1242,7 @@
           <p class="titles">
             <span style="color:#5b0eb2">*</span> Country of citizenship
           </p>
-          <input type="text" name="user_email" id="user_email" :placeholder="$t('regist.info')" />
+          <input type="text" :placeholder="$t('regist.info')" />
           <p class="tips" style="display: none;">{{$t('regist.eMailworing')}}</p>
         </div>
 
@@ -1250,7 +1250,7 @@
           <p class="titles">
             <span style="color:#5b0eb2">*</span> Account type
           </p>
-          <input type="text" name="user_email" id="user_email" :placeholder="$t('regist.info')" />
+          <input type="text" :placeholder="$t('regist.info')" />
           <p class="tips" style="display: none;">{{$t('regist.eMailworing')}}</p>
         </div>
 
@@ -1258,7 +1258,7 @@
           <p class="titles">
             <span style="color:#5b0eb2">*</span> IB account(optional)
           </p>
-          <input type="text" name="user_email" id="user_email" :placeholder="$t('regist.info')" />
+          <input type="text" :placeholder="$t('regist.info')" />
           <p class="tips" style="display: none;">{{$t('regist.eMailworing')}}</p>
         </div>
 
@@ -1266,18 +1266,18 @@
         <div class="center clearfix" :class="lang == false ?'enMargin':''">
           <ul>
             <li>
-              <input type="checkbox" name="type" id="agreement1" checked />
+              <input type="checkbox" checked />
               <a class="pup" @click="$util.downloadPdf('/pdf/fx.pdf', '风险披露')">{{$t('regist.Iread')}}</a>
             </li>
             <li>
-              <input type="checkbox" name="type" id="agreement2" checked />
+              <input type="checkbox" checked />
               <a
                 @click="$util.downloadPdf('/pdf/CPTMarketsv2.pdf', '自动调整杠杆说明')"
                 class="pup"
               >{{$t('regist.say')}}</a>
             </li>
             <li>
-              <input type="checkbox" name="type" id="agreement3" checked />
+              <input type="checkbox" checked />
               <a
                 class="pup"
                 @click="$util.downloadPdf('/pdf/malicious.pdf', 'CPT Markets流动性指南')"
@@ -1286,7 +1286,7 @@
             <div class="clear"></div>
           </ul>
         </div>
-        <div class="sumbtn" onclick="one()" id="btndk">{{$t('regist.nextOne')}}</div>
+        <div class="sumbtn">{{$t('regist.nextOne')}}</div>
       </div>
     </div>
   </div>
