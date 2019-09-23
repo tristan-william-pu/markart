@@ -727,6 +727,7 @@ export default {
             li.LipcBot {
               margin: 19px auto 20px;
             }
+            
             li.flo {
               line-height: 67px;
             }
@@ -743,6 +744,9 @@ export default {
               font-size: 27px;
               color: #939393;
               font-weight: 900;
+            }
+            li.bot{
+              margin-bottom: 25px;
             }
           }
           .border {
@@ -801,17 +805,20 @@ export default {
             }
           }
         }
+        .enFontSize{
+            > ul{
+              li{
+                font-size:15px;
+              }
+              li.liauBot{
+              margin:-2px auto 20px;
+            }
+            }
+            
+          }
       }
     }
   }
 }
-.enFontSize{
-  ul{
-    li{
-      font-size:15px !important;
-      line-height: 26px;
-    }
-  }
-  
-}
+
 </style>

@@ -13,7 +13,9 @@ import router from './router'
 import store from './store'
 import VueI18n from 'vue-i18n'
 import Util from '@/common/util.js';
-Vue.use(VueI18n);
+import axios from 'axios'
+Vue.use(VueI18n,axios);
+
 
 Object.defineProperty(Vue.prototype, '$util', {
   value: Util,

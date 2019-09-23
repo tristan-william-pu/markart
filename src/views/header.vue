@@ -219,7 +219,19 @@ export default {
     }
   },
   mounted(){
-    this.langChange()
+    this.langChange();
+    let url = 'https://www.cptmarkets.com';
+    let data = {
+      name:'tata',
+      age:18
+    }
+    this.$http.post(Url, {
+        page: p
+    }).then((res) => {
+        console.log(res);
+    }).catch((err) => {
+        console.log(err);
+    });
   },
   methods: {
     tap(i) {

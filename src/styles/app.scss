@@ -117,6 +117,21 @@
     
     // ----- 注册开始 ------
     .regist{
+      .banner{
+        .img{
+          .warp{
+             width:100%;
+             .bannerfont{
+               font-size: 30px;
+               line-height: 42px;
+               letter-spacing: 0px;
+             }
+             .bannertipsfont{
+               font-size: 18px;
+             }
+          }
+        }
+      }
       .accountwarp{
         width:100% !important;
         .left{
@@ -1980,7 +1995,8 @@
           .accounttype{
             div{
               span{
-                font-size:22px !important;
+                font-size:18px !important;
+                letter-spacing: 0px;
               }
             }
           }
@@ -1989,6 +2005,15 @@
           .conTit{
             div{
               font-size: 16px;
+              &:first-child{
+                width: 43%;
+              }
+              &::last-child{
+                width: 57%;
+              }
+              }
+              
+
             }
           }
         }
@@ -2070,6 +2095,6 @@
     }
   }
   
-}
+
 
 @import './mediaIphone.scss';

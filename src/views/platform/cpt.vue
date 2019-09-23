@@ -366,12 +366,12 @@ export default {
         font-weight: 100;
         font-size: 60px;
         color: #fff;
-        font-family: FZLTZHK;
+       
         text-align: center;
         font-weight: 600;
       }
       p {
-        font-family: LTH;
+        
         font-size: 20px;
         color: #fff;
         width: 252px;
@@ -406,7 +406,7 @@ export default {
         width: 19%;
         margin-right: 1%;
         border-radius: 15px;
-        font-family: LTH;
+        
         text-align: center;
         font-size: 18px;
         color: #fff;
@@ -456,7 +456,7 @@ export default {
             font-size: 18px;
             line-height: 36px;
             color: #171717;
-            font-family: LTH;
+            
           }
           .ctLine {
             width: 54px;
@@ -482,7 +482,7 @@ export default {
       h3 {
         font-size: 30px;
         line-height: 38px;
-        font-family: FZLTZHK;
+       
         span {
           display: block;
         }
@@ -514,7 +514,7 @@ export default {
             p {
               font-size: 21px;
               color: #d5b0ff;
-              font-family: FZLTZHK;
+             
               text-align: center;
               margin: 36px auto 76px;
               transition: 0.3s all ease-out;
@@ -545,7 +545,7 @@ export default {
             font-size: 18px;
             line-height: 35px;
             color: #ffffff;
-            font-family: LTH;
+            
             margin-left: 64px;
           }
         }
@@ -559,7 +559,7 @@ export default {
       font-size: 30px;
       line-height: 40px;
       color: #000000;
-      font-family: FZLTZHK;
+     
       font-weight: 600;
       span {
         display: block;
@@ -600,7 +600,7 @@ export default {
           dt {
             font-size: 22px;
             line-height: 44px;
-            font-family: FZLTZHK;
+           
             margin-bottom: 24px;
             font-weight: 600;
           }
@@ -608,7 +608,7 @@ export default {
             line-height: 35px;
             color: #121212;
             font-size: 18px;
-            font-family: LTH;
+            
             transition: 0.3s all ease;
           }
         }
@@ -653,7 +653,7 @@ export default {
         font-size: 18px;
         color: #171717;
         line-height: 36px;
-        font-family: LTH;
+        
       }
       .btn {
         width: 536px;
@@ -688,7 +688,7 @@ export default {
         font-size: 30px;
         line-height: 40px;
         color: #000000;
-        font-family: FZLTZHK;
+       
         font-weight: 100;
         font-weight: 600;
         span {
@@ -719,7 +719,7 @@ export default {
           > div {
             font-size: 22px;
             color: #000000;
-            font-family: FZLTZHK;
+           
             width: 89px;
             line-height: 34px;
             text-align: center;
@@ -744,7 +744,7 @@ export default {
           > div {
             font-size: 22px;
             color: #000000;
-            font-family: FZLTZHK;
+           
             width: 89px;
             line-height: 34px;
             text-align: center;
@@ -781,7 +781,7 @@ export default {
           float: left;
           > p {
             font-size: 18px;
-            font-family: LTH;
+            
             line-height: 35px;
             color: #171717;
           }
@@ -845,7 +845,7 @@ export default {
           font-size: 18px;
           line-height: 35px;
           color: #171717;
-          font-family: LTH;
+          
         }
       }
       .btn {
@@ -868,7 +868,7 @@ export default {
           p {
             font-size: 14px;
             color: #b5b5b5;
-            font-family: LTH;
+            
             margin-bottom: 25px;
             span {
               margin-left: 10px;
@@ -877,7 +877,7 @@ export default {
           h6 {
             font-size: 28px;
             color: #ffffff;
-            font-family: FZLTZHK;
+           
             line-height: 38px;
             margin: 20px 0;
             span {
@@ -915,7 +915,7 @@ export default {
           font-size: 18px;
           line-height: 35px;
           color: #171717;
-          font-family: LTH;
+          
         }
         .btn {
           width: 68%;
@@ -933,7 +933,7 @@ export default {
             h6 {
               font-size: 28px;
               color: #ffffff;
-              font-family: FZLTZHK;
+             
               line-height: 38px;
               margin: 20px 0;
               span {
@@ -977,7 +977,7 @@ export default {
         font-size: 30px;
         line-height: 40px;
         color: #000000;
-        font-family: FZLTZHK;
+       
         font-weight: 100;
         font-weight: 600;
         span {
@@ -1016,7 +1016,7 @@ export default {
           .tit {
             font-size: 28px;
             color: #ffffff;
-            font-family: FZLTZHK;
+           
             margin: 22px 0 0 28px;
             text-align: center;
           }
@@ -1033,7 +1033,7 @@ export default {
             font-size: 16px;
             line-height: 25px;
             color: #d5b0ff;
-            font-family: LTH;
+            
             margin-left: 28px;
             transition: .5s all ease-out;
           }

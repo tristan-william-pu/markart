@@ -1354,18 +1354,11 @@ export default {
 .regist {
   .banner {
     width: 100%;
-    height: 224px;
-    overflow: hidden;
-    position: relative;
-    z-index: 1;
     .img {
-      position: absolute;
-      left: 50%;
-      margin-left: -50%;
-      height: 224px;
-      background: url(/images/E-mail_02.png);
-      width: 100%;
-      z-index: 10;
+      max-width: 100%;
+      height:auto;
+      display: block;
+      background: url(/images/E-mail_02.png) no-repeat center;
       .warp {
         width: 1200px;
         display: block;
@@ -1387,6 +1380,7 @@ export default {
           color: #fff;
           text-align: center;
           font-size: 24px;
+          padding-bottom: 35px;
           @include animation(bounceInUps, 1s, 200ms);
         }
       }

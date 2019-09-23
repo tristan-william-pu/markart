@@ -95,7 +95,7 @@ export default {
   @import '@/styles/mixin.scss';
   .introduction {
     .mainCont{
-      width:80%;
+      width:1200px;
       margin:0 auto;
       margin-bottom: 60px;  
       >*{
@@ -128,7 +128,13 @@ export default {
                 font-size: 22px;
                 line-height: 65px;
                 color: #000000;
-              }       
+              }
+              img{
+                max-width: 100%;
+                display: block;
+                height:auto;
+                margin:0 auto;
+              }     
             }
             >div {
               margin: 30px 0 60px 0;
