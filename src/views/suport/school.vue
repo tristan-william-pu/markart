@@ -6,7 +6,7 @@
  * @Description: 支持
  -->
 <template>
-  <div>
+  <div class="learnSchool">
     <!--交易学院-->
 		<div class="bigImg">
 			<div class="center">
@@ -294,19 +294,18 @@
       </div>
     </div>
     <!--enPhone-->
-    <div class="teaBgPh" v-show="enBool == false">
-      <div class="center clearfix">
-        <div class="fl">
-          <p class="sec">The voice of <br/> Forex Market</p>
-          <div class="cenWord clearfix">
-           Throughout market movements, <br>unscramble trading password to enjoy <br> the industry opportunity
+    <div class="enSysbol mb" v-show="enBool == false">
+        <div class="center clearfix">
+          <div class="fl">
+            <p>The voice of Forex Market</p>
+            <span>Throughout market movements, unscramble trading password to enjoy the industry opportunity</span>
+          </div>
+          <img class="fl" src="/images/sch/tea.png" alt/>
+          <div class="fr">
+            <p class="line"></p>
+            <p class="con">In 2014-2017, he won the title of best analyst in China for three consecutive years</p>
           </div>
         </div>
-        <div class="fr">
-          <p class="fr"></p>
-          <p class="fr">In 2014-2017, he won the title of best analyst in China for three consecutive years</p>
-        </div>
-      </div>
     </div>
 
     <div class="teaCon clearfix">
@@ -983,39 +982,6 @@ export default {
   }
   
 }
-// @media screen and (max-width: 1200px) {
-//     .bigImg .center {
-//       padding: 5% 0;
-//     }
-//     .search .center {
-//       width: 90%;
-//     }
-//     .video .center {
-//       width: 84%;
-//     }
-//     .video .center > .vidCon > ul li:last-child {
-//       margin-top: 15px;
-//     }
-
-//     .know .center {
-//       width: 90%;
-//     }
-//     .know .center > ul.advanced {
-//       width: 90%;
-//     }
-//     .teaBg {
-//       background: url(../../../public/images/sch/teacher.png) no-repeat center
-//         top;
-//       background-size: auto;
-//     }
-//     .teaBg .center {
-//       width: 73%;
-//       padding: 9% 0 11%;
-//     }
-//     .teaCon {
-//       width: 95%;
-//     }
-//   }
 .teaBg.enTeacher{
   .center{
     .fl{
@@ -1053,6 +1019,56 @@ export default {
         }
       }
       
+    }
+  }
+}
+.learnSchool{
+  .enSysbol{
+    width: 100%;
+    height:309px;
+    color:#fff;
+    background: url(../../../public/images/sch/teaBg.png) no-repeat;
+    .center{
+      width: 100%;
+      margin: 0 auto;
+      padding: 5% 0 6%;
+      >div.fl{
+        width: 43%;
+        margin-left: 4%;
+        p{
+          color: #fffefc;
+          font-size: 20px;
+          font-family: MNJ;
+          line-break: 30px;
+          margin-bottom: 30px;
+        }
+        span{
+          color: #dedede;
+          font-size: 13px;
+          font-family: MONLig;
+          line-height: 15px;
+        }
+      }
+      >img{
+        width: 49%;
+      }
+      >div.fr{
+        width: 69%;
+        margin: -23% 3% 0 0;
+        p.line{
+          width: 100%;
+          height: 0.1rem;
+          background-color: #6a2eaf;
+          margin: 33% 0 8px 0%;
+          display: block;
+        }
+        p.con{
+            font-size: 10px;
+          line-height: 15px;
+          color: #c4c4c4;
+          font-family: MONLig;
+        }
+      }
     }
   }
 }
