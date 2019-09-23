@@ -177,6 +177,11 @@ export default new Router({
       name: 'contantus',
       component: importModule('contantus/contantus')
     }, {
+      //活动页面
+      path: '/oversea',
+      name: 'oversea',
+      component: importModule('actives/sep_oversea')
+    },{
       path: '/clound',
       component: () => import('@/components/m-clound.vue')
     }, {
