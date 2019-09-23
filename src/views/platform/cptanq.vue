@@ -78,22 +78,22 @@
         <div class="listDiv">
           <!--如何修改持仓？-->
           <div class="botOne firQue">
-            <div class="listTop clear">
+            <div class="listTop clear"  @click="showItem(0)">
               <img src="@/assets/proSjx.png" class="fl" />
               <p class="fl">{{$t('question.hold')}}</p>
             </div>
-            <div class="listBot">
+            <div class="listBot" v-if=" show[0] ">
               <img src="@/assets/sTop.jpg" />
               <p>{{$t('question.line')}}</p>
             </div>
           </div>
           <!--我如何在CPT cTrader平仓？-->
           <div>
-            <div class="listTop clear">
+            <div class="listTop clear"  @click="showItem(1)">
               <img src="@/assets/proSjx.png" class="fl" />
               <p class="fl">{{$t('question.ping')}}</p>
             </div>
-            <div class="listBot">
+            <div class="listBot" v-if=" show[1] ">
               <img src="@/assets/sTop.jpg" />
               <p>
                 {{$t('question.see')}}
@@ -103,22 +103,22 @@
           </div>
           <!--在CPT cTrader中怎么查看我的账户历史？-->
           <div class="botThr">
-            <div class="listTop clear">
+            <div class="listTop clear"  @click="showItem(2)">
               <img src="@/assets/proSjx.png" class="fl" />
               <p class="fl">{{$t('question.account')}}</p>
             </div>
-            <div class="listBot">
+            <div class="listBot" v-if=" show[2] ">
               <img src="@/assets/sTop.jpg" />
               <p>{{$t('question.history')}}</p>
             </div>
           </div>
           <!--如何在CPT cTrader中进行挂单？-->
           <div>
-            <div class="listTop clear">
+            <div class="listTop clear"  @click="showItem(3)">
               <img src="@/assets/proSjx.png" class="fl" />
               <p class="fl">{{$t('question.hang')}}</p>
             </div>
-            <div class="listBot">
+            <div class="listBot" v-if=" show[3] ">
               <img src="@/assets/sTop.jpg" />
               <p>
                 {{$t('question.hangqa')}}
@@ -128,22 +128,22 @@
           </div>
           <!--如何在CPT cTrader修改或删除一个挂单?-->
           <div class="botOne">
-            <div class="listTop clear">
+            <div class="listTop clear"  @click="showItem(4)">
               <img src="@/assets/proSjx.png" class="fl" />
               <p class="fl">{{$t('question.delete')}}</p>
             </div>
-            <div class="listBot">
+            <div class="listBot" v-if=" show[4] ">
               <img src="@/assets/sTop.jpg" />
               <p>{{$t('question.need')}}</p>
             </div>
           </div>
           <!--如何设置单击或双击来执行交易？-->
           <div>
-            <div class="listTop clear">
+            <div class="listTop clear"  @click="showItem(5)">
               <img src="@/assets/proSjx.png" class="fl" />
               <p class="fl">{{$t('question.trade')}}</p>
             </div>
-            <div class="listBot">
+            <div class="listBot" v-if=" show[5] ">
               <img src="@/assets/sTop.jpg" />
               <p>
                 {{$t('question.platform')}}
@@ -154,22 +154,22 @@
           </div>
           <!--怎样打开新的图表？-->
           <div class="botThr">
-            <div class="listTop clear">
+            <div class="listTop clear"  @click="showItem(6)">
               <img src="@/assets/proSjx.png" class="fl" />
               <p class="fl">{{$t('question.newChart')}}</p>
             </div>
-            <div class="listBot">
+            <div class="listBot" v-if=" show[6] ">
               <img src="@/assets/sTop.jpg" />
               <p>{{$t('question.choose')}}</p>
             </div>
           </div>
           <!--我在哪里查看账户余额和交易历史?-->
           <div class="botLoo">
-            <div class="listTop clear">
+            <div class="listTop clear"  @click="showItem(7)">
               <img src="@/assets/proSjx.png" class="fl" />
               <p class="fl">{{$t('question.where')}}</p>
             </div>
-            <div class="listBot">
+            <div class="listBot" v-if=" show[7] ">
               <img src="@/assets/sTop.jpg" />
               <p>
                 {{$t('question.balance')}}
@@ -181,55 +181,55 @@
           </div>
           <!--如何创建CPT cTrader交易报表?-->
           <div class="botOne">
-            <div class="listTop clear">
+            <div class="listTop clear"  @click="showItem(8)">
               <img src="@/assets/proSjx.png" class="fl" />
               <p class="fl">{{$t('question.report')}}</p>
             </div>
-            <div class="listBot">
+            <div class="listBot" v-if=" show[8] ">
               <img src="@/assets/sTop.jpg" />
               <p>{{$t('question.export')}}</p>
             </div>
           </div>
           <!--如何在单位数和手数之间进行切换？-->
           <div class="botThr">
-            <div class="listTop clear">
+            <div class="listTop clear"  @click="showItem(9)">
               <img src="@/assets/proSjx.png" class="fl" />
               <p class="fl">{{$t('question.swicth')}}</p>
             </div>
-            <div class="listBot">
+            <div class="listBot" v-if=" show[9] ">
               <img src="@/assets/sTop.jpg" />
               <p>{{$t('question.lable')}}</p>
             </div>
           </div>
           <!--如何修改一键交易模式？-->
           <div class="botThr">
-            <div class="listTop clear">
+            <div class="listTop clear"  @click="showItem(10)">
               <img src="@/assets/proSjx.png" class="fl" />
               <p class="fl">{{$t('question.model')}}</p>
             </div>
-            <div class="listBot">
+            <div class="listBot" v-if=" show[10] ">
               <img src="@/assets/sTop.jpg" />
               <p>{{$t('question.between')}}</p>
             </div>
           </div>
           <!--怎样定制自己的图表？-->
           <div class="botThr">
-            <div class="listTop clear">
+            <div class="listTop clear"  @click="showItem(11)">
               <img src="@/assets/proSjx.png" class="fl" />
               <p class="fl">{{$t('question.custom')}}</p>
             </div>
-            <div class="listBot">
+            <div class="listBot" v-if=" show[11] ">
               <img src="@/assets/sTop.jpg" />
               <p>{{$t('question.right')}}</p>
             </div>
           </div>
           <!--什么是市场的深度？-->
           <div class="botLoo">
-            <div class="listTop clear">
+            <div class="listTop clear"  @click="showItem(12)">
               <img src="@/assets/proSjx.png" class="fl" />
               <p class="fl">{{$t('question.marketDepth')}}</p>
             </div>
-            <div class="listBot">
+            <div class="listBot" v-if=" show[12] ">
               <img src="@/assets/sTop.jpg" />
               <p>
                 {{$t('question.depthqa')}}
@@ -241,55 +241,56 @@
           </div>
           <!--为什么不能登录到CPT cTrader？-->
           <div class="botOne">
-            <div class="listTop clear">
+            <div class="listTop clear"  @click="showItem(13)">
               <img src="@/assets/proSjx.png" class="fl" />
-              <p class="fl">{{$t('question.notLogin')}}</p>
+              <p class="fl">{{$t('question.enter')}}</p>
             </div>
-            <div class="listBot">
+            <div class="listBot" v-if=" show[13] ">
               <img src="@/assets/sTop.jpg" />
-              <p>{{$t('question.enter')}}</p>
+              <p>{{$t('question.according')}}</p>
             </div>
           </div>
           <!--如何按照图表交易？-->
           <div class="botOne">
-            <div class="listTop clear">
+            <div class="listTop clear"  @click="showItem(14)">
               <img src="@/assets/proSjx.png" class="fl" />
-              <p class="fl">{{$t('question.according')}}</p>
+              <p class="fl">{{$t('question.code')}}</p>
             </div>
-            <div class="listBot">
+            <div class="listBot" v-if=" show[14] ">
               <img src="@/assets/sTop.jpg" />
-              <p>{{$t('question.code')}}</p>
+              <p>{{$t('question.target')}}</p>
             </div>
           </div>
+         
           <!--什么是市场情绪指标？-->
           <div class="botThr">
-            <div class="listTop clear">
+            <div class="listTop clear"  @click="showItem(15)">
               <img src="@/assets/proSjx.png" class="fl" />
-              <p class="fl">{{$t('question.target')}}</p>
+              <p class="fl">{{$t('question.targetqa')}}</p>
             </div>
-            <div class="listBot">
+            <div class="listBot" v-if=" show[15] ">
               <img src="@/assets/sTop.jpg" />
-              <p>{{$t('question.targetqa')}}</p>
+              <p>{{$t('question.recovery')}}</p>
             </div>
           </div>
           <!--如何恢复我的CPT cTrader ID？-->
           <div class="botOne">
-            <div class="listTop clear">
+            <div class="listTop clear"  @click="showItem(16)">
               <img src="@/assets/proSjx.png" class="fl" />
-              <p class="fl">{{$t('question.recovery')}}</p>
+              <p class="fl">{{$t('question.stips')}}</p>
             </div>
-            <div class="listBot">
+            <div class="listBot" v-if=" show[16] ">
               <img src="@/assets/sTop.jpg" />
-              <p>{{$t('question.stips')}}</p>
+              <p>{{$t('question.install')}}</p>
             </div>
           </div>
           <!--如何安装CPT cTrader桌面版本?-->
           <div>
-            <div class="listTop clear">
+            <div class="listTop clear"  @click="showItem(17)">
               <img src="@/assets/proSjx.png" class="fl" />
-              <p class="fl">{{$t('question.install')}}</p>
+              <p class="fl"> {{$t('question.desk')}}</p>
             </div>
-            <div class="listBot">
+            <div class="listBot" v-if=" show[17] ">
               <img src="@/assets/sTop.jpg" />
               <p>
                {{$t('question.webLink')}} 
@@ -302,11 +303,11 @@
           </div>
           <!--当我关闭平台后，我的EA还会继续工作吗?-->
           <div class="botOne">
-            <div class="listTop clear">
+            <div class="listTop clear"  @click="showItem(18)">
               <img src="@/assets/proSjx.png" class="fl" />
               <p class="fl">{{$t('question.ea')}}</p>
             </div>
-            <div class="listBot">
+            <div class="listBot" v-if=" show[18] ">
               <img src="@/assets/sTop.jpg" />
               <p>
                 {{$t('question.app')}}
@@ -324,7 +325,15 @@ export default {
   data(){
     return{
       lang:true,
+      number:0,
+      show:[true,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,],
     }
+  },
+  methods:{
+    showItem(index){
+      this.number = index;
+      this.show.splice(index, 1, !this.show[index]);
+    },
   },
   mounted(){
     if( this.$i18n.locale == 'en' ){
@@ -333,6 +342,7 @@ export default {
       this.lang = true;
     }
   },
+  
 };
 </script>
 <style lang="scss">
@@ -459,6 +469,7 @@ a {
           margin: 30px auto 0;
           .listTop {
             @include flex(flex-start, flex-start);
+            user-select:none;
             img {
               margin: 0.7% 1% 0 1%;
             }

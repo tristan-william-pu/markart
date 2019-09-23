@@ -165,10 +165,12 @@ export default {
         color: #fff;
       }
       a{
+         color:#fff;
         img{
           width: 27px;
           margin: 0 10px;
           opacity: 0.5;
+         
         }
       }
     }
