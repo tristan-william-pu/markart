@@ -202,7 +202,9 @@ export default {
       height:360px;
       display: flex;
       align-items: center;
-      
+      .img{
+        width:200px;
+      }
     }
     .bankTit{
         font-size: 26px;
