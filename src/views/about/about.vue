@@ -86,11 +86,11 @@
       </div>
 
        <div class="btnbox aboutuse">
-        <div class="btn">
-          <a href="index.php?m=simulationRegister&a=simulationRegister" onclick="ga('send', 'event', 'DR', 'play', 'OPEN');">{{$t('about.simulation')}}</a>
+        <div class="btn" @click="regist(1)">
+          <p>{{$t('about.simulation')}}</p>
         </div>
-        <div class="btn active">
-          <a href="index.php?m=register&a=register" onclick="ga('send', 'event', 'TR', 'play', 'OPEN');">{{$t('about.trueth')}}</a> 
+        <div class="btn active"  @click="regist(0)">
+          <p>{{$t('about.trueth')}}</p> 
         </div>
        
       </div>
@@ -99,7 +99,18 @@
   </div>
 </template>
 <script>
-export default {};
+export default {
+  methods:{
+    regist(type) {
+        this.$router.push({
+          name: 'regist',
+          params: {
+            active: type
+          }
+        })
+      }
+  },
+};
 </script>
 <style lang="scss">
 @import "@/styles/mixin.scss";
@@ -249,7 +260,7 @@ export default {};
       position: relative;
       overflow: hidden;
       margin-right: 20px;
-      a{
+      p{
         color: #000;
         display: block;
         &:hover{

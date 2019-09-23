@@ -9,44 +9,76 @@
 					<span class="fr">外汇交易术语及词汇</span>
 				</div>
 				<ul class="clearfix changecolor">
-                    <li v-for="(word,index) in words" :key="index" @click="wordsCHange(index)" :class="index == num ?'wordActive':''">{{word}}</li>
+                    <li v-for="(word,index) in words" :key="index" @click="wordsCHange(index)" :class=" index == num ?'wordActive':''">{{word}}</li>
 				</ul>
-				<template v-for="(content,index) in contents">
-					<div class="con clearfix" :key="index" v-if="num == index ">
-						<p class="fl setfontsize">{{content.big}}</p>
+				<!-- <template v-for="(content,index) in carry">
+					<div class="con clearfix" :key="index" v-if=" num == index ">
+						<p class="fl setfontsize">{{carry[index].big}}</p>
 						<div class="fr setfontsizes">
-							<p v-for="(sentence,index) in content[$i18n.locale + 'long']" :key="index">{{sentence}}</p>
+							<p v-for="(sentence,key) in carryLong" :key="key">{{sentence}}</p>
 						</div>
 					</div>
-				</template>
+				</template> -->
+				<div>
+					<div class="con clearfix" >
+						<p class="fl setfontsize">{{carry.big}}</p>
+						<div class="fr setfontsizes">
+							<p v-for="(sentence,key) in carryLong" :key="key">{{sentence}}</p>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
     </div>
 </template>
 
 <script>
-import {contents} from './js/contents'
+
     export default {
         data(){
             return{
                 words:["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"],
-                contents:contents,
-                num:0,
+                contents: require('./js/contents'),
+				num:0,
+				bool:false,
             }
 		},
-        mounted(){
-			console.log(this.$route.params.freezeMon)
-			var father = this.$route.params.freezeMon;
-			if( father == undefined ){
-				this.num = 0;
-			}else{
-				this.num = this.$route.params.freezeMon;
-			}
-            
-        },
+		computed:{
+			locale() {
+				return this.$i18n.locale
+			},
+			numbers(){
+				return this.$route.params.freezeMon || 0;
+			},
+			carry(){
+				let data;
+				if( this.bool ){
+					 data = this.contents.contents[this.num];
+				}else{
+					 data = this.contents.contents[this.numbers];
+				}
+
+				return data;
+			},
+			carryLong(){
+				let data;
+				if( this.locale == 'en' ){
+					data = this.carry.enlong;
+				}else if( this.locale == 'cn' ){
+					data = this.carry.long;
+				}else{
+					data = this.carry.zhlong;
+				}
+				return data;
+			},
+		},
+		mounted(){
+			this.num = this.numbers;
+		},
         methods:{
             wordsCHange(index){
-                this.num = index;
+				this.num = index;
+				this.bool = true;
             },
         },
 

@@ -69,9 +69,9 @@
     <div class="bottomline mb20">
       <div class="warp">
         <p>{{$t('safety.regulated')}}</p>
-        <a href="/register/register">
-          <div class="yelbtn">{{$t('safety.now')}}</div>
-        </a>
+        <div>
+          <div class="yelbtn" @click="regist(0)">{{$t('safety.now')}}</div>
+        </div>
       </div>
     </div>
   </div>
@@ -90,7 +90,14 @@ export default {
     skew() {
       this.showMap = !this.showMap;
     },
-    reset() {}
+    regist(type) {
+        this.$router.push({
+          name: 'regist',
+          params: {
+            active: type
+          }
+        })
+      }
   },
   created(){
     

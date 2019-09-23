@@ -63,6 +63,7 @@
         margin-right:10px;
       }
     }
+
     // ----------- 尾部 --------------
     .foot{
       footer{
@@ -163,7 +164,7 @@
       .gupao{
         padding:0;
       }
-      .particles-button{
+      .nowBtn{
         margin-top:20px;
       }
       .trading{
@@ -1680,7 +1681,19 @@
 	}
 	.know .center>ul.list li:hover{
 		background:url(../public/images/sch/know.png) no-repeat;
-	}
+  }
+  
+  // ------ 支付方式
+  .payment{
+    .slider{
+      .checkBtn{
+        button{
+          width:auto !important;
+        }
+      }  
+    }
+  }
+
 	/*A-Z*/
 	.az>.center{
 		width: 82%;
@@ -1902,9 +1915,12 @@
         font-size: 21px;
         margin-top:50px;
       }
-      .contantbox .warp{
-        padding:0 15px;
-        width: auto;
+      .contantbox{
+        height:auto;
+        .warp{
+          padding:0 15px;
+          width: auto;
+        }
       }
       .art{
         line-height: 32px;
@@ -2014,6 +2030,44 @@
          
       } 
     } 
+    // ------轮播图------
+    
+    .sildewarp{
+      .entitle{
+        text-align: center;
+        font-size: 22px;
+        font-weight: bold;
+        letter-spacing: 2px;
+        margin-top: 10px;
+        line-height: 30px;
+      }
+      .enBtn{
+        width: 300px;
+        height: 40px;
+        text-align: center;
+        line-height: 40px;
+        color: #fff;
+        margin: 0 auto;
+        border-radius: 30px;
+      }
+      
+    }
+    .swiper-slide{
+      .cnBanner{
+        img{
+          margin-top:10px;
+          width:100% ;
+        }
+      }
+      .nowBtn{
+        width:70%;
+        height:35px;
+        margin-top:10px;
+      } 
+      .enBtns{
+        width: 300px;
+      }
+    }
   }
   
 }

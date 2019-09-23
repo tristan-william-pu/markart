@@ -5,39 +5,56 @@
 			<div class="swiper-wrapper" >
  
 				<div class="swiper-slide">
-					<div>
-						<img class="" :src="banner[0].img" v-if="!enBool" />
-						<div class="grid__item theme-1 emerging" v-if="!enBool">
+					<div class="cnBanner" v-if="locale == 'cn'">
+						<img  :src="banner[0][locale].img"  />
+						<div class="emerging">
 							<!-- <button class="action"><svg class="icon icon--rewind">
 								<use xlink:href="#icon-rewind"></use>
 							</svg></button> -->
-							<router-link :to="banner[0].url">
-								<button class="particles-button emergingBtn">立即开始交易</button>
+							<router-link :to="banner[0][locale].url">
+								<button class="nowBtn emergingBtn">立即开始交易</button>
 							</router-link>
 						</div>
 					</div>
-                    <div>
-						<p v-if="enBool">WE ARE THE MARKET LEADER</p>
-						<p v-if="enBool">AT CPTMARKETS, TRADE THE MARKETS YOU WANT, TO PROVIDE THE BEST EXPERIENCE POSSIBLE TO YOU</p>
-						<button v-if="enBool">START YOUR TRANSACTION</button>
+					<div class="cnBanner" v-if="locale == 'tc'">
+						<img  :src="banner[0][locale].img"  />
+						<div class="emerging">
+							<!-- <button class="action"><svg class="icon icon--rewind">
+								<use xlink:href="#icon-rewind"></use>
+							</svg></button> -->
+							<router-link :to="banner[0][locale].url">
+								<button class="nowBtn emergingBtn">立即开始交易</button>
+							</router-link>
+						</div>
+					</div>
+                    <div v-if="locale == 'en'">
+						<p class="entitle emerging">WE ARE THE MARKET LEADER</p>
+						<p class="enBnnerCon emerging pc">AT CPTMARKETS, TRADE THE MARKETS YOU WANT, <br>TO PROVIDE THE BEST EXPERIENCE POSSIBLE TO YOU</p>
+						<div class="enBtn emergingBtn">
+							<router-link :to="banner[0][locale].url">
+								<button class="nowBtn enBtns">START YOUR TRANSACTION</button>
+							</router-link>
+						</div>
+						
 					</div>
 					
                 </div>
 				<div class="swiper-slide">
 					<router-link to="">
-						<img class="" :src="banner[1].img" />
+						<img class="" :src="banner[1][locale].img" />
 					</router-link>
                     
                 </div>
 				<div class="swiper-slide">
-					<router-link :to="banner[2].url">
-						<img class="" :src="banner[2].img" />
+					<router-link :to="banner[2][locale].url">
+						<img class="" :src="banner[2][locale].img" />
 					</router-link>
                 </div>
 				
 				
 			</div>
- 
+			<div class="swiper-button-prev pc"></div>
+			<div class="swiper-button-next pc"></div>
 			<!-- <div class="swiper-pagination"></div> -->
 		</div>
  
@@ -55,46 +72,49 @@
 		data() {
 			return {
 				enBool:false,
-				banner: [],
-				
-			}
-		},
-		methods:{
-			changeLang(){
-				if( this.$i18n.locale == 'en' ){
-					this.enBool = true;
-					this.banner = [{
-							img: require("@/assets/bannerfont_03.png"),url:'/regist',
-						},{
-							img: "images/banner2.jpg",url:''
-						},{
-							img: "images/bannerEn.jpg",url:'/plan'
+				banner:[
+					{
+						cn:{
+							img:require("@/assets/bannerfont_03.png"),url:'/regist'
 						},
-					];
-				}else{
-					this.enBool = false;
-					this.banner = [{
-							img: require("@/assets/bannerfont_03.png"),url:'/regist',
-						},{
+						tc:{
+							img:require("@/assets/bannerfont_03.png"),url:'/regist'
+						},
+						en:{
+							img:require("@/assets/bannerfont_03.png"),url:'/regist'
+						},
+					},
+					{
+						cn:{
 							img: "images/banner2cn.jpg",url:''
-						},{
+						},
+						tc:{
+							img: "images/banner2cn.jpg",url:''
+						},
+						en:{
+							img:"images/banner2.jpg",url:''
+						},
+					},
+					{
+						cn:{
 							img: "images/banner.jpg",url:'/plan'
 						},
-					]
-				}
+						tc:{
+							img: "images/banner2.jpg",url:''
+						},
+						en:{
+							img: "images/bannerEn.jpg",url:'/plan'
+						},
+					}
+				],
+			}
+		},
+		computed:{
+			locale(){
+				return this.$i18n.locale
 			},
 		},
-		created(){
-			this.changeLang()
-		},
-		updated(){
-			// this.changeLang()
-			console.log(123)
-		},
-		components: {
- 
-			
-		},
+	
 	mounted: function() {
 
 		//配置Swiper  建议关于Swiper配置方面可以前往Swiper官网
@@ -109,13 +129,17 @@
 				stopOnLastSlide: false,
 				disableOnInteraction: false,
 			},
-
+			  navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+			},
+			
 		})
 	}
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 
 .swiper-container {
   width: 100%;
@@ -128,25 +152,10 @@
 .swiper-slide img {
 	width: 100%;
 }
-.swiper-slide:nth-child(2) img{
-	width: 45% !important;
+.swiper-slide .cnBanner img{
+	width: 45% ;
 	font-family: Oswald;
     text-align: center;
-    width: 100%;
-    font-size: 68px;
-    letter-spacing: 10px;
-    margin-top: 185px;
-	line-height: 200px;
-	opacity: 0;
-	transform: translate(0, 50px);
-	animation: slide-up 1s cubic-bezier(0.215, 0.61, 0.355, 1);
-	animation-fill-mode: forwards;
-}
-.swiper-slide:last-child img{
-	width: 45% !important;
-	font-family: Oswald;
-    text-align: center;
-    width: 100%;
     font-size: 68px;
     letter-spacing: 10px;
     margin-top: 185px;
@@ -163,7 +172,7 @@
     cursor: pointer;
 
 }
-.particles-button {
+.nowBtn {
     position: relative;
     border-radius: 5px;
     border-radius: vb0eb2ar(--radius-button);
@@ -180,6 +189,31 @@
     line-height: 0px !important;
     font-weight: bold;
     font-size: 16px;
+}
+.entitle{
+    text-align: center;
+	font-size: 50px;
+	font-weight: bold;
+    letter-spacing: 10px;
+    margin-top: 100px;
+    line-height: 100px;
+}
+.enBnnerCon{
+    text-align: center;
+    width: 100%;
+    font-size: 24px;
+    letter-spacing: 4px;
+    line-height: 42px;
+}
+.enBtn{
+	width: 300px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    color: #fff;
+    margin: 80px auto;
+    font-family: Oswaldbold;
+    border-radius: 30px;
 }
 .emergingBtn {
   text-align: center;

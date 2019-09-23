@@ -838,5 +838,9 @@ question:{
     pros:'9 Tips from the pros',
     choose:'Why trade with CPT Markets?',
   },
-    
+   // 支付方式
+   type:{
+    title:'Method of payment',
+    discript:'As an established Foreign Exchange and CFD broker, CPT Markets has been providing traders with multiple ways of deposit and withdrawal over the past few years, facilitate your trading process to be more efficient and convenient. You can freely choose the transaction payment method according to your needs.',
+  },
 }

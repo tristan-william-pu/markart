@@ -83,12 +83,12 @@
           </p>
           <p class="art">
             {{$t('footer.name')}}
-            <a class="pup" href="//p/index">{{$t('footer.href')}}</a>
+            <router-link class="pup" to="/">{{$t('footer.href')}}</router-link>
             {{$t('footer.lastName')}}
           </p>
           <p class="art">
             {{$t('footer.wales')}}
-            <a class="pup" href="https://www.cptmarkets.co.uk">{{$t('footer.hrefSecond')}}</a>
+            <router-link class="pup" to="/">{{$t('footer.hrefSecond')}}</router-link>
             {{$t('footer.walesMail')}}
           </p>
           <div class="line"></div>
@@ -96,23 +96,23 @@
             {{$t('footer.risk')}}
             <a
               class="pup"
-              href="/Public/addheader/pdf/ys.pdf"
+              href="/pdf/ys.pdf"
               download="隐私政策"
             >{{$t('footer.Privacy')}}</a>,
             <a
               class="pup"
-              href="/Public/addheader/pdf/CPTMarketsv2.pdf"
+              href="/pdf/CPTMarketsv2.pdf"
               download="风险提示"
             >{{$t('footer.prompt')}}</a>,
             <a
               class="pup"
-              href="/Public/addheader/pdf/fx.pdf"
+              href="/pdf/fx.pdf"
               download="风险披露"
             >{{$t('footer.Disclosure')}}</a>
             ,{{$t('footer.And')}}
             <a
               class="pup"
-              href="/Public/addheader/pdf/mz.pdf"
+              href="/pdf/mz.pdf"
               download="免责声明"
             >{{$t('footer.disclaimer')}}</a>
             {{$t('footer.money')}}
