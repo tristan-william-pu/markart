@@ -139,7 +139,7 @@
 		<div class="valDep">
 			<div class="depTop clearfix">
 				<div class="topLe">
-					<p class="titDep">Valid deposit: $500≤X<$2,000</p>
+					<p class="titDep">Valid deposit: $500≤X&lt;$2,000</p>
 					<p class="boxTit">Minimum transaction volume:<span>30</span>lots</p>
 					<div class="boxBot clearfix">
 						<p class="fl leP">Bonus</p>
@@ -147,7 +147,7 @@
 					</div>
 				</div>
 				<div class="topRig">
-					<p class="titDep">Valid deposit: $2,000≤X<$5,000</p>
+					<p class="titDep">Valid deposit: $2,000≤X&lt;$5,000</p>
 					<p class="boxTit">Minimum transaction volume:<span>100</span>lots</p>
 					<div class="boxBot clearfix">
 						<p class="fl leP">Bonus</p>
@@ -157,7 +157,7 @@
 			</div>
 			<div class="depBot clearfix">
 				<div class="topLe">
-					<p class="titDep">Valid deposit: $5,000≤X<$10,000 </p>
+					<p class="titDep">Valid deposit: $5,000≤X&lt;$10,000 </p>
 					<p class="boxTit">Minimum transaction volume:<span>250</span>lots</p>
 					<div class="boxBot clearfix">
 						<p class="fl leP">Bonus</p>
