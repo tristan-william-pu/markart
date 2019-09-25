@@ -149,7 +149,8 @@
       <div class="center">
         <ul class="clearfix">
           <li>
-            <img src="images/sch/indTopLe.png" />
+            <img v-if=" changeLong == 'cn' ||  changeLong == 'tc' " src="images/sch/indTopLe.png" />
+            <img v-else src="images/sch/indTopLe_en.png" />
           </li>
           <li class="schCen">
             <span>{{$t('home.tools')}}</span>
@@ -276,6 +277,11 @@ export default {
     };
   },
   components: { Banner, MClound },
+  computed:{
+    changeLong(){
+      return this.$i18n.locale;
+    },
+  },
   mounted() {
     setTimeout(() => {
       let flag = 0;
@@ -291,7 +297,6 @@ export default {
     menu() {
         this.scroll = document.documentElement.scrollTop || document.body.scrollTop;
         const show = this.show
-        // console.log(this.scroll)
         let reacts;
         if(document.documentElement.clientWidth > 1200){
           reacts = [1300,2100,2900];
@@ -304,14 +309,12 @@ export default {
 
           if ( height > react ) {
             show.regist = true
-            console.log(height)
           }
         }
         if (!show.trading) {
           let react = reacts[1]
           if (height  > react) {
             show.trading = true
-            console.log(height)
           }
         }
         if (!show.navbanner) {
@@ -319,7 +322,6 @@ export default {
           let react = reacts[2]
           if (height > react) {
             show.navbanner = true
-            console.log(height)
           }
         }
         if (show.regist && show.trading && show.navbanner) {

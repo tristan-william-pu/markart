@@ -294,7 +294,7 @@
               <img src="@/assets/sTop.jpg" />
               <p>
                {{$t('question.webLink')}} 
-                <a href="/p/ctIndex">https://www.cptmarkets.com</a>{{$t('question.desk')}}
+                <a href="/p/ctIndex">https://www.cptmarkets.com</a>
                 <br />{{$t('question.mac')}}
                 <a href="/p/ctIndex">{{$t('question.clickto')}}</a>
                 <br />{{$t('question.error')}}
@@ -492,6 +492,7 @@ a {
               margin-left: 40px;
             }
             p {
+              font-size: 16px;
               margin: 2% auto 0;
               padding: 28px 27px;
               background-color: #fdfcfa;

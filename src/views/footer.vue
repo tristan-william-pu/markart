@@ -170,7 +170,9 @@ export default {
           width: 27px;
           margin: 0 10px;
           opacity: 0.5;
-         
+        }
+        img:hover{
+          opacity: 1;
         }
       }
     }
@@ -184,6 +186,9 @@ export default {
     padding-right: 35px;
     color: #fff;
     font-size: 16px;
+    a{
+      color:#fff;
+    }
   }
   .lianxi {
     float: left;

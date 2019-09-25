@@ -3,7 +3,7 @@
 <!--导航-->
         <div class="nav">
             <div class="center clearfix">
-                <a href="/p/index"><img src="@/assets/sep_oversea/logo.png" class="fl" /></a>
+                <router-link to="/home"><img src="@/assets/sep_oversea/logo.png" class="fl" /></router-link>
                 <p class="fl clearfix">
                     <span class="fl">
                         <img src="@/assets/sep_oversea/tel.png" />&nbsp;&nbsp;400-100-1103
@@ -12,32 +12,31 @@
                         <img src="@/assets/sep_oversea/xf.png"/>&nbsp;&nbsp;cs@cptmarkets.com
                     </span>
                 </p>
-                <div class="fr downbox">
-                    <div class="topShow">
-                        <img src="@/assets/sep_oversea/united-kingdom.png" class="topImg" />
+                <div class="fr downbox" @mouseenter="bool = true" @mouseleave="bool = false">
+                    <div class="topShow" >
+						<img :src="langImgSrc" class="topImg" alt />
+                        <!-- <img src="@/assets/sep_oversea/united-kingdom.png" class="topImg" /> -->
                         <img src="@/assets/sep_oversea/pula.png" class="pula" />
                     </div>
                     
-                    <div class="box">
+                    <div class="box" v-show="bool">
                         <div class="arrows"></div>
                         <ul>
-                            <li class="clearfix">
-                                <a href="/p/sep_Chinese">
+							<li class="clearfix" @click="changeLang('en')">
+                                    <img src="@/assets/sep_oversea/united-kingdom.png"/>
+                                    <span>English</span>
+                            </li>
+                            <li class="clearfix" @click="changeLang('cn')">
                                     <img src="@/assets/sep_oversea/china.png"/>
                                     <span>中文</span>
-                                </a>	
                             </li>
-                            <li class="clearfix">
-                                <a href="/p/sep_Vietnam">
+                            <li class="clearfix" @click="changeLang('vn')">
                                     <img src="@/assets/sep_oversea/vietnam.png"/>
                                     <span>Tiếng Việt</span>
-                                </a>
                             </li>
-                            <li class="clearfix">
-                                <a href="/p/sep_Indonesia">
+                            <li class="clearfix" @click="changeLang('in')">
                                     <img src="@/assets/sep_oversea/indonesia.png"/>
                                     <span>Indonesia</span>
-                                </a>
                             </li>
                         </ul>
                     </div>
@@ -48,9 +47,9 @@
 		<!--大图-->
 		<div class="bigBanner">
 			<div class="center">
-				<h3>CPT Markets <span>Welcome Bonus</span></h3>
-				<h4>1st Sep. 2019 - 30th Sep. 2019</h4>
-				<h5><router-link to="/regist">Register now!</router-link></h5>
+				<h3>CPT Markets <span>{{langData.welcome}}</span></h3>
+				<h4>{{langData.date}}</h4>
+				<h5><router-link to="/regist">{{langData.register}}</router-link></h5>
 				<svg width="0" height="0"> 
 					<filter id="filter">
 						<feTurbulence type="fractalNoise" baseFrequency=".01" numOctaves="6" />
@@ -59,7 +58,7 @@
 				</svg>
 				<div class="wrapper">
 					<div class="button _1">
-						<span><router-link to="/regist">Register now!</router-link></span><div class="back"></div>
+						<span><router-link to="/regist">{{langData.register}}</router-link></span><div class="back"></div>
 					</div>
 				</div>	
 			</div>
@@ -72,41 +71,41 @@
 				</div>
 				<div class="fr">
 					<div class="beTop clearfix">
-						<p class="fl">Up to</p>
+						<p class="fl">{{langData.up}}</p>
 						<img src="@/assets/sep_oversea/num.png" class="fl"/>
 					</div>
-					<p>Best Deposit Bonus</p>
+					<p>{{langData.best}}</p>
 					<div class="boxTab">
-						<p>Personal Information</p>
-						<input type="text" placeholder="First Name" name = 'first_name' id = 'first_name'/>
-						<input type="text" placeholder="Last Name"  name = 'last_name' id = 'last_name'/>
+						<p>{{langData.information}}</p>
+						<input type="text" :placeholder="langData.FirstName" name = 'first_name' id = 'first_name'/>
+						<input type="text" :placeholder="langData.LastName"  name = 'last_name' id = 'last_name'/>
 						<select id="queryType"  name="queryType" v-model="cmd" @change="doChange()">
-							<option value="1"  name="queryType">Indonesia</option>  
-							<option value="2"  name="queryType">Vietnam</option>   
-							<option value="3" name="queryType">Thailand</option>   
-							<option value="4" name="queryType">Singapore</option>  
-							<option value="5" name="queryType">Malaysia</option>  
-							<option value="6" name="queryType">Philippines</option> 
-							<option value="7" name="queryType">Cambodia </option> 
-							<option value="8" name="queryType">Burma</option>   
-							<option value="9" name="queryType">Laos </option> 
-							<option value="10" name="queryType">Brunei </option> 
-							<option value="11" name="queryType">Timor-Leste </option> 
+							<option value="1"  name="queryType">{{langData.Indonesia}}</option>  
+							<option value="2"  name="queryType">{{langData.Vietnam}}</option>   
+							<option value="3" name="queryType">{{langData.Thailand}}</option>   
+							<option value="4" name="queryType">{{langData.Singapore}}</option>  
+							<option value="5" name="queryType">{{langData.Malaysia}}</option>  
+							<option value="6" name="queryType">{{langData.Philippines}}</option> 
+							<option value="7" name="queryType">{{langData.Cambodia}} </option> 
+							<option value="8" name="queryType">{{langData.Burma}}</option>   
+							<option value="9" name="queryType">{{langData.Laos}} </option> 
+							<option value="10" name="queryType">{{langData.Brunei}} </option> 
+							<option value="11" name="queryType">{{langData.Timor}} </option> 
 						</select>
 						<div class="numDiv clearfix">
                             <div  class="fl select">
                                 +{{countryNum}}
                             </div>
-							<input type="text" placeholder="Phone number" class="phoNum fl" name = 'user_cell' id = 'user_cell' />
+							<input type="text" :placeholder="langData.phone" class="phoNum fl" name = 'user_cell' id = 'user_cell' />
 						</div>
 						
-						<input type="email" placeholder="Email" class="mail" name = 'user_email' id ='user_email'/>
+						<input type="email" :placeholder="langData.Email" class="mail" name = 'user_email' id ='user_email'/>
 						<div class="check clearfix">
 							<input type="checkbox" checked="checked" class="fl" />
-							<p class="fl">I've read and accept the <span><a href="/Public/sep_overseas/CPT Markets Welcome Bonus 2019 Terms and Conditions.pdf" download="Terms and Conditions">Terms & Conditions</a></span></p>
+							<p class="fl">{{langData.read}}<span><a href="/Public/sep_overseas/CPT Markets Welcome Bonus 2019 Terms and Conditions.pdf" download="Terms and Conditions">{{langData.terms}}</a></span></p>
 						</div>
-						<div class="btnDiv" name ='save_btn' id ='save_btn'>Register Now</div>
-						<p class="tit">Already registered ? <span><router-link to="/login">Login now!</router-link></span></p>
+						<div class="btnDiv" name ='save_btn' id ='save_btn'>{{langData.registernow}}</div>
+						<p class="tit">{{langData.already}}<span><router-link to="/login">{{langData.login}}</router-link></span></p>
 					</div>
 				</div>
 			</div>
@@ -114,23 +113,23 @@
 		<!--How to claim bonus?-->
 		<div class="claim">
 			<div class="center">
-				<h3>How to claim bonus?</h3>
+				<h3>{{langData.claim}}</h3>
 				<ul class="clearfix">
 					<li>
 						<img src="@/assets/sep_oversea/claim1.png"/>
-						<p>Register</p>
+						<p>{{langData.regist}}</p>
 					</li>
 					<li>
 						<img src="@/assets/sep_oversea/claim2.png"/>
-						<p>Deposit</p>
+						<p>{{langData.deposit}}</p>
 					</li>
 					<li>
 						<img src="@/assets/sep_oversea/claim3.png"/>
-						<p>Trade</p>
+						<p>{{langData.trade}}</p>
 					</li>
 					<li>
 						<img src="@/assets/sep_oversea/claim4.png"/>
-						<p>Bonus</p>
+						<p>{{langData.four}}</p>
 					</li>
 				</ul>
 			</div>
@@ -139,58 +138,58 @@
 		<div class="valDep">
 			<div class="depTop clearfix">
 				<div class="topLe">
-					<p class="titDep">Valid deposit: $500≤X&lt;$2,000</p>
-					<p class="boxTit">Minimum transaction volume:<span>30</span>lots</p>
+					<p class="titDep">{{langData.valid}}$500≤X&lt;$2,000</p>
+					<p class="boxTit">{{langData.minimum}}<span>30</span>{{langData.lots}}</p>
 					<div class="boxBot clearfix">
-						<p class="fl leP">Bonus</p>
+						<p class="fl" :class="lang == 'vn'?'lepSet':'leP'">{{langData.bonus}}</p>
 						<p class="fl num">$60</p>
 					</div>
 				</div>
 				<div class="topRig">
-					<p class="titDep">Valid deposit: $2,000≤X&lt;$5,000</p>
-					<p class="boxTit">Minimum transaction volume:<span>100</span>lots</p>
+					<p class="titDep">{{langData.valid}}$2,000≤X&lt;$5,000</p>
+					<p class="boxTit">{{langData.minimum}}<span>100</span>{{langData.lots}}</p>
 					<div class="boxBot clearfix">
-						<p class="fl leP">Bonus</p>
+						<p class="fl" :class="lang == 'vn'?'lepSet':'leP'">{{langData.bonus}}</p>
 						<p class="fl num">$<span>200</span></p>
 					</div>
 				</div>
 			</div>
 			<div class="depBot clearfix">
 				<div class="topLe">
-					<p class="titDep">Valid deposit: $5,000≤X&lt;$10,000 </p>
-					<p class="boxTit">Minimum transaction volume:<span>250</span>lots</p>
+					<p class="titDep">{{langData.valid}}$5,000≤X&lt;$10,000 </p>
+					<p class="boxTit">{{langData.minimum}}<span>250</span>{{langData.lots}}</p>
 					<div class="boxBot clearfix">
-						<p class="fl leP">Bonus</p>
+						<p class="fl" :class="lang == 'vn'?'lepSet':'leP'">{{langData.bonus}}</p>
 						<p class="fl num">$<span>1000</span></p>
 					</div>
 				</div>
 				<div class="topRig">
-					<p class="titDep">Valid deposit: X≥$10,000</p>
-					<p class="boxTit">Minimum transaction volume:<span>500</span>lots</p>
+					<p class="titDep">{{langData.valid}} X≥$10,000</p>
+					<p class="boxTit">{{langData.minimum}}<span>500</span>{{langData.lots}}</p>
 					<div class="boxBot clearfix">
-						<p class="fl leP">Bonus</p>
+						<p class="fl" :class="lang == 'vn'?'lepSet':'leP'">{{langData.bonus}}</p>
 						<p class="fl num">$<span>2500</span></p>
 					</div>
 				</div>
 			</div>
 		</div>
 		<!--Newly register customers?-->
-		<p class="newlyReg">Newly register customers?<br>Then you can get  <span>$99</span> additional bonus!</p>
+		<p class="newlyReg" >{{langData.newly}}<br>{{langData.get}}<span>$99</span> {{langData.additional}}</p>
 		<!--Terms and Conditions-->
 		<div class="rulers">
 			<div class="center">
-				<h6>Terms and Conditions</h6>
+				<h6>{{langData.conditions}}</h6>
 				<img src="@/assets/sep_oversea/rul.png" alt="" @click="showToggle"/>
 				<div class="conRul" v-if="isShow">
-					<p>1. All CPT Markets real retail USD accounts can apply for this promotion by sending email to cs@cptmarkets.com for registration after the deposit from 1st September, 2019 to 30th September, 2019.</p>
-					<p>2. All registered CPT Markets real retail USD accounts can claim the corresponding bonus after the required transaction volume is done before 31st December, 2019. </p>
-					<p>3. When the “valid deposit” of all newly registered retail customers during the registration period is greater than or equal to $2,000, an additional $99 welcome bonus will be awarded to customer’s account after the required transaction volume is done. </p>
-					<p>4. The “valid deposit” is calculated based on the total amount of deposits from 1st September , 2019 to the date of registration via email.</p>
-					<p>5. The US cent account cannot participate in this promotion.</p>
-					<p>6. This promotion is only available to customers of Southeast Asia countries and regions. Each account ID can only be used once and is not allowed to participate in other promotions at the same time. </p>
-					<p>7. If CPT Markets detects that the customer has abused the terms of this promotion, CPT Markets reserves the right to withdraw the trading bonus or terminate the customer access to the services provided by CPT Markets.</p>
-					<p>8. The transaction volume will not be counted when customers violate the “CPT Markets Liquidity Guidelines”or make other malicious transactions. </p>
-					<p>9. CPT Markets reserves all rights for final explanation.</p>
+					<p>{{langData.all}}</p>
+					<p>{{langData.retail}}</p>
+					<p>{{langData.customers}}</p>
+					<p>{{langData.calculated}}</p>
+					<p>{{langData.account}}</p>
+					<p>{{langData.promotion}}</p>
+					<p>{{langData.detects}}</p>
+					<p>{{langData.volume}}</p>
+					<p>{{langData.reserves}}</p>
 				</div>
 			</div>
 		</div>
@@ -225,7 +224,7 @@
 						<img src="@/assets/sep_oversea/wx.jpg" class="wxEwm"/>
 					</li>
 				</ul>
-				<p class="btn"><router-link to="/regist">Register now!</router-link></p>
+				<p class="btn"><router-link to="/regist">{{langData.register}}</router-link></p>
 			</div>
 		</div>
 		<!--底部-->
@@ -241,12 +240,18 @@
 </template>
 	
 <script>
+
 export default {
     data(){
         return{
             country:['62','84','66','65','60','63','855','95','856','673','670'],
             cmd:1,
-            isShow:true,
+			isShow:false,
+			lang:'en',
+			langImgSrc:require("@/assets/sep_oversea/united-kingdom.png"),
+			bool:false,
+			data:require('./sep_oversea'),
+			langData:{},
         }
     },
     computed:{
@@ -257,12 +262,42 @@ export default {
     },
     methods:{
         showToggle(){
-            this.isShow = !this.isShow; 
+			this.isShow = !this.isShow; 
         },
-       
-        
-    },
-    
+        changeLang(lang){
+			if( lang == 'cn' ){
+				this.langData = this.data[0].cn;
+				this.langImgSrc = require("@/assets/sep_oversea/china.png");
+			}else if( lang == 'en' ){
+				this.langData = this.data[0].en;
+				this.langImgSrc = require("@/assets/sep_oversea/united-kingdom.png");
+			}else if( lang == 'vn' ){
+				this.langData = this.data[0].vn;
+				this.langImgSrc = require("@/assets/sep_oversea/vietnam.png");
+			}else{
+				this.langData = this.data[0].in;
+				this.langImgSrc = require("@/assets/sep_oversea/indonesia.png");
+			}
+		 this.lang=lang;
+		},
+	},
+	mounted(){
+	},
+	created(){
+		let lang='en';
+	
+			if( lang == 'cn' ){
+				this.langData = this.data[0].cn;
+			}else if( lang == 'en' ){
+				this.langData = this.data[0].en;
+			}else if( lang == 'vn' ){
+				this.langData = this.data[0].vn; 	
+			}else{
+				this.langData = this.data[0].in;
+			}
+		
+	},
+   
 }
 </script>
 
@@ -414,8 +449,7 @@ export default {
 	    position: absolute;
     	left: -48%;
 	    z-index: 1111;
-	    display: none;
-	   	top:40px;
+	   	top:35px;
 	}
 	
 	.nav .center div.fr .topShow .topImg{
@@ -701,12 +735,15 @@ export default {
 		float: left;
 		width: 19%;
 		margin: 0 3%;
-		font-size: 26px !important;
 		color: #ffffff;
 		text-align: center;
 		font-weight:800;
-        padding-bottom: 115px;
+		padding-bottom: 115px;
+		>p{
+		font-size: 26px;
+		}
 	}
+
 	.claim .center ul li img{
 		margin: 0 auto 40px;
 	}
@@ -725,7 +762,6 @@ export default {
 	.valDep>div>div p.boxTit{
 		font-size: 18px;
 		color: #ffffff;
-		font-family:MONMEDIUM;
 		text-align: center;
 		margin-top: 14%;
 	}
@@ -753,10 +789,12 @@ export default {
 		font-size: 83px;
 	}
 	.valDep>div>div div.boxBot p.leP{
+		font-size: 56px;
 	    margin: 2% 0 0 30%;
 	}
-	.valDep>div>div div.boxBot p.lepReset{
-	    margin: 2% 0 0 13%;
+	.valDep>div>div div.boxBot p.lepSet{
+		font-size: 40px;
+	    margin: 2% 0 0 26%;
 	}
 	.valDep div.depTop div.topLe{
 		background:url(../../assets/sep_oversea/bg1.jpg) no-repeat center #f26d00;
@@ -941,9 +979,8 @@ export default {
 		.valDep>div>div div.boxBot p.leP {
 		    margin: 2% 0 0 2%;
 		}
-		.valDep>div>div div.boxBot p.lepReset {
+		.valDep>div>div div.boxBot p.lepSet {
 			margin: 2% 0 0 2%;
-			font-size: 37px;
 		}
 		.valDep>div>div div.boxBot p.numReset {
 			font-size: 62px !important;
@@ -1010,7 +1047,7 @@ export default {
     	.valDep>div>div div.boxBot p.leP {
 		    margin: 2% 0 0 12%;
 		}
-		.valDep>div>div div.boxBot p.lepReset {
+		.valDep>div>div div.boxBot p.lepSet {
 		    margin: 2% 0 0 12%;
 		}
 		.fllow {
@@ -1086,7 +1123,7 @@ export default {
 	.nav .center div.fr .box{
 		width: 10rem;
 	    height: auto;
-	    clearfix: both;
+	    clear: both;
 	    background: #fff;
 	    border: 1px solid #cfcfcf;
 	    z-index: 100;
@@ -1403,7 +1440,7 @@ export default {
 		font-size: 1.5rem !important;
 	}
 	.valDep>div>div p.titDep{
-		font-size: 2rem;
+		font-size: 1.5rem;
 		color: #ffffff;
 		font-weight:800;
 		text-align: center;
@@ -1411,15 +1448,11 @@ export default {
 	.valDep>div>div p.boxTit{
 		font-size: 1.5rem;
 		color: #ffffff;
-		font-family:MONMEDIUM;
 		text-align: center;
 		margin-top: 14%;
 	}
 	.valDep>div>div div.boxTit span{
 		font-size: 2rem;
-	}
-	.valDep>div>div div.boxReset{
-		font-size: 2.5rem !important;
 	}
 	.valDep>div>div div.boxBot{
 		font-size: 3rem;
@@ -1439,10 +1472,12 @@ export default {
 		font-size: 3rem;
 	}
 	.valDep>div>div div.boxBot p.leP{
+		font-size: 3rem;
 	    margin: 2% 0 0 30%;
 	}
-	.valDep>div>div div.boxBot p.lepReset{
-	    margin: 2% 0 0 8%;
+	.valDep>div>div div.boxBot p.lepSet{
+		font-size: 2.5rem;
+	    margin: 2% 0 0 3%;
 	}
 	.valDep div.depTop div.topLe{
 		background:url(../../assets/sep_oversea/bg1.jpg) no-repeat center #f26d00;
@@ -1549,7 +1584,6 @@ export default {
 	.fllow .center p.btn{
 		background: url(../../assets/sep_oversea/floBtn.png) no-repeat center;
 	    background-size: 100%;
-	    font-family: MONBOLD;
 	    text-align: center;
 	    font-size: 1.5rem;
 	    color: #ffffff;
@@ -1599,7 +1633,7 @@ export default {
     	}
     	.bigBanner .center {
 		    padding: 0 0 0%;
-		    clearfix:both;
+		    clear:both;
 		}
 		.bigBanner .center h4 {
     		margin: 0;
@@ -1614,7 +1648,7 @@ export default {
 			font-size: 1.2rem !important;
 		}
     	.valDep>div>div p.titDep{
-			font-size: 1.5rem;
+			font-size: 1.3rem;
 		}
 		.best .center>.fr .boxTab .numDiv input {
 	    	width: 51%;
@@ -1622,6 +1656,10 @@ export default {
 	    .nav .center>a>img {
 		    margin: 1.5rem 3rem;
 		}
+		.valDep>div>div div.boxBot p.lepSet{
+		font-size: 2rem;
+	    margin: 2% 0 0 3%;
+	}
     }
     @media screen and (width:768px){
     	.nav .center>a>img {
