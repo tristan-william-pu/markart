@@ -46,6 +46,18 @@ src: url('../../public/font/montserrat/Montserrat-Light.otf');
     font-family: ALB;
     src: url("../../public/font/fz/A_ALBIONICEXP.TTF");
   }
+@font-face {
+    font-family: MNJH;
+    src: url("../../public/font/fz/迷你简汉真广标_0.ttf");
+}
+@font-face {
+    font-family: imp;
+    src: url("../../public/font/fz/impact.ttf");
+}
+@font-face {
+    font-family: calibri;
+    src: url("../../public/font/fz/calibri.ttf");
+}
 body,p,h1,h2,h3,h4,h5,h6,ul,ol,dl,li,dt,dd{
     /* 默认有边距，都要清除 */
     margin: 0;

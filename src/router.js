@@ -182,6 +182,14 @@ export default new Router({
       name: 'oversea',
       component: importModule('actives/sep_oversea')
     },{
+      path: '/analysts',
+      name: 'analysts',
+      component: importModule('actives/analysts')
+    },{
+      path: '/road',
+      name: 'road',
+      component: importModule('actives/road')
+    },{
       path: '/clound',
       component: () => import('@/components/m-clound.vue')
     }, {

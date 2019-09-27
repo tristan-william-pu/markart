@@ -22,8 +22,8 @@ export default {
   components: { Header, Footer },
   data(){
     return {
-      header: ['plan','oversea'],
-      footer: ['login','plan','oversea']
+      header: ['plan','oversea','analysts','road'],
+      footer: ['login','plan','oversea','analysts','road']
     }
   }
 }

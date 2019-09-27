@@ -102,7 +102,12 @@
 						<input type="email" :placeholder="langData.Email" class="mail" name = 'user_email' id ='user_email'/>
 						<div class="check clearfix">
 							<input type="checkbox" checked="checked" class="fl" />
-							<p class="fl">{{langData.read}}<span><a href="/Public/sep_overseas/CPT Markets Welcome Bonus 2019 Terms and Conditions.pdf" download="Terms and Conditions">{{langData.terms}}</a></span></p>
+							<p class="fl">{{langData.read}}
+							<span v-if=" lang == 'cn' "><a href="pdf/active/CPT Markets chinese.pdf" download="Terms and Conditions">{{langData.terms}}</a></span>
+							<span v-if=" lang == 'en' "><a href="pdf/active/CPT Markets  Terms and Conditions.pdf" download="Terms and Conditions">{{langData.terms}}</a></span>
+							<span v-if=" lang == 'in' "><a href="pdf/active/CPT Markets indonasia.pdf" download="Terms and Conditions">{{langData.terms}}</a></span>
+							<span v-if=" lang == 'vn' "><a href="pdf/active/CPT Markets vietnam.pdf" download="Terms and Conditions">{{langData.terms}}</a></span>
+							</p>
 						</div>
 						<div class="btnDiv" name ='save_btn' id ='save_btn'>{{langData.registernow}}</div>
 						<p class="tit">{{langData.already}}<span><router-link to="/login">{{langData.login}}</router-link></span></p>
@@ -368,43 +373,45 @@ export default {
 }
 
 @media only screen and (max-width: 750px) {
-  .wrapper {
-    flex-direction: column;
-  }
+.overSea{
+	.wrapper {
+		flex-direction: column;
+	}
 
-  .button {
-    margin: 0.8rem 0;
-  }
+	.button {
+		margin: 0.8rem 0;
+	}
+	}
+	.support {
+	position: absolute;
+	right: 10px;
+	bottom: 10px;
+	padding: 10px;
+	display: flex;
+	}
 }
-.support {
-  position: absolute;
-  right: 10px;
-  bottom: 10px;
-  padding: 10px;
-  display: flex;
-}
-
 @media screen and (min-width:768px){
-::-webkit-input-placeholder { 
-	color: #202020;
-    font-size: 16px;
-    font-weight: bold;
-}
-::-moz-placeholder { 
-	color: #202020;
-    font-size: 16px;
-     font-weight: bold;
-}
-:-ms-input-placeholder { 
-	color: #202020;
-    font-size: 16px;
-     font-weight: bold;
-}
-:-moz-placeholder {  
-	color: #202020;
-    font-size: 16px;
-     font-weight: bold;
-}
+.overSea{
+	::-webkit-input-placeholder { 
+		color: #202020;
+		font-size: 16px;
+		font-weight: bold;
+	}
+	::-moz-placeholder { 
+		color: #202020;
+		font-size: 16px;
+		font-weight: bold;
+	}
+	:-ms-input-placeholder { 
+		color: #202020;
+		font-size: 16px;
+		font-weight: bold;
+	}
+	:-moz-placeholder {  
+		color: #202020;
+		font-size: 16px;
+		font-weight: bold;
+	}
 	.nav{
 		width:100%;
 		height: 68px;
@@ -938,7 +945,9 @@ export default {
 		font-size: 10px;
 		line-height: 25px;
 	}
+}
 	@media screen and (max-width:1200px) and (min-width:768px){
+	.overSea{
 		.nav .center{
 			width: 90%;
 		}
@@ -982,22 +991,12 @@ export default {
 		.valDep>div>div div.boxBot p.lepSet {
 			margin: 2% 0 0 2%;
 		}
-		.valDep>div>div div.boxBot p.numReset {
-			font-size: 62px !important;
-		}
 		.valDep>div>div div.boxBot p.num {
 		    font-size: 96px;
 		    margin: 0% 0 0 5%;
 		}
 		.valDep>div>div p.titDep {
     		font-size: 27px;
-		}
-		.valDep>div>div p.titReset {
-			width: 312px;
-			margin:0 auto
-		}
-		.valDep>div>div div.boxBot p.numReset span {
-		    font-size: 52px !important;
 		}
     	.valDep>div>div div.boxBot p.num span {
 		    font-size: 79px;
@@ -1028,9 +1027,11 @@ export default {
     	.nav .center>p {
 		    margin-left: 18%;
 		}
+	}
 
 	}
 	@media screen and (min-width:1200px) and (max-width:1700px){
+	  .overSea{
 		.nav .center {
     		width: 80%;
     	}
@@ -1069,6 +1070,7 @@ export default {
 		.best .center>.fr .beTop p {
 		    margin-right: 12px;
 		}
+	  }
     }
 }
 
@@ -1076,26 +1078,27 @@ export default {
 	html{
 		font-size:62.5%;
 	}
-::-webkit-input-placeholder { /* Chrome/Opera/Safari */ 
-	color: #202020;
-	font-size: 1rem;
-	font-weight:800;
-}
-::-moz-placeholder { /* Firefox 19+ */  
-	color: #202020;
-	font-size: 1rem;
-	font-weight:800;
-}
-:-ms-input-placeholder { /* IE 10+ */ 
-	color: #202020;
-	font-size: 1rem;
-	font-weight:800;
-}
-:-moz-placeholder { /* Firefox 18- */ 
-	color: #202020;
-	font-size: 1rem;
-	font-weight:800;
-}
+.overSea{
+	::-webkit-input-placeholder { /* Chrome/Opera/Safari */ 
+		color: #202020;
+		font-size: 1rem;
+		font-weight:800;
+	}
+	::-moz-placeholder { /* Firefox 19+ */  
+		color: #202020;
+		font-size: 1rem;
+		font-weight:800;
+	}
+	:-ms-input-placeholder { /* IE 10+ */ 
+		color: #202020;
+		font-size: 1rem;
+		font-weight:800;
+	}
+	:-moz-placeholder { /* Firefox 18- */ 
+		color: #202020;
+		font-size: 1rem;
+		font-weight:800;
+	}
 	.nav .center{
 		width: 98%;
 		margin:0 auto;
@@ -1356,43 +1359,43 @@ export default {
 		color: #5b00c3;
 	}
 	
-.best .center>.fr .boxTab .numDiv{
-	width: 95%;
-	margin: 2rem 5% 0;
-}	
-.best .center>.fr .boxTab .numDiv .select{
-	width: 30%;
-	color: #202020;
-		font-size: 1.5rem;
-		font-weight:700;
-		margin: 0;
-		border-radius: 0.2rem;
-		border:1px solid #e1dbc1;
-		line-height: 3rem;
-		height: 3rem;
-    	background-color: #f0eef0;
-		display: none;
-		text-align: center;
-}	
-.best .center>.fr .boxTab .numDiv .select:first-child{
-	display: inline-block;
-}
-.best .center>.fr .boxTab .numDiv input{
-	width: 54%;
-	color: #202020;
-		font-size: 1.5rem;
-		font-weight:800;
-		margin:0;
-		background-color: #f0eef0;
-		border-radius: 0.2rem;
-		border:1px solid #e1dbc1;
-		line-height: 3rem;
-		padding: 0 1.5rem;
-}	
-.best .center>.fr .boxTab .numDiv .phoNum {
-    background: url(../../assets/sep_oversea/phone.png) no-repeat 89% center #f0eef0;
-    background-size: 5%;
-}	
+	.best .center>.fr .boxTab .numDiv{
+		width: 95%;
+		margin: 2rem 5% 0;
+	}	
+	.best .center>.fr .boxTab .numDiv .select{
+		width: 30%;
+		color: #202020;
+			font-size: 1.5rem;
+			font-weight:700;
+			margin: 0;
+			border-radius: 0.2rem;
+			border:1px solid #e1dbc1;
+			line-height: 3rem;
+			height: 3rem;
+			background-color: #f0eef0;
+			display: none;
+			text-align: center;
+	}	
+	.best .center>.fr .boxTab .numDiv .select:first-child{
+		display: inline-block;
+	}
+	.best .center>.fr .boxTab .numDiv input{
+		width: 54%;
+		color: #202020;
+			font-size: 1.5rem;
+			font-weight:800;
+			margin:0;
+			background-color: #f0eef0;
+			border-radius: 0.2rem;
+			border:1px solid #e1dbc1;
+			line-height: 3rem;
+			padding: 0 1.5rem;
+	}	
+	.best .center>.fr .boxTab .numDiv .phoNum {
+		background: url(../../assets/sep_oversea/phone.png) no-repeat 89% center #f0eef0;
+		background-size: 5%;
+	}	
 	
 
 	
@@ -1621,7 +1624,9 @@ export default {
 		font-size: 1rem;
 		line-height: 2.5rem;
 	}
+}
 	@media screen and (max-width:320px){
+	.overSea{
 		.nav .center>a>img {
 		    margin: 1.5rem 7rem;
 		}
@@ -1659,10 +1664,12 @@ export default {
 		.valDep>div>div div.boxBot p.lepSet{
 		font-size: 2rem;
 	    margin: 2% 0 0 3%;
+		}
 	}
     }
     @media screen and (width:768px){
-    	.nav .center>a>img {
+	.overSea{
+		.nav .center>a>img {
 		    width: 30%;
 		    margin: 1.3rem 14.5rem;
 		}
@@ -1718,6 +1725,7 @@ export default {
 		    left: -43%;
 		    width: 227%;
 		}
+	}
 	}
 }
 </style>
