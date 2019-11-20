@@ -12,6 +12,7 @@ function createXhr() {
 		return new ActiveXObject("Microsoft.XMLHTTP");
 	}
 }
+const type = target => Object.prototype.toString.call(target).replace( /.*\s+|[^\w]/g, '' ).toLocaleLowerCase();
 const local = ( lg ) => {
   const key = 'market_local';
   if ( lg ) localStorage.setItem( key, lg );
@@ -55,8 +56,78 @@ const downloadPdf = (path = '', name = '') => {
   xhr.send();
 }
 
+function autoImgSize(_imgwidth, _imgheight, _rewidth, reheight){
+	let maxWidth = _rewidth
+	let maxHeight = reheight
+	let hRatio
+	let wRatio
+	let Ratio = 1
+	let w = _imgwidth
+	let h = _imgheight
+	wRatio = maxWidth / w
+	hRatio = maxHeight / h
+	Ratio = (wRatio <= hRatio ? wRatio : hRatio)
+  return {
+    width: Math.floor( w * Ratio ),
+    height: Math.floor( h * Ratio )
+  };
+}
+function readImage ( file = '') {
+  return new Promise( (resole, reject) => {
+    if ( !file || type(file) !== 'file') {
+      reject(null)
+    } else {
+      let reader = new FileReader();
+      reader.onload = () => {
+        let img = new Image();
+        img.onload = () => {
+          const result = {
+            width: img.width,
+            height: img.height,
+            base64: img.src,
+          };
+          img = null;
+          reader = null;
+          resole( result );
+        }
+        img.onerror = () => {
+          reject( null );
+        }
+        img.src = reader.result;
+      }
+      reader.onerror = () => {
+        reject( null );
+      }
+      reader.readAsDataURL( file );
+    }
+  } );
+}
+let timmer = null
+function success(msg, isErr = false) {
+  clearTimeout( timmer );
+  const notice = document.querySelector( '#notice' );
+  const cname = notice.className.replace( /(\s+fade-in)|(\s+fade-out)/g, '' );
+  notice.className = cname;
+  notice.querySelector('.success').style.display = isErr ? 'none' : 'block';
+  notice.querySelector('.error').style.display = isErr ? 'block' : 'none';
+  setTimeout(() => {
+    notice.querySelector('.detail').innerText = msg;
+    notice.className = cname + ' fade-in';
+    timmer = setTimeout(() => {
+      notice.className = cname + ' fade-out';
+    }, 2500);
+  })
+}
+function error(msg) {
+  success(msg, true)
+}
 export default {
   local,
   getClientHeight,
-  downloadPdf
+  downloadPdf,
+  autoImgSize,
+  readImage,
+  type,
+  success,
+  error,
 }

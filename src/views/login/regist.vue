@@ -39,8 +39,8 @@
           <p class="titles">
             <span style="color:#5b0eb2">*</span> {{$t('regist.userName')}}
           </p>
-          <input type="text" name="user_name" id="user_name" :placeholder="$t('regist.plName')" />
-          <p class="tips"></p>
+          <input v-model="regForm.first_name" type="text" name="user_name" id="user_name" :placeholder="$t('regist.plName')" />
+          <p class="tips">{{errors.first_name}}</p>
         </div>
         <!-- <div class="inputbox">
                   <p class="titles"><span style="color:#5b0eb2">* </span> 图形验证码</p>
@@ -58,191 +58,11 @@
           </p>
 
           <select name="user_cell_zd" class="sel">
-            <option value="86" selected="selected">86({{$t('regist.China')}})</option>
-            <option value="886">886(台湾)</option>
-            <option value="852">852(香港)</option>
-            <option value="853">853(澳门)</option>
-            <option value="244">244(Angola)</option>
-            <option value="93">93(Afghanistan)</option>
-            <option value="355">355(Albania)</option>
-            <option value="213">213(Algeria)</option>
-            <option value="376">376(Andorra)</option>
-            <option value="1264">1264(Anguilla)</option>
-            <option value="1268">1268(Antigua and Barbuda)</option>
-            <option value="54">54(Argentina)</option>
-            <option value="374">374(Armenia)</option>
-            <option value="61">61(Australia)</option>
-            <option value="43">43(Austria)</option>
-            <option value="994">994(Azerbaijan)</option>
-            <option value="1242">1242(Bahamas)</option>
-            <option value="973">973(Bahrain)</option>
-            <option value="880">880(Bangladesh)</option>
-            <option value="1246">1246(Barbados)</option>
-            <option value="375">375(Belarus)</option>
-            <option value="32">32(Belgium)</option>
-            <option value="501">501(Belize)</option>
-            <option value="229">229(Benin)</option>
-            <option value="1441">1441(Bermuda)</option>
-            <option value="591">591(Bolivia)</option>
-            <option value="267">267(Botswana)</option>
-            <option value="55">55(Brazil)</option>
-            <option value="673">673(Brunei)</option>
-            <option value="359">359(Bulgaria)</option>
-            <option value="226">226(Burkina Faso)</option>
-            <option value="95">95(Myanmar)</option>
-            <option value="257">257(Burundi)</option>
-            <option value="237">237(Cameroon)</option>
-            <option value="1">1(Canada)</option>
-            <option value="236">236(Central African Republic)</option>
-            <option value="235">235(Chad)</option>
-            <option value="56">56(Chile)</option>
-            <option value="57">57(Colombia)</option>
-            <option value="682">682(Cook Islands)</option>
-            <option value="506">506(Costa Rica)</option>
-            <option value="242">242(Congo)</option>
-            <option value="53">53(Cuba)(Congo)</option>
-            <option value="357">357(Cyprus)</option>
-            <option value="420">420(Czech Republic)</option>
-            <option value="45">45(Denmark)</option>
-            <option value="253">253(Djibouti)</option>
-            <option value="1890">1890(Dominican Republic)</option>
-            <option value="593">593(Ecuador)</option>
-            <option value="20">20(Egypt)</option>
-            <option value="503">503(El Salvador)</option>
-            <option value="372">372(Estonia)</option>
-            <option value="251">251(Ethiopia)</option>
-            <option value="679">679(Fiji Islands)</option>
-            <option value="358">358(Finland)</option>
-            <option value="33">33(France)</option>
-            <option value="594">594(French Guiana)</option>
-            <option value="241">241(Gabon)</option>
-            <option value="220">220(Gambia)</option>
-            <option value="995">995(Georgia)</option>
-            <option value="49">49(Germany)</option>
-            <option value="233">233(Ghana)</option>
-            <option value="350">350(Gibraltar)</option>
-            <option value="30">30(Greece)</option>
-            <option value="1809">1809(Grenada)</option>
-            <option value="1671">1671(Guam)</option>
-            <option value="502">502(Guatemala)</option>
-            <option value="224">224(Guinea)</option>
-            <option value="592">592(Guyana)</option>
-            <option value="509">509(Haiti)</option>
-            <option value="504">504(Honduras)</option>
-            <option value="36">36(Hungary)</option>
-            <option value="354">354(Iceland)</option>
-            <option value="91">91(India)</option>
-            <option value="62">62(Indonesia)</option>
-            <option value="98">98(Iran)</option>
-            <option value="964">964(Iraq)</option>
-            <option value="353">353(Ireland)</option>
-            <option value="972">972(Israel)</option>
-            <option value="39">39(Italy)</option>
-            <option value="1876">1876(Jamaica)</option>
-            <option value="81">81(Japan)</option>
-            <option value="962">962(Jordan)</option>
-            <option value="855">855(Cambodia)</option>
-            <option value="327">327(Kazakhstan)</option>
-            <option value="254">254(Kenya)</option>
-            <option value="965">965(Kuwait)</option>
-            <option value="331">331(Kyrgyzstan)</option>
-            <option value="856">856(Laos)</option>
-            <option value="371">371(Latvia)</option>
-            <option value="266">266(Lesotho)</option>
-            <option value="961">961(Lebanon)</option>
-            <option value="231">231(Liberia)</option>
-            <option value="218">218(Libya)</option>
-            <option value="423">423(Liechtenstein)</option>
-            <option value="370">370(Lithuania)</option>
-            <option value="352">352(Luxembourg)</option>
-            <option value="261">261(Madagascar)</option>
-            <option value="265">265(Malawi)</option>
-            <option value="60">60(Malaysia)</option>
-            <option value="960">960(Maldives)</option>
-            <option value="223">223(Mali)</option>
-            <option value="356">356(Malta)</option>
-            <option value="230">230(Mauritius)</option>
-            <option value="52">52(Mexico)</option>
-            <option value="373">373(Moldova)</option>
-            <option value="377">377(Monaco)</option>
-            <option value="976">976(Mongolia)</option>
-            <option value="1664">1664(Montserrat)</option>
-            <option value="212">212(Morocco)</option>
-            <option value="258">258(Mozambique)</option>
-            <option value="264">264(Namibia)</option>
-            <option value="674">674(Nauru)</option>
-            <option value="977">977(Nepal)</option>
-            <option value="31">31(Netherlands)</option>
-            <option value="64">64(New Zealand)</option>
-            <option value="505">505(Nicaragua)</option>
-            <option value="227">227(Niger)</option>
-            <option value="234">234(Nigeria)</option>
-            <option value="850">850(South Korea)</option>
-            <option value="47">47(Norway)</option>
-            <option value="968">968(Oman)</option>
-            <option value="92">92(Pakistan)</option>
-            <option value="507">507(Panama)</option>
-            <option value="675">675(Papua New Guinea)</option>
-            <option value="595">595(Paraguay)</option>
-            <option value="51">51(Peru)</option>
-            <option value="63">63(Philippines)</option>
-            <option value="48">48(Poland)</option>
-            <option value="689">689(French Polynesia)</option>
-            <option value="351">351(Portugal)</option>
-            <option value="1787">1787(Puerto Rico)</option>
-            <option value="974">974(Qatar)</option>
-            <option value="40">40(Romania)</option>
-            <option value="7">7(Russia)</option>
-            <option value="1758">1758(St. Lucia)</option>
-            <option value="1784">1784(St. Vincent and the Grenadines)</option>
-            <option value="378">378(San Marino)</option>
-            <option value="239">239(Sao Tome and Principe)</option>
-            <option value="966">966(Saudi Arabia)</option>
-            <option value="221">221(Senegal)</option>
-            <option value="248">248(Seychelles)</option>
-            <option value="232">232(Sierra Leone)</option>
-            <option value="65">65(Singapore)</option>
-            <option value="421">421(Slovakia)</option>
-            <option value="386">386(Slovenia)</option>
-            <option value="677">677(Solomon Islands)</option>
-            <option value="27">27(South Africa)</option>
-            <option value="252">252(Somalia)</option>
-            <option value="82">82(South Korea)</option>
-            <option value="249">249(Sultan)</option>
-            <option value="963">963(Syria)</option>
-            <option value="34">34(Spain)</option>
-            <option value="94">94(Sri Lanka)</option>
-            <option value="597">597(Suriname)</option>
-            <option value="268">268(Swaziland)</option>
-            <option value="46">46(Sweden)</option>
-            <option value="41">41(Switzerland)</option>
-            <option value="992">992(Tajikistan)</option>
-            <option value="255">255(Tanzania)</option>
-            <option value="66">66(Thailand)</option>
-            <option value="228">228(Togo)</option>
-            <option value="676">676(Tonga)</option>
-            <option value="1809">1809(Trinidad and Tobago)</option>
-            <option value="216">216(Tunisia)</option>
-            <option value="90">90(Turkey)</option>
-            <option value="993">993(Turkmenistan)</option>
-            <option value="256">256(Uganda)</option>
-            <option value="380">380(Ukraine)</option>
-            <option value="971">971(United Arab Emirates)</option>
-            <option value="44">44(United Kingdom)</option>
-            <option value="001">001(United States)</option>
-            <option value="598">598(Uruguay)</option>
-            <option value="233">233(Uzbekistan)</option>
-            <option value="58">58(Venezuela)</option>
-            <option value="84">84(Viet Nam)</option>
-            <option value="967">967(Yemen)</option>
-            <option value="381">381(Serbia and Montenegro)</option>
-            <option value="263">263(Zimbabwe)</option>
-            <option value="260">260(Zambia)</option>
-            <option value="243">243(Zaire)</option>
+            <option v-for="(item, key) in $store.state.countries" :key="key" :value="key">{{item}}</option>
           </select>
-          <input class="inputtt" type="text" name="user_cell" :placeholder="$t('regist.plPhone')" />
+          <input class="inputtt" v-model="regForm.user_cell_zd" @input="checkInputInRemote('user_cell_zd')" type="text" name="user_cell" :placeholder="$t('regist.plPhone')" />
           <div class="clear"></div>
-          <p class="tips" name="user_cell_tips" id="user_cell_tips"></p>
+          <p class="tips" name="user_cell_tips" id="user_cell_tips">{{errors.user_cell_zd}}</p>
         </div>
 
         <div class="inputbox">
@@ -261,11 +81,11 @@
             type="button"
             name="sms_code"
             id="sms_code"
-            :value="$t('regist.get')"
+            
             onclick="check_code();"
           />
           <div class="clear"></div>
-          <p class="tips" name="sms_code_t" id="sms_code_t" style="display: block;">{{$t('regist.write')}}</p>
+          <p class="tips" name="sms_code_t" id="sms_code_t" style="display: block;">{{errors.sms_code}}</p>
         </div>
 
         <div class="clear"></div>
@@ -274,7 +94,7 @@
           <p class="titles">
             <span style="color:#5b0eb2">*</span>{{$t('regist.new')}}
           </p>
-          <select name="balance" id="balance">
+          <select v-model="regForm.balance" name="balance" id="balance">
             <option value>{{$t('regist.USDT')}}</option>
             <option value="3000">3000</option>
             <option value="5000">5000</option>
@@ -286,14 +106,13 @@
             <option value="1000000">1000000</option>
             <option value="5000000">5000000</option>
           </select>
-          <p class="tips"></p>
+          <p class="tips">{{errors.balance}}</p>
         </div>
         <div class="inputbox">
           <p class="titles">
             <span style="color:#5b0eb2">*</span> {{$t('regist.leverage')}}
           </p>
           <select name="leverage" id="leverage">
-            <option value>{{$t('regist.leverage')}}</option>
             <option value="500">1:500</option>
             <option value="400">1:400</option>
             <option value="300">1:300</option>
@@ -315,7 +134,7 @@
             <option value="2">1:2</option>
             <option value="1">1:1</option>
           </select>
-          <p class="tips"></p>
+          <p class="tips">{{errors.leverage}}</p>
         </div>
         <div class="clear"></div>
 
@@ -333,8 +152,8 @@
           <p class="titles">
             <span style="color:#5b0eb2">*</span> {{$t('regist.email')}}
           </p>
-          <input type="text" name="user_email" id="user_email" :placeholder="$t('regist.info')" />
-          <p class="tips" style="display: none;">{{$t('regist.eMailworing')}}</p>
+          <input type="text" v-model="regForm.user_email" @input="checkInputInRemote('check_email')" name="user_email" id="user_email" :placeholder="$t('regist.info')" />
+          <p class="tips">{{errors.user_email}}</p>
         </div>
         <!--<div class="inputbox">
               <p class="titles">* 图形验证码</p>
@@ -353,11 +172,12 @@
           <input
             type="password"
             name="user_password"
+            v-model="regForm.user_password"
             id="user_password"
             :placeholder="$t('regist.plWritePWD')"
             onkeyup="this.value=this.value.replace(/^[A-Za-z0-9]{16}/,'');"
           />
-          <p class="tips" style="display: none;">{{$t('regist.WorringPWD')}}</p>
+          <p class="tips"></p>
         </div>
         <!-- <div class="inputbox">
              <p class="titles">* 确认密码</p>
@@ -370,190 +190,10 @@
             <span style="color:#5b0eb2">*</span>{{$t('regist.phone')}}
           </p>
 
-          <select name="user_cell_zd" id="user_cell_zd" class="sel">
-            <option value="86" selected="selected">86({{$t('regist.China')}})</option>
-            <option value="886">886(台湾)</option>
-            <option value="852">852(香港)</option>
-            <option value="853">853(澳门)</option>
-            <option value="244">244(Angola)</option>
-            <option value="93">93(Afghanistan)</option>
-            <option value="355">355(Albania)</option>
-            <option value="213">213(Algeria)</option>
-            <option value="376">376(Andorra)</option>
-            <option value="1264">1264(Anguilla)</option>
-            <option value="1268">1268(Antigua and Barbuda)</option>
-            <option value="54">54(Argentina)</option>
-            <option value="374">374(Armenia)</option>
-            <option value="61">61(Australia)</option>
-            <option value="43">43(Austria)</option>
-            <option value="994">994(Azerbaijan)</option>
-            <option value="1242">1242(Bahamas)</option>
-            <option value="973">973(Bahrain)</option>
-            <option value="880">880(Bangladesh)</option>
-            <option value="1246">1246(Barbados)</option>
-            <option value="375">375(Belarus)</option>
-            <option value="32">32(Belgium)</option>
-            <option value="501">501(Belize)</option>
-            <option value="229">229(Benin)</option>
-            <option value="1441">1441(Bermuda)</option>
-            <option value="591">591(Bolivia)</option>
-            <option value="267">267(Botswana)</option>
-            <option value="55">55(Brazil)</option>
-            <option value="673">673(Brunei)</option>
-            <option value="359">359(Bulgaria)</option>
-            <option value="226">226(Burkina Faso)</option>
-            <option value="95">95(Myanmar)</option>
-            <option value="257">257(Burundi)</option>
-            <option value="237">237(Cameroon)</option>
-            <option value="1">1(Canada)</option>
-            <option value="236">236(Central African Republic)</option>
-            <option value="235">235(Chad)</option>
-            <option value="56">56(Chile)</option>
-            <option value="57">57(Colombia)</option>
-            <option value="682">682(Cook Islands)</option>
-            <option value="506">506(Costa Rica)</option>
-            <option value="242">242(Congo)</option>
-            <option value="53">53(Cuba)(Congo)</option>
-            <option value="357">357(Cyprus)</option>
-            <option value="420">420(Czech Republic)</option>
-            <option value="45">45(Denmark)</option>
-            <option value="253">253(Djibouti)</option>
-            <option value="1890">1890(Dominican Republic)</option>
-            <option value="593">593(Ecuador)</option>
-            <option value="20">20(Egypt)</option>
-            <option value="503">503(El Salvador)</option>
-            <option value="372">372(Estonia)</option>
-            <option value="251">251(Ethiopia)</option>
-            <option value="679">679(Fiji Islands)</option>
-            <option value="358">358(Finland)</option>
-            <option value="33">33(France)</option>
-            <option value="594">594(French Guiana)</option>
-            <option value="241">241(Gabon)</option>
-            <option value="220">220(Gambia)</option>
-            <option value="995">995(Georgia)</option>
-            <option value="49">49(Germany)</option>
-            <option value="233">233(Ghana)</option>
-            <option value="350">350(Gibraltar)</option>
-            <option value="30">30(Greece)</option>
-            <option value="1809">1809(Grenada)</option>
-            <option value="1671">1671(Guam)</option>
-            <option value="502">502(Guatemala)</option>
-            <option value="224">224(Guinea)</option>
-            <option value="592">592(Guyana)</option>
-            <option value="509">509(Haiti)</option>
-            <option value="504">504(Honduras)</option>
-            <option value="36">36(Hungary)</option>
-            <option value="354">354(Iceland)</option>
-            <option value="91">91(India)</option>
-            <option value="62">62(Indonesia)</option>
-            <option value="98">98(Iran)</option>
-            <option value="964">964(Iraq)</option>
-            <option value="353">353(Ireland)</option>
-            <option value="972">972(Israel)</option>
-            <option value="39">39(Italy)</option>
-            <option value="1876">1876(Jamaica)</option>
-            <option value="81">81(Japan)</option>
-            <option value="962">962(Jordan)</option>
-            <option value="855">855(Cambodia)</option>
-            <option value="327">327(Kazakhstan)</option>
-            <option value="254">254(Kenya)</option>
-            <option value="965">965(Kuwait)</option>
-            <option value="331">331(Kyrgyzstan)</option>
-            <option value="856">856(Laos)</option>
-            <option value="371">371(Latvia)</option>
-            <option value="266">266(Lesotho)</option>
-            <option value="961">961(Lebanon)</option>
-            <option value="231">231(Liberia)</option>
-            <option value="218">218(Libya)</option>
-            <option value="423">423(Liechtenstein)</option>
-            <option value="370">370(Lithuania)</option>
-            <option value="352">352(Luxembourg)</option>
-            <option value="261">261(Madagascar)</option>
-            <option value="265">265(Malawi)</option>
-            <option value="60">60(Malaysia)</option>
-            <option value="960">960(Maldives)</option>
-            <option value="223">223(Mali)</option>
-            <option value="356">356(Malta)</option>
-            <option value="230">230(Mauritius)</option>
-            <option value="52">52(Mexico)</option>
-            <option value="373">373(Moldova)</option>
-            <option value="377">377(Monaco)</option>
-            <option value="976">976(Mongolia)</option>
-            <option value="1664">1664(Montserrat)</option>
-            <option value="212">212(Morocco)</option>
-            <option value="258">258(Mozambique)</option>
-            <option value="264">264(Namibia)</option>
-            <option value="674">674(Nauru)</option>
-            <option value="977">977(Nepal)</option>
-            <option value="31">31(Netherlands)</option>
-            <option value="64">64(New Zealand)</option>
-            <option value="505">505(Nicaragua)</option>
-            <option value="227">227(Niger)</option>
-            <option value="234">234(Nigeria)</option>
-            <option value="850">850(South Korea)</option>
-            <option value="47">47(Norway)</option>
-            <option value="968">968(Oman)</option>
-            <option value="92">92(Pakistan)</option>
-            <option value="507">507(Panama)</option>
-            <option value="675">675(Papua New Guinea)</option>
-            <option value="595">595(Paraguay)</option>
-            <option value="51">51(Peru)</option>
-            <option value="63">63(Philippines)</option>
-            <option value="48">48(Poland)</option>
-            <option value="689">689(French Polynesia)</option>
-            <option value="351">351(Portugal)</option>
-            <option value="1787">1787(Puerto Rico)</option>
-            <option value="974">974(Qatar)</option>
-            <option value="40">40(Romania)</option>
-            <option value="7">7(Russia)</option>
-            <option value="1758">1758(St. Lucia)</option>
-            <option value="1784">1784(St. Vincent and the Grenadines)</option>
-            <option value="378">378(San Marino)</option>
-            <option value="239">239(Sao Tome and Principe)</option>
-            <option value="966">966(Saudi Arabia)</option>
-            <option value="221">221(Senegal)</option>
-            <option value="248">248(Seychelles)</option>
-            <option value="232">232(Sierra Leone)</option>
-            <option value="65">65(Singapore)</option>
-            <option value="421">421(Slovakia)</option>
-            <option value="386">386(Slovenia)</option>
-            <option value="677">677(Solomon Islands)</option>
-            <option value="27">27(South Africa)</option>
-            <option value="252">252(Somalia)</option>
-            <option value="82">82(South Korea)</option>
-            <option value="249">249(Sultan)</option>
-            <option value="963">963(Syria)</option>
-            <option value="34">34(Spain)</option>
-            <option value="94">94(Sri Lanka)</option>
-            <option value="597">597(Suriname)</option>
-            <option value="268">268(Swaziland)</option>
-            <option value="46">46(Sweden)</option>
-            <option value="41">41(Switzerland)</option>
-            <option value="992">992(Tajikistan)</option>
-            <option value="255">255(Tanzania)</option>
-            <option value="66">66(Thailand)</option>
-            <option value="228">228(Togo)</option>
-            <option value="676">676(Tonga)</option>
-            <option value="1809">1809(Trinidad and Tobago)</option>
-            <option value="216">216(Tunisia)</option>
-            <option value="90">90(Turkey)</option>
-            <option value="993">993(Turkmenistan)</option>
-            <option value="256">256(Uganda)</option>
-            <option value="380">380(Ukraine)</option>
-            <option value="971">971(United Arab Emirates)</option>
-            <option value="44">44(United Kingdom)</option>
-            <option value="001">001(United States)</option>
-            <option value="598">598(Uruguay)</option>
-            <option value="233">233(Uzbekistan)</option>
-            <option value="58">58(Venezuela)</option>
-            <option value="84">84(Viet Nam)</option>
-            <option value="967">967(Yemen)</option>
-            <option value="381">381(Serbia and Montenegro)</option>
-            <option value="263">263(Zimbabwe)</option>
-            <option value="260">260(Zambia)</option>
-            <option value="243">243(Zaire)</option>
+          <select name="user_cell_zd" v-model="regForm.user_cell_zd" id="user_cell_zd" class="sel">
+            <option v-for="(item, key) in $store.state.countries" :key="key" :value="key">{{item}}</option>
           </select>
-          <input class="inputtt" type="text" name="user_cell" id="user_cell" :placeholder="$t('regist.plPhone')" />
+          <input class="inputtt" type="text" v-model="regForm.user_cell" name="user_cell" id="user_cell" :placeholder="$t('regist.plPhone')" />
           <div class="clear"></div>
           <p class="tips" id="user_cell_tishi" name="user_cell_tishi"></p>
         </div>
@@ -562,24 +202,24 @@
           <p class="titles">
             <span style="color:#5b0eb2">*</span> {{$t('regist.code')}}
           </p>
-          <input class="inputtt" type="text" :placeholder="$t('regist.six')" />
+          <input class="inputtt" v-model="regForm.sim_code" type="text" :placeholder="$t('regist.six')" />
           <input
             class="codebtn"
             type="button"
             name="sim_code_1"
             id="sim_code_1"
-            onclick="get_sms_code()"
+            @click="sendSimCode"
             :value="$t('regist.get')"
           />
           <div class="clear"></div>
-          <p class="tips" id="sim_code_tishi" name="sim_code_tishi"></p>
+          <p class="tips" id="sim_code_tishi" name="sim_code_tishi">{{errors.sim_code}}</p>
         </div>
 
         <div class="inputbox" style="position: relative">
           <p class="titles">
             <span style="color:#5b0eb2;">*</span>&nbsp;{{$t('regist.station')}}
           </p>
-          <select name="mct" style="opacity: 0;" v-model="selectChooese" @change="consoel">
+          <select name="mct" style="opacity: 0;" v-model="regForm.trade_type" @change="consoel">
             <option value="mt4" class="mt4">MT4</option>
             <option value="ct" class="ctrader">cTrader</option>
           </select>
@@ -602,11 +242,11 @@
           <p class="titles">
             <span style="color:#5b0eb2">*</span>&nbsp;{{$t('regist.money')}}
           </p>
-          <select id="currency_type" name="currency_type">
+          <select v-model="regForm.currency_type" id="currency_type" name="currency_type">
             <option value="USD">{{$t('regist.dollor')}}</option>
             <option value="USC" id="Quater" style="display: block;" v-if="selectChooese == 'mt4'? true :false">{{$t('regist.cents')}}</option>
           </select>
-          <p class="tips"></p>
+          <p class="tips">{{errors.currency_type}}</p>
         </div>
 
         <div class="clear"></div>
@@ -620,18 +260,18 @@
         <div class="center clearfix" :class="lang == false ?'enMargin':''">
           <ul>
             <li>
-              <input type="checkbox" name="type" id="agreement1" checked />
+              <input type="checkbox" name="type" v-model="regForm.agreement1" id="agreement1" checked />
               <a class="pup" @click="$util.downloadPdf('/pdf/fx.pdf', '风险披露')">{{$t('regist.Iread')}}</a>
             </li>
             <li>
-              <input type="checkbox" name="type" id="agreement2" checked />
+              <input type="checkbox" name="type" v-model="regForm.agreement2" id="agreement2" checked />
               <a
                 @click="$util.downloadPdf('/pdf/CPTMarketsv2.pdf', '自动调整杠杆说明')"
                 class="pup"
               >{{$t('regist.say')}}</a>
             </li>
             <li>
-              <input type="checkbox" name="type" id="agreement3" checked />
+              <input type="checkbox" name="type" v-model="regForm.agreement3" id="agreement3" checked />
               <a
                 class="pup"
                 @click="$util.downloadPdf('/pdf/malicious.pdf', 'CPT Markets流动性指南')"
@@ -640,263 +280,42 @@
             <div class="clear"></div>
           </ul>
         </div>
-        <div class="sumbtn" onclick="one()" id="btndk">{{$t('regist.nextOne')}}</div>
+        <div class="sumbtn" @click="nextOne" id="btndk">{{$t('regist.nextOne')}}</div>
       </div>
       <div class="yanzheng" v-show="active == 0 && step == 1 ">
         <div class="left" id="two" style>
           <div class="inputbox">
             <p class="titles">{{$t('regist.country')}}</p>
-            <select name="user_nation" id="user_nation">
-              <option value>{{$t('regist.plCountry')}}</option>
-              <option value="CN" selected="selected">中国大陆</option>
-              <option value="TW">台湾</option>
-              <option value="HK">香港</option>
-              <option value="MO">澳门</option>
-              <option value="CA">Canada</option>
-              <option value="AF">Afghanistan</option>
-              <option value="AL">Albania</option>
-              <option value="DZ">Algeria</option>
-              <option value="AS">American Samoa</option>
-              <option value="AD">Andorra</option>
-              <option value="AO">Angola</option>
-              <option value="AI">Anguilla</option>
-              <option value="AQ">Antarctica</option>
-              <option value="AG">Antigua and Barbuda</option>
-              <option value="AR">Argentina</option>
-              <option value="AM">Armenia</option>
-              <option value="AW">Aruba</option>
-              <option value="AU">Australia</option>
-              <option value="AT">Austria</option>
-              <option value="AZ">Azerbaijan</option>
-              <option value="BS">Bahamas</option>
-              <option value="BH">Bahrain</option>
-              <option value="BD">Bangladesh</option>
-              <option value="BB">Barbados</option>
-              <option value="BY">Belarus</option>
-              <option value="BE">Belgium</option>
-              <option value="BZ">Belize</option>
-              <option value="BJ">Benin</option>
-              <option value="BM">Bermuda</option>
-              <option value="BT">Bhutan</option>
-              <option value="BO">Bolivia</option>
-              <option value="BA">Bosnia and Herzegovina</option>
-              <option value="BW">Botswana</option>
-              <option value="BV">Bouvet Island</option>
-              <option value="BR">Brazil</option>
-              <option value="IO">British Indian Ocean Territory</option>
-              <option value="BN">Brunei</option>
-              <option value="BG">Bulgaria</option>
-              <option value="BF">Burkina Faso</option>
-              <option value="BI">Burundi</option>
-              <option value="KH">Cambodia</option>
-              <option value="CM">Cameroon</option>
-              <option value="CV">Cape Verde</option>
-              <option value="KY">Cayman Islands</option>
-              <option value="CF">Central African Republic</option>
-              <option value="TD">Chad</option>
-              <option value="CL">Chile</option>
-              <option value="CX">Christmas Island</option>
-              <option value="CC">Cocos (Keeling) Islands</option>
-              <option value="CO">Colombia</option>
-              <option value="KM">Comoros</option>
-              <option value="CK">Cook Islands</option>
-              <option value="CR">Costa Rica</option>
-              <option value="HR">Croatia (Hrvatska)</option>
-              <option value="CY">Cyprus</option>
-              <option value="CZ">Czech Republic</option>
-              <option value="DK">Denmark</option>
-              <option value="DJ">Djibouti</option>
-              <option value="DM">Dominica</option>
-              <option value="DO">Dominican Republic</option>
-              <option value="TP">East Timor</option>
-              <option value="EC">Ecuador</option>
-              <option value="EG">Egypt</option>
-              <option value="SV">El Salvador</option>
-              <option value="GQ">Equatorial Guinea</option>
-              <option value="EE">Estonia</option>
-              <option value="ET">Ethiopia</option>
-              <option value="FK">Falkland Islands (Islas Malvinas)</option>
-              <option value="FO">Faroe Islands</option>
-              <option value="FJ">Fiji Islands</option>
-              <option value="FI">Finland</option>
-              <option value="FR">France</option>
-              <option value="GF">French Guiana</option>
-              <option value="PF">French Polynesia</option>
-              <option value="TF">French Southern and Antarctic Lands</option>
-              <option value="GA">Gabon</option>
-              <option value="GM">Gambia</option>
-              <option value="GE">Georgia</option>
-              <option value="DE">Germany</option>
-              <option value="GH">Ghana</option>
-              <option value="GI">Gibraltar</option>
-              <option value="GR">Greece</option>
-              <option value="GL">Greenland</option>
-              <option value="GD">Grenada</option>
-              <option value="GP">Guadeloupe</option>
-              <option value="GU">Guam</option>
-              <option value="GT">Guatemala</option>
-              <option value="GN">Guinea</option>
-              <option value="GW">Guinea-Bissau</option>
-              <option value="GY">Guyana</option>
-              <option value="HT">Haiti</option>
-              <option value="HN">Honduras</option>
-              <option value="HU">Hungary</option>
-              <option value="IS">Iceland</option>
-              <option value="IN">India</option>
-              <option value="ID">Indonesia</option>
-              <option value="IE">Ireland</option>
-              <option value="IL">Israel</option>
-              <option value="IT">Italy</option>
-              <option value="JM">Jamaica</option>
-              <option value="JP">Japan</option>
-              <option value="JO">Jordan</option>
-              <option value="KZ">Kazakhstan</option>
-              <option value="KE">Kenya</option>
-              <option value="KI">Kiribati</option>
-              <option value="KW">Kuwait</option>
-              <option value="KG">Kyrgyzstan</option>
-              <option value="LA">Laos</option>
-              <option value="LV">Latvia</option>
-              <option value="LS">Lesotho</option>
-              <option value="LI">Liechtenstein</option>
-              <option value="LT">Lithuania</option>
-              <option value="LU">Luxembourg</option>
-              <option value="MK">Macedonia</option>
-              <option value="MG">Madagascar</option>
-              <option value="MW">Malawi</option>
-              <option value="MY">Malaysia</option>
-              <option value="MV">Maldives</option>
-              <option value="ML">Mali</option>
-              <option value="MT">Malta</option>
-              <option value="MH">Marshall Islands</option>
-              <option value="MQ">Martinique</option>
-              <option value="MR">Mauritania</option>
-              <option value="MU">Mauritius</option>
-              <option value="YT">Mayotte</option>
-              <option value="MX">Mexico</option>
-              <option value="FM">Micronesia</option>
-              <option value="MD">Moldova</option>
-              <option value="MC">Monaco</option>
-              <option value="MN">Mongolia</option>
-              <option value="MS">Montserrat</option>
-              <option value="MA">Morocco</option>
-              <option value="MZ">Mozambique</option>
-              <option value="MM">Myanmar</option>
-              <option value="NA">Namibia</option>
-              <option value="NR">Nauru</option>
-              <option value="NP">Nepal</option>
-              <option value="NL">Netherlands</option>
-              <option value="AN">Netherlands Antilles</option>
-              <option value="NC">New Caledonia</option>
-              <option value="NZ">New Zealand</option>
-              <option value="NI">Nicaragua</option>
-              <option value="NE">Niger</option>
-              <option value="NG">Nigeria</option>
-              <option value="NU">Niue</option>
-              <option value="NF">Norfolk Island</option>
-              <option value="MP">Northern Mariana Islands</option>
-              <option value="NO">Norway</option>
-              <option value="OM">Oman</option>
-              <option value="PK">Pakistan</option>
-              <option value="PW">Palau</option>
-              <option value="PA">Panama</option>
-              <option value="PG">Papua New Guinea</option>
-              <option value="PY">Paraguay</option>
-              <option value="PE">Peru</option>
-              <option value="PH">Philippines</option>
-              <option value="PN">Pitcairn Islands</option>
-              <option value="PL">Poland</option>
-              <option value="PT">Portugal</option>
-              <option value="PR">Puerto Rico</option>
-              <option value="QA">Qatar</option>
-              <option value="RE">Reunion</option>
-              <option value="RO">Romania</option>
-              <option value="RU">Russia</option>
-              <option value="RW">Rwanda</option>
-              <option value="WS">Samoa</option>
-              <option value="SM">San Marino</option>
-              <option value="ST">Sao Tome and Principe</option>
-              <option value="SA">Saudi Arabia</option>
-              <option value="SN">Senegal</option>
-              <option value="YU">Serbia and Montenegro</option>
-              <option value="SC">Seychelles</option>
-              <option value="SL">Sierra Leone</option>
-              <option value="SG">Singapore</option>
-              <option value="SK">Slovakia</option>
-              <option value="SI">Slovenia</option>
-              <option value="SB">Solomon Islands</option>
-              <option value="ZA">South Africa</option>
-              <option value="GS">South Georgia and the South Sandwich Islands</option>
-              <option value="KP">South Korea</option>
-              <option value="ES">Spain</option>
-              <option value="LK">Sri Lanka</option>
-              <option value="SH">St. Helena</option>
-              <option value="KN">St. Kitts and Nevis</option>
-              <option value="LC">St. Lucia</option>
-              <option value="PM">St. Pierre and Miquelon</option>
-              <option value="VC">St. Vincent and the Grenadines</option>
-              <option value="SR">Suriname</option>
-              <option value="SJ">Svalbard and Jan Mayen</option>
-              <option value="SZ">Swaziland</option>
-              <option value="SE">Sweden</option>
-              <option value="CH">Switzerland</option>
-              <option value="TJ">Tajikistan</option>
-              <option value="TZ">Tanzania</option>
-              <option value="TH">Thailand</option>
-              <option value="TG">Togo</option>
-              <option value="TK">Tokelau</option>
-              <option value="TO">Tonga</option>
-              <option value="TT">Trinidad and Tobago</option>
-              <option value="TN">Tunisia</option>
-              <option value="TR">Turkey</option>
-              <option value="TM">Turkmenistan</option>
-              <option value="TC">Turks and Caicos Islands</option>
-              <option value="TV">Tuvalu</option>
-              <option value="UG">Uganda</option>
-              <option value="UA">Ukraine</option>
-              <option value="AE">United Arab Emirates</option>
-              <option value="GB">United Kingdom</option>
-              <option value="UY">Uruguay</option>
-              <option value="UZ">Uzbekistan</option>
-              <option value="VU">Vanuatu</option>
-              <option value="VA">Vatican City</option>
-              <option value="VE">Venezuela</option>
-              <option value="VN">Viet Nam</option>
-              <option value="VI">Virgin Islands</option>
-              <option value="VG">Virgin Islands (British)</option>
-              <option value="WF">Wallis and Futuna</option>
-              <option value="YE">Yemen</option>
-              <option value="ZM">Zambia</option>
-              <option value="ZW">Zimbabwe</option>
+            <select name="user_nation" v-model="regForm.user_nation" id="user_nation">
+              <option v-for="(item, key) in $store.state.countriesShort" :key="key" :value="key">{{item}}</option>
             </select>
             <p class="tips"></p>
           </div>
 
           <div class="inputbox">
             <p class="titles">{{$t('regist.ChineseName')}}</p>
-            <input type="text" name="first_name" id="first_name" />
+            <input type="text" name="first_name" v-model="regForm.first_name" id="first_name" />
             <p class="tips" style="display: block;">{{$t('regist.PlChinese')}}</p>
           </div>
           <div class="clear"></div>
           <div class="inputbox">
             <p class="titles">{{$t('regist.enName')}}</p>
-            <input type="text" name="last_name" id="last_name" />
-            <p class="tips" style="display: block;">{{$t('regist.plEnName')}}</p>
+            <input type="text" v-model="regForm.last_name" name="last_name" id="last_name" />
+            <p class="tips" style="display: block;">{{errors.last_name}}</p>
           </div>
           <div class="clear"></div>
           <div class="inputbox">
             <p class="titles">{{$t('regist.CardID')}}</p>
-            <select name="user_certificate_type" id="user_certificate_type">
-              <option value>{{$t('regist.enName')}}</option>
+            <select name="user_certificate_type" v-model="regForm.user_certificate_type" id="user_certificate_type">
               <option value="1">{{$t('regist.IDcard')}}</option>
               <option value="2">{{$t('regist.passport')}}</option>
             </select>
-            <p class="tips" style="display: none;">{{$t('regist.WordingCard')}}</p>
+            <p class="tips">{{$t('regist.WordingCard')}}</p>
           </div>
           <div class="inputbox">
             <p class="titles">{{$t('regist.IDnum')}}</p>
-            <input type="text" id="user_certificate_no" name="user_certificate_no" />
-            <p class="tips" style="display: block;">{{$t('regist.WriteIDnum')}}</p>
+            <input type="text" v-model="regForm.user_certificate_no" id="user_certificate_no" name="user_certificate_no" />
+            <p class="tips" style="display: block;">{{errors.user_certificate_no}}</p>
           </div>
           <div class="clear"></div>
 
@@ -908,13 +327,15 @@
             <div class="kuang">
               <div class="upload" @click="$refs.idCard0.value = '',$refs.idCard0.click()">
                 <div class="select">
-                  <input type="file" ref="idCard0" style="position: absolute; visibility: hidden" />
+                  <img v-if="files.idCard0" :width="files.idCard0.width + 'px'" :height="files.idCard0.height + 'px'" :src="files.idCard0.base64" alt="">
+                  <input type="file" ref="idCard0" @change="fileChange($event, 'idCard0')" style="position: absolute; visibility: hidden" />
                 </div>
                 <span class="text">{{$t('regist.certificate')}}</span>
               </div>
               <div class="upload" @click="$refs.idCard1.value ='' ,$refs.idCard1.click()">
                 <div class="select">
-                  <input type="file" ref="idCard1" style="position: absolute; visibility: hidden" />
+                  <img v-if="files.idCard1" :width="files.idCard1.width + 'px'" :height="files.idCard1.height + 'px'" :src="files.idCard1.base64" alt="">
+                  <input type="file" ref="idCard1" @change="fileChange($event, 'idCard1')" style="position: absolute; visibility: hidden" />
                 </div>
                 <span class="text">{{$t('regist.reverse')}}</span>
               </div>
@@ -932,25 +353,25 @@
 
           <div class="inputbox">
             <p class="titles">{{$t('regist.cardholder')}}</p>
-            <input type="text" id="bank_user_name" name="bank_user_name" :placeholder="$t('regist.need')" />
-            <p class="tips"></p>
+            <input type="text" v-model="regForm.bank_user_name" id="bank_user_name" name="bank_user_name" :placeholder="$t('regist.need')" />
+            <p class="tips">{{errors.bank_user_name}}</p>
           </div>
           <div class="inputbox">
             <p class="titles">{{$t('regist.BankNum')}}</p>
-            <input type="text" id="bank_no" name="bank_no" />
-            <p class="tips"></p>
+            <input type="text" v-model="regForm.bank_no" id="bank_no" name="bank_no" />
+            <p class="tips">{{errors.bank_no}}</p>
           </div>
 
           <div class="clear"></div>
           <div class="inputbox">
             <p class="titles">{{$t('regist.BankName')}}</p>
-            <input type="text" id="bank_name" name="bank_name" />
-            <p class="tips"></p>
+            <input type="text" id="bank_name" v-model="regForm.bank_name" name="bank_name" />
+            <p class="tips">{{errors.bank_name}}</p>
           </div>
           <div class="inputbox">
             <p class="titles">{{$t('regist.branchBank')}}</p>
-            <input type="text" id="bank_address" name="bank_address" />
-            <p class="tips"></p>
+            <input type="text" v-model="regForm.bank_address" id="bank_address" name="bank_address" />
+            <p class="tips">{{errors.bank_address}}</p>
           </div>
           <div class="clear"></div>
 
@@ -962,7 +383,8 @@
             <div class="kuang">
               <div class="upload" @click="$refs.bankCard.value = '',$refs.bankCard.click()">
                 <div class="select">
-                  <input type="file" ref="bankCard" style="position: absolute; visibility: hidden" />
+                  <img v-if="files.bankCard" :width="files.bankCard.width + 'px'" :height="files.bankCard.height + 'px'" :src="files.bankCard.base64" alt="">
+                  <input type="file" ref="bankCard" @change="fileChange($event, 'bankCard')" style="position: absolute; visibility: hidden" />
                 </div>
                 <span class="text">{{$t('regist.BankImage')}}</span>
               </div>
@@ -979,7 +401,7 @@
           </div>-->
           <div class="clear"></div>
           <!--<div class="sumbtn Previouspage" onclick="retwo()">Previous page</div>-->
-          <div class="sumbtn" onclick="two()">{{$t('regist.post')}}</div>
+          <div class="sumbtn" @click="submit">{{$t('regist.post')}}</div>
         </div>
 
         <div id="three" style="display: none;">
@@ -1018,187 +440,7 @@
           </p>
 
           <select name="user_cell_zd" class="sel">
-            <option value="86" selected="selected">86({{$t('regist.China')}})</option>
-            <option value="886">886(台湾)</option>
-            <option value="852">852(香港)</option>
-            <option value="853">853(澳门)</option>
-            <option value="244">244(Angola)</option>
-            <option value="93">93(Afghanistan)</option>
-            <option value="355">355(Albania)</option>
-            <option value="213">213(Algeria)</option>
-            <option value="376">376(Andorra)</option>
-            <option value="1264">1264(Anguilla)</option>
-            <option value="1268">1268(Antigua and Barbuda)</option>
-            <option value="54">54(Argentina)</option>
-            <option value="374">374(Armenia)</option>
-            <option value="61">61(Australia)</option>
-            <option value="43">43(Austria)</option>
-            <option value="994">994(Azerbaijan)</option>
-            <option value="1242">1242(Bahamas)</option>
-            <option value="973">973(Bahrain)</option>
-            <option value="880">880(Bangladesh)</option>
-            <option value="1246">1246(Barbados)</option>
-            <option value="375">375(Belarus)</option>
-            <option value="32">32(Belgium)</option>
-            <option value="501">501(Belize)</option>
-            <option value="229">229(Benin)</option>
-            <option value="1441">1441(Bermuda)</option>
-            <option value="591">591(Bolivia)</option>
-            <option value="267">267(Botswana)</option>
-            <option value="55">55(Brazil)</option>
-            <option value="673">673(Brunei)</option>
-            <option value="359">359(Bulgaria)</option>
-            <option value="226">226(Burkina Faso)</option>
-            <option value="95">95(Myanmar)</option>
-            <option value="257">257(Burundi)</option>
-            <option value="237">237(Cameroon)</option>
-            <option value="1">1(Canada)</option>
-            <option value="236">236(Central African Republic)</option>
-            <option value="235">235(Chad)</option>
-            <option value="56">56(Chile)</option>
-            <option value="57">57(Colombia)</option>
-            <option value="682">682(Cook Islands)</option>
-            <option value="506">506(Costa Rica)</option>
-            <option value="242">242(Congo)</option>
-            <option value="53">53(Cuba)(Congo)</option>
-            <option value="357">357(Cyprus)</option>
-            <option value="420">420(Czech Republic)</option>
-            <option value="45">45(Denmark)</option>
-            <option value="253">253(Djibouti)</option>
-            <option value="1890">1890(Dominican Republic)</option>
-            <option value="593">593(Ecuador)</option>
-            <option value="20">20(Egypt)</option>
-            <option value="503">503(El Salvador)</option>
-            <option value="372">372(Estonia)</option>
-            <option value="251">251(Ethiopia)</option>
-            <option value="679">679(Fiji Islands)</option>
-            <option value="358">358(Finland)</option>
-            <option value="33">33(France)</option>
-            <option value="594">594(French Guiana)</option>
-            <option value="241">241(Gabon)</option>
-            <option value="220">220(Gambia)</option>
-            <option value="995">995(Georgia)</option>
-            <option value="49">49(Germany)</option>
-            <option value="233">233(Ghana)</option>
-            <option value="350">350(Gibraltar)</option>
-            <option value="30">30(Greece)</option>
-            <option value="1809">1809(Grenada)</option>
-            <option value="1671">1671(Guam)</option>
-            <option value="502">502(Guatemala)</option>
-            <option value="224">224(Guinea)</option>
-            <option value="592">592(Guyana)</option>
-            <option value="509">509(Haiti)</option>
-            <option value="504">504(Honduras)</option>
-            <option value="36">36(Hungary)</option>
-            <option value="354">354(Iceland)</option>
-            <option value="91">91(India)</option>
-            <option value="62">62(Indonesia)</option>
-            <option value="98">98(Iran)</option>
-            <option value="964">964(Iraq)</option>
-            <option value="353">353(Ireland)</option>
-            <option value="972">972(Israel)</option>
-            <option value="39">39(Italy)</option>
-            <option value="1876">1876(Jamaica)</option>
-            <option value="81">81(Japan)</option>
-            <option value="962">962(Jordan)</option>
-            <option value="855">855(Cambodia)</option>
-            <option value="327">327(Kazakhstan)</option>
-            <option value="254">254(Kenya)</option>
-            <option value="965">965(Kuwait)</option>
-            <option value="331">331(Kyrgyzstan)</option>
-            <option value="856">856(Laos)</option>
-            <option value="371">371(Latvia)</option>
-            <option value="266">266(Lesotho)</option>
-            <option value="961">961(Lebanon)</option>
-            <option value="231">231(Liberia)</option>
-            <option value="218">218(Libya)</option>
-            <option value="423">423(Liechtenstein)</option>
-            <option value="370">370(Lithuania)</option>
-            <option value="352">352(Luxembourg)</option>
-            <option value="261">261(Madagascar)</option>
-            <option value="265">265(Malawi)</option>
-            <option value="60">60(Malaysia)</option>
-            <option value="960">960(Maldives)</option>
-            <option value="223">223(Mali)</option>
-            <option value="356">356(Malta)</option>
-            <option value="230">230(Mauritius)</option>
-            <option value="52">52(Mexico)</option>
-            <option value="373">373(Moldova)</option>
-            <option value="377">377(Monaco)</option>
-            <option value="976">976(Mongolia)</option>
-            <option value="1664">1664(Montserrat)</option>
-            <option value="212">212(Morocco)</option>
-            <option value="258">258(Mozambique)</option>
-            <option value="264">264(Namibia)</option>
-            <option value="674">674(Nauru)</option>
-            <option value="977">977(Nepal)</option>
-            <option value="31">31(Netherlands)</option>
-            <option value="64">64(New Zealand)</option>
-            <option value="505">505(Nicaragua)</option>
-            <option value="227">227(Niger)</option>
-            <option value="234">234(Nigeria)</option>
-            <option value="850">850(South Korea)</option>
-            <option value="47">47(Norway)</option>
-            <option value="968">968(Oman)</option>
-            <option value="92">92(Pakistan)</option>
-            <option value="507">507(Panama)</option>
-            <option value="675">675(Papua New Guinea)</option>
-            <option value="595">595(Paraguay)</option>
-            <option value="51">51(Peru)</option>
-            <option value="63">63(Philippines)</option>
-            <option value="48">48(Poland)</option>
-            <option value="689">689(French Polynesia)</option>
-            <option value="351">351(Portugal)</option>
-            <option value="1787">1787(Puerto Rico)</option>
-            <option value="974">974(Qatar)</option>
-            <option value="40">40(Romania)</option>
-            <option value="7">7(Russia)</option>
-            <option value="1758">1758(St. Lucia)</option>
-            <option value="1784">1784(St. Vincent and the Grenadines)</option>
-            <option value="378">378(San Marino)</option>
-            <option value="239">239(Sao Tome and Principe)</option>
-            <option value="966">966(Saudi Arabia)</option>
-            <option value="221">221(Senegal)</option>
-            <option value="248">248(Seychelles)</option>
-            <option value="232">232(Sierra Leone)</option>
-            <option value="65">65(Singapore)</option>
-            <option value="421">421(Slovakia)</option>
-            <option value="386">386(Slovenia)</option>
-            <option value="677">677(Solomon Islands)</option>
-            <option value="27">27(South Africa)</option>
-            <option value="252">252(Somalia)</option>
-            <option value="82">82(South Korea)</option>
-            <option value="249">249(Sultan)</option>
-            <option value="963">963(Syria)</option>
-            <option value="34">34(Spain)</option>
-            <option value="94">94(Sri Lanka)</option>
-            <option value="597">597(Suriname)</option>
-            <option value="268">268(Swaziland)</option>
-            <option value="46">46(Sweden)</option>
-            <option value="41">41(Switzerland)</option>
-            <option value="992">992(Tajikistan)</option>
-            <option value="255">255(Tanzania)</option>
-            <option value="66">66(Thailand)</option>
-            <option value="228">228(Togo)</option>
-            <option value="676">676(Tonga)</option>
-            <option value="1809">1809(Trinidad and Tobago)</option>
-            <option value="216">216(Tunisia)</option>
-            <option value="90">90(Turkey)</option>
-            <option value="993">993(Turkmenistan)</option>
-            <option value="256">256(Uganda)</option>
-            <option value="380">380(Ukraine)</option>
-            <option value="971">971(United Arab Emirates)</option>
-            <option value="44">44(United Kingdom)</option>
-            <option value="001">001(United States)</option>
-            <option value="598">598(Uruguay)</option>
-            <option value="233">233(Uzbekistan)</option>
-            <option value="58">58(Venezuela)</option>
-            <option value="84">84(Viet Nam)</option>
-            <option value="967">967(Yemen)</option>
-            <option value="381">381(Serbia and Montenegro)</option>
-            <option value="263">263(Zimbabwe)</option>
-            <option value="260">260(Zambia)</option>
-            <option value="243">243(Zaire)</option>
+            <option v-for="(item, key) in $store.state.countries" :key="key" :value="key">{{item}}</option>
           </select>
           <input class="inputtt" type="text" name="user_cell" :placeholder="$t('regist.plPhone')" />
           <div class="clear"></div>
@@ -1215,7 +457,7 @@
             type="button"
             name="sim_code_1"
             id="sim_code_1"
-            onclick="get_sms_code()"
+            onclick="sendSimCode()"
             :value="$t('regist.get')"
           />
           <div class="clear"></div>
@@ -1227,7 +469,7 @@
             <span style="color:#5b0eb2">*</span> Graphic verification code
           </p>
           <input type="text"  />
-          <p class="tips" style="display: none;">{{$t('regist.eMailworing')}}</p>
+          <p class="tips">{{$t('regist.eMailworing')}}</p>
         </div>
 
         <div class="inputbox">
@@ -1235,7 +477,7 @@
             <span style="color:#5b0eb2">*</span> Name
           </p>
           <input type="text" :placeholder="$t('regist.info')" />
-          <p class="tips" style="display: none;">{{$t('regist.eMailworing')}}</p>
+          <p class="tips">{{$t('regist.eMailworing')}}</p>
         </div>
 
         <div class="inputbox">
@@ -1243,7 +485,7 @@
             <span style="color:#5b0eb2">*</span> Country of citizenship
           </p>
           <input type="text" :placeholder="$t('regist.info')" />
-          <p class="tips" style="display: none;">{{$t('regist.eMailworing')}}</p>
+          <p class="tips">{{$t('regist.eMailworing')}}</p>
         </div>
 
         <div class="inputbox">
@@ -1251,7 +493,7 @@
             <span style="color:#5b0eb2">*</span> Account type
           </p>
           <input type="text" :placeholder="$t('regist.info')" />
-          <p class="tips" style="display: none;">{{$t('regist.eMailworing')}}</p>
+          <p class="tips">{{$t('regist.eMailworing')}}</p>
         </div>
 
         <div class="inputbox">
@@ -1259,7 +501,7 @@
             <span style="color:#5b0eb2">*</span> IB account(optional)
           </p>
           <input type="text" :placeholder="$t('regist.info')" />
-          <p class="tips" style="display: none;">{{$t('regist.eMailworing')}}</p>
+          <p class="tips">{{$t('regist.eMailworing')}}</p>
         </div>
 
         <div class="clear"></div>
@@ -1296,7 +538,7 @@ export default {
   data() {
     return {
       active: 0,
-      step: 0,
+      step: 1,
       selectShow:false,
       selectChooese:'mt4',
       bgImg:require('@/assets/MT4B.png'),
@@ -1305,6 +547,34 @@ export default {
         {img:require('@/assets/ctB.png'),name:'cTrader'}, 
         {img:require('@/assets/MT4B.png'),name:'MT4'}, 
       ],
+      files: {
+        idCard1: '',
+        idCard0: '',
+        bankCard: '',
+      },
+      regForm: {
+        user_email:'',		
+        user_password:'',		
+        user_cell_zd:'86',		
+        user_cell:'',		
+        account_ib:'',		
+        user_nation:'CN',		
+        first_name:'',		
+        last_name:'',		
+        user_certificate_type:'1',		
+        user_certificate_no:'',		
+        bank_user_name:'',		
+        bank_no:'',		
+        bank_name:'',		
+        bank_address:'',		
+        currency_type:'',		
+        trade_type:'',
+        user_name:'',
+        simulation_code:'',
+        balance:'',	
+        leverage:'',
+      },
+      errors: {},
       lang:true,
     };
   },
@@ -1323,10 +593,8 @@ export default {
         this.selectChooese = 'ct';
       }
        this.selectShow = false;
-       console.log(this.selectChooese);
     },
     consoel(){
-      console.log("abc")
       console.log(this.selectChooese);
     },
     changeLang(){
@@ -1335,6 +603,65 @@ export default {
         }else{
           this.lang = true
         }
+    },
+    checkInputInRemote(type) {
+      const form = this.regForm;
+      const urls = {
+        check_email: 'register/check_email',
+        check_cell: 'register/check_cell',
+        check_account_ib: 'register/check_account_ib',
+        check_certificate_no: 'register/check_certificate_no',
+        check_sim_code: 'register/check_sim_code',
+      };
+      const params = {
+        user_email: form.user_email,
+        user_cell_zd: form.user_cell,
+        account_ib: form.account_ib,
+        user_certificate_type: form.user_certificate_type,
+        user_certificate_no: form.user_certificate_no,
+        check_sim_code: form.check_sim_code,
+      };
+      this.$http.post(urls[type], {
+        
+      }).then((res) => {
+        const data = res.body;
+        if (data.code === 200) {
+          this.errors[type] = '';
+        } else {
+          this.errors[type] = '已被占用';
+        }
+      }).catch(e => {
+
+      });
+    },
+    sendSimCode() {},
+    nextOne() {
+      const values = Object.values(this.errors).filter(el => el);
+      if (values.length) {
+        return
+      }
+      this.step = 1;
+    },
+    async fileChange(e, type) {
+      const file = this.$refs[type].files[0];
+      if (!/\.jpg$|\.jpeg$|\.png$|\.bmp$/.test(file.name)) {
+        this.$util.error('图片格式不正确');
+        return;
+      }
+      const result = await this.$util.readImage(file);
+      if (!result) {
+        this.$util.error('读取失败');
+        return;
+      }
+      const resize = this.$util.autoImgSize(result.width, result.height, 200, 139);
+      this.files[type] = {
+        width: resize.width,
+        height: resize.height,
+        base64: result.base64
+      };
+    },
+    submit() {
+      
     },
   },
   created(){
@@ -1532,9 +859,10 @@ export default {
           }
         }
         .tips {
-          margin-top: 20px;
-          color: #5b0eb2;
-          font-size: 16px;
+          margin-top: 5px;
+          color: red;
+          font-size: 14px;
+          height: 20px;
           box-sizing: border-box;
         }
         .replay {
@@ -1614,6 +942,9 @@ export default {
               width: 200px;
               height: 150px;
               border: 1px dashed #ccc;
+              display: flex;
+              justify-content: center;
+              align-items: center;
             }
             .text {
               margin-top: 15px;

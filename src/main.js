@@ -13,8 +13,15 @@ import router from './router'
 import store from './store'
 import VueI18n from 'vue-i18n'
 import Util from '@/common/util.js';
-import axios from 'axios'
-Vue.use(VueI18n,axios);
+import Http from '@/common/http.js';
+
+Object.defineProperty( Vue.prototype, '$http', {
+  value: Http,
+  configurable: false,
+  writable: false,
+} );
+
+Vue.use(VueI18n);
 
 
 Object.defineProperty(Vue.prototype, '$util', {
